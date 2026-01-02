@@ -712,6 +712,22 @@ body {
     border-color: var(--accent-color);
 }
 
+.flowchart-step.highlight {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-color: #ff9800;
+    border-width: 4px;
+}
+
+.flowchart-step.highlight .flowchart-title {
+    color: #e65100;
+    font-weight: 800;
+}
+
+.flowchart-step.highlight .flowchart-desc {
+    color: #bf360c;
+    font-weight: 600;
+}
+
 .flowchart-icon {
     font-size: 3rem;
     margin-bottom: 0.5rem;
