@@ -417,6 +417,63 @@ body {
     padding: 2rem 0;
 }
 
+.dua-index {
+    background: var(--white);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.dua-index h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.index-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.index-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.index-list li:last-child {
+    border-bottom: none;
+}
+
+.index-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    padding-right: 1rem;
+    transition: all 0.3s;
+}
+
+.index-list a:hover {
+    color: var(--secondary-color);
+    padding-right: 1.5rem;
+    font-weight: 600;
+}
+
+.index-list a::before {
+    content: "→ ";
+    margin-left: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.index-list a:hover::before {
+    opacity: 1;
+}
+
 .dua-category {
     background: var(--white);
     margin-bottom: 2rem;
