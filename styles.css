@@ -449,6 +449,29 @@ body {
     font-size: 1.2rem;
 }
 
+.info-text {
+    background: #fff9e6;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border-right: 3px solid var(--accent-color);
+    font-style: italic;
+    color: #856404;
+}
+
+.asmaul-husna {
+    background: #f0f8ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    line-height: 2;
+}
+
+.asmaul-husna p {
+    margin: 0.8rem 0;
+    color: #333;
+}
+
 /* Guide Section */
 .guide-section {
     padding: 2rem 0;
