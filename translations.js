@@ -21,7 +21,8 @@ const translations = {
         common: {
             siteTitle: "উমরাহ ও হজ্জ",
             siteSubtitle: "Umrah & Hajj Guide",
-            forBangladeshiMuslims: "বাংলাদেশী মুসলমানদের জন্য"
+            forBangladeshiMuslims: "বাংলাদেশী মুসলমানদের জন্য",
+            educationalPurpose: "এই ওয়েবসাইটটি শিক্ষামূলক উদ্দেশ্যে তৈরি করা হয়েছে"
         },
         // Homepage
         home: {
@@ -60,7 +61,8 @@ const translations = {
         common: {
             siteTitle: "Umrah & Hajj",
             siteSubtitle: "Umrah & Hajj Guide",
-            forBangladeshiMuslims: "For Bangladeshi Muslims"
+            forBangladeshiMuslims: "For Bangladeshi Muslims",
+            educationalPurpose: "This website is created for educational purposes"
         },
         // Homepage
         home: {
@@ -99,7 +101,8 @@ const translations = {
         common: {
             siteTitle: "العمرة والحج",
             siteSubtitle: "دليل العمرة والحج",
-            forBangladeshiMuslims: "للمسلمين البنغلاديشيين"
+            forBangladeshiMuslims: "للمسلمين البنغلاديشيين",
+            educationalPurpose: "تم إنشاء هذا الموقع لأغراض تعليمية"
         },
         // Homepage
         home: {
