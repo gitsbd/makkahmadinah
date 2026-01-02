@@ -740,6 +740,46 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
+.flowchart-dua {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px dashed var(--border-color);
+}
+
+.flowchart-step.start .flowchart-dua,
+.flowchart-step.end .flowchart-dua {
+    border-top-color: rgba(255, 255, 255, 0.3);
+}
+
+.flowchart-dua .arabic-small {
+    font-family: 'Amiri', 'Arial', serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: center;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.flowchart-step.start .flowchart-dua .arabic-small,
+.flowchart-step.end .flowchart-dua .arabic-small {
+    color: var(--white);
+}
+
+.flowchart-dua .transliteration-small {
+    font-style: italic;
+    color: #666;
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 0.3rem 0;
+    line-height: 1.4;
+}
+
+.flowchart-step.start .flowchart-dua .transliteration-small,
+.flowchart-step.end .flowchart-dua .transliteration-small {
+    color: rgba(255, 255, 255, 0.85);
+}
+
 .flowchart-arrow {
     font-size: 2rem;
     color: var(--primary-color);
