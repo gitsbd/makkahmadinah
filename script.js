@@ -1,13 +1,24 @@
-// Language Toggle Function
-let currentLanguage = 'bn'; // Bengali is default
-
+// Language Toggle Function - Integrated with translations.js
 function toggleLanguage() {
-    // This is a placeholder for future language toggle functionality
-    // For now, it shows an alert
-    if (currentLanguage === 'bn') {
-        alert('English version coming soon! / ইংরেজি সংস্করণ শীঘ্রই আসছে!');
-    } else {
-        currentLanguage = 'bn';
+    const languages = ['bn', 'en', 'ar'];
+    const currentIndex = languages.indexOf(currentLang);
+    const nextIndex = (currentIndex + 1) % languages.length;
+    setLanguage(languages[nextIndex]);
+}
+
+// Language selector dropdown
+function showLanguageMenu() {
+    const menu = document.getElementById('language-menu');
+    if (menu) {
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+}
+
+function selectLanguage(lang) {
+    setLanguage(lang);
+    const menu = document.getElementById('language-menu');
+    if (menu) {
+        menu.style.display = 'none';
     }
 }
 

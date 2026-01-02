@@ -161,6 +161,10 @@ body {
     color: var(--white);
 }
 
+.lang-selector {
+    position: relative;
+}
+
 .lang-toggle {
     background-color: var(--accent-color);
     color: var(--primary-color);
@@ -170,10 +174,44 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: transform 0.2s;
+    min-width: 100px;
 }
 
 .lang-toggle:hover {
     transform: scale(1.05);
+}
+
+.lang-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    min-width: 120px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    z-index: 1000;
+}
+
+.lang-menu a {
+    display: block;
+    color: var(--text-color);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 0;
+}
+
+.lang-menu a:hover {
+    background-color: var(--light-green);
+    color: var(--primary-color);
+}
+
+.lang-menu a.active {
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 /* Hero Section */
