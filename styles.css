@@ -87,6 +87,7 @@ body {
     list-style: none;
     gap: 1.5rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .nav a {
@@ -101,6 +102,63 @@ body {
 .nav a:hover,
 .nav a.active {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown Menu Styles */
+.nav li {
+    position: relative;
+}
+
+.nav .dropdown {
+    position: relative;
+}
+
+.nav .dropdown > a::after {
+    content: ' ▼';
+    font-size: 0.7rem;
+    margin-right: 0.3rem;
+}
+
+.nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--white);
+    min-width: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    z-index: 1000;
+}
+
+.nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav .dropdown-menu li {
+    list-style: none;
+    margin: 0;
+}
+
+.nav .dropdown-menu a {
+    display: block;
+    color: var(--text-color);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 0;
+}
+
+.nav .dropdown-menu a:hover {
+    background-color: var(--light-green);
+    color: var(--primary-color);
+}
+
+.nav .dropdown-menu a.active {
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .lang-toggle {
@@ -844,6 +902,31 @@ body {
     
     .flowchart-desc {
         font-size: 0.85rem;
+    }
+}
+
+/* Mobile Dropdown Menu */
+@media (max-width: 768px) {
+    .nav .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.1);
+        margin-top: 0;
+    }
+    
+    .nav .dropdown:hover .dropdown-menu,
+    .nav .dropdown:focus-within .dropdown-menu {
+        display: block;
+    }
+    
+    .nav .dropdown-menu a {
+        color: var(--white);
+        padding: 0.6rem 1rem;
+    }
+    
+    .nav .dropdown-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
     }
 }
 
