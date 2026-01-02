@@ -124,8 +124,14 @@ const translations = {
     }
 };
 
-// Language detection and storage
+// Language detection and storage - Default to Bengali (bn)
 let currentLang = localStorage.getItem('language') || 'bn';
+
+// Ensure Bengali is the default if no language preference exists
+if (!localStorage.getItem('language')) {
+    currentLang = 'bn';
+    localStorage.setItem('language', 'bn');
+}
 
 // Function to get translation
 function t(key) {
