@@ -1,93 +1,95 @@
 import DuaCategory from '@/components/DuaCategory'
+import PageHeader from '@/components/PageHeader'
+import DuaItem from '@/components/DuaItem'
+import SectionWrapper from '@/components/SectionWrapper'
+import InfoText from '@/components/InfoText'
+import SurahItem from '@/components/SurahItem'
 
 export default function Duas() {
   return (
     <>
-      <section className="page-header">
-        <div className="container">
-          <h1>উমরাহ ও হজ্জ দোয়া</h1>
-          <p>উমরাহ ও হজ্জের জন্য প্রয়োজনীয় সমস্ত গুরুত্বপূর্ণ দোয়া ও সূরা</p>
-          <p className="section-count">মোট <strong>৮</strong>টি দোয়া বিভাগ</p>
-        </div>
-      </section>
+      <PageHeader 
+        title="উমরাহ ও হজ্জ দোয়া"
+        subtitle="উমরাহ ও হজ্জের জন্য প্রয়োজনীয় সমস্ত গুরুত্বপূর্ণ দোয়া ও সূরা"
+        sectionCount={8}
+      />
 
-      <section className="duas-section">
-        <div className="container">
+      <SectionWrapper className="duas-section">
           <DuaCategory id="ihram" title="ইহরামের দোয়া" defaultOpen={false} number={1}>
-            <div className="dua-item">
-              <h3>ইহরামের নিয়ত</h3>
-              <p className="arabic">لَبَّيْكَ اللَّهُمَّ عُمْرَةً</p>
-              <p className="transliteration">Labbaik Allahumma Umratan</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, আমি উমরাহর জন্য উপস্থিত</p>
-            </div>
-            <div className="dua-item">
-              <h3>তালবিয়া</h3>
-              <p className="arabic">لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ</p>
-              <p className="transliteration">Labbaik Allahumma Labbaik, Labbaik La Sharika Laka Labbaik, Innal Hamda Wan Ni'mata Laka Wal Mulk, La Sharika Lak</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, আমি উপস্থিত, আমি উপস্থিত। আপনার কোন শরীক নেই, আমি উপস্থিত। নিশ্চয়ই সকল প্রশংসা, নেয়ামত ও রাজত্ব আপনার, আপনার কোন শরীক নেই।</p>
-            </div>
+            <DuaItem 
+              title="ইহরামের নিয়ত"
+              arabic="لَبَّيْكَ اللَّهُمَّ عُمْرَةً"
+              transliteration="Labbaik Allahumma Umratan"
+              translation="হে আল্লাহ, আমি উমরাহর জন্য উপস্থিত"
+            />
+            <DuaItem 
+              title="তালবিয়া"
+              arabic="لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ"
+              transliteration="Labbaik Allahumma Labbaik, Labbaik La Sharika Laka Labbaik, Innal Hamda Wan Ni'mata Laka Wal Mulk, La Sharika Lak"
+              translation="হে আল্লাহ, আমি উপস্থিত, আমি উপস্থিত। আপনার কোন শরীক নেই, আমি উপস্থিত। নিশ্চয়ই সকল প্রশংসা, নেয়ামত ও রাজত্ব আপনার, আপনার কোন শরীক নেই।"
+            />
           </DuaCategory>
 
           <DuaCategory id="mosque-entry" title="মসজিদে প্রবেশের দোয়া" defaultOpen={false} number={2}>
-            <div className="dua-item">
-              <h3>মসজিদে প্রবেশ</h3>
-              <p className="arabic">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ</p>
-              <p className="transliteration">Allahumma Iftah Li Abwaba Rahmatik</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, আমার জন্য আপনার রহমতের দরজা খুলে দিন</p>
-            </div>
-            <div className="dua-item">
-              <h3>মসজিদ থেকে বের হওয়ার দোয়া</h3>
-              <p className="arabic">اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ</p>
-              <p className="transliteration">Allahumma Inni As'aluka Min Fadlik</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, আমি আপনার কাছে আপনার অনুগ্রহ প্রার্থনা করি</p>
-            </div>
+            <DuaItem 
+              title="মসজিদে প্রবেশ"
+              arabic="اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ"
+              transliteration="Allahumma Iftah Li Abwaba Rahmatik"
+              translation="হে আল্লাহ, আমার জন্য আপনার রহমতের দরজা খুলে দিন"
+            />
+            <DuaItem 
+              title="মসজিদ থেকে বের হওয়ার দোয়া"
+              arabic="اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ"
+              transliteration="Allahumma Inni As'aluka Min Fadlik"
+              translation="হে আল্লাহ, আমি আপনার কাছে আপনার অনুগ্রহ প্রার্থনা করি"
+            />
           </DuaCategory>
 
           <DuaCategory id="tawaf-duas" title="তাওয়াফের দোয়া" defaultOpen={false} number={3}>
-            <div className="dua-item">
-              <h3>তাওয়াফ শুরু</h3>
-              <p className="arabic">بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ</p>
-              <p className="transliteration">Bismillahi Wallahu Akbar</p>
-              <p className="translation"><strong>অনুবাদ:</strong> আল্লাহর নামে শুরু করছি এবং আল্লাহ সর্বশ্রেষ্ঠ</p>
-            </div>
-            <div className="dua-item">
-              <h3>তাওয়াফের সময়</h3>
-              <p className="arabic">سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ</p>
-              <p className="transliteration">Subhanallahi Walhamdulillahi Wa La Ilaha Illallahu Wallahu Akbar</p>
-              <p className="translation"><strong>অনুবাদ:</strong> আল্লাহ পবিত্র, সকল প্রশংসা আল্লাহর, আল্লাহ ছাড়া কোন ইলাহ নেই, আল্লাহ সর্বশ্রেষ্ঠ</p>
-            </div>
-            <div className="dua-item">
-              <h3>রুকনে ইয়ামানির কাছে</h3>
-              <p className="arabic">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</p>
-              <p className="transliteration">Rabbana Atina Fid Dunya Hasanatan Wa Fil Akhirati Hasanatan Wa Qina Azaban Nar</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আমাদের রব, আমাদের দুনিয়াতে কল্যাণ দিন এবং আখিরাতে কল্যাণ দিন এবং আমাদেরকে জাহান্নামের শাস্তি থেকে রক্ষা করুন</p>
-            </div>
+            <DuaItem 
+              title="তাওয়াফ শুরু"
+              arabic="بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ"
+              transliteration="Bismillahi Wallahu Akbar"
+              translation="আল্লাহর নামে শুরু করছি এবং আল্লাহ সর্বশ্রেষ্ঠ"
+            />
+            <DuaItem 
+              title="তাওয়াফের সময়"
+              arabic="سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ"
+              transliteration="Subhanallahi Walhamdulillahi Wa La Ilaha Illallahu Wallahu Akbar"
+              translation="আল্লাহ পবিত্র, সকল প্রশংসা আল্লাহর, আল্লাহ ছাড়া কোন ইলাহ নেই, আল্লাহ সর্বশ্রেষ্ঠ"
+            />
+            <DuaItem 
+              title="রুকনে ইয়ামানির কাছে"
+              arabic="رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ"
+              transliteration="Rabbana Atina Fid Dunya Hasanatan Wa Fil Akhirati Hasanatan Wa Qina Azaban Nar"
+              translation="হে আমাদের রব, আমাদের দুনিয়াতে কল্যাণ দিন এবং আখিরাতে কল্যাণ দিন এবং আমাদেরকে জাহান্নামের শাস্তি থেকে রক্ষা করুন"
+            />
           </DuaCategory>
 
           <DuaCategory id="zamzam" title="জমজম পান করার দোয়া" defaultOpen={false} number={4}>
-            <div className="dua-item">
-              <h3>জমজম পান</h3>
-              <p className="arabic">اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا وَاسِعًا وَشِفَاءً مِنْ كُلِّ دَاءٍ</p>
-              <p className="transliteration">Allahumma Inni As'aluka Ilman Nafian Wa Rizqan Wasian Wa Shifaan Min Kulli Dain</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, আমি আপনার কাছে উপকারী জ্ঞান, প্রশস্ত রিজিক এবং সকল রোগ থেকে আরোগ্য চাই</p>
-            </div>
+            <DuaItem 
+              title="জমজম পান"
+              arabic="اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا وَاسِعًا وَشِفَاءً مِنْ كُلِّ دَاءٍ"
+              transliteration="Allahumma Inni As'aluka Ilman Nafian Wa Rizqan Wasian Wa Shifaan Min Kulli Dain"
+              translation="হে আল্লাহ, আমি আপনার কাছে উপকারী জ্ঞান, প্রশস্ত রিজিক এবং সকল রোগ থেকে আরোগ্য চাই"
+            />
           </DuaCategory>
 
           <DuaCategory id="sai-duas" title="সাঈ (সাফা-মারওয়া) এর দোয়া" defaultOpen={false} number={5}>
-            <div className="dua-item">
-              <h3>সাফায় দোয়া</h3>
-              <p className="arabic">إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ فَمَنْ حَجَّ الْبَيْتَ أَوِ اعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا</p>
-              <p className="transliteration">Innas Safa Wal Marwata Min Sha'airillah</p>
-              <p className="translation"><strong>অনুবাদ:</strong> নিশ্চয়ই সাফা ও মারওয়া আল্লাহর নিদর্শনসমূহের অন্তর্গত</p>
-            </div>
-            <div className="dua-item">
+            <DuaItem 
+              title="সাফায় দোয়া"
+              arabic="إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ فَمَنْ حَجَّ الْبَيْتَ أَوِ اعْتَمَرَ فَلَا جُنَاحَ عَلَيْهِ أَنْ يَطَّوَّفَ بِهِمَا"
+              transliteration="Innas Safa Wal Marwata Min Sha'airillah"
+              translation="নিশ্চয়ই সাফা ও মারওয়া আল্লাহর নিদর্শনসমূহের অন্তর্গত"
+            />
+            <DuaItem>
               <h3>সাঈর সময়</h3>
-              <p className="info-text"><strong>প্রধান দোয়া:</strong></p>
+              <InfoText><strong>প্রধান দোয়া:</strong></InfoText>
               <p className="arabic">رَبِّ اغْفِرْ وَارْحَمْ وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ</p>
               <p className="transliteration">Rabbighfir Warham Wa Tajawaz Amma Ta'lamu Innaka Antal A'azzul Akram</p>
               <p className="translation"><strong>অনুবাদ:</strong> হে রব, ক্ষমা করুন, রহম করুন এবং আপনি যা জানেন তা থেকে অগ্রাহ্য করুন, নিশ্চয়ই আপনি সর্বশ্রেষ্ঠ ও সর্বাধিক সম্মানিত</p>
 
-              <p className="info-text mt-md"><strong>বিকল্প দোয়া সমূহ:</strong></p>
+              <InfoText className="mt-md"><strong>বিকল্প দোয়া সমূহ:</strong></InfoText>
               
               <h4>বিকল্প ১ (সংক্ষিপ্ত):</h4>
               <p className="arabic">رَبِّ اغْفِرْ وَارْحَمْ</p>
@@ -98,7 +100,12 @@ export default function Duas() {
               <p className="arabic">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</p>
               <p className="transliteration">Rabbana Atina Fid Dunya Hasanatan Wa Fil Akhirati Hasanatan Wa Qina Azaban Nar</p>
               <p className="translation"><strong>অনুবাদ:</strong> হে আমাদের রব, আমাদের দুনিয়াতে কল্যাণ দিন এবং আখিরাতে কল্যাণ দিন এবং আমাদেরকে জাহান্নামের শাস্তি থেকে রক্ষা করুন।</p>
-            </div>
+
+              <h4>বিকল্প ৩:</h4>
+              <p className="arabic">رَبِّ اغْفِرْ وَارْحَمْ إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ</p>
+              <p className="transliteration">Rabbighfir Warham, Innaka Antal A'azzul Akram</p>
+              <p className="translation"><strong>অনুবাদ:</strong> হে রব, ক্ষমা করুন এবং রহম করুন, নিশ্চয়ই আপনি সর্বশ্রেষ্ঠ ও সর্বাধিক সম্মানিত</p>
+            </DuaItem>
           </DuaCategory>
 
           <DuaCategory id="arafat" title="আরাফাতের দোয়া" defaultOpen={false} number={6}>
@@ -136,8 +143,7 @@ export default function Duas() {
               <p className="translation"><strong>অনুবাদ:</strong> বলুন, হে কাফিরগণ! (১) আমি তোমাদের ইবাদত করি না যা তোমরা ইবাদত কর। (২) এবং তোমরাও ইবাদতকারী নও যা আমি ইবাদত করি। (৩) এবং আমি ইবাদতকারী নই যা তোমরা ইবাদত করেছ। (৪) এবং তোমরাও ইবাদতকারী নও যা আমি ইবাদত করি। (৫) তোমাদের জন্য তোমাদের ধর্ম এবং আমার জন্য আমার ধর্ম। (৬)</p>
             </div>
           </DuaCategory>
-        </div>
-      </section>
+      </SectionWrapper>
     </>
   )
 }

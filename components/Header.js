@@ -44,11 +44,12 @@ export default function Header() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="/duas/" className={isActive('/duas/') || isActive('/daily-duas/') || isActive('/general-duas/') ? 'active' : ''}>
+              <Link href="/duas/" className={isActive('/duas/') || isActive('/daily-duas/') || isActive('/general-duas/') || isActive('/umrah-duas/') ? 'active' : ''}>
                 দোয়া ও সূরা
               </Link>
               <ul className="dropdown-menu">
                 <li><Link href="/duas/" className={isActive('/duas/') ? 'active' : ''}>উমরাহ ও হজ্জ দোয়া</Link></li>
+                <li><Link href="/umrah-duas/" className={isActive('/umrah-duas/') ? 'active' : ''}>উমরাহ দোয়া</Link></li>
                 <li><Link href="/daily-duas/" className={isActive('/daily-duas/') ? 'active' : ''}>দৈনিক দোয়া</Link></li>
                 <li><Link href="/general-duas/" className={isActive('/general-duas/') ? 'active' : ''}>সাধারণ দোয়া</Link></li>
               </ul>

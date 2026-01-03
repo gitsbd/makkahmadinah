@@ -2,6 +2,8 @@ import ExpandableSection from '@/components/ExpandableSection'
 import PageHeader from '@/components/PageHeader'
 import ImportantNote from '@/components/ImportantNote'
 import CompletionBox from '@/components/CompletionBox'
+import UmrahProcessSteps from '@/components/UmrahProcessSteps'
+import TripChecklist from '@/components/TripChecklist'
 
 export default function Umrah() {
   return (
@@ -96,11 +98,31 @@ export default function Umrah() {
           </div>
 
           <ExpandableSection 
+            id="trip-checklist" 
+            title="উমরাহ ভ্রমণের প্রস্তুতি চেকলিস্ট (Umrah Trip Checklist)" 
+            defaultOpen={false}
+            className="dua-category-wrapper"
+            number={0}
+          >
+            <TripChecklist />
+          </ExpandableSection>
+
+          <ExpandableSection 
+            id="umrah-process-detailed" 
+            title="উমরাহ সম্পাদনের সম্পূর্ণ প্রক্রিয়া (Step by Step Process)" 
+            defaultOpen={false}
+            className="dua-category-wrapper"
+            number={1}
+          >
+            <UmrahProcessSteps />
+          </ExpandableSection>
+
+          <ExpandableSection 
             id="umrah-intro" 
             title="উমরাহ কি?" 
             defaultOpen={false}
             className="day-section-expandable"
-           number={1}>
+           number={2}>
             <div className="dua-item">
               <p className="info-text">উমরাহ হল ইসলামের একটি গুরুত্বপূর্ণ ইবাদত যা মক্কায় কাবা শরীফ তাওয়াফ, সাফা-মারওয়ার মধ্যে সাঈ এবং চুল কাটার মাধ্যমে সম্পন্ন হয়। এটি হজ্জের মতো ফরজ নয়, তবে এটি একটি সুন্নত এবং খুবই ফজিলতপূর্ণ ইবাদত।</p>
               
@@ -124,7 +146,7 @@ export default function Umrah() {
             title="উমরাহর গুরুত্ব ও ফজিলত" 
             defaultOpen={false}
             className="day-section-expandable"
-           number={2}>
+           number={3}>
             <div className="dua-item">
               <h3>উমরাহর ফজিলত:</h3>
               <ul className="list-styled">
@@ -153,7 +175,7 @@ export default function Umrah() {
             title="উমরাহ কখন করা যায়?" 
             defaultOpen={false}
             className="day-section-expandable"
-           number={3}>
+           number={4}>
             <div className="dua-item">
               <p className="info-text"><strong>উমরাহ বছরের যেকোনো সময় করা যায়।</strong> হজ্জের মতো নির্দিষ্ট মাসে সীমাবদ্ধ নয়। তবে কিছু সময়ে উমরাহ পালনের বিশেষ ফজিলত রয়েছে।</p>
               
@@ -179,7 +201,7 @@ export default function Umrah() {
             title="উমরাহ কোথায় করতে হয়?" 
             defaultOpen={false}
             className="day-section-expandable"
-           number={4}>
+           number={5}>
             <div className="dua-item">
               <p className="info-text"><strong>উমরাহ শুধুমাত্র মক্কা শরীফে করা যায়।</strong> উমরাহর প্রধান কাজগুলো মক্কার বিভিন্ন স্থানে সম্পন্ন করতে হয়।</p>
               
@@ -200,7 +222,7 @@ export default function Umrah() {
             title="মিকাত (Meeqat)" 
             defaultOpen={false}
             className="day-section-expandable"
-           number={5}>
+           number={6}>
             <div className="dua-item">
               <p className="info-text">মিকাত হল সেই স্থান যেখান থেকে ইহরাম গ্রহণ করতে হয়। মক্কা থেকে বিভিন্ন দিক থেকে আসা লোকদের জন্য বিভিন্ন মিকাত নির্ধারিত:</p>
               
@@ -222,7 +244,7 @@ export default function Umrah() {
             title="উমরাহ কতবার করা যায়?" 
             defaultOpen={false}
             className="day-section-expandable"
-           number={6}>
+           number={7}>
             <div className="dua-item">
               <p className="info-text"><strong>উমরাহ যতবার ইচ্ছা ততবার করা যায়।</strong> এটি হজ্জের মতো জীবনে একবার সীমাবদ্ধ নয়।</p>
               
@@ -249,7 +271,7 @@ export default function Umrah() {
             title="কে কে উমরাহ করতে পারে?" 
             defaultOpen={false}
             className="day-section-expandable"
-           number={7}>
+           number={9}>
             <div className="dua-item">
               <h3>উমরাহ করার শর্তসমূহ:</h3>
               <ul className="list-styled">
@@ -286,7 +308,7 @@ export default function Umrah() {
             defaultOpen={false}
             className="day-section-expandable"
             icon="👕"
-           number={8}>
+           number={9}>
             <div className="process-step">
               <div className="step-content">
                 <h3>কি করতে হবে:</h3>
@@ -321,7 +343,7 @@ export default function Umrah() {
             defaultOpen={false}
             className="day-section-expandable"
             icon="🕋"
-           number={9}>
+           number={10}>
             <div className="process-step">
               <div className="step-content">
                 <h3>কি করতে হবে:</h3>

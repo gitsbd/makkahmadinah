@@ -1,18 +1,19 @@
 import DuaCategory from '@/components/DuaCategory'
+import PageHeader from '@/components/PageHeader'
+import DuaItem from '@/components/DuaItem'
+import SectionWrapper from '@/components/SectionWrapper'
+import InfoText from '@/components/InfoText'
 
 export default function DailyDuas() {
   return (
     <>
-      <section className="page-header">
-        <div className="container">
-          <h1>দৈনিক দোয়ার সংকলন</h1>
-          <p>প্রতিদিন পড়ার জন্য গুরুত্বপূর্ণ দোয়া ও সূরা</p>
-          <p className="section-count">মোট <strong>৫৪</strong>টি দোয়া ও সূরা</p>
-        </div>
-      </section>
+      <PageHeader 
+        title="দৈনিক দোয়ার সংকলন"
+        subtitle="প্রতিদিন পড়ার জন্য গুরুত্বপূর্ণ দোয়া ও সূরা"
+        sectionCount={54}
+      />
 
-      <section className="duas-section">
-        <div className="container">
+      <SectionWrapper className="duas-section">
           <DuaCategory id="start" title="শুরু" defaultOpen={false} number={1}>
             <div className="dua-item">
               <p className="arabic">أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
@@ -621,8 +622,7 @@ export default function DailyDuas() {
               </div>
             </div>
           </DuaCategory>
-        </div>
-      </section>
+      </SectionWrapper>
     </>
   )
 }

@@ -2,6 +2,7 @@ import ExpandableSection from '@/components/ExpandableSection'
 import PageHeader from '@/components/PageHeader'
 import ImportantNote from '@/components/ImportantNote'
 import CompletionBox from '@/components/CompletionBox'
+import TripChecklist from '@/components/TripChecklist'
 
 export default function Hajj() {
   return (
@@ -9,7 +10,7 @@ export default function Hajj() {
       <PageHeader 
         title="হজ্জ সম্পাদনের সম্পূর্ণ গাইড"
         subtitle="দিনে দিনে বিস্তারিত নির্দেশিকা"
-        sectionCount={10}
+        sectionCount={11}
       />
 
       <section className="process-section">
@@ -107,6 +108,16 @@ export default function Hajj() {
               </div>
             </div>
           </div>
+
+          <ExpandableSection 
+            id="trip-checklist" 
+            title="হজ্জ ভ্রমণের প্রস্তুতি চেকলিস্ট (Hajj Trip Checklist)" 
+            defaultOpen={false}
+            className="dua-category-wrapper"
+            number={0}
+          >
+            <TripChecklist />
+          </ExpandableSection>
 
           <ExpandableSection 
             id="hajj-importance" 

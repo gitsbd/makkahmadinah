@@ -1,18 +1,17 @@
 import GuideCategory from '@/components/GuideCategory'
+import PageHeader from '@/components/PageHeader'
+import SectionWrapper from '@/components/SectionWrapper'
 
 export default function Guide() {
   return (
     <>
-      <section className="page-header">
-        <div className="container">
-          <h1>সম্পূর্ণ গাইড</h1>
-          <p>উমরাহ ও হজ্জের জন্য প্রয়োজনীয় সমস্ত তথ্য</p>
-          <p className="section-count">মোট <strong>৮</strong>টি বিভাগ</p>
-        </div>
-      </section>
+      <PageHeader 
+        title="সম্পূর্ণ গাইড"
+        subtitle="উমরাহ ও হজ্জের জন্য প্রয়োজনীয় সমস্ত তথ্য"
+        sectionCount={8}
+      />
 
-      <section className="guide-section">
-        <div className="container">
+      <SectionWrapper className="guide-section">
           <GuideCategory id="preparation" title="প্রস্তুতি" defaultOpen={false} number={1}>
             <h3>যা যা প্রয়োজন:</h3>
             <ul>
@@ -144,8 +143,7 @@ export default function Guide() {
               <li><strong>গাইড:</strong> একজন অভিজ্ঞ গাইডের সাথে থাকুন</li>
             </ul>
           </GuideCategory>
-        </div>
-      </section>
+      </SectionWrapper>
     </>
   )
 }
