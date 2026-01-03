@@ -8,6 +8,13 @@ export default function Madinah() {
           <h1>মদিনার ইতিহাস (History of Madinah)</h1>
           <p>রাসূলুল্লাহ (সা.) এর শহর</p>
           <p className="section-count">মোট <strong>৮</strong>টি বিভাগ</p>
+          <div style={{ margin: '2rem 0', textAlign: 'center' }}>
+            <img 
+              src="/assets/images/madinaprophet.JPG" 
+              alt="মদিনা শরীফ - রাসূলুল্লাহ (সা.) এর শহর" 
+              style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.2)', maxHeight: '500px' }}
+            />
+          </div>
         </div>
       </section>
 

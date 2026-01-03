@@ -23,9 +23,9 @@ export default function Home() {
               <p>ধাপে ধাপে উমরাহ সম্পাদনের সম্পূর্ণ নির্দেশিকা</p>
               <div style={{ margin: '1rem 0', textAlign: 'center' }}>
                 <img 
-                  src="/assets/images/kaabaSharif.jpeg" 
-                  alt="কাবা শরীফ" 
-                  style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
+                  src="/assets/images/madinaprophet.JPG" 
+                  alt="মদিনা শরীফ" 
+                  style={{ width: '100%', height: '280px', objectFit: 'cover', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
                 />
               </div>
               <Link href="/umrah/" className="feature-link">শিখুন →</Link>
@@ -34,12 +34,26 @@ export default function Home() {
               <div className="feature-icon">🕌</div>
               <h3>হজ্জ গাইড</h3>
               <p>দিনে দিনে হজ্জ সম্পাদনের বিস্তারিত প্রক্রিয়া</p>
+              <div style={{ margin: '1rem 0', textAlign: 'center' }}>
+                <img 
+                  src="/assets/images/kaabaSharif.jpeg" 
+                  alt="কাবা শরীফ" 
+                  style={{ width: '100%', height: '280px', objectFit: 'cover', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
+                />
+              </div>
               <Link href="/hajj/" className="feature-link">শিখুন →</Link>
             </div>
             <div className="feature-card">
               <div className="feature-icon">📿</div>
               <h3>দোয়া ও সূরা</h3>
               <p>সমস্ত প্রয়োজনীয় দোয়া, সূরা এবং বাংলা অনুবাদ</p>
+              <div style={{ margin: '1rem 0', textAlign: 'center' }}>
+                <img 
+                  src="/assets/images/dua.jpeg" 
+                  alt="দোয়া ও সূরা" 
+                  style={{ width: '100%', height: '280px', objectFit: 'cover', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}
+                />
+              </div>
               <Link href="/duas/" className="feature-link">দেখুন →</Link>
             </div>
             <div className="feature-card">

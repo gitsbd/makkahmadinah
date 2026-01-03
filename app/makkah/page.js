@@ -8,6 +8,13 @@ export default function Makkah() {
           <h1>মক্কার ইতিহাস (History of Makkah)</h1>
           <p>পবিত্র কাবা শরীফের শহর</p>
           <p className="section-count">মোট <strong>৫</strong>টি বিভাগ</p>
+          <div style={{ margin: '2rem 0', textAlign: 'center' }}>
+            <img 
+              src="/assets/images/kaabaSharif.jpeg" 
+              alt="কাবা শরীফ" 
+              style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.2)', maxHeight: '500px' }}
+            />
+          </div>
         </div>
       </section>
 
