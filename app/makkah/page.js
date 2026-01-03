@@ -1,22 +1,17 @@
 import ExpandableSection from '@/components/ExpandableSection'
+import PageHeader from '@/components/PageHeader'
+import InfoBox from '@/components/InfoBox'
 
 export default function Makkah() {
   return (
     <>
-      <section className="page-header">
-        <div className="container">
-          <h1>মক্কার ইতিহাস (History of Makkah)</h1>
-          <p>পবিত্র কাবা শরীফের শহর</p>
-          <p className="section-count">মোট <strong>৫</strong>টি বিভাগ</p>
-          <div style={{ margin: '2rem 0', textAlign: 'center' }}>
-            <img 
-              src="/assets/images/kaabaSharif.jpeg" 
-              alt="কাবা শরীফ" 
-              style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.2)', maxHeight: '500px' }}
-            />
-          </div>
-        </div>
-      </section>
+      <PageHeader 
+        title="মক্কার ইতিহাস (History of Makkah)"
+        subtitle="পবিত্র কাবা শরীফের শহর"
+        sectionCount={5}
+        image="/assets/images/kaabaSharif.jpeg"
+        imageAlt="কাবা শরীফ"
+      />
 
       <section className="duas-section">
         <div className="container">
@@ -52,7 +47,7 @@ export default function Makkah() {
               
               <h3>কাবা শরীফের স্থাপত্য</h3>
               <p>কাবা শরীফ একটি ঘনক আকৃতির (cubical) ভবন, যার প্রতিটি বাহু প্রায় ১২ মিটার (৪০ ফুট) দীর্ঘ। এটি প্রায় ১৫ মিটার (৫০ ফুট) উঁচু। কাবা শরীফের চারটি কোণ রয়েছে:</p>
-              <ul style={{ marginRight: '2rem', lineHeight: '2' }}>
+              <ul className="list-styled">
                 <li><strong>হাজরে আসওয়াদ কোণ:</strong> দক্ষিণ-পূর্ব কোণ, যেখানে হাজরে আসওয়াদ অবস্থিত</li>
                 <li><strong>ইরাকি কোণ:</strong> উত্তর-পূর্ব কোণ</li>
                 <li><strong>শামি কোণ:</strong> উত্তর-পশ্চিম কোণ</li>
@@ -110,22 +105,20 @@ export default function Makkah() {
               <p>কুরআনে আল্লাহ তা'আলা বলেন: "আর আল্লাহর জন্য মানুষের উপর হজ্জ করা ফরজ, যারা সেখানে যাওয়ার সামর্থ্য রাখে।" (সূরা আল-ইমরান, আয়াত ৯৭)</p>
               <p>হাদীসে বর্ণিত আছে যে, কাবা শরীফ হল পৃথিবীর কেন্দ্র এবং এটি আল্লাহর আরশের নিচে অবস্থিত।</p>
               
-              <div className="info-text" style={{ backgroundColor: '#e8f5e9', padding: '1.5rem', borderRadius: '8px', margin: '1.5rem 0', borderRight: '4px solid var(--primary-color)' }}>
-                <h4 style={{ color: 'var(--primary-color)', marginTop: 0 }}>মসজিদুল হারামে নামাজের ফজিলত</h4>
-                <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '1rem' }}><strong>রাসূলুল্লাহ (সা.) বলেছেন:</strong> "মসজিদুল হারামে একবার নামাজ পড়লে এক লক্ষ (১,০০,০০০) বার নামাজের সওয়াব পাওয়া যায়।"</p>
-                <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: 0 }}>অর্থাৎ, মসজিদুল হারামে (মক্কায়) একবার ফরজ নামাজ পড়লে, অন্য সাধারণ মসজিদে এক লক্ষ বার নামাজ পড়ার সমান সওয়াব পাওয়া যায়।</p>
-              </div>
+              <InfoBox variant="green" title="মসজিদুল হারামে নামাজের ফজিলত">
+                <p><strong>রাসূলুল্লাহ (সা.) বলেছেন:</strong> "মসজিদুল হারামে একবার নামাজ পড়লে এক লক্ষ (১,০০,০০০) বার নামাজের সওয়াব পাওয়া যায়।"</p>
+                <p>অর্থাৎ, মসজিদুল হারামে (মক্কায়) একবার ফরজ নামাজ পড়লে, অন্য সাধারণ মসজিদে এক লক্ষ বার নামাজ পড়ার সমান সওয়াব পাওয়া যায়।</p>
+              </InfoBox>
               
-              <div className="info-text" style={{ backgroundColor: '#fff3e0', padding: '1.5rem', borderRadius: '8px', margin: '1.5rem 0', borderRight: '4px solid #ff9800' }}>
-                <h4 style={{ color: '#e65100', marginTop: 0 }}>তিনটি পবিত্র মসজিদে নামাজের সওয়াব</h4>
-                <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '0.5rem' }}>রাসূলুল্লাহ (সা.) বলেছেন: "তিনটি মসজিদ ছাড়া অন্য কোনো স্থানে (নামাজের জন্য) বিশেষভাবে সফর করা যায় না: মসজিদুল হারাম (মক্কা), আমার এই মসজিদ (মসজিদে নববী, মদিনা), এবং মসজিদুল আকসা (জেরুজালেম)।"</p>
-                <ul style={{ marginTop: '1rem', paddingRight: '1.5rem' }}>
-                  <li style={{ marginBottom: '0.8rem' }}><strong>মসজিদুল হারাম (মক্কা):</strong> একবার নামাজ = <strong>১,০০,০০০ বার</strong> নামাজের সওয়াব</li>
-                  <li style={{ marginBottom: '0.8rem' }}><strong>মসজিদে নববী (মদিনা):</strong> একবার নামাজ = <strong>১,০০০ বার</strong> নামাজের সওয়াব</li>
-                  <li style={{ marginBottom: '0.8rem' }}><strong>মসজিদুল আকসা (জেরুজালেম):</strong> একবার নামাজ = <strong>৫০০ বার</strong> নামাজের সওয়াব</li>
+              <InfoBox variant="orange" title="তিনটি পবিত্র মসজিদে নামাজের সওয়াব">
+                <p>রাসূলুল্লাহ (সা.) বলেছেন: "তিনটি মসজিদ ছাড়া অন্য কোনো স্থানে (নামাজের জন্য) বিশেষভাবে সফর করা যায় না: মসজিদুল হারাম (মক্কা), আমার এই মসজিদ (মসজিদে নববী, মদিনা), এবং মসজিদুল আকসা (জেরুজালেম)।"</p>
+                <ul className="list-spaced">
+                  <li><strong>মসজিদুল হারাম (মক্কা):</strong> একবার নামাজ = <strong>১,০০,০০০ বার</strong> নামাজের সওয়াব</li>
+                  <li><strong>মসজিদে নববী (মদিনা):</strong> একবার নামাজ = <strong>১,০০০ বার</strong> নামাজের সওয়াব</li>
+                  <li><strong>মসজিদুল আকসা (জেরুজালেম):</strong> একবার নামাজ = <strong>৫০০ বার</strong> নামাজের সওয়াব</li>
                 </ul>
-              </div>
-              <p style={{ marginTop: '1rem' }}><strong>মনে রাখবেন:</strong> এই সওয়াব শুধুমাত্র ফরজ নামাজের জন্য নয়, সুন্নত, নফল, তাহাজ্জুদসহ সব ধরনের নামাজের জন্য প্রযোজ্য। তবে ফরজ নামাজের সওয়াব সবচেয়ে বেশি।</p>
+              </InfoBox>
+              <p className="mt-sm"><strong>মনে রাখবেন:</strong> এই সওয়াব শুধুমাত্র ফরজ নামাজের জন্য নয়, সুন্নত, নফল, তাহাজ্জুদসহ সব ধরনের নামাজের জন্য প্রযোজ্য। তবে ফরজ নামাজের সওয়াব সবচেয়ে বেশি।</p>
               
               <h3>তাওয়াফ (কাবা শরীফ প্রদক্ষিণ)</h3>
               <p>তাওয়াফ হল কাবা শরীফের চারপাশে সাতবার প্রদক্ষিণ করা। এটি হজ্জ ও উমরাহর একটি গুরুত্বপূর্ণ অংশ। তাওয়াফ শুরু হয় হাজরে আসওয়াদ থেকে এবং ঘড়ির কাঁটার বিপরীত দিকে (বাম দিকে) করা হয়।</p>

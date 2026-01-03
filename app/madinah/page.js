@@ -1,22 +1,16 @@
 import ExpandableSection from '@/components/ExpandableSection'
+import PageHeader from '@/components/PageHeader'
 
 export default function Madinah() {
   return (
     <>
-      <section className="page-header">
-        <div className="container">
-          <h1>মদিনার ইতিহাস (History of Madinah)</h1>
-          <p>রাসূলুল্লাহ (সা.) এর শহর</p>
-          <p className="section-count">মোট <strong>৮</strong>টি বিভাগ</p>
-          <div style={{ margin: '2rem 0', textAlign: 'center' }}>
-            <img 
-              src="/assets/images/madinaprophet.JPG" 
-              alt="মদিনা শরীফ - রাসূলুল্লাহ (সা.) এর শহর" 
-              style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0,0,0,0.2)', maxHeight: '500px' }}
-            />
-          </div>
-        </div>
-      </section>
+      <PageHeader 
+        title="মদিনার ইতিহাস (History of Madinah)"
+        subtitle="রাসূলুল্লাহ (সা.) এর শহর"
+        sectionCount={8}
+        image="/assets/images/madinaprophet.JPG"
+        imageAlt="মদিনা শরীফ - রাসূলুল্লাহ (সা.) এর শহর"
+      />
 
       <section className="duas-section">
         <div className="container">
@@ -115,7 +109,7 @@ export default function Madinah() {
               <p>বর্তমানে মসজিদে নববী বিশ্বের অন্যতম বৃহত্তম মসজিদ। এটি প্রায় ৪,০০,০০০ বর্গমিটার এলাকা জুড়ে বিস্তৃত এবং একসাথে প্রায় ১০ লক্ষ মুসল্লি নামাজ পড়তে পারেন। মসজিদে আধুনিক শীততাপ নিয়ন্ত্রণ ব্যবস্থা, স্বয়ংক্রিয় ছাতা, আধুনিক আলোকসজ্জা এবং বিভিন্ন আধুনিক সুযোগ-সুবিধা রয়েছে।</p>
               
               <h3>মসজিদে নববীর বিশেষ স্থানসমূহ</h3>
-              <ul style={{ marginRight: '2rem', lineHeight: '2' }}>
+              <ul className="list-styled">
                 <li><strong>রওজা শরীফ:</strong> রাসূলুল্লাহ (সা.), হযরত আবু বকর (রা.) ও হযরত উমর (রা.) এর কবরস্থান</li>
                 <li><strong>রিয়াদ আল জান্নাহ:</strong> রওজা শরীফ ও মিম্বরের মধ্যবর্তী স্থান, যা জান্নাতের বাগান হিসেবে পরিচিত</li>
                 <li><strong>মিম্বর শরীফ:</strong> রাসূলুল্লাহ (সা.) এর মিম্বরের স্থান</li>

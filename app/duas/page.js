@@ -87,7 +87,7 @@ export default function Duas() {
               <p className="transliteration">Rabbighfir Warham Wa Tajawaz Amma Ta'lamu Innaka Antal A'azzul Akram</p>
               <p className="translation"><strong>অনুবাদ:</strong> হে রব, ক্ষমা করুন, রহম করুন এবং আপনি যা জানেন তা থেকে অগ্রাহ্য করুন, নিশ্চয়ই আপনি সর্বশ্রেষ্ঠ ও সর্বাধিক সম্মানিত</p>
 
-              <p className="info-text" style={{ marginTop: '1.5rem' }}><strong>বিকল্প দোয়া সমূহ:</strong></p>
+              <p className="info-text mt-md"><strong>বিকল্প দোয়া সমূহ:</strong></p>
               
               <h4>বিকল্প ১ (সংক্ষিপ্ত):</h4>
               <p className="arabic">رَبِّ اغْفِرْ وَارْحَمْ</p>

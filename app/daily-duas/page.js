@@ -433,7 +433,7 @@ export default function DailyDuas() {
 
           <DuaCategory id="zikr-peace" title="দিলের প্রশান্তির যিকিরসমূহ | আল্লাহর নৈকট্য লাভের যিকির" defaultOpen={false} number={47}>
             <div className="dua-item">
-              <ul style={{ marginRight: '2rem', lineHeight: '2' }}>
+              <ul className="list-styled">
                 <li>সুবহানাল্লাহ, আলহামদুলিল্লাহ, লা-ইলাহা ইল্লাল্লাহ, আল্লাহু আকবার</li>
                 <li>আস্তাগফিরুল্লাহ</li>
                 <li>লা হাওলা ওয়া লা কুওয়াতা ইল্লা বিল্লাহ</li>
@@ -492,7 +492,7 @@ export default function DailyDuas() {
 
           <DuaCategory id="zikr-collection" title="যিকিরসমূহ (Collection of Zikr)" defaultOpen={false} number={53}>
             <div className="dua-item">
-              <ul style={{ marginRight: '2rem', lineHeight: '2' }}>
+              <ul className="list-styled">
                 <li>আল্লাহু লা ইলাহা ইল্লা হুয়াল হাইয়্যুল ক্বাইয়্যুম।</li>
                 <li>আল্লাহু লা ইলাহা ইল্লা হুয়ার রাহমানুর রাহীম।</li>
                 <li>আল্লাহু লা ইলাহা ইল্লা আনতা সুবহানাকা ইন্নি কুনতু মিনাজ-জালিমীন।</li>
