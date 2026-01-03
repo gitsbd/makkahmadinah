@@ -1,8 +1,13 @@
+import { getImagePath } from '@/utils/imagePath'
+
 /**
  * Reusable PageHeader Component
  * Used for consistent page headers across all pages
  */
 export default function PageHeader({ title, subtitle, sectionCount, image, imageAlt }) {
+  // Use utility to handle basePath for GitHub Pages
+  const imageSrc = image ? getImagePath(image) : null
+  
   return (
     <section className="page-header">
       <div className="container">
@@ -11,10 +16,10 @@ export default function PageHeader({ title, subtitle, sectionCount, image, image
         {sectionCount && (
           <p className="section-count">মোট <strong>{sectionCount}</strong>টি বিভাগ</p>
         )}
-        {image && (
+        {imageSrc && (
           <div className="image-container-lg">
             <img 
-              src={image} 
+              src={imageSrc} 
               alt={imageAlt || title} 
               className="image-header"
             />
