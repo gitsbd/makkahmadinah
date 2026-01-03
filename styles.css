@@ -28,24 +28,41 @@ body {
 
 .arabic {
     font-family: 'Amiri', 'Arial', serif;
-    font-size: 1.3em;
-    line-height: 2;
+    font-size: 1.4em;
+    line-height: 2.2;
     text-align: right;
     color: var(--primary-color);
-    margin: 10px 0;
+    margin: 1.2rem 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(26, 71, 42, 0.05) 100%);
+    border-radius: 8px;
+    border-right: 3px solid var(--accent-color);
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .transliteration {
     font-style: italic;
-    color: #666;
-    margin: 5px 0;
-    font-size: 0.95em;
+    color: #555;
+    margin: 1rem 0;
+    font-size: 1em;
+    padding: 0.8rem 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-right: 2px solid #dee2e6;
+    font-weight: 500;
 }
 
 .translation {
-    color: #555;
-    margin: 10px 0;
-    padding-right: 15px;
+    color: #444;
+    margin: 1.2rem 0;
+    padding: 1rem 1.2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    line-height: 1.8;
+    font-size: 1.05em;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .container {
@@ -513,6 +530,12 @@ body {
     padding: 2rem 0;
 }
 
+.duas-section .container {
+    max-width: 1000px;
+}
+    padding: 2rem 0;
+}
+
 .dua-index {
     background: var(--white);
     margin-bottom: 2rem;
@@ -573,14 +596,16 @@ body {
 .dua-category {
     background: var(--white);
     margin-bottom: 1.5rem;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    transition: box-shadow 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(26, 71, 42, 0.1);
 }
 
 .dua-category:hover {
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }
 
 .dua-category h2 {
@@ -591,31 +616,52 @@ body {
     border-bottom: 3px solid var(--accent-color);
 }
 
-/* Dropdown Toggle Button Styles */
+/* Modern Dropdown Toggle Button Styles */
 .dropdown-toggle {
     width: 100%;
     text-align: right;
-    padding: 1.2rem 1.5rem;
-    background: linear-gradient(135deg, var(--light-green) 0%, #d4e6d5 100%);
-    border: 2px solid var(--accent-color);
-    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: none;
+    border-bottom: 2px solid #e9ecef;
     cursor: pointer;
     margin-bottom: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--primary-color);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.dropdown-toggle::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent-color) 0%, var(--primary-color) 100%);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.dropdown-toggle:hover::before,
+.dropdown-toggle.active::before {
+    transform: scaleY(1);
 }
 
 .dropdown-toggle:hover {
-    background: linear-gradient(135deg, #d4e6d5 0%, var(--light-green) 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    border-color: var(--primary-color);
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding-right: 2.5rem;
+}
+
+.dropdown-toggle.active {
+    background: linear-gradient(135deg, var(--light-green) 0%, #ffffff 100%);
+    border-bottom-color: var(--accent-color);
 }
 
 .dropdown-toggle h2 {
@@ -623,29 +669,43 @@ body {
     display: inline;
     border: none;
     padding: 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1.4;
+    flex: 1;
+    text-align: right;
 }
 
 .dropdown-toggle span {
-    font-size: 1rem;
-    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--accent-color);
     font-weight: bold;
+    margin-left: 1rem;
+    min-width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dropdown-toggle:hover span {
-    transform: scale(1.2);
+    transform: scale(1.15);
+    color: var(--primary-color);
 }
 
-/* General Dua Content Styles */
+.dropdown-toggle.active span {
+    transform: rotate(180deg);
+    color: var(--primary-color);
+}
+
+/* Modern General Dua Content Styles */
 .general-dua-content {
     margin-top: 0;
-    padding: 1.5rem;
-    background: var(--white);
-    border-radius: 0 0 8px 8px;
-    border-top: 2px solid var(--accent-color);
-    animation: slideDown 0.3s ease-out;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #ffffff 0%, #fafbfc 100%);
+    border-top: 1px solid #e9ecef;
+    animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes slideDown {
@@ -654,22 +714,43 @@ body {
         max-height: 0;
         padding-top: 0;
         padding-bottom: 0;
+        transform: translateY(-10px);
     }
     to {
         opacity: 1;
         max-height: 5000px;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        transform: translateY(0);
     }
 }
 
 .dua-item,
 .surah-item {
-    background: var(--light-green);
-    padding: 1.5rem;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: 12px;
     margin-bottom: 1.5rem;
     border-right: 4px solid var(--accent-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dua-item::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--accent-color) 0%, var(--primary-color) 100%);
+}
+
+.dua-item:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateX(-4px);
 }
 
 .dua-item h3,
@@ -680,13 +761,16 @@ body {
 }
 
 .info-text {
-    background: #fff9e6;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    border-right: 3px solid var(--accent-color);
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-right: 4px solid var(--accent-color);
     font-style: italic;
     color: #856404;
+    box-shadow: 0 2px 6px rgba(133, 100, 4, 0.1);
+    font-size: 1.05em;
+    line-height: 1.7;
 }
 
 .asmaul-husna {

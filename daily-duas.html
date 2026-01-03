@@ -75,7 +75,7 @@
                 </div>
 
                 <div class="dua-category" id="durud">
-                    <button class="dropdown-toggle" onclick="toggleDuaCategory('durud')">
+                    <button class="dropdown-toggle active" onclick="toggleDuaCategory('durud')">
                         <h2>দরুদ ইব্রাহিমি (Durud-e-Ibrahimi)</h2> <span>▲</span>
                     </button>
                     <div id="durud-content" class="general-dua-content" style="display: block;">
@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="dua-category" id="fatiha">
-                    <button class="dropdown-toggle" onclick="toggleDuaCategory('fatiha')">
+                    <button class="dropdown-toggle active" onclick="toggleDuaCategory('fatiha')">
                         <h2>সুরা আল-ফাতিহা</h2> <span>▲</span>
                     </button>
                     <div id="fatiha-content" class="general-dua-content" style="display: block;">
@@ -931,9 +931,11 @@
             if (content.style.display === 'none' || content.style.display === '') {
                 content.style.display = 'block';
                 arrow.textContent = '▲';
+                button.classList.add('active');
             } else {
                 content.style.display = 'none';
                 arrow.textContent = '▼';
+                button.classList.remove('active');
             }
         }
         
