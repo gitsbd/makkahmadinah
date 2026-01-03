@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  root: '.',
+  root: 'src/pages',
   server: {
     port: 3000,
     open: '/index.html',
