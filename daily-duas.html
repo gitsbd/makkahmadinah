@@ -925,14 +925,34 @@
     <script>
         function toggleDuaCategory(id) {
             const content = document.getElementById(id + '-content');
-            const button = content.previousElementSibling;
-            const arrow = button.querySelector('span');
+            if (!content) {
+                console.error('Content element not found for id:', id);
+                return;
+            }
             
-            if (content.style.display === 'none' || content.style.display === '') {
+            const button = content.previousElementSibling;
+            if (!button || !button.classList.contains('dropdown-toggle')) {
+                console.error('Button element not found for id:', id);
+                return;
+            }
+            
+            const arrow = button.querySelector('span');
+            if (!arrow) {
+                console.error('Arrow element not found for id:', id);
+                return;
+            }
+            
+            // Check if content is currently visible
+            const isVisible = content.style.display !== 'none' && 
+                             window.getComputedStyle(content).display !== 'none';
+            
+            if (!isVisible) {
+                // Expand
                 content.style.display = 'block';
                 arrow.textContent = '▲';
                 button.classList.add('active');
             } else {
+                // Collapse
                 content.style.display = 'none';
                 arrow.textContent = '▼';
                 button.classList.remove('active');
@@ -941,17 +961,50 @@
         
         function toggleGeneralDua(id) {
             const content = document.getElementById(id);
-            const button = content.previousElementSibling;
-            const arrow = button.querySelector('span');
+            if (!content) {
+                console.error('Content element not found for id:', id);
+                return;
+            }
             
-            if (content.style.display === 'none' || content.style.display === '') {
+            const button = content.previousElementSibling;
+            if (!button) {
+                console.error('Button element not found for id:', id);
+                return;
+            }
+            
+            const arrow = button.querySelector('span');
+            if (!arrow) {
+                console.error('Arrow element not found for id:', id);
+                return;
+            }
+            
+            // Check if content is currently visible
+            const isVisible = content.style.display !== 'none' && 
+                             window.getComputedStyle(content).display !== 'none';
+            
+            if (!isVisible) {
+                // Expand
                 content.style.display = 'block';
                 arrow.textContent = '▲';
             } else {
+                // Collapse
                 content.style.display = 'none';
                 arrow.textContent = '▼';
             }
         }
+        
+        // Initialize active states on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set active class for sections that are expanded by default
+            const expandedSections = ['start', 'durud', 'fatiha'];
+            expandedSections.forEach(function(id) {
+                const content = document.getElementById(id + '-content');
+                const button = document.querySelector(`button[onclick="toggleDuaCategory('${id}')"]`);
+                if (content && button && content.style.display === 'block') {
+                    button.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>

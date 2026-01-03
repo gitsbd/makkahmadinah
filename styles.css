@@ -738,6 +738,9 @@ body {
     padding: 2rem;
     background: linear-gradient(to bottom, #ffffff 0%, #fafbfc 100%);
     border-top: 1px solid #e9ecef;
+}
+
+.general-dua-content[style*="display: block"] {
     animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
