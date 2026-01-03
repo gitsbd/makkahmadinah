@@ -572,10 +572,15 @@ body {
 
 .dua-category {
     background: var(--white);
-    margin-bottom: 2rem;
-    padding: 2rem;
+    margin-bottom: 1.5rem;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.dua-category:hover {
+    box-shadow: var(--shadow-hover);
 }
 
 .dua-category h2 {
@@ -584,6 +589,78 @@ body {
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid var(--accent-color);
+}
+
+/* Dropdown Toggle Button Styles */
+.dropdown-toggle {
+    width: 100%;
+    text-align: right;
+    padding: 1.2rem 1.5rem;
+    background: linear-gradient(135deg, var(--light-green) 0%, #d4e6d5 100%);
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-toggle:hover {
+    background: linear-gradient(135deg, #d4e6d5 0%, var(--light-green) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.dropdown-toggle h2 {
+    margin: 0;
+    display: inline;
+    border: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.dropdown-toggle span {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.dropdown-toggle:hover span {
+    transform: scale(1.2);
+}
+
+/* General Dua Content Styles */
+.general-dua-content {
+    margin-top: 0;
+    padding: 1.5rem;
+    background: var(--white);
+    border-radius: 0 0 8px 8px;
+    border-top: 2px solid var(--accent-color);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 5000px;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 }
 
 .dua-item,
