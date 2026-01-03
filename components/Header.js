@@ -2,9 +2,12 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 export default function Header() {
   const pathname = usePathname()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState(null)
   
   // Normalize pathname for comparison (handle trailing slashes)
   const normalizePath = (path) => {
@@ -19,69 +22,113 @@ export default function Header() {
     return normalizePath(pathname) === normalizePath(href)
   }
 
+  const toggleDropdown = (dropdownName) => {
+    setOpenDropdown(openDropdown === dropdownName ? null : dropdownName)
+  }
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false)
+    setOpenDropdown(null)
+  }
+
   return (
-    <header className="header">
-      <div className="container">
-        <div className="logo">
-          <h1>🕋 উমরাহ ও হজ্জ</h1>
-          <p>Umrah & Hajj Guide</p>
-        </div>
-        <nav className="nav">
+    <>
+      {mobileMenuOpen && (
+        <div 
+          className="mobile-menu-overlay"
+          onClick={() => setMobileMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+      <header className={`header ${mobileMenuOpen ? 'menu-open' : ''}`}>
+        <div className="container">
+          <div className="logo">
+            <h1>🕋 উমরাহ ও হজ্জ</h1>
+            <p>Umrah & Hajj Guide</p>
+          </div>
+          <button 
+            className="mobile-menu-toggle"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav className={`nav ${mobileMenuOpen ? 'nav-open' : ''}`}>
           <ul>
             <li>
-              <Link href="/" className={isActive('/') ? 'active' : ''}>
+              <Link href="/" className={isActive('/') ? 'active' : ''} onClick={closeMobileMenu}>
                 হোম
               </Link>
             </li>
             <li className="dropdown">
-              <Link href="/umrah/" className={isActive('/umrah/') || isActive('/guide/') || isActive('/hajj/') ? 'active' : ''}>
+              <button 
+                className="dropdown-toggle-btn"
+                onClick={() => toggleDropdown('pilgrimage')}
+                aria-expanded={openDropdown === 'pilgrimage'}
+              >
                 তীর্থযাত্রা পরিষেবা
-              </Link>
-              <ul className="dropdown-menu">
-                <li><Link href="/guide/" className={isActive('/guide/') ? 'active' : ''}>গাইড</Link></li>
-                <li><Link href="/umrah/" className={isActive('/umrah/') ? 'active' : ''}>উমরাহ</Link></li>
-                <li><Link href="/hajj/" className={isActive('/hajj/') ? 'active' : ''}>হজ্জ</Link></li>
+              </button>
+              <ul className={`dropdown-menu ${openDropdown === 'pilgrimage' ? 'dropdown-open' : ''}`}>
+                <li><Link href="/guide/" className={isActive('/guide/') ? 'active' : ''} onClick={closeMobileMenu}>গাইড</Link></li>
+                <li><Link href="/umrah/" className={isActive('/umrah/') ? 'active' : ''} onClick={closeMobileMenu}>উমরাহ</Link></li>
+                <li><Link href="/hajj/" className={isActive('/hajj/') ? 'active' : ''} onClick={closeMobileMenu}>হজ্জ</Link></li>
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="/duas/" className={isActive('/duas/') || isActive('/daily-duas/') || isActive('/general-duas/') || isActive('/umrah-duas/') ? 'active' : ''}>
+              <button 
+                className="dropdown-toggle-btn"
+                onClick={() => toggleDropdown('duas')}
+                aria-expanded={openDropdown === 'duas'}
+              >
                 দোয়া ও সূরা
-              </Link>
-              <ul className="dropdown-menu">
-                <li><Link href="/duas/" className={isActive('/duas/') ? 'active' : ''}>উমরাহ ও হজ্জ দোয়া</Link></li>
-                <li><Link href="/umrah-duas/" className={isActive('/umrah-duas/') ? 'active' : ''}>উমরাহ দোয়া</Link></li>
-                <li><Link href="/daily-duas/" className={isActive('/daily-duas/') ? 'active' : ''}>দৈনিক দোয়া</Link></li>
-                <li><Link href="/general-duas/" className={isActive('/general-duas/') ? 'active' : ''}>সাধারণ দোয়া</Link></li>
+              </button>
+              <ul className={`dropdown-menu ${openDropdown === 'duas' ? 'dropdown-open' : ''}`}>
+                <li><Link href="/duas/" className={isActive('/duas/') ? 'active' : ''} onClick={closeMobileMenu}>উমরাহ ও হজ্জ দোয়া</Link></li>
+                <li><Link href="/umrah-duas/" className={isActive('/umrah-duas/') ? 'active' : ''} onClick={closeMobileMenu}>উমরাহ দোয়া</Link></li>
+                <li><Link href="/daily-duas/" className={isActive('/daily-duas/') ? 'active' : ''} onClick={closeMobileMenu}>দৈনিক দোয়া</Link></li>
+                <li><Link href="/general-duas/" className={isActive('/general-duas/') ? 'active' : ''} onClick={closeMobileMenu}>সাধারণ দোয়া</Link></li>
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="/makkah/" className={isActive('/makkah/') || isActive('/madinah/') || isActive('/makkah-places/') || isActive('/madinah-places/') ? 'active' : ''}>
+              <button 
+                className="dropdown-toggle-btn"
+                onClick={() => toggleDropdown('history')}
+                aria-expanded={openDropdown === 'history'}
+              >
                 ইতিহাস
-              </Link>
-              <ul className="dropdown-menu">
-                <li><Link href="/makkah/" className={isActive('/makkah/') ? 'active' : ''}>মক্কা (Makkah)</Link></li>
-                <li><Link href="/madinah/" className={isActive('/madinah/') ? 'active' : ''}>মদিনা (Madinah)</Link></li>
-                <li><Link href="/makkah-places/" className={isActive('/makkah-places/') ? 'active' : ''}>মক্কা দর্শনীয় স্থান</Link></li>
-                <li><Link href="/madinah-places/" className={isActive('/madinah-places/') ? 'active' : ''}>মদিনা দর্শনীয় স্থান</Link></li>
+              </button>
+              <ul className={`dropdown-menu ${openDropdown === 'history' ? 'dropdown-open' : ''}`}>
+                <li><Link href="/makkah/" className={isActive('/makkah/') ? 'active' : ''} onClick={closeMobileMenu}>মক্কা (Makkah)</Link></li>
+                <li><Link href="/madinah/" className={isActive('/madinah/') ? 'active' : ''} onClick={closeMobileMenu}>মদিনা (Madinah)</Link></li>
+                <li><Link href="/makkah-places/" className={isActive('/makkah-places/') ? 'active' : ''} onClick={closeMobileMenu}>মক্কা দর্শনীয় স্থান</Link></li>
+                <li><Link href="/madinah-places/" className={isActive('/madinah-places/') ? 'active' : ''} onClick={closeMobileMenu}>মদিনা দর্শনীয় স্থান</Link></li>
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="/quran/" className={isActive('/quran/') || isActive('/bukhari/') || isActive('/muslim/') || isActive('/prophets/') || isActive('/akhlaq/') || isActive('/ibadat/') ? 'active' : ''}>
+              <button 
+                className="dropdown-toggle-btn"
+                onClick={() => toggleDropdown('library')}
+                aria-expanded={openDropdown === 'library'}
+              >
                 ইসলামী লাইব্রেরি
-              </Link>
-              <ul className="dropdown-menu">
-                <li><Link href="/quran/" className={isActive('/quran/') ? 'active' : ''}>কুরআন (Qur'an)</Link></li>
-                <li><Link href="/bukhari/" className={isActive('/bukhari/') ? 'active' : ''}>সহীহ বুখারী (Sahih Bukhari)</Link></li>
-                <li><Link href="/muslim/" className={isActive('/muslim/') ? 'active' : ''}>মুসলিম শরীফ (সহীহ মুসলিম)</Link></li>
-                <li><Link href="/prophets/" className={isActive('/prophets/') ? 'active' : ''}>নবী-রাসূলদের নামসমূহ</Link></li>
-                <li><Link href="/akhlaq/" className={isActive('/akhlaq/') ? 'active' : ''}>আখলাক ও আদব</Link></li>
-                <li><Link href="/ibadat/" className={isActive('/ibadat/') ? 'active' : ''}>ইবাদত</Link></li>
+              </button>
+              <ul className={`dropdown-menu ${openDropdown === 'library' ? 'dropdown-open' : ''}`}>
+                <li><Link href="/quran/" className={isActive('/quran/') ? 'active' : ''} onClick={closeMobileMenu}>কুরআন (Qur'an)</Link></li>
+                <li><Link href="/bukhari/" className={isActive('/bukhari/') ? 'active' : ''} onClick={closeMobileMenu}>সহীহ বুখারী (Sahih Bukhari)</Link></li>
+                <li><Link href="/muslim/" className={isActive('/muslim/') ? 'active' : ''} onClick={closeMobileMenu}>মুসলিম শরীফ (সহীহ মুসলিম)</Link></li>
+                <li><Link href="/prophets/" className={isActive('/prophets/') ? 'active' : ''} onClick={closeMobileMenu}>নবী-রাসূলদের নামসমূহ</Link></li>
+                <li><Link href="/akhlaq/" className={isActive('/akhlaq/') ? 'active' : ''} onClick={closeMobileMenu}>আখলাক ও আদব</Link></li>
+                <li><Link href="/ibadat/" className={isActive('/ibadat/') ? 'active' : ''} onClick={closeMobileMenu}>ইবাদত</Link></li>
               </ul>
             </li>
           </ul>
-        </nav>
-      </div>
-    </header>
+          </nav>
+        </div>
+      </header>
+    </>
   )
 }
 

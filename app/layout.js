@@ -7,6 +7,12 @@ export const metadata = {
   description: 'বাংলাদেশী মুসলমানদের জন্য সম্পূর্ণ উমরাহ ও হজ্জ গাইড',
 }
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="bn" dir="rtl">
