@@ -18,34 +18,56 @@
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="/src/pages/index.html">হোম</a></li>
+                    <li><a href="/src/pages/src/pages/index.html">হোম</a></li>
                     <li class="dropdown">
-                        <a href="/src/pages/umrah.html">তীর্থযাত্রা পরিষেবা</a>
+                        <a href="/src/pages/src/pages/umrah.html">তীর্থযাত্রা পরিষেবা</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/src/pages/guide.html">গাইড</a></li>
-                            <li><a href="/src/pages/umrah.html">উমরাহ</a></li>
-                            <li><a href="/src/pages/hajj.html">হজ্জ</a></li>
+                            <li><a href="/src/pages/src/pages/guide.html">গাইড</a></li>
+                            <li><a href="/src/pages/src/pages/umrah.html">উমরাহ</a></li>
+                            <li><a href="/src/pages/src/pages/hajj.html">হজ্জ</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="/src/pages/duas.html">দোয়া ও সূরা</a>
+                        <a href="/src/pages/src/pages/duas.html">দোয়া ও সূরা</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/src/pages/duas.html">উমরাহ ও হজ্জ দোয়া</a></li>
-                            <li><a href="/src/pages/daily-duas.html">দৈনিক দোয়া</a></li>
-                            <li><a href="/src/pages/general-duas.html" class="active">সাধারণ দোয়া</a></li>
+                            <li><a href="/src/pages/src/pages/duas.html">উমরাহ ও হজ্জ দোয়া</a></li>
+                            <li><a href="/src/pages/src/pages/daily-duas.html">দৈনিক দোয়া</a></li>
+                            <li><a href="/src/pages/src/pages/general-duas.html" class="active">সাধারণ দোয়া</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="/src/pages/makkah.html">ইতিহাস</a>
+                        <a href="/src/pages/src/pages/makkah.html">ইতিহাস</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/src/pages/makkah.html">মক্কা (Makkah)</a></li>
-                            <li><a href="/src/pages/madinah.html">মদিনা (Madinah)</a></li>
-                            <li><a href="/src/pages/makkah-places.html">মক্কা দর্শনীয় স্থান</a></li>
-                            <li><a href="/src/pages/madinah-places.html">মদিনা দর্শনীয় স্থান</a></li>
+                            <li><a href="/src/pages/src/pages/makkah.html">মক্কা (Makkah)</a></li>
+                            <li><a href="/src/pages/src/pages/madinah.html">মদিনা (Madinah)</a></li>
+                            <li><a href="/src/pages/src/pages/makkah-places.html">মক্কা দর্শনীয় স্থান</a></li>
+                            <li><a href="/src/pages/src/pages/madinah-places.html">মদিনা দর্শনীয় স্থান</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
+            <button class="lang-toggle" onclick="toggleLanguage()">English</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>সাধারণ দোয়া (General Duas)</h1>
+                <p>প্রতিদিনের জীবনে ব্যবহার করা হয় এমন গুরুত্বপূর্ণ দোয়া</p>
+            </div>
+        </section>
+
+        <section class="duas-section">
+            <div class="container">
+                <div class="dua-category" id="general-duas">
+                    <h2>সাধারণ দোয়া</h2>
+                    <div class="dua-item">
+                        <p class="info-text">নিচের দোয়াগুলো প্রতিদিনের জীবনে ব্যবহার করা হয়। প্রতিটি দোয়ার জন্য নিচের তালিকা থেকে নির্বাচন করুন:</p>
+                        <div style="margin-top: 1rem;">
+                            <button class="dropdown-toggle" onclick="toggleGeneralDua('morning')" style="width: 100%; text-align: right; padding: 1rem; background: var(--light-green); border: 1px solid var(--border-color); border-radius: 5px; cursor: pointer; margin-bottom: 0.5rem; font-size: 1.1rem; font-weight: 600;">
+                                সকালের দোয়া <span style="float: left;">▼</span>
+                            </button>
                             <div id="morning" class="general-dua-content" style="display: none; margin-bottom: 1rem; padding: 1rem; background: var(--white); border-radius: 5px; border: 1px solid var(--border-color);">
                                 <h3>সকালে ঘুম থেকে উঠে</h3>
                                 <p class="arabic">اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ</p>
