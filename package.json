@@ -2,17 +2,14 @@
   "name": "makkahmadinah",
   "version": "1.0.0",
   "description": "Umrah & Hajj Guide Website for Bangladeshi Muslims",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js",
-    "build": "vite build",
-    "preview": "vite preview",
-    "serve": "node server.js",
-    "format": "prettier --write \"src/**/*.{js,html,css}\"",
-    "format:check": "prettier --check \"src/**/*.{js,html,css}\"",
-    "lint": "echo 'Linting not configured yet'",
-    "clean": "rm -rf dist .vite"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md}\""
   },
   "keywords": [
     "umrah",
@@ -21,7 +18,8 @@
     "bangladesh",
     "pilgrimage",
     "religious-guide",
-    "multilingual"
+    "nextjs",
+    "react"
   ],
   "author": "",
   "license": "MIT",
@@ -33,11 +31,16 @@
     "url": "https://github.com/gitsbd/makkahmadinah/issues"
   },
   "homepage": "https://gitsbd.github.io/makkahmadinah/",
-  "devDependencies": {
-    "vite": "^5.0.0",
-    "prettier": "^3.0.0"
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=9.0.0"

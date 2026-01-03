@@ -23,6 +23,8 @@ pnpm-lock.yaml
 # Build output
 dist/
 .vite/
+.next/
+out/
 
 # Logs
 *.log
