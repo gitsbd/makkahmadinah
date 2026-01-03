@@ -18,6 +18,11 @@ export default defineConfig({
       '@assets': resolve(__dirname, 'public/assets')
     }
   },
+  publicDir: resolve(__dirname, 'public'),
+  // Ensure Vite resolves modules correctly from src/pages root
+  optimizeDeps: {
+    include: ['../locales/translations.js', '../scripts/script.js']
+  },
   build: {
     outDir: resolve(__dirname, 'dist'),
     assetsDir: 'assets',
