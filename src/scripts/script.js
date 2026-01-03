@@ -1,26 +1,5 @@
-// Language Toggle Function - Integrated with translations.js
-function toggleLanguage() {
-    const languages = ['bn', 'en', 'ar'];
-    const currentIndex = languages.indexOf(currentLang);
-    const nextIndex = (currentIndex + 1) % languages.length;
-    setLanguage(languages[nextIndex]);
-}
-
-// Language selector dropdown
-function showLanguageMenu() {
-    const menu = document.getElementById('language-menu');
-    if (menu) {
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    }
-}
-
-function selectLanguage(lang) {
-    setLanguage(lang);
-    const menu = document.getElementById('language-menu');
-    if (menu) {
-        menu.style.display = 'none';
-    }
-}
+// Main JavaScript for Umrah & Hajj Guide Website
+// Bangla language only
 
 // Smooth Scroll for Anchor Links
 document.addEventListener('DOMContentLoaded', function() {
@@ -46,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     navLinks.forEach(link => {
         const linkPage = link.getAttribute('href');
-        if (linkPage === currentPage) {
+        if (linkPage === currentPage || (currentPage === '' && linkPage === '/index.html')) {
             link.classList.add('active');
         } else {
             link.classList.remove('active');
@@ -83,7 +62,7 @@ function printPage() {
     window.print();
 }
 
-// Share Functionality (for future implementation)
+// Share Functionality
 function sharePage() {
     if (navigator.share) {
         navigator.share({
@@ -99,3 +78,66 @@ function sharePage() {
     }
 }
 
+// Toggle functions for dropdown menus
+function toggleGeneralDua(id) {
+    const content = document.getElementById(id);
+    const button = content.previousElementSibling;
+    const arrow = button.querySelector('span');
+    
+    if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        arrow.textContent = '▲';
+    } else {
+        content.style.display = 'none';
+        arrow.textContent = '▼';
+    }
+}
+
+function toggleDuaCategory(id) {
+    const content = document.getElementById(id + '-content');
+    if (!content) {
+        console.error('Content element not found for id:', id);
+        return;
+    }
+    
+    const button = content.previousElementSibling;
+    if (!button || !button.classList.contains('dropdown-toggle')) {
+        console.error('Button element not found for id:', id);
+        return;
+    }
+    
+    const arrow = button.querySelector('span');
+    if (!arrow) {
+        console.error('Arrow element not found for id:', id);
+        return;
+    }
+    
+    // Check if content is currently visible
+    const isVisible = content.style.display !== 'none' && 
+                     window.getComputedStyle(content).display !== 'none';
+    
+    if (!isVisible) {
+        // Expand
+        content.style.display = 'block';
+        arrow.textContent = '▲';
+        button.classList.add('active');
+    } else {
+        // Collapse
+        content.style.display = 'none';
+        arrow.textContent = '▼';
+        button.classList.remove('active');
+    }
+}
+
+// Initialize active states on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Set active class for sections that are expanded by default
+    const expandedSections = ['start', 'durud', 'fatiha'];
+    expandedSections.forEach(function(id) {
+        const content = document.getElementById(id + '-content');
+        const button = document.querySelector(`button[onclick="toggleDuaCategory('${id}')"]`);
+        if (content && button && content.style.display === 'block') {
+            button.classList.add('active');
+        }
+    });
+});

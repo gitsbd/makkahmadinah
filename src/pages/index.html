@@ -1,71 +1,62 @@
 <!DOCTYPE html>
-<html lang="bn" dir="rtl" data-default-lang="bn">
+<html lang="bn" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="common.siteTitle">উমরাহ ও হজ্জ - Umrah & Hajj Guide</title>
+    <title>উমরাহ ও হজ্জ - Umrah & Hajj Guide</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
-    <script type="module" src="@locales/translations.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1 data-i18n="common.siteTitle">🕋 উমরাহ ও হজ্জ</h1>
-                <p data-i18n="common.siteSubtitle">Umrah & Hajj Guide</p>
+                <h1>🕋 উমরাহ ও হজ্জ</h1>
+                <p>Umrah & Hajj Guide</p>
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="/index.html" class="active" data-i18n="nav.home">হোম</a></li>
+                    <li><a href="/index.html" class="active">হোম</a></li>
                     <li class="dropdown">
-                        <a href="/umrah.html" data-i18n="nav.pilgrimageServices">তীর্থযাত্রা পরিষেবা</a>
+                        <a href="/umrah.html">তীর্থযাত্রা পরিষেবা</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/guide.html" data-i18n="nav.guide">গাইড</a></li>
-                            <li><a href="/umrah.html" data-i18n="nav.umrah">উমরাহ</a></li>
-                            <li><a href="/hajj.html" data-i18n="nav.hajj">হজ্জ</a></li>
+                            <li><a href="/guide.html">গাইড</a></li>
+                            <li><a href="/umrah.html">উমরাহ</a></li>
+                            <li><a href="/hajj.html">হজ্জ</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="/duas.html" data-i18n="nav.duas">দোয়া ও সূরা</a>
+                        <a href="/duas.html">দোয়া ও সূরা</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/duas.html" data-i18n="nav.importantDuas">উমরাহ ও হজ্জ দোয়া</a></li>
-                            <li><a href="/daily-duas.html" data-i18n="nav.dailyDuas">দৈনিক দোয়া</a></li>
-                            <li><a href="/general-duas.html" data-i18n="nav.generalDuas">সাধারণ দোয়া</a></li>
+                            <li><a href="/duas.html">উমরাহ ও হজ্জ দোয়া</a></li>
+                            <li><a href="/daily-duas.html">দৈনিক দোয়া</a></li>
+                            <li><a href="/general-duas.html">সাধারণ দোয়া</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="/makkah.html" data-i18n="nav.history">ইতিহাস</a>
+                        <a href="/makkah.html">ইতিহাস</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/makkah.html" data-i18n="nav.makkah">মক্কা (Makkah)</a></li>
-                            <li><a href="/madinah.html" data-i18n="nav.madinah">মদিনা (Madinah)</a></li>
+                            <li><a href="/makkah.html">মক্কা (Makkah)</a></li>
+                            <li><a href="/madinah.html">মদিনা (Madinah)</a></li>
                             <li><a href="/makkah-places.html">মক্কা দর্শনীয় স্থান</a></li>
                             <li><a href="/madinah-places.html">মদিনা দর্শনীয় স্থান</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
-            <div class="lang-selector">
-                <button class="lang-toggle" onclick="showLanguageMenu()" id="lang-button">বাংলা</button>
-                <div class="lang-menu" id="language-menu">
-                    <a href="#" onclick="selectLanguage('bn'); return false;">বাংলা</a>
-                    <a href="#" onclick="selectLanguage('en'); return false;">English</a>
-                    <a href="#" onclick="selectLanguage('ar'); return false;">العربية</a>
-                </div>
-            </div>
         </div>
     </header>
 
     <main class="main-content">
         <section class="hero">
             <div class="container">
-                <h1 class="hero-title" data-i18n="home.title">বাংলাদেশী মুসলমানদের জন্য উমরাহ ও হজ্জ গাইড</h1>
-                <p class="hero-subtitle" data-i18n="home.subtitle">সম্পূর্ণ প্রক্রিয়া, দোয়া ও সূরা সহ বিস্তারিত নির্দেশিকা</p>
+                <h1 class="hero-title">বাংলাদেশী মুসলমানদের জন্য উমরাহ ও হজ্জ গাইড</h1>
+                <p class="hero-subtitle">সম্পূর্ণ প্রক্রিয়া, দোয়া ও সূরা সহ বিস্তারিত নির্দেশিকা</p>
                 <div class="hero-buttons">
-                    <a href="/umrah.html" class="btn btn-primary" data-i18n="home.getStarted">উমরাহ শুরু করুন</a>
-                    <a href="/hajj.html" class="btn btn-secondary" data-i18n="home.getStarted">হজ্জ শুরু করুন</a>
+                    <a href="/umrah.html" class="btn btn-primary">উমরাহ শুরু করুন</a>
+                    <a href="/hajj.html" class="btn btn-secondary">হজ্জ শুরু করুন</a>
                 </div>
             </div>
         </section>
@@ -75,36 +66,36 @@
                 <div class="feature-grid">
                     <div class="feature-card">
                         <div class="feature-icon">🕋</div>
-                        <h3 data-i18n="home.umrahGuide">উমরাহ গাইড</h3>
-                        <p data-i18n="home.umrahDesc">ধাপে ধাপে উমরাহ সম্পাদনের সম্পূর্ণ নির্দেশিকা</p>
+                        <h3>উমরাহ গাইড</h3>
+                        <p>ধাপে ধাপে উমরাহ সম্পাদনের সম্পূর্ণ নির্দেশিকা</p>
                         <div style="margin: 1rem 0; text-align: center;">
                             <img src="../../public/assets/images/kaabaSharif.jpeg" alt="কাবা শরীফ" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                         </div>
-                        <a href="/umrah.html" class="feature-link" data-i18n="home.learnMore">শিখুন →</a>
+                        <a href="/umrah.html" class="feature-link">শিখুন →</a>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🕌</div>
-                        <h3 data-i18n="home.hajjGuide">হজ্জ গাইড</h3>
-                        <p data-i18n="home.hajjDesc">দিনে দিনে হজ্জ সম্পাদনের বিস্তারিত প্রক্রিয়া</p>
-                        <a href="/hajj.html" class="feature-link" data-i18n="home.learnMore">শিখুন →</a>
+                        <h3>হজ্জ গাইড</h3>
+                        <p>দিনে দিনে হজ্জ সম্পাদনের বিস্তারিত প্রক্রিয়া</p>
+                        <a href="/hajj.html" class="feature-link">শিখুন →</a>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">📿</div>
-                        <h3 data-i18n="home.duasGuide">দোয়া ও সূরা</h3>
-                        <p data-i18n="home.duasDesc">সমস্ত প্রয়োজনীয় দোয়া, সূরা এবং বাংলা অনুবাদ</p>
-                        <a href="/duas.html" class="feature-link" data-i18n="home.learnMore">দেখুন →</a>
+                        <h3>দোয়া ও সূরা</h3>
+                        <p>সমস্ত প্রয়োজনীয় দোয়া, সূরা এবং বাংলা অনুবাদ</p>
+                        <a href="/duas.html" class="feature-link">দেখুন →</a>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">📖</div>
-                        <h3 data-i18n="home.fullGuide">সম্পূর্ণ গাইড</h3>
-                        <p data-i18n="home.fullGuideDesc">প্রস্তুতি থেকে শুরু করে সবকিছু</p>
-                        <a href="/guide.html" class="feature-link" data-i18n="home.learnMore">পড়ুন →</a>
+                        <h3>সম্পূর্ণ গাইড</h3>
+                        <p>প্রস্তুতি থেকে শুরু করে সবকিছু</p>
+                        <a href="/guide.html" class="feature-link">পড়ুন →</a>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🌅</div>
-                        <h3 data-i18n="home.dailyDuas">দৈনিক দোয়া</h3>
-                        <p data-i18n="home.dailyDuasDesc">প্রতিদিন পড়ার জন্য গুরুত্বপূর্ণ দোয়া</p>
-                        <a href="/daily-duas.html" class="feature-link" data-i18n="home.learnMore">দেখুন →</a>
+                        <h3>দৈনিক দোয়া</h3>
+                        <p>প্রতিদিন পড়ার জন্য গুরুত্বপূর্ণ দোয়া</p>
+                        <a href="/daily-duas.html" class="feature-link">দেখুন →</a>
                     </div>
                 </div>
             </div>
@@ -137,23 +128,12 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 <span data-i18n="common.siteTitle">উমরাহ ও হজ্জ গাইড</span> | <span data-i18n="common.forBangladeshiMuslims">বাংলাদেশী মুসলমানদের জন্য</span></p>
-            <p class="footer-note" data-i18n="common.educationalPurpose">এই ওয়েবসাইটটি শিক্ষামূলক উদ্দেশ্যে তৈরি করা হয়েছে</p>
+            <p>&copy; 2024 উমরাহ ও হজ্জ গাইড | বাংলাদেশী মুসলমানদের জন্য</p>
+            <p class="footer-note">এই ওয়েবসাইটটি শিক্ষামূলক উদ্দেশ্যে তৈরি করা হয়েছে</p>
         </div>
     </footer>
 
-    <script type="module" src="@locales/translations.js"></script>
     <script type="module" src="@scripts/script.js"></script>
-    <script>
-        // Close language menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const langSelector = document.querySelector('.lang-selector');
-            const langMenu = document.getElementById('language-menu');
-            if (langSelector && langMenu && !langSelector.contains(event.target)) {
-                langMenu.style.display = 'none';
-            }
-        });
-    </script>
 </body>
 </html>
 
