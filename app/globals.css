@@ -1525,6 +1525,245 @@ a:hover {
     }
 }
 
+/* Prophets Diagram Styles */
+.prophets-diagram {
+  background: linear-gradient(135deg, var(--light-green) 0%, var(--bg-secondary) 100%);
+  padding: var(--spacing-xl) 0;
+  margin: var(--spacing-xl) 0;
+  border-radius: var(--radius-lg);
+}
+
+.prophets-diagram-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.prophets-diagram-header h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.prophets-diagram-subtitle {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.prophets-legend {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-md);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.9rem;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.legend-color.ulul-azm {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+  box-shadow: var(--shadow-sm);
+}
+
+.legend-color.regular {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  box-shadow: var(--shadow-sm);
+}
+
+.prophets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-md);
+}
+
+.prophet-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition-base);
+  position: relative;
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+}
+
+.prophet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.prophet-card.ulul-azm {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(244, 208, 63, 0.1) 100%);
+  border-color: var(--accent-color);
+  border-width: 2px;
+}
+
+.prophet-card.ulul-azm:hover {
+  border-color: var(--accent-light);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+}
+
+.prophet-number {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: var(--primary-color);
+  color: var(--white);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.prophet-card.ulul-azm .prophet-number {
+  background: var(--accent-color);
+  color: var(--text-color);
+}
+
+.prophet-arabic {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: var(--spacing-sm) 0;
+  direction: rtl;
+  font-family: 'Amiri', 'Noto Sans Arabic', serif;
+}
+
+.prophet-card.ulul-azm .prophet-arabic {
+  color: var(--accent-color);
+}
+
+.prophet-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: var(--spacing-xs) 0;
+}
+
+.prophet-english {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: var(--spacing-xs);
+}
+
+.prophet-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--accent-color);
+  color: var(--text-color);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.prophet-tooltip {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text-color);
+  color: var(--white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: var(--shadow-md);
+}
+
+.prophet-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid var(--text-color);
+}
+
+.prophets-info {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.prophets-info .info-text {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .prophets-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+  }
+
+  .prophet-card {
+    padding: var(--spacing-sm);
+  }
+
+  .prophet-arabic {
+    font-size: 1.5rem;
+  }
+
+  .prophet-name {
+    font-size: 0.9rem;
+  }
+
+  .prophet-english {
+    font-size: 0.75rem;
+  }
+
+  .prophets-diagram-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .prophets-legend {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .prophets-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .prophet-arabic {
+    font-size: 1.3rem;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header .container {

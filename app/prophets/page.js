@@ -4,6 +4,7 @@ import InfoBox from '@/components/InfoBox'
 import ExpandableSection from '@/components/ExpandableSection'
 import DuaItem from '@/components/DuaItem'
 import AudioPlayer from '@/components/AudioPlayer'
+import ProphetsDiagram from '@/components/ProphetsDiagram'
 
 export default function Prophets() {
   return (
@@ -13,6 +14,8 @@ export default function Prophets() {
         subtitle="ইসলামে উল্লিখিত সকল নবী-রাসূলের নাম, বর্ণনা ও ইতিহাস"
         sectionCount={25}
       />
+
+      <ProphetsDiagram />
 
       <SectionWrapper className="duas-section">
         <ExpandableSection 
