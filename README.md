@@ -1,5 +1,67 @@
 # উমরাহ ও হজ্জ গাইড - Umrah & Hajj Guide
 
+## 🚀 Local Development
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Setup
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Start development server:**
+   ```bash
+   npm run dev
+   ```
+   
+   The website will open automatically at `http://localhost:3000`
+
+3. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+4. **Preview production build:**
+   ```bash
+   npm run preview
+   ```
+
+### Development Features
+- ⚡ Fast Hot Module Replacement (HMR)
+- 🔄 Auto-reload on file changes
+- 📱 Responsive design testing
+- 🌐 Multi-language support (Bengali, English, Arabic)
+
+## 📦 Deployment
+
+### GitHub Pages (Automatic)
+
+The website is automatically deployed to GitHub Pages when you push to `main` or `master` branch.
+
+The deployment workflow:
+1. Builds the website using Vite
+2. Deploys to GitHub Pages
+3. Available at: `https://gitsbd.github.io/makkahmadinah/`
+
+### Manual Deployment
+
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+
+2. The `dist` folder contains the production-ready files
+
+3. Deploy the `dist` folder to your hosting service
+
+---
+
+# উমরাহ ও হজ্জ গাইড - Umrah & Hajj Guide
+
 বাংলাদেশী মুসলমানদের জন্য সম্পূর্ণ উমরাহ ও হজ্জ গাইড ওয়েবসাইট।
 
 ## বৈশিষ্ট্য
