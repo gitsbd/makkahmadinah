@@ -82,6 +82,9 @@ export default function Footer() {
               <li>
                 <Link href="/akhlaq/">আখলাক ও আদব</Link>
               </li>
+              <li>
+                <Link href="/ibadat/">ইবাদত</Link>
+              </li>
             </ul>
           </div>
 

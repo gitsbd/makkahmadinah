@@ -66,7 +66,7 @@ export default function Header() {
               </ul>
             </li>
             <li className="dropdown">
-              <Link href="/quran/" className={isActive('/quran/') || isActive('/bukhari/') || isActive('/muslim/') || isActive('/prophets/') || isActive('/akhlaq/') ? 'active' : ''}>
+              <Link href="/quran/" className={isActive('/quran/') || isActive('/bukhari/') || isActive('/muslim/') || isActive('/prophets/') || isActive('/akhlaq/') || isActive('/ibadat/') ? 'active' : ''}>
                 ইসলামী লাইব্রেরি
               </Link>
               <ul className="dropdown-menu">
@@ -75,6 +75,7 @@ export default function Header() {
                 <li><Link href="/muslim/" className={isActive('/muslim/') ? 'active' : ''}>মুসলিম শরীফ (সহীহ মুসলিম)</Link></li>
                 <li><Link href="/prophets/" className={isActive('/prophets/') ? 'active' : ''}>নবী-রাসূলদের নামসমূহ</Link></li>
                 <li><Link href="/akhlaq/" className={isActive('/akhlaq/') ? 'active' : ''}>আখলাক ও আদব</Link></li>
+                <li><Link href="/ibadat/" className={isActive('/ibadat/') ? 'active' : ''}>ইবাদত</Link></li>
               </ul>
             </li>
           </ul>
