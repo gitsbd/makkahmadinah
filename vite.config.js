@@ -1,11 +1,22 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   root: '.',
   server: {
     port: 3000,
     open: true,
-    host: true
+    host: true,
+    strictPort: false
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@scripts': resolve(__dirname, 'src/scripts'),
+      '@locales': resolve(__dirname, 'src/locales'),
+      '@assets': resolve(__dirname, 'public/assets')
+    }
   },
   build: {
     outDir: 'dist',
@@ -13,20 +24,20 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: './index.html',
-        umrah: './umrah.html',
-        hajj: './hajj.html',
-        duas: './duas.html',
-        'daily-duas': './daily-duas.html',
-        'general-duas': './general-duas.html',
-        guide: './guide.html',
-        makkah: './makkah.html',
-        madinah: './madinah.html',
-        'makkah-places': './makkah-places.html',
-        'madinah-places': './madinah-places.html'
+        main: resolve(__dirname, 'src/pages/index.html'),
+        umrah: resolve(__dirname, 'src/pages/umrah.html'),
+        hajj: resolve(__dirname, 'src/pages/hajj.html'),
+        duas: resolve(__dirname, 'src/pages/duas.html'),
+        'daily-duas': resolve(__dirname, 'src/pages/daily-duas.html'),
+        'general-duas': resolve(__dirname, 'src/pages/general-duas.html'),
+        guide: resolve(__dirname, 'src/pages/guide.html'),
+        makkah: resolve(__dirname, 'src/pages/makkah.html'),
+        madinah: resolve(__dirname, 'src/pages/madinah.html'),
+        'makkah-places': resolve(__dirname, 'src/pages/makkah-places.html'),
+        'madinah-places': resolve(__dirname, 'src/pages/madinah-places.html')
       }
     }
   },
-  publicDir: 'images'
+  publicDir: 'public'
 });
 

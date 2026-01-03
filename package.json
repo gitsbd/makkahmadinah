@@ -7,19 +7,38 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "format": "prettier --write \"src/**/*.{js,html,css}\"",
+    "format:check": "prettier --check \"src/**/*.{js,html,css}\"",
+    "lint": "echo 'Linting not configured yet'",
+    "clean": "rm -rf dist .vite"
   },
   "keywords": [
     "umrah",
     "hajj",
     "islam",
     "bangladesh",
-    "pilgrimage"
+    "pilgrimage",
+    "religious-guide",
+    "multilingual"
   ],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitsbd/makkahmadinah.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gitsbd/makkahmadinah/issues"
+  },
+  "homepage": "https://gitsbd.github.io/makkahmadinah/",
   "devDependencies": {
-    "vite": "^5.0.0"
+    "vite": "^5.0.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }
 

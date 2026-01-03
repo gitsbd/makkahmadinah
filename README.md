@@ -74,18 +74,43 @@ The deployment workflow:
 - ✅ মোবাইল ফ্রেন্ডলি ডিজাইন
 - ✅ আধুনিক এবং সুন্দর UI
 
-## ফাইল স্ট্রাকচার
+## 📁 Project Structure
 
 ```
 makkahmadinah/
-├── index.html          # হোমপেজ
-├── umrah.html          # উমরাহ গাইড
-├── hajj.html           # হজ্জ গাইড
-├── duas.html           # দোয়া ও সূরা
-├── guide.html          # সম্পূর্ণ গাইড
-├── styles.css          # স্টাইলশীট
-├── script.js           # JavaScript
-└── README.md           # এই ফাইল
+├── src/
+│   ├── pages/              # HTML pages
+│   │   ├── index.html
+│   │   ├── umrah.html
+│   │   ├── hajj.html
+│   │   ├── duas.html
+│   │   ├── daily-duas.html
+│   │   ├── general-duas.html
+│   │   ├── guide.html
+│   │   ├── makkah.html
+│   │   ├── madinah.html
+│   │   ├── makkah-places.html
+│   │   └── madinah-places.html
+│   ├── styles/             # CSS files
+│   │   └── styles.css
+│   ├── scripts/            # JavaScript files
+│   │   └── script.js
+│   └── locales/            # Translation files
+│       └── translations.js
+├── public/
+│   └── assets/
+│       └── images/         # Image assets
+├── docs/                   # Documentation
+│   ├── DEPLOYMENT.md
+│   ├── DEVELOPMENT.md
+│   ├── MULTILINGUAL_GUIDE.md
+│   └── ...
+├── .github/                # GitHub workflows
+│   └── workflows/
+│       └── deploy.yml
+├── package.json
+├── vite.config.js
+└── README.md
 ```
 
 ## ব্যবহার
