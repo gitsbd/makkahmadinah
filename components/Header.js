@@ -65,6 +65,17 @@ export default function Header() {
                 <li><Link href="/madinah-places/" className={isActive('/madinah-places/') ? 'active' : ''}>মদিনা দর্শনীয় স্থান</Link></li>
               </ul>
             </li>
+            <li className="dropdown">
+              <Link href="/quran/" className={isActive('/quran/') || isActive('/bukhari/') || isActive('/muslim/') || isActive('/prophets/') ? 'active' : ''}>
+                ইসলামী লাইব্রেরি
+              </Link>
+              <ul className="dropdown-menu">
+                <li><Link href="/quran/" className={isActive('/quran/') ? 'active' : ''}>কুরআন (Qur'an)</Link></li>
+                <li><Link href="/bukhari/" className={isActive('/bukhari/') ? 'active' : ''}>সহীহ বুখারী (Sahih Bukhari)</Link></li>
+                <li><Link href="/muslim/" className={isActive('/muslim/') ? 'active' : ''}>মুসলিম শরীফ (সহীহ মুসলিম)</Link></li>
+                <li><Link href="/prophets/" className={isActive('/prophets/') ? 'active' : ''}>নবী-রাসূলদের নামসমূহ</Link></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>

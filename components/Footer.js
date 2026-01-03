@@ -63,6 +63,25 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Islamic Library */}
+          <div className="footer-section">
+            <h4 className="footer-heading">ইসলামী লাইব্রেরি</h4>
+            <ul className="footer-links">
+              <li>
+                <Link href="/quran/">কুরআন (Qur'an)</Link>
+              </li>
+              <li>
+                <Link href="/bukhari/">সহীহ বুখারী (Sahih Bukhari)</Link>
+              </li>
+              <li>
+                <Link href="/muslim/">মুসলিম শরীফ (সহীহ মুসলিম)</Link>
+              </li>
+              <li>
+                <Link href="/prophets/">নবী-রাসূলদের নামসমূহ</Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Legal & Information */}
           <div className="footer-section">
             <h4 className="footer-heading">আইনি ও তথ্য</h4>
