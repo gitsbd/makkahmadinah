@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  root: '.',
+  root: 'src/pages',
   server: {
     port: 3000,
     open: true,
@@ -19,7 +19,7 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: 'dist',
+    outDir: resolve(__dirname, 'dist'),
     assetsDir: 'assets',
     emptyOutDir: true,
     rollupOptions: {
@@ -38,6 +38,6 @@ export default defineConfig({
       }
     }
   },
-  publicDir: 'public'
+  publicDir: resolve(__dirname, 'public')
 });
 
