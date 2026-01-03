@@ -234,7 +234,7 @@ export default function Hajj() {
                   <li>হজ্জের সময় ধৈর্য ধারণ করতে হবে</li>
                   <li>হজ্জের পর নতুন জীবন শুরু করতে হবে</li>
                 </ul>
-              </div>
+              </ImportantNote>
             </div>
           </ExpandableSection>
 

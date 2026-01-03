@@ -276,7 +276,7 @@ export default function Umrah() {
                   <li>ইহরামের সময় মুখমণ্ডল ঢাকতে হবে না</li>
                   <li>হাতমোজা পরা যাবে না</li>
                 </ul>
-              </div>
+              </ImportantNote>
             </div>
           </ExpandableSection>
 
