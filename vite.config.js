@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     port: 3000,
     open: '/src/pages/index.html',
-    host: true,
+    host: '0.0.0.0',
     strictPort: false
   },
   resolve: {
