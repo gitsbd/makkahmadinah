@@ -10,7 +10,7 @@ const translations = {
             umrah: "উমরাহ",
             hajj: "হজ্জ",
             duas: "দোয়া ও সূরা",
-            importantDuas: "গুরুত্বপূর্ণ দোয়া ও সূরা",
+            importantDuas: "উমরাহ ও হজ্জ দোয়া",
             dailyDuas: "দৈনিক দোয়া",
             history: "ইতিহাস",
             makkah: "মক্কা (Makkah)",
