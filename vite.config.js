@@ -5,7 +5,7 @@ export default defineConfig({
   root: '.',
   server: {
     port: 3000,
-    open: '/src/pages/index.html',
+    open: '/index.html',
     host: true,
     strictPort: false
   },
