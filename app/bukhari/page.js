@@ -2,6 +2,7 @@ import PageHeader from '@/components/PageHeader'
 import SectionWrapper from '@/components/SectionWrapper'
 import InfoBox from '@/components/InfoBox'
 import ExpandableSection from '@/components/ExpandableSection'
+import AudioPlayer from '@/components/AudioPlayer'
 
 export default function Bukhari() {
   return (
@@ -65,7 +66,10 @@ export default function Bukhari() {
 
             <h3>সহীহ বুখারী পাঠের ফজিলত</h3>
             <p>হাদীস পাঠ এবং অধ্যয়ন করা প্রতিটি মুসলমানের জন্য গুরুত্বপূর্ণ। রাসূলুল্লাহ (সা.) বলেছেন:</p>
-            <p className="arabic">مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ</p>
+            <p className="arabic">
+              <span className="arabic-text">مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ</span>
+              <AudioPlayer arabicText="مَنْ يُرِدِ اللَّهُ بِهِ خَيْرًا يُفَقِّهْهُ فِي الدِّينِ" />
+            </p>
             <p className="transliteration">Man yuridillahu bihi khairan yufaqqihhu fid din</p>
             <p className="translation"><strong>অনুবাদ:</strong> "যার জন্য আল্লাহ কল্যাণ চান, তাকে তিনি দ্বীনের ফিকহ (গভীর জ্ঞান) দান করেন।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
 

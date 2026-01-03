@@ -4,6 +4,7 @@ import DuaItem from '@/components/DuaItem'
 import SectionWrapper from '@/components/SectionWrapper'
 import InfoText from '@/components/InfoText'
 import SurahItem from '@/components/SurahItem'
+import AudioPlayer from '@/components/AudioPlayer'
 
 export default function Duas() {
   return (
@@ -85,24 +86,36 @@ export default function Duas() {
             <DuaItem>
               <h3>সাঈর সময়</h3>
               <InfoText><strong>প্রধান দোয়া:</strong></InfoText>
-              <p className="arabic">رَبِّ اغْفِرْ وَارْحَمْ وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ</p>
+              <p className="arabic">
+                <span className="arabic-text">رَبِّ اغْفِرْ وَارْحَمْ وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ</span>
+                <AudioPlayer arabicText="رَبِّ اغْفِرْ وَارْحَمْ وَتَجَاوَزْ عَمَّا تَعْلَمُ إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ" />
+              </p>
               <p className="transliteration">Rabbighfir Warham Wa Tajawaz Amma Ta'lamu Innaka Antal A'azzul Akram</p>
               <p className="translation"><strong>অনুবাদ:</strong> হে রব, ক্ষমা করুন, রহম করুন এবং আপনি যা জানেন তা থেকে অগ্রাহ্য করুন, নিশ্চয়ই আপনি সর্বশ্রেষ্ঠ ও সর্বাধিক সম্মানিত</p>
 
               <InfoText className="mt-md"><strong>বিকল্প দোয়া সমূহ:</strong></InfoText>
               
               <h4>বিকল্প ১ (সংক্ষিপ্ত):</h4>
-              <p className="arabic">رَبِّ اغْفِرْ وَارْحَمْ</p>
+              <p className="arabic">
+                <span className="arabic-text">رَبِّ اغْفِرْ وَارْحَمْ</span>
+                <AudioPlayer arabicText="رَبِّ اغْفِرْ وَارْحَمْ" />
+              </p>
               <p className="transliteration">Rabbighfir Warham</p>
               <p className="translation"><strong>অনুবাদ:</strong> হে রব, ক্ষমা করুন এবং রহম করুন।</p>
 
               <h4>বিকল্প ২:</h4>
-              <p className="arabic">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</p>
+              <p className="arabic">
+                <span className="arabic-text">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</span>
+                <AudioPlayer arabicText="رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ" />
+              </p>
               <p className="transliteration">Rabbana Atina Fid Dunya Hasanatan Wa Fil Akhirati Hasanatan Wa Qina Azaban Nar</p>
               <p className="translation"><strong>অনুবাদ:</strong> হে আমাদের রব, আমাদের দুনিয়াতে কল্যাণ দিন এবং আখিরাতে কল্যাণ দিন এবং আমাদেরকে জাহান্নামের শাস্তি থেকে রক্ষা করুন।</p>
 
               <h4>বিকল্প ৩:</h4>
-              <p className="arabic">رَبِّ اغْفِرْ وَارْحَمْ إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ</p>
+              <p className="arabic">
+                <span className="arabic-text">رَبِّ اغْفِرْ وَارْحَمْ إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ</span>
+                <AudioPlayer arabicText="رَبِّ اغْفِرْ وَارْحَمْ إِنَّكَ أَنْتَ الْأَعَزُّ الْأَكْرَمُ" />
+              </p>
               <p className="transliteration">Rabbighfir Warham, Innaka Antal A'azzul Akram</p>
               <p className="translation"><strong>অনুবাদ:</strong> হে রব, ক্ষমা করুন এবং রহম করুন, নিশ্চয়ই আপনি সর্বশ্রেষ্ঠ ও সর্বাধিক সম্মানিত</p>
             </DuaItem>
@@ -111,7 +124,10 @@ export default function Duas() {
           <DuaCategory id="arafat" title="আরাফাতের দোয়া" defaultOpen={false} number={6}>
             <div className="dua-item">
               <h3>আরাফাতে বিশেষ দোয়া</h3>
-              <p className="arabic">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</p>
+              <p className="arabic">
+                <span className="arabic-text">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</span>
+                <AudioPlayer arabicText="لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ" />
+              </p>
               <p className="transliteration">La Ilaha Illallahu Wahdahu La Sharika Lah, Lahul Mulku Wa Lahul Hamdu Wa Huwa Ala Kulli Shai'in Qadir</p>
               <p className="translation"><strong>অনুবাদ:</strong> আল্লাহ ছাড়া কোন ইলাহ নেই, তিনি এক, তাঁর কোন শরীক নেই, রাজত্ব তাঁর, প্রশংসা তাঁর এবং তিনি সবকিছুর উপর ক্ষমতাবান</p>
             </div>

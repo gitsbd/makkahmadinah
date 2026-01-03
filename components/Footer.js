@@ -79,6 +79,9 @@ export default function Footer() {
               <li>
                 <Link href="/prophets/">নবী-রাসূলদের নামসমূহ</Link>
               </li>
+              <li>
+                <Link href="/akhlaq/">আখলাক ও আদব</Link>
+              </li>
             </ul>
           </div>
 

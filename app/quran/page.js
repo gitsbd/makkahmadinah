@@ -2,6 +2,7 @@ import PageHeader from '@/components/PageHeader'
 import SectionWrapper from '@/components/SectionWrapper'
 import InfoBox from '@/components/InfoBox'
 import ExpandableSection from '@/components/ExpandableSection'
+import AudioPlayer from '@/components/AudioPlayer'
 
 export default function Quran() {
   return (
@@ -37,7 +38,10 @@ export default function Quran() {
 
             <h3>কুরআন পাঠের ফজিলত</h3>
             <p>রাসূলুল্লাহ (সা.) বলেছেন:</p>
-            <p className="arabic">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</p>
+            <p className="arabic">
+              <span className="arabic-text">خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ</span>
+              <AudioPlayer arabicText="خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ" />
+            </p>
             <p className="transliteration">Khayrukum man ta'allamal Qur'ana wa 'allamahu</p>
             <p className="translation"><strong>অনুবাদ:</strong> "তোমাদের মধ্যে সর্বোত্তম ব্যক্তি হল সে যে কুরআন শিখে এবং অন্যকে শেখায়।" (সহীহ বুখারী)</p>
 

@@ -3,6 +3,7 @@ import SectionWrapper from '@/components/SectionWrapper'
 import InfoBox from '@/components/InfoBox'
 import ExpandableSection from '@/components/ExpandableSection'
 import DuaItem from '@/components/DuaItem'
+import AudioPlayer from '@/components/AudioPlayer'
 
 export default function Prophets() {
   return (
@@ -54,7 +55,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>আদম (আ.) - প্রথম মানুষ ও প্রথম নবী</h3>
-            <p className="arabic">آدَم</p>
+            <p className="arabic">
+              <span className="arabic-text">آدَم</span>
+              <AudioPlayer arabicText="آدَم" />
+            </p>
             <p className="transliteration">Adam</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -81,7 +85,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>ইদ্রিস (আ.) - জ্ঞানী নবী</h3>
-            <p className="arabic">إِدْرِيس</p>
+            <p className="arabic">
+              <span className="arabic-text">إِدْرِيس</span>
+              <AudioPlayer arabicText="إِدْرِيس" />
+            </p>
             <p className="transliteration">Idris</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -93,7 +100,10 @@ export default function Prophets() {
             </ul>
 
             <h4>কুরআনে উল্লেখ:</h4>
-            <p className="arabic">وَاذْكُرْ فِي الْكِتَابِ إِدْرِيسَ ۚ إِنَّهُ كَانَ صِدِّيقًا نَّبِيًّا</p>
+            <p className="arabic">
+              <span className="arabic-text">وَاذْكُرْ فِي الْكِتَابِ إِدْرِيسَ ۚ إِنَّهُ كَانَ صِدِّيقًا نَّبِيًّا</span>
+              <AudioPlayer arabicText="وَاذْكُرْ فِي الْكِتَابِ إِدْرِيسَ ۚ إِنَّهُ كَانَ صِدِّيقًا نَّبِيًّا" />
+            </p>
             <p className="transliteration">Wazkur fil kitabi Idris, innahu kana siddiqan nabiyya</p>
             <p className="translation"><strong>অনুবাদ:</strong> "আর এই কিতাবে ইদ্রিসের কথা স্মরণ করুন, তিনি ছিলেন সত্যবাদী নবী।" (সূরা মারইয়াম, আয়াত ৫৬-৫৭)</p>
           </DuaItem>
@@ -108,7 +118,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>নূহ (আ.) - প্রথম উলুল আযম রাসূল</h3>
-            <p className="arabic">نُوح</p>
+            <p className="arabic">
+              <span className="arabic-text">نُوح</span>
+              <AudioPlayer arabicText="نُوح" />
+            </p>
             <p className="transliteration">Nuh</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -136,7 +149,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>হুদ (আ.) - আদ জাতির নবী</h3>
-            <p className="arabic">هُود</p>
+            <p className="arabic">
+              <span className="arabic-text">هُود</span>
+              <AudioPlayer arabicText="هُود" />
+            </p>
             <p className="transliteration">Hud</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -163,7 +179,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>সালিহ (আ.) - সামুদ জাতির নবী</h3>
-            <p className="arabic">صَالِح</p>
+            <p className="arabic">
+              <span className="arabic-text">صَالِح</span>
+              <AudioPlayer arabicText="صَالِح" />
+            </p>
             <p className="transliteration">Salih</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -190,7 +209,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>ইব্রাহিম (আ.) - খলীলুল্লাহ (আল্লাহর বন্ধু)</h3>
-            <p className="arabic">إِبْرَاهِيم</p>
+            <p className="arabic">
+              <span className="arabic-text">إِبْرَاهِيم</span>
+              <AudioPlayer arabicText="إِبْرَاهِيم" />
+            </p>
             <p className="transliteration">Ibrahim</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -219,7 +241,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>লূত (আ.) - সদম শহরের নবী</h3>
-            <p className="arabic">لُوط</p>
+            <p className="arabic">
+              <span className="arabic-text">لُوط</span>
+              <AudioPlayer arabicText="لُوط" />
+            </p>
             <p className="transliteration">Lut</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -247,7 +272,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>ইসমাঈল (আ.) - কুরবানীর নবী</h3>
-            <p className="arabic">إِسْمَاعِيل</p>
+            <p className="arabic">
+              <span className="arabic-text">إِسْمَاعِيل</span>
+              <AudioPlayer arabicText="إِسْمَاعِيل" />
+            </p>
             <p className="transliteration">Ismail</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -275,7 +303,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>ইসহাক (আ.) - ইব্রাহিম (আ.) এর পুত্র</h3>
-            <p className="arabic">إِسْحَاق</p>
+            <p className="arabic">
+              <span className="arabic-text">إِسْحَاق</span>
+              <AudioPlayer arabicText="إِسْحَاق" />
+            </p>
             <p className="transliteration">Ishaq</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -301,7 +332,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>ইয়াকুব (আ.) - ইসরাঈল (আ.)</h3>
-            <p className="arabic">يَعْقُوب</p>
+            <p className="arabic">
+              <span className="arabic-text">يَعْقُوب</span>
+              <AudioPlayer arabicText="يَعْقُوب" />
+            </p>
             <p className="transliteration">Yaqub</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -327,7 +361,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>ইউসুফ (আ.) - সবচেয়ে সুন্দর কাহিনী</h3>
-            <p className="arabic">يُوسُف</p>
+            <p className="arabic">
+              <span className="arabic-text">يُوسُف</span>
+              <AudioPlayer arabicText="يُوسُف" />
+            </p>
             <p className="transliteration">Yusuf</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -356,7 +393,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>আইয়ুব (আ.) - ধৈর্যশীল নবী</h3>
-            <p className="arabic">أَيُّوب</p>
+            <p className="arabic">
+              <span className="arabic-text">أَيُّوب</span>
+              <AudioPlayer arabicText="أَيُّوب" />
+            </p>
             <p className="transliteration">Ayub</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -384,7 +424,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>শুআইব (আ.) - মাদইয়ান জাতির নবী</h3>
-            <p className="arabic">شُعَيْب</p>
+            <p className="arabic">
+              <span className="arabic-text">شُعَيْب</span>
+              <AudioPlayer arabicText="شُعَيْب" />
+            </p>
             <p className="transliteration">Shuaib</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -410,7 +453,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>মুসা (আ.) - কালীমুল্লাহ (আল্লাহর সাথে কথা বলা ব্যক্তি)</h3>
-            <p className="arabic">مُوسَى</p>
+            <p className="arabic">
+              <span className="arabic-text">مُوسَى</span>
+              <AudioPlayer arabicText="مُوسَى" />
+            </p>
             <p className="transliteration">Musa</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -441,7 +487,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>হারুন (আ.) - মুসা (আ.) এর ভাই</h3>
-            <p className="arabic">هَارُون</p>
+            <p className="arabic">
+              <span className="arabic-text">هَارُون</span>
+              <AudioPlayer arabicText="هَارُون" />
+            </p>
             <p className="transliteration">Harun</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -467,7 +516,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>দাউদ (আ.) - যাবুরের নবী</h3>
-            <p className="arabic">دَاوُود</p>
+            <p className="arabic">
+              <span className="arabic-text">دَاوُود</span>
+              <AudioPlayer arabicText="دَاوُود" />
+            </p>
             <p className="transliteration">Dawud</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -494,7 +546,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>সুলাইমান (আ.) - রাজত্বের নবী</h3>
-            <p className="arabic">سُلَيْمَان</p>
+            <p className="arabic">
+              <span className="arabic-text">سُلَيْمَان</span>
+              <AudioPlayer arabicText="سُلَيْمَان" />
+            </p>
             <p className="transliteration">Sulaiman</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -521,7 +576,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>ইলিয়াস (আ.) - বালের উপাসকদের নবী</h3>
-            <p className="arabic">إِلْيَاس</p>
+            <p className="arabic">
+              <span className="arabic-text">إِلْيَاس</span>
+              <AudioPlayer arabicText="إِلْيَاس" />
+            </p>
             <p className="transliteration">Ilyas</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -546,7 +604,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>আল-ইয়াসা (আ.) - ইলিয়াস (আ.) এর পরবর্তী নবী</h3>
-            <p className="arabic">الْيَسَع</p>
+            <p className="arabic">
+              <span className="arabic-text">الْيَسَع</span>
+              <AudioPlayer arabicText="الْيَسَع" />
+            </p>
             <p className="transliteration">Alyasa</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -569,7 +630,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>ইউনুস (আ.) - মাছের পেটে</h3>
-            <p className="arabic">يُونُس</p>
+            <p className="arabic">
+              <span className="arabic-text">يُونُس</span>
+              <AudioPlayer arabicText="يُونُس" />
+            </p>
             <p className="transliteration">Yunus</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -598,7 +662,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>যাকারিয়া (আ.) - ইয়াহইয়া (আ.) এর পিতা</h3>
-            <p className="arabic">زَكَرِيَّا</p>
+            <p className="arabic">
+              <span className="arabic-text">زَكَرِيَّا</span>
+              <AudioPlayer arabicText="زَكَرِيَّا" />
+            </p>
             <p className="transliteration">Zakariya</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -624,7 +691,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>ইয়াহইয়া (আ.) - যাকারিয়া (আ.) এর পুত্র</h3>
-            <p className="arabic">يَحْيَى</p>
+            <p className="arabic">
+              <span className="arabic-text">يَحْيَى</span>
+              <AudioPlayer arabicText="يَحْيَى" />
+            </p>
             <p className="transliteration">Yahya</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -649,7 +719,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>ঈসা (আ.) - রুহুল্লাহ (আল্লাহর রূহ) ও মাসিহ</h3>
-            <p className="arabic">عِيسَى</p>
+            <p className="arabic">
+              <span className="arabic-text">عِيسَى</span>
+              <AudioPlayer arabicText="عِيسَى" />
+            </p>
             <p className="transliteration">Isa</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -678,7 +751,10 @@ export default function Prophets() {
         >
           <DuaItem>
             <h3>মুহাম্মদ (সা.) - শেষ নবী ও রাসূল</h3>
-            <p className="arabic">مُحَمَّد</p>
+            <p className="arabic">
+              <span className="arabic-text">مُحَمَّد</span>
+              <AudioPlayer arabicText="مُحَمَّد" />
+            </p>
             <p className="transliteration">Muhammad</p>
             
             <h4>ইতিহাস ও বর্ণনা:</h4>
@@ -707,7 +783,10 @@ export default function Prophets() {
         <InfoBox variant="blue" className="mt-lg">
           <h4>📚 নবী-রাসূলদের উপর দরুদ</h4>
           <p>রাসূলুল্লাহ (সা.) বলেছেন: "যে ব্যক্তি আমার উপর একবার দরুদ পাঠ করে, আল্লাহ তার উপর দশবার রহমত পাঠান।"</p>
-          <p className="arabic">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</p>
+          <p className="arabic">
+              <span className="arabic-text">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</span>
+              <AudioPlayer arabicText="اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ" />
+            </p>
           <p className="transliteration">Allahumma salli ala Muhammadin wa ala ali Muhammad</p>
         </InfoBox>
       </SectionWrapper>

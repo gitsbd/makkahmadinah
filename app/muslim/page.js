@@ -2,6 +2,7 @@ import PageHeader from '@/components/PageHeader'
 import SectionWrapper from '@/components/SectionWrapper'
 import InfoBox from '@/components/InfoBox'
 import ExpandableSection from '@/components/ExpandableSection'
+import AudioPlayer from '@/components/AudioPlayer'
 
 export default function Muslim() {
   return (
@@ -77,7 +78,10 @@ export default function Muslim() {
 
             <h3>মুসলিম শরীফ পাঠের ফজিলত</h3>
             <p>হাদীস পাঠ এবং অধ্যয়ন করা প্রতিটি মুসলমানের জন্য গুরুত্বপূর্ণ। রাসূলুল্লাহ (সা.) বলেছেন:</p>
-            <p className="arabic">مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ</p>
+            <p className="arabic">
+              <span className="arabic-text">مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ</span>
+              <AudioPlayer arabicText="مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ" />
+            </p>
             <p className="transliteration">Man salaka tariqan yaltamisu fihi ilman sahhallahu lahu bihi tariqan ilal jannah</p>
             <p className="translation"><strong>অনুবাদ:</strong> "যে ব্যক্তি জ্ঞান অর্জনের পথে চলবে, আল্লাহ তার জন্য জান্নাতের পথ সহজ করে দেবেন।" (সহীহ মুসলিম)</p>
 

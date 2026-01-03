@@ -4,6 +4,7 @@ import ImportantNote from '@/components/ImportantNote'
 import CompletionBox from '@/components/CompletionBox'
 import UmrahProcessSteps from '@/components/UmrahProcessSteps'
 import TripChecklist from '@/components/TripChecklist'
+import AudioPlayer from '@/components/AudioPlayer'
 
 export default function Umrah() {
   return (
@@ -189,7 +190,10 @@ export default function Umrah() {
               
               <div className="dua-box mt-md">
                 <h4>রমজানে উমরাহর ফজিলত:</h4>
-                <p className="arabic">عَنْ ابْنِ عَبَّاسٍ رَضِيَ اللَّهُ عَنْهُمَا قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لِامْرَأَةٍ مِنْ الْأَنْصَارِ: مَا مَنَعَكِ أَنْ تَحُجِّي مَعَنَا؟ قَالَتْ: لَمْ يَكُنْ لَنَا إِلَّا نَاضِحَانِ فَحَجَّ أَبُو وَلَدِهَا وَابْنُهَا عَلَى نَاضِحٍ وَتَرَكَا لَنَا نَاضِحًا نَنْضَحُ بِهِ قَالَ: فَإِذَا جَاءَ رَمَضَانُ فَاعْتَمِرِي فَإِنَّ عُمْرَةً فِيهِ تَعْدِلُ حَجَّةً</p>
+                <p className="arabic">
+                  <span className="arabic-text">عَنْ ابْنِ عَبَّاسٍ رَضِيَ اللَّهُ عَنْهُمَا قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لِامْرَأَةٍ مِنْ الْأَنْصَارِ: مَا مَنَعَكِ أَنْ تَحُجِّي مَعَنَا؟ قَالَتْ: لَمْ يَكُنْ لَنَا إِلَّا نَاضِحَانِ فَحَجَّ أَبُو وَلَدِهَا وَابْنُهَا عَلَى نَاضِحٍ وَتَرَكَا لَنَا نَاضِحًا نَنْضَحُ بِهِ قَالَ: فَإِذَا جَاءَ رَمَضَانُ فَاعْتَمِرِي فَإِنَّ عُمْرَةً فِيهِ تَعْدِلُ حَجَّةً</span>
+                  <AudioPlayer arabicText="عَنْ ابْنِ عَبَّاسٍ رَضِيَ اللَّهُ عَنْهُمَا قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لِامْرَأَةٍ مِنْ الْأَنْصَارِ: مَا مَنَعَكِ أَنْ تَحُجِّي مَعَنَا؟ قَالَتْ: لَمْ يَكُنْ لَنَا إِلَّا نَاضِحَانِ فَحَجَّ أَبُو وَلَدِهَا وَابْنُهَا عَلَى نَاضِحٍ وَتَرَكَا لَنَا نَاضِحًا نَنْضَحُ بِهِ قَالَ: فَإِذَا جَاءَ رَمَضَانُ فَاعْتَمِرِي فَإِنَّ عُمْرَةً فِيهِ تَعْدِلُ حَجَّةً" />
+                </p>
                 <p className="transliteration">An Ibn Abbasi Radiyallahu Anhuma Qala: Qala Rasulallahi Sallallahu Alaihi Wasallam Li Imraatin Min Al Ansari: Ma Mana'aki An Tahujji Ma'ana? Qalat: Lam Yakun Lana Illa Nadihan Fahajja Abu Waladiha Wa Ibnaha Ala Nadihin Wa Taraka Lana Nadihan Nandahu Bihi Qala: Fa Iza Ja'a Ramadhanu Fa'tamiri Fa Inna Umratan Fihi Ta'dilu Hajjatan</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত ইবনে আব্বাস (রা.) থেকে বর্ণিত, রাসূলুল্লাহ (সা.) আনসারি এক মহিলাকে বললেন: "তোমাকে আমাদের সাথে হজ্জ করতে কী বাধা দিল?" তিনি বললেন: "আমাদের কাছে দুটি উট ছিল, আমার স্বামী ও ছেলে একটি নিয়ে হজ্জে গেছে এবং আমাদের জন্য একটি রেখে গেছে যার দ্বারা আমরা কাজ করি।" রাসূলুল্লাহ (সা.) বললেন: "যখন রমজান আসবে, তখন উমরাহ করো, কারণ রমজানে উমরাহ একটি হজ্জের সমান।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
               </div>
@@ -258,7 +262,10 @@ export default function Umrah() {
               
               <div className="dua-box mt-md">
                 <h4>হাদীস:</h4>
-                <p className="arabic">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: الْعُمْرَةُ إِلَى الْعُمْرَةِ كَفَّارَةٌ لِمَا بَيْنَهُمَا</p>
+                <p className="arabic">
+                  <span className="arabic-text">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: الْعُمْرَةُ إِلَى الْعُمْرَةِ كَفَّارَةٌ لِمَا بَيْنَهُمَا</span>
+                  <AudioPlayer arabicText="عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: الْعُمْرَةُ إِلَى الْعُمْرَةِ كَفَّارَةٌ لِمَا بَيْنَهُمَا" />
+                </p>
                 <p className="transliteration">An Abi Hurairata Radiyallahu Anhu Anna Rasulallahi Sallallahu Alaihi Wasallam Qala: Al Umratu Ila Al Umrati Kaffaratun Lima Bainahuma</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত আবু হুরায়রা (রা.) থেকে বর্ণিত, রাসূলুল্লাহ (সা.) বলেছেন: "এক উমরাহ থেকে পরবর্তী উমরাহ পর্যন্ত মধ্যবর্তী গুনাহসমূহের কাফফারা (ক্ষমা)।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
                 <p className="info-text mt-sm">এই হাদীস থেকে বোঝা যায় যে উমরাহ বারবার করা যায় এবং প্রতিবারই এর ফজিলত রয়েছে।</p>
@@ -322,14 +329,20 @@ export default function Umrah() {
                 
                 <div className="dua-box">
                   <h4>ইহরামের নিয়ত (Niyyah):</h4>
-                  <p className="arabic">لَبَّيْكَ اللَّهُمَّ عُمْرَةً</p>
+                  <p className="arabic">
+                  <span className="arabic-text">لَبَّيْكَ اللَّهُمَّ عُمْرَةً</span>
+                  <AudioPlayer arabicText="لَبَّيْكَ اللَّهُمَّ عُمْرَةً" />
+                </p>
                   <p className="transliteration">Labbaik Allahumma Umratan</p>
                   <p className="translation">হে আল্লাহ, আমি উমরাহর জন্য উপস্থিত</p>
                 </div>
                 
                 <div className="dua-box">
                   <h4>তালবিয়া (Talbiyah):</h4>
-                  <p className="arabic">لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ</p>
+                  <p className="arabic">
+                  <span className="arabic-text">لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ</span>
+                  <AudioPlayer arabicText="لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ" />
+                </p>
                   <p className="transliteration">Labbaik Allahumma Labbaik, Labbaik La Sharika Laka Labbaik, Innal Hamda Wan Ni'mata Laka Wal Mulk, La Sharika Lak</p>
                   <p className="translation">হে আল্লাহ, আমি উপস্থিত, আমি উপস্থিত। আপনার কোন শরীক নেই, আমি উপস্থিত। নিশ্চয়ই সকল প্রশংসা, নেয়ামত ও রাজত্ব আপনার, আপনার কোন শরীক নেই।</p>
                 </div>
@@ -355,7 +368,10 @@ export default function Umrah() {
                 
                 <div className="dua-box">
                   <h4>মসজিদে প্রবেশের দোয়া:</h4>
-                  <p className="arabic">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ</p>
+                  <p className="arabic">
+                  <span className="arabic-text">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ</span>
+                  <AudioPlayer arabicText="اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ" />
+                </p>
                   <p className="transliteration">Allahumma Iftah Li Abwaba Rahmatik</p>
                   <p className="translation">হে আল্লাহ, আমার জন্য আপনার রহমতের দরজা খুলে দিন</p>
                 </div>
@@ -382,14 +398,20 @@ export default function Umrah() {
                 
                 <div className="dua-box">
                   <h4>তাওয়াফ শুরু করার দোয়া:</h4>
-                  <p className="arabic">بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ</p>
+                  <p className="arabic">
+                  <span className="arabic-text">بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ</span>
+                  <AudioPlayer arabicText="بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ" />
+                </p>
                   <p className="transliteration">Bismillahi Wallahu Akbar</p>
                   <p className="translation">আল্লাহর নামে শুরু করছি এবং আল্লাহ সর্বশ্রেষ্ঠ</p>
                 </div>
                 
                 <div className="dua-box">
                   <h4>তাওয়াফের সময় পড়ার দোয়া:</h4>
-                  <p className="arabic">سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ</p>
+                  <p className="arabic">
+                  <span className="arabic-text">سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ</span>
+                  <AudioPlayer arabicText="سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ" />
+                </p>
                   <p className="transliteration">Subhanallahi Walhamdulillahi Wa La Ilaha Illallahu Wallahu Akbar</p>
                   <p className="translation">আল্লাহ পবিত্র, সকল প্রশংসা আল্লাহর, আল্লাহ ছাড়া কোন ইলাহ নেই, আল্লাহ সর্বশ্রেষ্ঠ</p>
                 </div>
@@ -434,7 +456,10 @@ export default function Umrah() {
                 
                 <div className="dua-box">
                   <h4>জমজম পান করার দোয়া:</h4>
-                  <p className="arabic">اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا وَاسِعًا وَشِفَاءً مِنْ كُلِّ دَاءٍ</p>
+                  <p className="arabic">
+                  <span className="arabic-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا وَاسِعًا وَشِفَاءً مِنْ كُلِّ دَاءٍ</span>
+                  <AudioPlayer arabicText="اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا وَاسِعًا وَشِفَاءً مِنْ كُلِّ دَاءٍ" />
+                </p>
                   <p className="transliteration">Allahumma Inni As'aluka Ilman Nafian Wa Rizqan Wasian Wa Shifaan Min Kulli Dain</p>
                   <p className="translation">হে আল্লাহ, আমি আপনার কাছে উপকারী জ্ঞান, প্রশস্ত রিজিক এবং সকল রোগ থেকে আরোগ্য চাই</p>
                 </div>
@@ -462,7 +487,10 @@ export default function Umrah() {
                 
                 <div className="dua-box">
                   <h4>সাফায় দোয়া:</h4>
-                  <p className="arabic">إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ</p>
+                  <p className="arabic">
+                  <span className="arabic-text">إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ</span>
+                  <AudioPlayer arabicText="إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ" />
+                </p>
                   <p className="transliteration">Innas Safa Wal Marwata Min Sha'airillah</p>
                   <p className="translation">নিশ্চয়ই সাফা ও মারওয়া আল্লাহর নিদর্শনসমূহের অন্তর্গত</p>
                 </div>

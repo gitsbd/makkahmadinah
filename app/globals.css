@@ -272,11 +272,47 @@ a:hover {
     letter-spacing: 1px;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-base);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.arabic-text {
+    flex: 1;
+    text-align: right;
 }
 
 .arabic:hover {
     box-shadow: var(--shadow);
     transform: translateX(-2px);
+}
+
+.audio-player-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow);
+    flex-shrink: 0;
+}
+
+.audio-player-btn:hover {
+    background: var(--primary-light);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-md);
+}
+
+.audio-player-btn:active {
+    transform: scale(0.95);
 }
 
 .transliteration {

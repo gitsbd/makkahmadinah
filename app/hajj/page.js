@@ -3,6 +3,7 @@ import PageHeader from '@/components/PageHeader'
 import ImportantNote from '@/components/ImportantNote'
 import CompletionBox from '@/components/CompletionBox'
 import TripChecklist from '@/components/TripChecklist'
+import AudioPlayer from '@/components/AudioPlayer'
 
 export default function Hajj() {
   return (
@@ -140,21 +141,30 @@ export default function Hajj() {
               
               <div className="dua-box">
                 <h4>হাদীস ২:</h4>
-                <p className="arabic">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: مَنْ حَجَّ فَلَمْ يَرْفُثْ وَلَمْ يَفْسُقْ رَجَعَ كَيَوْمِ وَلَدَتْهُ أُمُّهُ</p>
+                <p className="arabic">
+                  <span className="arabic-text">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: مَنْ حَجَّ فَلَمْ يَرْفُثْ وَلَمْ يَفْسُقْ رَجَعَ كَيَوْمِ وَلَدَتْهُ أُمُّهُ</span>
+                  <AudioPlayer arabicText="عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: مَنْ حَجَّ فَلَمْ يَرْفُثْ وَلَمْ يَفْسُقْ رَجَعَ كَيَوْمِ وَلَدَتْهُ أُمُّهُ" />
+                </p>
                 <p className="transliteration">An Abi Hurairata Radiyallahu Anhu Anna Rasulallahi Sallallahu Alaihi Wasallam Qala: Man Hajja Falam Yar Futh Wa Lam Yafsuq Raja'a Kayaumi Waladatuhu Ummuhu</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত আবু হুরায়রা (রা.) থেকে বর্ণিত, রাসূলুল্লাহ (সা.) বলেছেন: "যে ব্যক্তি হজ্জ করল এবং কোনো অশ্লীল কথা বলল না ও কোনো গুনাহ করল না, সে এমনভাবে ফিরে আসবে যেন আজই তার মা তাকে জন্ম দিয়েছে।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
               </div>
               
               <div className="dua-box">
                 <h4>হাদীস ৩:</h4>
-                <p className="arabic">عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: الْحَجُّ وَالْعُمْرَةُ وَفْدَانِ إِلَى اللَّهِ عَزَّ وَجَلَّ يَدْعُونَهُ فَيُجِيبُهُمْ وَيَسْأَلُونَهُ فَيُعْطِيهِمْ</p>
+                <p className="arabic">
+                  <span className="arabic-text">عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: الْحَجُّ وَالْعُمْرَةُ وَفْدَانِ إِلَى اللَّهِ عَزَّ وَجَلَّ يَدْعُونَهُ فَيُجِيبُهُمْ وَيَسْأَلُونَهُ فَيُعْطِيهِمْ</span>
+                  <AudioPlayer arabicText="عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: الْحَجُّ وَالْعُمْرَةُ وَفْدَانِ إِلَى اللَّهِ عَزَّ وَجَلَّ يَدْعُونَهُ فَيُجِيبُهُمْ وَيَسْأَلُونَهُ فَيُعْطِيهِمْ" />
+                </p>
                 <p className="transliteration">An Abdullahi Ibn Umar Radiyallahu Anhuma Anna Rasulallahi Sallallahu Alaihi Wasallam Qala: Al Hajju Wal Umratu Wafdan Ila Allahi Azza Wa Jalla Yad'unahu Fayujibuhum Wa Yas'alunahu Fayu'tihim</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত আবদুল্লাহ ইবনে উমর (রা.) থেকে বর্ণিত, রাসূলুল্লাহ (সা.) বলেছেন: "হজ্জ ও উমরাহ হল আল্লাহর কাছে প্রতিনিধি দল, তারা তাঁকে ডাকে এবং তিনি তাদের ডাকে সাড়া দেন, তারা তাঁর কাছে চায় এবং তিনি তাদের দেন।" (ইবনে মাজাহ)</p>
               </div>
               
               <div className="dua-box">
                 <h4>হাদীস ৪:</h4>
-                <p className="arabic">عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا قَالَتْ: قُلْتُ يَا رَسُولَ اللَّهِ أَلَا نَغْزُو وَنُجَاهِدُ مَعَكُمْ؟ فَقَالَ: لَكِنَّ أَحْسَنَ الْجِهَادِ وَأَجْمَلَهُ الْحَجُّ حَجٌّ مَبْرُورٌ</p>
+                <p className="arabic">
+                  <span className="arabic-text">عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا قَالَتْ: قُلْتُ يَا رَسُولَ اللَّهِ أَلَا نَغْزُو وَنُجَاهِدُ مَعَكُمْ؟ فَقَالَ: لَكِنَّ أَحْسَنَ الْجِهَادِ وَأَجْمَلَهُ الْحَجُّ حَجٌّ مَبْرُورٌ</span>
+                  <AudioPlayer arabicText="عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا قَالَتْ: قُلْتُ يَا رَسُولَ اللَّهِ أَلَا نَغْزُو وَنُجَاهِدُ مَعَكُمْ؟ فَقَالَ: لَكِنَّ أَحْسَنَ الْجِهَادِ وَأَجْمَلَهُ الْحَجُّ حَجٌّ مَبْرُورٌ" />
+                </p>
                 <p className="transliteration">An Aishata Radiyallahu Anha Qalat: Qultu Ya Rasulallahi Ala Naghzu Wa Nujahidu Ma'akum? Fa Qala: Lakinnaha Ahsana Al Jihadi Wa Ajmalahu Al Hajju Hajjun Mabrurun</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত আয়েশা (রা.) থেকে বর্ণিত, তিনি বলেন: আমি বললাম, হে আল্লাহর রাসূল! আমরা কি যুদ্ধ করব না এবং আপনার সাথে জিহাদ করব না? তিনি বললেন: "কিন্তু সর্বোত্তম ও সর্বোৎকৃষ্ট জিহাদ হল কবুলকৃত হজ্জ।" (সহীহ বুখারী)</p>
               </div>
@@ -273,7 +283,10 @@ export default function Hajj() {
                 
                 <div className="dua-box">
                   <h4>হজ্জের নিয়ত:</h4>
-                  <p className="arabic">لَبَّيْكَ اللَّهُمَّ حَجًّا</p>
+                  <p className="arabic">
+                  <span className="arabic-text">لَبَّيْكَ اللَّهُمَّ حَجًّا</span>
+                  <AudioPlayer arabicText="لَبَّيْكَ اللَّهُمَّ حَجًّا" />
+                </p>
                   <p className="transliteration">Labbaik Allahumma Hajjan</p>
                   <p className="translation">হে আল্লাহ, আমি হজ্জের জন্য উপস্থিত</p>
                 </div>
@@ -303,7 +316,10 @@ export default function Hajj() {
                 
                 <div className="dua-box">
                   <h4>আরাফাতে পড়ার বিশেষ দোয়া:</h4>
-                  <p className="arabic">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</p>
+                  <p className="arabic">
+                  <span className="arabic-text">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</span>
+                  <AudioPlayer arabicText="لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ" />
+                </p>
                   <p className="transliteration">La Ilaha Illallahu Wahdahu La Sharika Lah, Lahul Mulku Wa Lahul Hamdu Wa Huwa Ala Kulli Shai'in Qadir</p>
                   <p className="translation">আল্লাহ ছাড়া কোন ইলাহ নেই, তিনি এক, তাঁর কোন শরীক নেই, রাজত্ব তাঁর, প্রশংসা তাঁর এবং তিনি সবকিছুর উপর ক্ষমতাবান</p>
                 </div>
@@ -362,14 +378,20 @@ export default function Hajj() {
                 
                 <div className="dua-box">
                   <h4>রমি (পাথর মারার) সময়:</h4>
-                  <p className="arabic">بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ</p>
+                  <p className="arabic">
+                  <span className="arabic-text">بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ</span>
+                  <AudioPlayer arabicText="بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ" />
+                </p>
                   <p className="transliteration">Bismillahi, Allahu Akbar</p>
                   <p className="translation">আল্লাহর নামে, আল্লাহ সর্বশ্রেষ্ঠ</p>
                 </div>
                 
                 <div className="dua-box">
                   <h4>কুরবানির দোয়া:</h4>
-                  <p className="arabic">إِنِّي وَجَّهْتُ وَجْهِي لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالْأَرْضَ حَنِيفًا وَمَا أَنَا مِنَ الْمُشْرِكِينَ</p>
+                  <p className="arabic">
+                  <span className="arabic-text">إِنِّي وَجَّهْتُ وَجْهِي لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالْأَرْضَ حَنِيفًا وَمَا أَنَا مِنَ الْمُشْرِكِينَ</span>
+                  <AudioPlayer arabicText="إِنِّي وَجَّهْتُ وَجْهِي لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالْأَرْضَ حَنِيفًا وَمَا أَنَا مِنَ الْمُشْرِكِينَ" />
+                </p>
                   <p className="transliteration">Inni Wajjahtu Wajhi Lilladhi Fataras Samawati Wal Arda Hanifan Wa Ma Ana Minal Mushrikin</p>
                   <p className="translation">নিশ্চয়ই আমি আমার মুখমণ্ডল সেই সত্তার দিকে ফিরিয়েছি যিনি আসমান ও জমিন সৃষ্টি করেছেন, একনিষ্ঠভাবে এবং আমি মুশরিকদের অন্তর্ভুক্ত নই</p>
                 </div>
@@ -398,7 +420,10 @@ export default function Hajj() {
                 
                 <div className="dua-box">
                   <h4>রমির পর দোয়া:</h4>
-                  <p className="arabic">اللَّهُمَّ اجْعَلْهُ حَجًّا مَبْرُورًا وَسَعْيًا مَشْكُورًا وَذَنْبًا مَغْفُورًا</p>
+                  <p className="arabic">
+                  <span className="arabic-text">اللَّهُمَّ اجْعَلْهُ حَجًّا مَبْرُورًا وَسَعْيًا مَشْكُورًا وَذَنْبًا مَغْفُورًا</span>
+                  <AudioPlayer arabicText="اللَّهُمَّ اجْعَلْهُ حَجًّا مَبْرُورًا وَسَعْيًا مَشْكُورًا وَذَنْبًا مَغْفُورًا" />
+                </p>
                   <p className="transliteration">Allahumma Ij'alhu Hajjan Mabruran Wa Sa'yan Mashkuran Wa Zanban Maghfuran</p>
                   <p className="translation">হে আল্লাহ, এটিকে কবুলকৃত হজ্জ, প্রশংসিত সাঈ এবং ক্ষমাপ্রাপ্ত গুনাহ করুন</p>
                 </div>
