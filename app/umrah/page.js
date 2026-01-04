@@ -149,17 +149,91 @@ export default function Umrah() {
             className="day-section-expandable"
            number={3}>
             <div className="dua-item">
-              <h3>উমরাহর ফজিলত:</h3>
-              <ul className="list-styled">
-                <li><strong>গুনাহ মাফ:</strong> উমরাহ পালন করলে পূর্ববর্তী গুনাহসমূহ মাফ হয়ে যায়।</li>
-                <li><strong>আল্লাহর নৈকট্য:</strong> উমরাহ পালনকারী আল্লাহর বিশেষ নৈকট্য লাভ করে।</li>
-                <li><strong>রিজিক বৃদ্ধি:</strong> হাদীস অনুসারে হজ্জ ও উমরাহ দারিদ্র্য দূর করে।</li>
-                <li><strong>জান্নাতের পুরস্কার:</strong> উমরাহ পালনকারী জান্নাতের পুরস্কার লাভ করে।</li>
-                <li><strong>দোয়া কবুল:</strong> উমরাহর সময় দোয়া কবুল হওয়ার বিশেষ সময়।</li>
-                <li><strong>আত্মশুদ্ধি:</strong> উমরাহ পালন করলে আত্মার পরিশুদ্ধি হয়।</li>
-              </ul>
+              <h3>কেন উমরাহ করি?</h3>
               
-              <h3>উমরাহর আধ্যাত্মিক গুরুত্ব</h3>
+              <div className="dua-box mt-md">
+                <h4>১. আল্লাহর নির্দেশ - কুরআনের নির্দেশনা:</h4>
+                <p className="info-text">আল্লাহ কুরআনে বলেছেন:</p>
+                <p className="arabic">
+                  <span className="arabic-text">وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلَّهِ</span>
+                  <AudioPlayer arabicText="وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلَّهِ" />
+                </p>
+                <p className="transliteration">Wa Atimmul Hajja Wal Umrata Lillah</p>
+                <p className="translation"><strong>অনুবাদ:</strong> "হজ ও উমরাহ আল্লাহর জন্য পূর্ণ করো।" (সূরা আল-বাকারা, আয়াত ১৯৬)</p>
+                <p className="info-text mt-sm">এই আয়াত থেকে বোঝা যায় যে হজ্জ ও উমরাহ আল্লাহর জন্য সম্পন্ন করতে হবে—তাই উমরাহ করি।</p>
+                <p className="info-text"><strong>সূত্র:</strong> Quran.com</p>
+              </div>
+
+              <div className="dua-box mt-md">
+                <h4>২. সুন্নাহ অনুসরণ - রাসূল (সা.) এর আমল:</h4>
+                <p className="info-text">রাসূলুল্লাহ (সা.) নিজে উমরাহ করেছেন (একাধিকবার) — তাই সুন্নাহ অনুসরণ করে উমরাহ করি।</p>
+                <p className="info-text mt-sm">রাসূলুল্লাহ (সা.) তাঁর জীবনে একাধিকবার উমরাহ করেছেন, যা আমাদের জন্য অনুসরণীয় সুন্নাহ।</p>
+                <p className="info-text"><strong>সূত্র:</strong> Islam-QA</p>
+              </div>
+
+              <div className="dua-box mt-md">
+                <h4>৩. গুনাহ মাফ - উমরাহ থেকে উমরাহ:</h4>
+                <p className="arabic">
+                  <span className="arabic-text">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: الْعُمْرَةُ إِلَى الْعُمْرَةِ كَفَّارَةٌ لِمَا بَيْنَهُمَا</span>
+                  <AudioPlayer arabicText="عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: الْعُمْرَةُ إِلَى الْعُمْرَةِ كَفَّارَةٌ لِمَا بَيْنَهُمَا" />
+                </p>
+                <p className="transliteration">An Abi Hurairata Radiyallahu Anhu Anna Rasulallahi Sallallahu Alaihi Wasallam Qala: Al Umratu Ila Al Umrati Kaffaratun Lima Bainahuma</p>
+                <p className="translation"><strong>অনুবাদ:</strong> হযরত আবু হুরায়রা (রা.) থেকে বর্ণিত, রাসূলুল্লাহ (সা.) বলেছেন: "এক উমরাহ থেকে আরেক উমরাহ—মাঝের গুনাহের কাফফারা/মাফ।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
+                <p className="info-text mt-sm">উমরাহ → উমরাহ: এক উমরাহ থেকে আরেক উমরাহ—মাঝের গুনাহের কাফফারা/মাফ।</p>
+                <p className="info-text"><strong>সূত্র:</strong> Sunnah.com</p>
+              </div>
+
+              <div className="dua-box mt-md">
+                <h4>৪. আল্লাহর মেহমান - হাজী ও মু'তামির (উমরাহকারী):</h4>
+                <p className="info-text">হাজী ও মু'তামির (উমরাহকারী) আল্লাহর মেহমান/দল: তারা দুআ করলে কবুল হয়, ক্ষমা চাইলে ক্ষমা করা হয়।</p>
+                <p className="arabic mt-sm">
+                  <span className="arabic-text">الْحَجَّاجُ وَالْعُمَّارُ وَفْدُ اللَّهِ، دَعَوْهُ فَأَجَابَهُمْ، وَسَأَلُوهُ فَأَعْطَاهُمْ</span>
+                  <AudioPlayer arabicText="الْحَجَّاجُ وَالْعُمَّارُ وَفْدُ اللَّهِ، دَعَوْهُ فَأَجَابَهُمْ، وَسَأَلُوهُ فَأَعْطَاهُمْ" />
+                </p>
+                <p className="transliteration">Al Hajjaju Wal Ummaru Wafdullah, Da'awhu Fa Ajabahum, Wa Sa'aluhu Fa A'tahum</p>
+                <p className="translation"><strong>অনুবাদ:</strong> "হাজী ও উমরাহকারীরা আল্লাহর মেহমান। তারা দুআ করলে তিনি কবুল করেন এবং তারা চাইলে তিনি দেন।"</p>
+                <p className="info-text"><strong>সূত্র:</strong> Ahadith</p>
+              </div>
+
+              <div className="dua-box mt-md">
+                <h4>৫. বহুগুণ সওয়াব - বাইতুল্লাহ/মসজিদুল হারামে সালাত:</h4>
+                <p className="info-text">বাইতুল্লাহ/মসজিদুল হারামে সালাতের সওয়াব বহুগুণ (প্রচলিত: ১ লক্ষ গুণ): তাই সেখানে বেশি বেশি নামাজ পড়ার জন্য উমরাহ করি।</p>
+                <p className="arabic mt-sm">
+                  <span className="arabic-text">صَلَاةٌ فِي الْمَسْجِدِ الْحَرَامِ أَفْضَلُ مِنْ مِائَةِ أَلْفِ صَلَاةٍ فِيمَا سِوَاهُ</span>
+                  <AudioPlayer arabicText="صَلَاةٌ فِي الْمَسْجِدِ الْحَرَامِ أَفْضَلُ مِنْ مِائَةِ أَلْفِ صَلَاةٍ فِيمَا سِوَاهُ" />
+                </p>
+                <p className="transliteration">Salatun Fil Masjidil Harami Afdalu Min Mi'ati Alfi Salatin Fima Siwahu</p>
+                <p className="translation"><strong>অনুবাদ:</strong> "মসজিদুল হারামে এক নামাজ অন্য মসজিদে এক লক্ষ নামাজের চেয়ে উত্তম।"</p>
+                <p className="info-text mt-sm">এই ফজিলতের কারণে মসজিদুল হারামে বেশি বেশি নামাজ পড়ার সুযোগ পাওয়ার জন্য উমরাহ করি।</p>
+                <p className="info-text"><strong>সূত্র:</strong> Islam Web</p>
+              </div>
+
+              <div className="dua-box mt-md">
+                <h4>৬. হাজরে আসওয়াদ (Black Stone) - জান্নাত থেকে নাযিল:</h4>
+                <p className="info-text">হাজরে আসওয়াদ (Black Stone) জান্নাত থেকে নাযিল—এবং কিয়ামতে সত্যভাবে স্পর্শ/ইশারা করা ব্যক্তির পক্ষে সাক্ষ্য দেবে; তবে কাউকে কষ্ট না দিয়ে।</p>
+                <p className="arabic mt-sm">
+                  <span className="arabic-text">عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو قَالَ: سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ: إِنَّ الرُّكْنَ وَالْمَقَامَ يَاقُوتَتَانِ مِنْ يَاقُوتِ الْجَنَّةِ، طَمَسَ اللَّهُ نُورَهُمَا، وَلَوْ لَمْ يَطْمِسْ نُورَهُمَا لَأَضَاءَتَا مَا بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ</span>
+                  <AudioPlayer arabicText="عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو قَالَ: سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ: إِنَّ الرُّكْنَ وَالْمَقَامَ يَاقُوتَتَانِ مِنْ يَاقُوتِ الْجَنَّةِ، طَمَسَ اللَّهُ نُورَهُمَا، وَلَوْ لَمْ يَطْمِسْ نُورَهُمَا لَأَضَاءَتَا مَا بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ" />
+                </p>
+                <p className="transliteration">An Abdullahi Ibn Amr Qala: Sami'tu Rasulallahi Sallallahu Alaihi Wasallam Yaqulu: Inna Ar Rukna Wal Maqama Yaqutatani Min Yaqutil Jannati, Tamasallahu Nurahuma, Wa Lau Lam Yatmis Nurahuma La Ad'ata Ma Baina Al Mashriqi Wal Maghribi</p>
+                <p className="translation"><strong>অনুবাদ:</strong> হযরত আবদুল্লাহ ইবনে আমর (রা.) থেকে বর্ণিত, রাসূলুল্লাহ (সা.) বলেছেন: "নিশ্চয়ই রুকন (হাজরে আসওয়াদ) ও মাকামে ইব্রাহিম জান্নাতের দুটি ইয়াকুত (মূল্যবান পাথর)। আল্লাহ তাদের আলো ঢেকে দিয়েছেন। যদি তিনি তাদের আলো ঢেকে না দিতেন, তাহলে তারা পূর্ব ও পশ্চিমের মধ্যবর্তী সব কিছু আলোকিত করে দিত।"</p>
+                <p className="info-text mt-sm"><strong>গুরুত্বপূর্ণ:</strong> হাজরে আসওয়াদ স্পর্শ বা ইশারা করার সময় কাউকে কষ্ট না দেওয়া, ভিড় এড়িয়ে শান্তভাবে করা এবং সত্যভাবে করা জরুরি।</p>
+                <p className="info-text"><strong>সূত্র:</strong> Sunnah.com</p>
+              </div>
+
+              <div className="dua-box mt-md">
+                <h4>৭. গুনাহ মাফের বড় কারণ:</h4>
+                <p className="info-text">উমরাহ গুনাহ মাফের বড় কারণ: বিশেষ করে উমরাহ-টু-উমরাহ মাঝের গুনাহ মাফ হয়; বড় গুনাহ হলে সত্য তাওবা জরুরি।</p>
+                <p className="info-text mt-sm">উমরাহ একটি গুরুত্বপূর্ণ ইবাদত যা গুনাহ মাফের জন্য অত্যন্ত কার্যকর। তবে মনে রাখতে হবে:</p>
+                <ul className="list-styled">
+                  <li>ছোট গুনাহগুলো উমরাহর মাধ্যমে মাফ হতে পারে</li>
+                  <li>এক উমরাহ থেকে পরবর্তী উমরাহ পর্যন্ত মধ্যবর্তী গুনাহ মাফ হয়</li>
+                  <li>বড় গুনাহ (কাবিরা) হলে শুধু উমরাহ যথেষ্ট নয়, সত্য তাওবা করা জরুরি</li>
+                  <li>তাওবার সাথে উমরাহ করলে আল্লাহর রহমত ও ক্ষমা পাওয়ার সম্ভাবনা বেড়ে যায়</li>
+                </ul>
+              </div>
+
+              <h3 className="mt-lg">উমরাহর আধ্যাত্মিক গুরুত্ব</h3>
               <p>উমরাহ শুধুমাত্র একটি ধর্মীয় রীতি নয়, এটি একটি আধ্যাত্মিক যাত্রা যা মুসলমানদের:</p>
               <ul className="list-styled">
                 <li>আল্লাহর সাথে সম্পর্ক গড়ে তুলতে সাহায্য করে</li>
