@@ -134,7 +134,10 @@ export default function Hajj() {
               
               <div className="dua-box">
                 <h4>হাদীস ১:</h4>
-                <p className="arabic">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: سُئِلَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَيُّ الْأَعْمَالِ أَفْضَلُ؟ قَالَ: إِيمَانٌ بِاللَّهِ وَرَسُولِهِ قِيلَ: ثُمَّ مَاذَا؟ قَالَ: جِهَادٌ فِي سَبِيلِ اللَّهِ قِيلَ: ثُمَّ مَاذَا؟ قَالَ: حَجٌّ مَبْرُورٌ</p>
+                <p className="arabic">
+                  <span className="arabic-text">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: سُئِلَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَيُّ الْأَعْمَالِ أَفْضَلُ؟ قَالَ: إِيمَانٌ بِاللَّهِ وَرَسُولِهِ قِيلَ: ثُمَّ مَاذَا؟ قَالَ: جِهَادٌ فِي سَبِيلِ اللَّهِ قِيلَ: ثُمَّ مَاذَا؟ قَالَ: حَجٌّ مَبْرُورٌ</span>
+                  <AudioPlayer arabicText="عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: سُئِلَ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَيُّ الْأَعْمَالِ أَفْضَلُ؟ قَالَ: إِيمَانٌ بِاللَّهِ وَرَسُولِهِ قِيلَ: ثُمَّ مَاذَا؟ قَالَ: جِهَادٌ فِي سَبِيلِ اللَّهِ قِيلَ: ثُمَّ مَاذَا؟ قَالَ: حَجٌّ مَبْرُورٌ" />
+                </p>
                 <p className="transliteration">An Abi Hurairata Radiyallahu Anhu Qala: Su'ila An Nabiyyi Sallallahu Alaihi Wasallam Ayyu Al A'mali Afdalu? Qala: Imanun Billahi Wa Rasulihi Qila: Thumma Matha? Qala: Jihadun Fi Sabilillahi Qila: Thumma Matha? Qala: Hajjun Mabrurun</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত আবু হুরায়রা (রা.) থেকে বর্ণিত, নবী (সা.) কে জিজ্ঞাসা করা হয়েছিল: "কোন আমল সবচেয়ে উত্তম?" তিনি বললেন: "আল্লাহ ও তাঁর রাসূলের প্রতি ঈমান।" বলা হল: "তারপর কী?" তিনি বললেন: "আল্লাহর পথে জিহাদ।" বলা হল: "তারপর কী?" তিনি বললেন: "কবুলকৃত হজ্জ।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
               </div>
@@ -381,6 +384,7 @@ export default function Hajj() {
                   <p className="arabic">
                   <span className="arabic-text">بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ</span>
                   <AudioPlayer arabicText="بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ" />
+                  <AudioPlayer arabicText="بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ" />
                 </p>
                   <p className="transliteration">Bismillahi, Allahu Akbar</p>
                   <p className="translation">আল্লাহর নামে, আল্লাহ সর্বশ্রেষ্ঠ</p>
@@ -493,7 +497,10 @@ export default function Hajj() {
                 
                 <div className="dua-box">
                   <h4>বিদায়ী তাওয়াফের দোয়া:</h4>
-                  <p className="arabic">اللَّهُمَّ إِنَّ بَيْتِكَ عَظَّمْتَهُ وَحَرَّمْتَهُ وَعَظَّمْتَ حُرْمَتَهُ</p>
+                  <p className="arabic">
+                    <span className="arabic-text">اللَّهُمَّ إِنَّ بَيْتِكَ عَظَّمْتَهُ وَحَرَّمْتَهُ وَعَظَّمْتَ حُرْمَتَهُ</span>
+                    <AudioPlayer arabicText="اللَّهُمَّ إِنَّ بَيْتِكَ عَظَّمْتَهُ وَحَرَّمْتَهُ وَعَظَّمْتَ حُرْمَتَهُ" />
+                  </p>
                   <p className="transliteration">Allahumma Inna Baitaka Azzamatahu Wa Harramtahu Wa Azzamata Hurmatahu</p>
                   <p className="translation">হে আল্লাহ, নিশ্চয়ই আপনি আপনার ঘরকে সম্মানিত করেছেন, হারাম করেছেন এবং এর সম্মানকে বৃদ্ধি করেছেন</p>
                 </div>
@@ -516,28 +523,40 @@ export default function Hajj() {
               
               <div className="dua-box">
                 <h4>হাদীস ১:</h4>
-                <p className="arabic">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: لَا تَشُدُّ الرِّحَالَ إِلَّا إِلَى ثَلَاثَةِ مَسَاجِدَ: الْمَسْجِدِ الْحَرَامِ وَمَسْجِدِي هَذَا وَالْمَسْجِدِ الْأَقْصَى</p>
+                <p className="arabic">
+                  <span className="arabic-text">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: لَا تَشُدُّ الرِّحَالَ إِلَّا إِلَى ثَلَاثَةِ مَسَاجِدَ: الْمَسْجِدِ الْحَرَامِ وَمَسْجِدِي هَذَا وَالْمَسْجِدِ الْأَقْصَى</span>
+                  <AudioPlayer arabicText="عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: لَا تَشُدُّ الرِّحَالَ إِلَّا إِلَى ثَلَاثَةِ مَسَاجِدَ: الْمَسْجِدِ الْحَرَامِ وَمَسْجِدِي هَذَا وَالْمَسْجِدِ الْأَقْصَى" />
+                </p>
                 <p className="transliteration">An Abi Hurairata Radiyallahu Anhu Anna Rasulallahi Sallallahu Alaihi Wasallam Qala: La Tashuddu Ar Rihala Illa Ila Thalathati Masajida: Al Masjidil Harami Wa Masjidi Hadha Wal Masjidil Aqsa</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত আবু হুরায়রা (রা.) থেকে বর্ণিত, রাসূলুল্লাহ (সা.) বলেছেন: "তিনটি মসজিদ ছাড়া অন্য কোথাও সফরের উদ্দেশ্যে যাত্রা করো না: মসজিদুল হারাম, আমার এই মসজিদ (মসজিদে নববী) এবং মসজিদুল আকসা।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
               </div>
               
               <div className="dua-box">
                 <h4>হাদীস ২:</h4>
-                <p className="arabic">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: صَلَاةٌ فِي مَسْجِدِي هَذَا خَيْرٌ مِنْ أَلْفِ صَلَاةٍ فِيمَا سِوَاهُ إِلَّا الْمَسْجِدَ الْحَرَامَ</p>
+                <p className="arabic">
+                  <span className="arabic-text">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: صَلَاةٌ فِي مَسْجِدِي هَذَا خَيْرٌ مِنْ أَلْفِ صَلَاةٍ فِيمَا سِوَاهُ إِلَّا الْمَسْجِدَ الْحَرَامَ</span>
+                  <AudioPlayer arabicText="عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: صَلَاةٌ فِي مَسْجِدِي هَذَا خَيْرٌ مِنْ أَلْفِ صَلَاةٍ فِيمَا سِوَاهُ إِلَّا الْمَسْجِدَ الْحَرَامَ" />
+                </p>
                 <p className="transliteration">An Abi Hurairata Radiyallahu Anhu Qala: Qala Rasulallahi Sallallahu Alaihi Wasallam: Salatun Fi Masjidi Hadha Khairun Min Alfi Salatin Fima Siwahu Illa Al Masjidil Haram</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত আবু হুরায়রা (রা.) থেকে বর্ণিত, রাসূলুল্লাহ (সা.) বলেছেন: "আমার এই মসজিদে (মসজিদে নববী) এক নামাজ মসজিদুল হারাম ছাড়া অন্য যেকোনো মসজিদে এক হাজার নামাজের চেয়ে উত্তম।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
               </div>
               
               <div className="dua-box">
                 <h4>হাদীস ৩:</h4>
-                <p className="arabic">عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: مَنْ زَارَ قَبْرِي وَجَبَتْ لَهُ شَفَاعَتِي</p>
+                <p className="arabic">
+                  <span className="arabic-text">عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: مَنْ زَارَ قَبْرِي وَجَبَتْ لَهُ شَفَاعَتِي</span>
+                  <AudioPlayer arabicText="عَنْ عَبْدِ اللَّهِ بْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: مَنْ زَارَ قَبْرِي وَجَبَتْ لَهُ شَفَاعَتِي" />
+                </p>
                 <p className="transliteration">An Abdullahi Ibn Umar Radiyallahu Anhuma Anna Rasulallahi Sallallahu Alaihi Wasallam Qala: Man Zara Qabri Wajabat Lahu Shafa'ati</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত আবদুল্লাহ ইবনে উমর (রা.) থেকে বর্ণিত, রাসূলুল্লাহ (সা.) বলেছেন: "যে ব্যক্তি আমার কবর জিয়ারত করবে, তার জন্য আমার শাফাআত ওয়াজিব হবে।" (দারাকুতনি, বায়হাকী)</p>
               </div>
               
               <div className="dua-box">
                 <h4>হাদীস ৪:</h4>
-                <p className="arabic">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: مَا بَيْنَ بَيْتِي وَمِنْبَرِي رَوْضَةٌ مِنْ رِيَاضِ الْجَنَّةِ</p>
+                <p className="arabic">
+                  <span className="arabic-text">عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: مَا بَيْنَ بَيْتِي وَمِنْبَرِي رَوْضَةٌ مِنْ رِيَاضِ الْجَنَّةِ</span>
+                  <AudioPlayer arabicText="عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: مَا بَيْنَ بَيْتِي وَمِنْبَرِي رَوْضَةٌ مِنْ رِيَاضِ الْجَنَّةِ" />
+                </p>
                 <p className="transliteration">An Abi Hurairata Radiyallahu Anhu Qala: Qala Rasulallahi Sallallahu Alaihi Wasallam: Ma Baina Baiti Wa Minbari Rawdatun Min Riyadil Jannah</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত আবু হুরায়রা (রা.) থেকে বর্ণিত, রাসূলুল্লাহ (সা.) বলেছেন: "আমার ঘর ও মিম্বরের মধ্যবর্তী স্থান হল জান্নাতের বাগানসমূহের একটি বাগান।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
               </div>
@@ -556,14 +575,20 @@ export default function Hajj() {
               
               <h4>রওজা শরীফে সালাম দেওয়ার দোয়া:</h4>
               <div className="dua-box">
-                <p className="arabic">السَّلَامُ عَلَيْكَ يَا رَسُولَ اللَّهِ، السَّلَامُ عَلَيْكَ يَا نَبِيَّ اللَّهِ، السَّلَامُ عَلَيْكَ يَا حَبِيبَ اللَّهِ</p>
+                <p className="arabic">
+                  <span className="arabic-text">السَّلَامُ عَلَيْكَ يَا رَسُولَ اللَّهِ، السَّلَامُ عَلَيْكَ يَا نَبِيَّ اللَّهِ، السَّلَامُ عَلَيْكَ يَا حَبِيبَ اللَّهِ</span>
+                  <AudioPlayer arabicText="السَّلَامُ عَلَيْكَ يَا رَسُولَ اللَّهِ، السَّلَامُ عَلَيْكَ يَا نَبِيَّ اللَّهِ، السَّلَامُ عَلَيْكَ يَا حَبِيبَ اللَّهِ" />
+                </p>
                 <p className="transliteration">Assalamu Alaika Ya Rasulallah, Assalamu Alaika Ya Nabiyyallah, Assalamu Alaika Ya Habiballah</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহর রাসূল, আপনার উপর সালাম। হে আল্লাহর নবী, আপনার উপর সালাম। হে আল্লাহর প্রিয়, আপনার উপর সালাম।</p>
               </div>
               
               <div className="dua-box">
                 <h4>রাসূলুল্লাহ (সা.) এর জন্য দোয়া:</h4>
-                <p className="arabic">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ</p>
+                <p className="arabic">
+                  <span className="arabic-text">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ</span>
+                  <AudioPlayer arabicText="اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ" />
+                </p>
                 <p className="transliteration">Allahumma Salli Ala Muhammadin Wa Ala Ali Muhammadin Kama Sallaita Ala Ibrahima Wa Ala Ali Ibrahima Innaka Hamidun Majidun</p>
                 <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, মুহাম্মদ (সা.) ও তাঁর পরিবারের উপর রহমত বর্ষণ করুন, যেমন আপনি ইব্রাহিম (আঃ) ও তাঁর পরিবারের উপর রহমত বর্ষণ করেছেন। নিশ্চয়ই আপনি প্রশংসিত ও মহান।</p>
               </div>

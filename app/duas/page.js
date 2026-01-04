@@ -136,7 +136,10 @@ export default function Duas() {
           <DuaCategory id="rami" title="রমি (পাথর মারার) দোয়া" defaultOpen={false} number={7}>
             <div className="dua-item">
               <h3>পাথর মারার সময়</h3>
-              <p className="arabic">بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ</p>
+              <p className="arabic">
+                <span className="arabic-text">بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ</span>
+                <AudioPlayer arabicText="بِسْمِ اللَّهِ، اللَّهُ أَكْبَرُ" />
+              </p>
               <p className="transliteration">Bismillahi, Allahu Akbar</p>
               <p className="translation"><strong>অনুবাদ:</strong> আল্লাহর নামে, আল্লাহ সর্বশ্রেষ্ঠ</p>
             </div>

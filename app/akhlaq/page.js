@@ -31,7 +31,10 @@ export default function Akhlaq() {
 
             <h3>গীবতের সংজ্ঞা</h3>
             <p className="info-text">রাসূলুল্লাহ (সা.) বলেছেন:</p>
-            <p className="arabic">الْغِيبَةُ ذِكْرُكَ أَخَاكَ بِمَا يَكْرَهُ</p>
+            <p className="arabic">
+              <span className="arabic-text">الْغِيبَةُ ذِكْرُكَ أَخَاكَ بِمَا يَكْرَهُ</span>
+              <AudioPlayer arabicText="الْغِيبَةُ ذِكْرُكَ أَخَاكَ بِمَا يَكْرَهُ" />
+            </p>
             <p className="transliteration">Al-ghibatu dhikruka akhaka bima yakruh</p>
             <p className="translation"><strong>অনুবাদ:</strong> "গীবত হল তোমার ভাইয়ের এমন বিষয় আলোচনা করা যা সে অপছন্দ করে।" (সহীহ মুসলিম)</p>
 
