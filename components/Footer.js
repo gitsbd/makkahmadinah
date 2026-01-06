@@ -1,8 +1,11 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import VisitorCounter from './VisitorCounter'
 
 export default function Footer() {
+  const pathname = usePathname()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -114,6 +117,11 @@ export default function Footer() {
           <p className="footer-note">
             এই ওয়েবসাইটটি শিক্ষামূলক উদ্দেশ্যে তৈরি করা হয়েছে
           </p>
+          {pathname === '/' && (
+            <p className="footer-note">
+              <VisitorCounter />
+            </p>
+          )}
         </div>
       </div>
     </footer>

@@ -48,6 +48,11 @@
     --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Noto Sans Bengali', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', sans-serif;
     line-height: 1.7;
@@ -55,6 +60,10 @@ body {
     background-color: var(--bg-color);
     direction: ltr;
     overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 16px;
@@ -1270,7 +1279,10 @@ a:hover {
     color: var(--white);
     padding: var(--spacing-xl) 0 var(--spacing-lg);
     margin-top: var(--spacing-xl);
+    margin-bottom: 0;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
 }
 
 .footer-content {
@@ -1403,6 +1415,23 @@ a:hover {
 .footer-bottom p {
     margin-bottom: var(--spacing-xs);
     opacity: 0.9;
+}
+
+.visitor-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.visitor-counter .label {
+    opacity: 0.85;
+}
+
+.visitor-counter .count {
+    color: var(--accent-light);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .footer-note {
