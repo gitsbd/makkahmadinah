@@ -14,10 +14,10 @@ export default function Footer() {
         <div className="footer-content">
           {/* Pilgrimage Services */}
           <div className="footer-section">
-            <h4 className="footer-heading">তীর্থযাত্রা পরিষেবা</h4>
+            <h4 className="footer-heading">হজযাত্রী/উমরাহযাত্রী সেবা</h4>
             <ul className="footer-links">
               <li>
-                <Link href="/guide/">সম্পূর্ণ গাইড</Link>
+                <Link href="/guide/">গাইড</Link>
               </li>
               <li>
                 <Link href="/umrah/">উমরাহ</Link>
@@ -39,10 +39,13 @@ export default function Footer() {
                 <Link href="/umrah-duas/">উমরাহ দোয়া</Link>
               </li>
               <li>
-                <Link href="/daily-duas/">দৈনিক দোয়া</Link>
+                <Link href="/general-duas/">দৈনন্দিন মাসনূন দোয়া</Link>
               </li>
               <li>
-                <Link href="/general-duas/">সাধারণ দোয়া</Link>
+                <Link href="/daily-duas/">আমার দোয়া</Link>
+              </li>
+              <li>
+                <Link href="/monajat/">মোনাজাত</Link>
               </li>
             </ul>
           </div>
