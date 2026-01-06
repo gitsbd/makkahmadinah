@@ -8,7 +8,9 @@ export default function DuaItem({
   title,
   arabic,
   transliteration,
+  banglaTransliteration,
   translation,
+  banglaTranslation,
   children
 }) {
   return (
@@ -20,8 +22,10 @@ export default function DuaItem({
           <AudioPlayer arabicText={arabic} />
         </p>
       )}
-      {transliteration && <p className="transliteration">{transliteration}</p>}
-      {translation && <p className="translation">{translation}</p>}
+      {transliteration && <p className="transliteration"><strong>English Pronunciation:</strong> {transliteration}</p>}
+      {banglaTransliteration && <p className="transliteration"><strong>বাংলা উচ্চারণ:</strong> {banglaTransliteration}</p>}
+      {translation && <p className="translation"><strong>Meaning (English):</strong> {translation}</p>}
+      {banglaTranslation && <p className="translation"><strong>অর্থ (বাংলা):</strong> {banglaTranslation}</p>}
       {children}
     </div>
   )

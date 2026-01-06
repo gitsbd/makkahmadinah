@@ -9,7 +9,7 @@ export default function GeneralDuas() {
       <PageHeader 
         title="দৈনন্দিন মাসনূন দোয়া"
         subtitle="প্রতিদিনের জীবনে ব্যবহার করা হয় এমন গুরুত্বপূর্ণ দোয়া"
-        sectionCount={16}
+        sectionCount={20}
       />
 
       <SectionWrapper className="duas-section">
@@ -210,6 +210,55 @@ export default function GeneralDuas() {
               transliteration="ইয়াগফিরুল্লাহু লী ওয়া লাক"
               translation="আল্লাহ আমাকে ও আপনাকে ক্ষমা করুন।"
             />
+          </GeneralDuaCategory>
+
+          <GeneralDuaCategory title="মায়ের জন্য দোয়া" number={17} defaultOpen={false}>
+            <DuaItem 
+              title="মায়ের জন্য আরবি দোয়া"
+              arabic="اللهم إن أمي في ذمتك وحبل جوارك، فقها فتنة القبر وعذاب النار، وأنت أهل الوفاء والحق، فاغفر لها وارحمها، وأكرم نزلها، ووسع مدخلها، واجعلها سيدة من سيدات أهل الجنة."
+              transliteration="Allāhumma inna ummī fī dhimmatika wa ḥabli jiwārik, faqi-hā fitnata al-qabr wa 'adhāba an-nār, wa anta ahlu al-wafā'i wal-ḥaqq, faghfir lahā warḥamhā, wa akrim nuzulahā, wa wassi' mudkhalahā, waj'alhā sayyidatan min sayyidāti ahli al-jannah."
+              banglaTransliteration="আল্লাহুম্মা ইন্না উম্মী ফী যিম্মাতিকা ওয়া হাবলি জিওয়ারিকা, ফাকিহা ফিতনাতাল কবরি ওয়া আজাবান নার, ওয়া আনতা আহলুল ওয়াফায়ি ওয়াল হাক্ক, ফাগফির লাহা ওয়ারহামহা, ওয়া আকরিম নুযুলাহা, ওয়া ওয়াসসিঅ মুদখালাহা, ওয়াজআলহা সাইয়িদাতান মিন সাইয়িদাতি আহলিল জান্নাহ।"
+              translation="O Allah, my mother is in Your protection and under the bond of Your refuge; so protect her from the trial of the grave and the punishment of the Fire. You are the One deserving of faithfulness and truth. So forgive her, have mercy on her, honor her reception, make her entrance spacious, and make her one of the noble ladies of Paradise."
+              banglaTranslation="হে আল্লাহ! আমার মা আপনার জিম্মায়/হেফাজতে এবং আপনার আশ্রয়ের বন্ধনে রয়েছে। আপনি তাকে কবরের ফিতনা ও আগুনের শাস্তি থেকে রক্ষা করুন। আপনি ওয়াদা পূরণের এবং সত্যের যোগ্য। তাই তাকে ক্ষমা করুন, তার প্রতি রহম করুন, তার আপ্যায়নকে সম্মানিত করুন, তার প্রবেশস্থানকে প্রশস্ত করে দিন এবং তাকে জান্নাতবাসী নারীদের সম্মানিত/নেত্রীদের একজন করে দিন।"
+            />
+          </GeneralDuaCategory>
+
+          <GeneralDuaCategory title="বাবার জন্য দোয়া" number={18} defaultOpen={false}>
+            <DuaItem 
+              title="বাবার জন্য আরবি দোয়া"
+              arabic="اللهم إن أبي في ذمتك وحبل جوارك، فقه فتنة القبر وعذاب النار، وأنت أهل الوفاء والحق، فاغفر له وارحمه، وأكرم نزله، ووسع مدخله، واجعله من أهل الجنة."
+              transliteration="Allāhumma inna abī fī dhimmatika wa ḥabli jiwārik, faqi-hu fitnata al-qabr wa 'adhāba an-nār, wa anta ahlu al-wafā'i wal-ḥaqq, faghfir lahu warḥamhu, wa akrim nuzulah, wa wassi' mudkhalah, waj'alhu min ahli al-jannah."
+              banglaTransliteration="আল্লাহুম্মা ইন্না আবী ফী যিম্মাতিকা ওয়া হাবলি জিওয়ারিকা, ফাকিহু ফিতনাতাল কবরি ওয়া আজাবান নার, ওয়া আনতা আহলুল ওয়াফায়ি ওয়াল হাক্ক, ফাগফির লাহু ওয়ারহামহু, ওয়া আকরিম নুযুলাহু, ওয়া ওয়াসসিঅ মুদখালাহু, ওয়াজআলহু মিন আহলিল জান্নাহ।"
+              translation="O Allah, my father is in Your protection and under the bond of Your refuge; so protect him from the trial of the grave and the punishment of the Fire. You are the One deserving of faithfulness and truth. So forgive him, have mercy on him, honor his reception, make his entrance spacious, and make him among the people of Paradise."
+              banglaTranslation="হে আল্লাহ! আমার বাবা আপনার হেফাজতে ও আপনার আশ্রয়ের বন্ধনে আছেন। আপনি তাকে কবরের ফিতনা ও জাহান্নামের শাস্তি থেকে রক্ষা করুন। আপনি ওয়াদা পূরণের ও সত্যের যোগ্য। আপনি তাকে ক্ষমা করুন, রহম করুন, তার আপ্যায়ন সম্মানিত করুন, তার প্রবেশস্থান প্রশস্ত করুন এবং তাকে জান্নাতবাসীদের অন্তর্ভুক্ত করুন।"
+            />
+          </GeneralDuaCategory>
+
+          <GeneralDuaCategory title="গুরুতর রোগ থেকে হেফাজতের দোয়া" number={19} defaultOpen={false}>
+            <DuaItem 
+              title="গুরুতর রোগ/খারাপ অসুখ থেকে আল্লাহর কাছে হেফাজত/রক্ষা চাওয়ার সহিহ হাদিসভিত্তিক দোয়া"
+              arabic="اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْبَرَصِ، وَالْجُنُونِ، وَالْجُذَامِ، وَمِنْ سَيِّئِ الأَسْقَامِ"
+              transliteration="Allāhumma innī a'ūdhu bika minal-barasi, wal-junūni, wal-judhāmi, wa min sayyi'il-asqām."
+              banglaTransliteration="আল্লাহুম্মা ইন্নী আ'ঊযু বিকা মিনাল বারাসি, ওয়াল জুনূনি, ওয়াল জুধামী, ওয়া মিন সাইয়্যি'ইল আসকাম।"
+              translation="O Allah, I seek refuge in You from leprosy, insanity, elephantiasis, and from all evil diseases."
+              banglaTranslation="হে আল্লাহ! আমি আপনার কাছে আশ্রয় চাই শ্বেতী/ত্বকের রোগ (বারাস), পাগলামি/মানসিক বিকার, কুষ্ঠ/জুযাম, এবং নিকৃষ্ট/ক্ষতিকর সব রোগব্যাধি থেকে।"
+            />
+            <p className="info-text"><strong>কখন পড়বেন:</strong> যে কোনো সময় পড়া যায়—অনেকে সকাল-সন্ধ্যা বা নিয়মিত দোয়ায় রাখেন।</p>
+          </GeneralDuaCategory>
+
+          <GeneralDuaCategory title="রাতে ঘুম থেকে জেগে উঠলে" number={20} defaultOpen={false}>
+            <DuaItem 
+              title="রাতে ঘুম থেকে হঠাৎ জেগে উঠলে পড়ার সহিহ দোয়া (হাদিসে আছে)"
+              arabic="لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ. سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ. رَبِّ اغْفِرْ لِي."
+              transliteration="Lā ilāha illallāhu waḥdahu lā sharīka lah, lahul-mulku wa lahul-ḥamd, wa huwa 'alā kulli shay'in qadīr. Subḥānallāh, wal-ḥamdu lillāh, wa lā ilāha illallāh, wallāhu akbar, wa lā ḥawla wa lā quwwata illā billāhil-'Aliyyil-'Aẓīm. Rabbighfir lī."
+              banglaTransliteration="লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শরীকা লাহ, লাহুল মুলকু ওয়া লাহুল হামদু, ওয়া হুয়া 'আলা কুল্লি শাই'ইন কাদীর। সুবহানাল্লাহ, আলহামদু লিল্লাহ, ওয়া লা ইলাহা ইল্লাল্লাহ, ওয়াল্লাহু আকবার, ওয়া লা হাওলা ওয়া লা কুওয়াতা ইল্লা বিল্লাহিল 'আলিয়্যিল 'আযীম। রাব্বিগফির লী।"
+              translation="There is no deity except Allah, alone without partner, to Him belongs all sovereignty and praise, and He is over all things competent. Glory is to Allah, and praise is to Allah, and there is no deity except Allah, and Allah is the Greatest, and there is no power and no strength except with Allah, the Most High, the Most Great. My Lord, forgive me."
+              banglaTranslation="আল্লাহ ছাড়া কোনো ইলাহ নেই—তিনি এক, তাঁর কোনো শরিক নেই; রাজত্ব তাঁর, প্রশংসা তাঁর; তিনি সব কিছুর উপর ক্ষমতাবান। আল্লাহ পবিত্র, সব প্রশংসা আল্লাহর, আল্লাহ ছাড়া কোনো ইলাহ নেই, আল্লাহ মহান; আর আল্লাহর সাহায্য ছাড়া কোনো শক্তি/সামর্থ্য নেই। হে আমার রব, আমাকে ক্ষমা করুন।"
+            />
+            <div className="info-box">
+              <h4>ফজিলত (হাদিস অনুযায়ী)</h4>
+              <p>যে ব্যক্তি রাতে জেগে উঠে এই দোয়া পড়ে <strong>তারপর দোয়া করে</strong>, তার দোয়া কবুল হয়; আর <strong>ওযু করে নামাজ পড়লে</strong> সেটাও কবুল হয়।</p>
+            </div>
           </GeneralDuaCategory>
       </SectionWrapper>
     </>
