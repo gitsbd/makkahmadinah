@@ -69,7 +69,7 @@ export default function Header() {
                 onClick={() => toggleDropdown('pilgrimage')}
                 aria-expanded={openDropdown === 'pilgrimage'}
               >
-                তীর্থযাত্রা পরিষেবা
+                হজযাত্রী/উমরাহযাত্রী সেবা
               </button>
               <ul className={`dropdown-menu ${openDropdown === 'pilgrimage' ? 'dropdown-open' : ''}`}>
                 <li><Link href="/guide/" className={isActive('/guide/') ? 'active' : ''} onClick={closeMobileMenu}>গাইড</Link></li>
@@ -88,8 +88,9 @@ export default function Header() {
               <ul className={`dropdown-menu ${openDropdown === 'duas' ? 'dropdown-open' : ''}`}>
                 <li><Link href="/duas/" className={isActive('/duas/') ? 'active' : ''} onClick={closeMobileMenu}>উমরাহ ও হজ্জ দোয়া</Link></li>
                 <li><Link href="/umrah-duas/" className={isActive('/umrah-duas/') ? 'active' : ''} onClick={closeMobileMenu}>উমরাহ দোয়া</Link></li>
-                <li><Link href="/daily-duas/" className={isActive('/daily-duas/') ? 'active' : ''} onClick={closeMobileMenu}>দৈনিক দোয়া</Link></li>
-                <li><Link href="/general-duas/" className={isActive('/general-duas/') ? 'active' : ''} onClick={closeMobileMenu}>সাধারণ দোয়া</Link></li>
+                <li><Link href="/general-duas/" className={isActive('/general-duas/') ? 'active' : ''} onClick={closeMobileMenu}>দৈনন্দিন মাসনূন দোয়া</Link></li>
+                <li><Link href="/daily-duas/" className={isActive('/daily-duas/') ? 'active' : ''} onClick={closeMobileMenu}>আমার দোয়া</Link></li>
+                <li><Link href="/monajat/" className={isActive('/monajat/') ? 'active' : ''} onClick={closeMobileMenu}>মোনাজাত</Link></li>
               </ul>
             </li>
             <li className="dropdown">

@@ -9,7 +9,7 @@ export default function DailyDuas() {
   return (
     <>
       <PageHeader 
-        title="দৈনিক দোয়ার সংকলন"
+        title="আমার দোয়া"
         subtitle="প্রতিদিন পড়ার জন্য গুরুত্বপূর্ণ দোয়া ও সূরা"
         sectionCount={54}
       />
@@ -39,7 +39,7 @@ export default function DailyDuas() {
                 </p>
               <p className="transliteration">আল্লাহুম্মা সাল্লি 'আলা মুহাম্মাদিও ওয়া 'আলা আলে মুহাম্মাদিন, কামা সাল্লাইতা 'আলা ইব্রাহিমা ওয়া 'আলা আলি ইব্রাহিমা, ইরাকা হামিদুম মজীদ।</p>
               <p className="transliteration">আল্লাহুম্মা বারিক 'আলা মুহাম্মাদিও ওয়া 'আলা আলি মুহাম্মাদিন, কামা বারাকতা 'আলা ইব্রাহিমা ওয়া 'আলা আলি ইব্রাহিমা, ইরাকা হামিদুম মজীদ।</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, আপনি মুহাম্মদ (সা.) এবং তাঁর পরিবারের উপর রহমত বর্ষণ করুন, যেমন আপনি ইব্রাহিম (আ.) এবং তাঁর পরিবারের উপর রহমত বর্ষণ করেছেন। নিশ্চয়ই আপনি প্রশংসিত ও মহিমান্বিত। হে আল্লাহ, আপনি মুহাম্মদ (সা.) এবং তাঁর পরিবারের উপর বরকত দিন, যেমন আপনি ইব্রাহিম (আ.) এবং তাঁর পরিবারের উপর বরকত দিয়েছেন। নিশ্চয়ই আপনি প্রশংসিত ও মহিমান্বিত।</p>
+              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, আপনি মুহাম্মদ (সা.) এবং তাঁর পরিবারের উপর রহমত বর্ষণ করুন, যেমন আপনি ইব্রাহিম (আ.) এবং তাঁর পরিবারের উপর রহমত বর্ষণ করেছিেন। নিশ্চয়ই আপনি প্রশংসিত ও মহিমান্বিত। হে আল্লাহ, আপনি মুহাম্মদ (সা.) এবং তাঁর পরিবারের উপর বরকত দিন, যেমন আপনি ইব্রাহিম (আ.) এবং তাঁর পরিবারের উপর বরকত দিয়েছেন। নিশ্চয়ই আপনি প্রশংসিত ও মহিমান্বিত।</p>
             </div>
           </DuaCategory>
 
@@ -50,7 +50,7 @@ export default function DailyDuas() {
                   <AudioPlayer arabicText="بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ (١) الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ (٢) الرَّحْمَٰنِ الرَّحِيمِ (٣) مَالِكِ يَوْمِ الدِّينِ (٤) إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ (٥) اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ (٦) صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ (٧)" />
                 </p>
               <p className="transliteration">বিসমিল্লাহির রহমানির রহিম। আলহামদু লিল্লাহি রাব্বিল আলামিন, আর-রাহমানির রহিম, মালিকি ইয়াওমিদ্দিন, ইয়াকা নাঅ'বুদু ওয়া ইয়াকা নাস্তা'ইন, ইহুদিনাস সিরাতাল মুস্তাকিম, সিরাতাল্লাযিনা আন'আমতা 'আলাইহিম গাইরিল মাগদুরি 'আলাইহিম ওয়ালাদ্দিল্লিন।</p>
-              <p className="translation"><strong>অনুবাদ:</strong> পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে শুরু করছি। (১) সমস্ত প্রশংসা আল্লাহর, যিনি বিশ্বজগতের রব। (২) পরম করুণাময় ও অসীম দয়ালু। (৩) বিচার দিনের মালিক। (৪) আমরা কেবল আপনারই ইবাদত করি এবং কেবল আপনারই কাছে সাহায্য চাই। (৫) আমাদেরকে সরল পথ দেখান। (৬) তাদের পথ, যাদের উপর আপনি অনুগ্রহ করেছেন, তাদের পথ নয় যাদের উপর আপনার গজব নেমেছে এবং যারা পথভ্রষ্ট হয়েছে। (৭)</p>
+              <p className="translation"><strong>অনুবাদ:</strong> পরম করুণাময় ও অসীম দয়ালু আল্লাহর নামে শুরু করছি। (১) সমস্ত প্রশংসা আল্লাহর, যিনি বিশ্বজগতের রব। (২) পরম করুণাময় ও অসীম দয়ালু। (৩) বিচার দিনের মালিক। (৪) আমরা কেবল আপনারই ইবাদত করি এবং কেবল আপনারই কাছে সাহায্য চাই। (৫) আমাদেরকে সরল পথ দেখান। (৬) তাদের পথ, যাদের উপর আপনি অনুগ্রহ করেছিেন, তাদের পথ নয় যাদের উপর আপনার গজব নেমেছে এবং যারা পথভ্রষ্ট হয়েছে। (৭)</p>
             </div>
           </DuaCategory>
 
@@ -63,7 +63,7 @@ export default function DailyDuas() {
                 <AudioPlayer arabicText="آمَنَ الرَّسُولُ بِمَا أُنْزِلَ إِلَيْهِ مِنْ رَبِّهِ وَالْمُؤْمِنُونَ ۖ كُلٌّ آَمَنَ بِاللَّهِ وَمَلَائِكَةِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رَسْلِهِ ۚ وَقَالُوا سَمِعْنَا وَأَطَعْنَا ۖ غَفَّرَانُكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ" />
               </p>
               <p className="transliteration">আমানার রসুলু বিমা উনজিলা ইলাইহি মির রাব্বিহি ওয়াল মু'মিনুন, কুল্লুন আমানা বিল্লাহি ওয়া মালায়িকাতিহি ওয়া কুতুবিহি ওয়া রুসুলিহি, লা নুফাররিকু বাইনা আহাদিম মিন রুসুলিহি, ওয়া কালু সামি'না ওয়া আতা'না, গুফরানাকা রাব্বানা ওয়া ইলাইকাল মাসীর।</p>
-              <p className="translation"><strong>অনুবাদ:</strong> রাসূল (সা.) তাঁর রবের কাছ থেকে যা অবতীর্ণ হয়েছে তাতে বিশ্বাস করেছেন এবং মুমিনরাও। সবাই আল্লাহ, তাঁর ফেরেশতা, তাঁর কিতাবসমূহ এবং তাঁর রাসূলগণের উপর বিশ্বাস করেছে। আমরা তাঁর রাসূলগণের মধ্যে কোন পার্থক্য করি না। তারা বলেছে: আমরা শুনেছি এবং মান্য করেছি। হে আমাদের রব, আপনার ক্ষমা চাই এবং আপনারই দিকে প্রত্যাবর্তন।</p>
+              <p className="translation"><strong>অনুবাদ:</strong> রাসূল (সা.) তাঁর রবের কাছ থেকে যা অবতীর্ণ হয়েছে তাতে বিশ্বাস করেছিেন এবং মুমিনরাও। সবাই আল্লাহ, তাঁর ফেরেশতা, তাঁর কিতাবসমূহ এবং তাঁর রাসূলগণের উপর বিশ্বাস করেছিে। আমরা তাঁর রাসূলগণের মধ্যে কোন পার্থক্য করি না। তারা বলেছে: আমরা শুনেছি এবং মান্য করেছিি। হে আমাদের রব, আপনার ক্ষমা চাই এবং আপনারই দিকে প্রত্যাবর্তন।</p>
             </div>
             <div className="dua-item">
               <h3>আয়াত ২৮৬</h3>
@@ -74,26 +74,6 @@ export default function DailyDuas() {
                 </p>
               <p className="transliteration">লা ইউকাল্লিফুল্লাহু নাফসান ইল্লা উস'আহা, লাহা মা কাসাবাত ওয়া 'আলাইহা মাকতাসাবাত, রাব্বানা লা তুয়াখিজনা ইন নাসিনা আও আখতা'না, রাব্বানা ওয়ালা তাহমিল 'আলাইনা ইসরান কামা হামালতাহু 'আলাল্লাযিনা মিন কাবলিনা, রাব্বানা ওয়ালা তুহাম্মিলনা মা লা তাকাতা লানা বিহি, ওয়াফু 'আন্না ওয়াগফির লানা ওয়ারহামনা, আনতা মাওলানা ফানসুরনা 'আলাল কাওমিল কাফিরিন।</p>
               <p className="translation"><strong>অনুবাদ:</strong> আল্লাহ কোন ব্যক্তিকে তার সাধ্যের অতীত দায়িত্ব দেন না। সে যা অর্জন করে তা তার জন্য এবং সে যা অর্জন করে তার বিরুদ্ধে তা। হে আমাদের রব, যদি আমরা ভুলে যাই বা ভুল করি, তবে আমাদেরকে পাকড়াও করবেন না। হে আমাদের রব, আমাদের পূর্ববর্তীদের উপর যেমন বোঝা চাপিয়েছিলেন, আমাদের উপর সেরূপ বোঝা চাপাবেন না। হে আমাদের রব, আমাদের উপর এমন বোঝা চাপাবেন না যার শক্তি আমাদের নেই। আমাদেরকে ক্ষমা করুন, আমাদেরকে মাফ করুন এবং আমাদের উপর রহম করুন। আপনি আমাদের মাওলা, তাই কাফির সম্প্রদায়ের বিরুদ্ধে আমাদের সাহায্য করুন।</p>
-            </div>
-          </DuaCategory>
-
-          <DuaCategory id="distress" title="কষ্ট ও দুশ্চিন্তা থেকে মুক্তির দোয়া" defaultOpen={false} number={5}>
-            <div className="dua-item">
-              <p className="arabic">
-                  <span className="arabic-text">لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ</span>
-                  <AudioPlayer arabicText="لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ" />
-                </p>
-              <p className="transliteration">লা ইলাহা ইল্লা আনতা সুবহানাকা ইন্নি কুনতু মিনাজ জালিমিন</p>
-              <p className="translation"><strong>অনুবাদ:</strong> আপনি ছাড়া কোন ইলাহ নেই, আপনি পবিত্র, নিশ্চয়ই আমি যালিমদের অন্তর্ভুক্ত ছিলাম।</p>
-            </div>
-            <div className="dua-item">
-              <h3>দুশ্চিন্তা ও দুঃখের দোয়া</h3>
-              <p className="arabic">
-                  <span className="arabic-text">اللَّهُمَّ إِنِّي عَبْدُكَ ابْنُ عَبْدِكَ ابْنُ أَمَتِكَ نَاصِيَتِي بِيَدِكَ مَاضٍ فِيَّ حُكْمُكَ عَدْلٌ فِيَّ قَضَاؤُكَ أَسْأَلُكَ بِكُلِّ اسْمٍ هُوَ لَكَ سَمَّيْتَ بِهِ نَفْسَكَ أَوْ أَنْزَلْتَهُ فِي كِتَابِكَ أَوْ عَلَّمْتَهُ أَحَدًا مِنْ خَلْقِكَ أَوِ اسْتَأْثَرْتَ بِهِ فِي عِلْمِ الْغَيْبِ عِنْدَكَ أَنْ تَجْعَلَ الْقُرْآنَ رَبِيعَ قَلْبِي وَنُورَ صَدْرِي وَجَلَاءَ حُزْنِي وَذَهَابَ هَمِّي</span>
-                  <AudioPlayer arabicText="اللَّهُمَّ إِنِّي عَبْدُكَ ابْنُ عَبْدِكَ ابْنُ أَمَتِكَ نَاصِيَتِي بِيَدِكَ مَاضٍ فِيَّ حُكْمُكَ عَدْلٌ فِيَّ قَضَاؤُكَ أَسْأَلُكَ بِكُلِّ اسْمٍ هُوَ لَكَ سَمَّيْتَ بِهِ نَفْسَكَ أَوْ أَنْزَلْتَهُ فِي كِتَابِكَ أَوْ عَلَّمْتَهُ أَحَدًا مِنْ خَلْقِكَ أَوِ اسْتَأْثَرْتَ بِهِ فِي عِلْمِ الْغَيْبِ عِنْدَكَ أَنْ تَجْعَلَ الْقُرْآنَ رَبِيعَ قَلْبِي وَنُورَ صَدْرِي وَجَلَاءَ حُزْنِي وَذَهَابَ هَمِّي" />
-                </p>
-              <p className="transliteration">আল্লাহুম্মা ইন্নি 'আবদুকা ইবনু 'আবদিকা ইবনু আমাতিকা, নাসিয়াতি বিয়াদিকা, মাদিন ফি হুকমুকা, 'আদলুন ফি কাদাউকা, আসআলুকা বিকুল্লি ইসমিন হুয়া লাকা সাম্মাইতা বিহি নাফসাকা আও আনজালতাহু ফি কিতাবিকা আও 'আল্লামতাহু আহাদাম মিন খালকিকা আওইসতাআসারতা বিহি ফি 'ইলমিল গাইবি 'ইন্দাকা, আন তাজ'আলাল কুরআনা রাবী'আ কালবী ওয়া নুরা সাদরি ওয়া জালাআ হুজনি ওয়া যাহাবা হাম্মি</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, আমি আপনার বান্দা, আপনার বান্দার সন্তান, আপনার বান্দীর সন্তান। আমার কপাল আপনার হাতে, আমার সম্পর্কে আপনার ফয়সালা কার্যকর, আপনার আদেশ ন্যায়সঙ্গত। আমি আপনার কাছে প্রার্থনা করছি আপনার প্রতিটি নামের দ্বারা যা দিয়ে আপনি নিজেকে নামকরণ করেছেন, অথবা আপনার কিতাবে নাযিল করেছেন, অথবা আপনার সৃষ্টির কারো কাছে শিক্ষা দিয়েছেন, অথবা আপনার গায়েবের জ্ঞানে রেখেছেন, যেন আপনি কুরআনকে আমার হৃদয়ের বসন্ত, আমার বক্ষের আলো, আমার দুঃখের নিরাময় এবং আমার দুশ্চিন্তার দূরীকরণ করেন।</p>
             </div>
           </DuaCategory>
 
@@ -114,7 +94,7 @@ export default function DailyDuas() {
                 <AudioPlayer arabicText="اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَىٰ عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ" />
               </p>
               <p className="transliteration">আল্লাহুম্মা আনতা রাব্বি, লা ইলাহা ইল্লা আনতা, খালাকতানি ওয়া ana 'আবদুকা ওয়া ana 'আলা 'আহদিকা ওয়া ওয়া'দিকা মাসতাত'তু, আউযু বিকা মিন শাররি মা সানাতু, আবুউ লাকা বিনি'মাতিকা 'আলাইয়া ওয়া আবুউ লাকা বিযানবী, ফাগফির লি ফাইন্নাহু লা ইয়াগফিরুয যুনুবা ইল্লা আনতা</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, আপনি আমার রব, আপনি ছাড়া কোন ইলাহ নেই, আপনি আমাকে সৃষ্টি করেছেন এবং আমি আপনার বান্দা, আমি আপনার অঙ্গীকার ও প্রতিশ্রুতির উপর আছি যতটুকু করতে পারি। আমি আপনার কাছে আশ্রয় চাই আমার কৃত কাজের অনিষ্ট থেকে, আমি আপনার কাছে স্বীকার করছি আপনার আমার উপর নেয়ামত এবং আমি আপনার কাছে স্বীকার করছি আমার গুনাহ, তাই আমাকে ক্ষমা করুন, কারণ আপনি ছাড়া কেউ গুনাহ ক্ষমা করতে পারে না।</p>
+              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, আপনি আমার রব, আপনি ছাড়া কোন ইলাহ নেই, আপনি আমাকে সৃষ্টি করেছিেন এবং আমি আপনার বান্দা, আমি আপনার অঙ্গীকার ও প্রতিশ্রুতির উপর আছি যতটুকু করতে পারি। আমি আপনার কাছে আশ্রয় চাই আমার কৃত কাজের অনিষ্ট থেকে, আমি আপনার কাছে স্বীকার করছি আপনার আমার উপর নেয়ামত এবং আমি আপনার কাছে স্বীকার করছি আমার গুনাহ, তাই আমাকে ক্ষমা করুন, কারণ আপনি ছাড়া কেউ গুনাহ ক্ষমা করতে পারে না।</p>
             </div>
           </DuaCategory>
 
@@ -234,7 +214,7 @@ export default function DailyDuas() {
               <p className="arabic">رَبَّنَا ٱغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ ٱلْحِسَابُ</p>
               <p className="transliteration">রাব্বি ইরহামহুমা কামা রাব্বাইয়ানি ছগীরান</p>
               <p className="transliteration">রাব্বানা গফির লি ওয়ালিওয়ালিদাইয়া ওয়ালিল মুমিনীনা ইয়াওমা ইয়াকুমুল হিসাব</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আমার প্রতিপালক! আপনি তাদের (আমার পিতা-মাতা) প্রতি দয়া করুন, যেমনটি তারা শৈশবে আমাকে লালন-পালন করেছেন। হে আমাদের পালনকর্তা! আমাকে, আমার পিতা-মাতাকে এবং সকল মুমিনকে ক্ষমা করুন, যেদিন হিসাব নিকাশ শুরু হবে।</p>
+              <p className="translation"><strong>অনুবাদ:</strong> হে আমার প্রতিপালক! আপনি তাদের (আমার পিতা-মাতা) প্রতি দয়া করুন, যেমনটি তারা শৈশবে আমাকে লালন-পালন করেছিেন। হে আমাদের পালনকর্তা! আমাকে, আমার পিতা-মাতাকে এবং সকল মুমিনকে ক্ষমা করুন, যেদিন হিসাব নিকাশ শুরু হবে।</p>
             </div>
           </DuaCategory>
 
@@ -374,7 +354,7 @@ export default function DailyDuas() {
             <div className="dua-item">
               <p className="arabic">اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا، وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ، فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ، وَارْحَمْنِي، إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ</p>
               <p className="transliteration">আল্লাহুম্মা ইন্নি জ্বালামতু নাফসি জুলমান কাসীরা, ওয়া লা ইয়াগফিরুয-যুনূবা ইল্লা আনতা, ফাগফির লি মাগফিরাতাম মিন 'ইন্দিকা, ওয়ারহামনি, ইন্নাকা আনতাল-গাফূরুর রাহীম।</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ! আমি নিজের উপর অনেক জুলুম করেছি। আর আপনি ছাড়া গুনাহ ক্ষমাকারী আর কেউ নেই। আপনি নিজ অনুগ্রহে আমাকে ক্ষমা করুন এবং আমার প্রতি রহম করুন। নিঃসন্দেহে আপনিই ক্ষমাকারী, করুণাময়।</p>
+              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ! আমি নিজের উপর অনেক জুলুম করেছিি। আর আপনি ছাড়া গুনাহ ক্ষমাকারী আর কেউ নেই। আপনি নিজ অনুগ্রহে আমাকে ক্ষমা করুন এবং আমার প্রতি রহম করুন। নিঃসন্দেহে আপনিই ক্ষমাকারী, করুণাময়।</p>
             </div>
           </DuaCategory>
 
@@ -382,7 +362,7 @@ export default function DailyDuas() {
             <div className="dua-item">
               <p className="arabic">رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَىٰ وَالِدَيَّ، وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ، وَأَدْخِلْنِي بِرَحْمَتِكَ فِي عِبَادِكَ الصَّالِحِينَ</p>
               <p className="transliteration">রব্বি আওযিঈনি আন আশকুরা নি'আমাতাকাল্লাতি আন'আমতা আলাইয়া ওয়া 'আলা ওয়ালিদাইয়া, ওয়া আন আ'মালা ছালিহান তারদ্বাহু, ওয়া আদখিলনী বিইরাহমাতিকা ফি ইবাদিকাস-সালিহীন।</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আমার রব! আমাকে অনুপ্রাণিত করুন যাতে আমি আপনার নেয়ামতের শুকরিয়া আদায় করি যা আপনি আমার ও আমার পিতা-মাতার উপর দান করেছেন, এবং যাতে আমি এমন নেক আমল করি যা আপনার সন্তুষ্টি অর্জন করে, এবং আপনার রহমতে আমাকে আপনার নেক বান্দাদের অন্তর্ভুক্ত করুন।</p>
+              <p className="translation"><strong>অনুবাদ:</strong> হে আমার রব! আমাকে অনুপ্রাণিত করুন যাতে আমি আপনার নেয়ামতের শুকরিয়া আদায় করি যা আপনি আমার ও আমার পিতা-মাতার উপর দান করেছিেন, এবং যাতে আমি এমন নেক আমল করি যা আপনার সন্তুষ্টি অর্জন করে, এবং আপনার রহমতে আমাকে আপনার নেক বান্দাদের অন্তর্ভুক্ত করুন।</p>
             </div>
           </DuaCategory>
 
@@ -423,7 +403,7 @@ export default function DailyDuas() {
             <div className="dua-item">
               <p className="arabic">اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ</p>
               <p className="transliteration">আল্লাহুম্মাক্ফিনী বিহালালিকা আন হারামিকা, ওয়া আঘনিনি বিফাদলিকা আম্মান সিওয়াক্।</p>
-              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ! আপনি যা হালাল করেছেন তা দিয়ে আমাকে যথেষ্ট করুন যাতে আমি যা হারাম করেছেন তা থেকে মুক্তি পেতে পারি, এবং আপনার অনুগ্রহে আমাকে আপনার ছাড়া অন্য সকলের থেকে মুক্তি দিন।</p>
+              <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ! আপনি যা হালাল করেছিেন তা দিয়ে আমাকে যথেষ্ট করুন যাতে আমি যা হারাম করেছিেন তা থেকে মুক্তি পেতে পারি, এবং আপনার অনুগ্রহে আমাকে আপনার ছাড়া অন্য সকলের থেকে মুক্তি দিন।</p>
             </div>
           </DuaCategory>
 
@@ -537,7 +517,7 @@ export default function DailyDuas() {
             <div className="dua-item">
               <p className="arabic">حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ، عَلَيْهِ تَوَكَّلْتُ، وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ</p>
               <p className="transliteration">হাসবিয়াল্লাহু লা ইলাহা ইল্লা হুয়া, আলাইহি তাওয়াক্কালতু, ওয়া হুয়া রাব্বুল 'আর্শিল আযীম।</p>
-              <p className="translation"><strong>অনুবাদ:</strong> "আমার জন্য আল্লাহই যথেষ্ট, তিনি ছাড়া কোনো উপাস্য নেই। আমি তাঁরই উপর ভরসা করেছি, আর তিনি মহা আরশের অধিপতি।"</p>
+              <p className="translation"><strong>অনুবাদ:</strong> "আমার জন্য আল্লাহই যথেষ্ট, তিনি ছাড়া কোনো উপাস্য নেই। আমি তাঁরই উপর ভরসা করেছিি, আর তিনি মহা আরশের অধিপতি।"</p>
             </div>
           </DuaCategory>
 
@@ -547,155 +527,6 @@ export default function DailyDuas() {
               <p className="transliteration">সুব্‌হানাকা আল্লাহুম্মা ওয়া বিহামদিকা, আশহাদু অ্যাল্লা ইলাহা ইল্লা আনতা, আস্তাগফিরুকা ওয়া আতূবু ইলাইক।</p>
               <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ! আপনি পবিত্র, আপনার প্রশংসা সহ আমি সাক্ষ্য দিচ্ছি যে আপনি ছাড়া আর কোনো উপাস্য নেই। আমি আপনার নিকট ক্ষমা প্রার্থনা করি এবং আপনারই দিকে তাওবা করি।</p>
               <p className="info-text">এই দোয়া যেকোনো মজলিস বা আলোচনা শেষে পাঠ করা সুন্নত। এতে যদি কোনো ভুলভ্রান্তি বা অপ্রাসঙ্গিক কথা বলে ফেলা হয়ে থাকে, তা মাফ চাওয়া হয়।</p>
-            </div>
-          </DuaCategory>
-
-          <DuaCategory id="bangla-monajat-1" title="বাংলা মোনাজাত-১" defaultOpen={false} number={51}>
-            <div className="dua-item">
-              <p className="translation">ইয়া আল্লাহ!! আমি জানিনা অতীতে কতটা পাপ করেছি, কতটা ভুল করেছি জেনে না-জেনে, কত মানুষকে কষ্ট-দুঃখ দিয়েছি, হয়তো কত ওয়াক্ত নামাজ কাজা হয়ে গেছে, কার কার নামে গীবত করেছি, কার কার নামে সমালোচনা করেছি, কত কি দেখে হিংসা করেছি। আস্তাগফিরুল্লাহ।</p>
-              <p className="translation">ইয়া আল্লাহ! আপনি এখন আমাদেরকে এমনভাবে তৈরী করুন যাতে এসব থেকে আস্তে আস্তে মুক্তি পেতে পারি। আমাদেরকে আলোর পথ দেখান, আমার মনে ইসলামের প্রেম বাড়িয়ে দিন। আমাদেরকে মনে আল্লাহ ও তার রাসূলের প্রতি ভালবাসা প্রচুর পরিমানে বৃদ্ধি করে দিন। ইসলামকে জানার ইচ্ছা বাড়িয়ে দিন। ইয়া আল্লাহ!! কোনো বিপদ আসার আগেই আমাকে তা থেকে রক্ষা করুন। আমাদেরকে বদনজর থেকে রক্ষা করুন। আমাদেরকে পাপ থেকে দূরে থাকার তৌফিক দান করুন!</p>
-              <p className="translation">ইয়া আল্লাহ, আমাদের ঈমান বৃদ্ধি করে দিন, আমাদের মনকে নরম বানিয়ে দিন, আমাদেরকে বেশি বেশি তওবা করার তৌফিক দিন। আমাদেরকে হেদায়েত দান করুন! 🙌 আমীন 🙌</p>
-            </div>
-          </DuaCategory>
-
-          <DuaCategory id="bangla-monajat-2" title="বাংলা মোনাজাত-২" defaultOpen={false} number={52}>
-            <div className="dua-item">
-              <p className="translation">ইয়া রহমান, ইয়া রহিম, ইয়া জাল জালালি ওয়াল ইকরাম, "ইয়া গাফফার" "ইয়া সাত্তার" ইয়া জাব্বার" "ইয়া ওয়াদুদ" "ইয়া আজিজ" "ইয়া আজিম" "ইয়া হানানু" "ইয়া ইয়া মান্নানু", হে আমার রব, হে আমার সৃষ্টিকর্তা।</p>
-              <p className="translation">আপনার পবিত্র নামগুলোর উছিলায়, আপনার তাওহীদের সাক্ষী "লা ইলাহা ইল্লাল্লাহ" এর উছিলায়, আপনার বন্ধু ও হাবীব হযরত মুহাম্মদ (সঃ) এর উম্মত হিসাবে আমাদের সকলের মনের নেক ইচ্ছা গুলো পূর্ণ করে দিন।</p>
-              <p className="translation">অভাব, ঋণ দূর করে দিন। যারা যারা বিপদে আছে তাদের সকল কে আপনি বিপদ থেকে মুক্তি করে দিন। আমাদের মানসিক কষ্ট ও দুঃখ দূর করে দিন। আমাদের রিজিকে বরকত দান করুন। বাবা মা পরিবারের সকলকে নেক হায়াত দান করুন। ❤️🤲</p>
-              <p className="translation">আমিন...🤲🤲</p>
-            </div>
-          </DuaCategory>
-
-          <DuaCategory id="zikr-collection" title="যিকিরসমূহ (Collection of Zikr)" defaultOpen={false} number={53}>
-            <div className="dua-item">
-              <ul className="list-styled">
-                <li>আল্লাহু লা ইলাহা ইল্লা হুয়াল হাইয়্যুল ক্বাইয়্যুম।</li>
-                <li>আল্লাহু লা ইলাহা ইল্লা হুয়ার রাহমানুর রাহীম।</li>
-                <li>আল্লাহু লা ইলাহা ইল্লা আনতা সুবহানাকা ইন্নি কুনতু মিনাজ-জালিমীন।</li>
-                <li>সল্লি ওয়া সাল্লিম ওয়া বারিক আবাদান 'আলান নবিয়্যিল উম্মিই ওয়া আলিহি ওয়া আসহাবিহি আজমাঈন।</li>
-                <li>আল্লাহু আল্লাহু আল্লাহু লা ইলাহা ইল্লাল্লাহু, মুহাম্মাদুর রাসূলুল্লাহি সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম।</li>
-                <li>ইয়া গওসু! ইয়া গওসু! ইয়া গওসু!</li>
-              </ul>
-            </div>
-          </DuaCategory>
-
-          <DuaCategory id="asmaul-husna" title="আল্লাহর ৯৯টি নাম (আসমাউল হুসনা)" defaultOpen={false} number={54}>
-            <div className="dua-item">
-              <p className="info-text">আল্লাহর ৯৯টি সুন্দর নাম। এই নামগুলো পড়লে আল্লাহর রহমত ও বরকত লাভ হয়।</p>
-              <div className="asmaul-husna-table">
-                <table className="names-table">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>আরবি</th>
-                      <th>ইংরেজি</th>
-                      <th>অর্থ</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr><td>1</td><td>الرَّحْمَٰنُ</td><td>AR-RAHMAN</td><td>The Most Gracious</td></tr>
-                    <tr><td>2</td><td>الرَّحِيمُ</td><td>AR-RAHEEM</td><td>The Most Merciful</td></tr>
-                    <tr><td>3</td><td>الْمَلِكُ</td><td>AL-MALIK</td><td>The King, The Sovereign</td></tr>
-                    <tr><td>4</td><td>الْقُدُّوسُ</td><td>AL-QUDDUS</td><td>The Most Holy, The Most Pure</td></tr>
-                    <tr><td>5</td><td>السَّلَامُ</td><td>AS-SALAM</td><td>The Source of Peace</td></tr>
-                    <tr><td>6</td><td>الْمُؤْمِنُ</td><td>AL-MU'MIN</td><td>The Guardian of Faith</td></tr>
-                    <tr><td>7</td><td>الْمُهَيْمِنُ</td><td>AL-MUHAYMIN</td><td>The Protector, The Preserver</td></tr>
-                    <tr><td>8</td><td>الْعَزِيزُ</td><td>AL-AZEEZ</td><td>The Mighty, The Strong</td></tr>
-                    <tr><td>9</td><td>الْجَبَّارُ</td><td>AL-JABBAR</td><td>The Compeller, The Restorer</td></tr>
-                    <tr><td>10</td><td>الْمُتَكَبِّرُ</td><td>AL-MUTAKABBIR</td><td>The Majestic, The Supreme</td></tr>
-                    <tr><td>11</td><td>الْخَالِقُ</td><td>AL-KHAALIQ</td><td>The Creator</td></tr>
-                    <tr><td>12</td><td>الْبَارِئُ</td><td>AL-BAARI</td><td>The Maker, The Evolver</td></tr>
-                    <tr><td>13</td><td>الْمُصَوِّرُ</td><td>AL-MUSAWWIR</td><td>The Fashioner, The Shaper</td></tr>
-                    <tr><td>14</td><td>الْغَفَّارُ</td><td>AL-GHAFFAR</td><td>The Great Forgiver</td></tr>
-                    <tr><td>15</td><td>الْقَهَّارُ</td><td>AL-QAHHAR</td><td>The Subduer, The Dominant</td></tr>
-                    <tr><td>16</td><td>الْوَهَّابُ</td><td>AL-WAHHAB</td><td>The Bestower, The Giver</td></tr>
-                    <tr><td>17</td><td>الرَّزَّاقُ</td><td>AR-RAZZAQ</td><td>The Provider, The Sustainer</td></tr>
-                    <tr><td>18</td><td>الْفَتَّاحُ</td><td>AL-FATTAAH</td><td>The Opener, The Judge</td></tr>
-                    <tr><td>19</td><td>الْعَلِيمُ</td><td>AL-ALEEM</td><td>The All-Knowing</td></tr>
-                    <tr><td>20</td><td>الْقَابِضُ</td><td>AL-QAABID</td><td>The Withholder, The Restrainer</td></tr>
-                    <tr><td>21</td><td>الْبَاسِطُ</td><td>AL-BAASIT</td><td>The Expander, The Reliever</td></tr>
-                    <tr><td>22</td><td>الْخَافِضُ</td><td>AL-KHAAFIDH</td><td>The Abaser, The Humiliator</td></tr>
-                    <tr><td>23</td><td>الرَّافِعُ</td><td>AR-RAAFI</td><td>The Exalter, The Elevator</td></tr>
-                    <tr><td>24</td><td>الْمُعِزُّ</td><td>AL-MU'IZZ</td><td>The Honourer, The Strengthener</td></tr>
-                    <tr><td>25</td><td>الْمُذِلُّ</td><td>AL-MUDHILL</td><td>The Dishonourer, The Humiliator</td></tr>
-                    <tr><td>26</td><td>السَّمِيعُ</td><td>AS-SAMEE</td><td>The All-Hearing</td></tr>
-                    <tr><td>27</td><td>الْبَصِيرُ</td><td>AL-BASEER</td><td>The All-Seeing</td></tr>
-                    <tr><td>28</td><td>الْحَكَمُ</td><td>AL-HAKAM</td><td>The Judge, The Arbitrator</td></tr>
-                    <tr><td>29</td><td>الْعَدْلُ</td><td>AL-ADL</td><td>The Just, The Equitable</td></tr>
-                    <tr><td>30</td><td>اللَّطِيفُ</td><td>AL-LATEEF</td><td>The Subtle, The Gentle</td></tr>
-                    <tr><td>31</td><td>الْخَبِيرُ</td><td>AL-KHABEER</td><td>The All-Aware</td></tr>
-                    <tr><td>32</td><td>الْحَلِيمُ</td><td>AL-HALEEM</td><td>The Forbearing, The Patient</td></tr>
-                    <tr><td>33</td><td>الْعَظِيمُ</td><td>AL-AZEEM</td><td>The Great, The Magnificent</td></tr>
-                    <tr><td>34</td><td>الْغَفُورُ</td><td>AL-GHAFOOR</td><td>The All-Forgiving</td></tr>
-                    <tr><td>35</td><td>الشَّكُورُ</td><td>ASH-SHAKOOR</td><td>The Most Appreciative</td></tr>
-                    <tr><td>36</td><td>الْعَلِيُّ</td><td>AL-ALEE</td><td>The Most High, The Exalted</td></tr>
-                    <tr><td>37</td><td>الْكَبِيرُ</td><td>AL-KABEER</td><td>The Great, The Grand</td></tr>
-                    <tr><td>38</td><td>الْحَفِيظُ</td><td>AL-HAFEEDH</td><td>The Preserver, The Guardian</td></tr>
-                    <tr><td>39</td><td>الْمُقِيتُ</td><td>AL-MUQEET</td><td>The Sustainer, The Maintainer</td></tr>
-                    <tr><td>40</td><td>الْحَسِيبُ</td><td>AL-HASEEB</td><td>The Reckoner, The Accountant</td></tr>
-                    <tr><td>41</td><td>الْجَلِيلُ</td><td>AL-JALEEL</td><td>The Majestic, The Sublime</td></tr>
-                    <tr><td>42</td><td>الْكَرِيمُ</td><td>AL-KAREEM</td><td>The Most Generous, The Noble</td></tr>
-                    <tr><td>43</td><td>الرَّقِيبُ</td><td>AR-RAQEEB</td><td>The Watcher, The Observer</td></tr>
-                    <tr><td>44</td><td>الْمُجِيبُ</td><td>AL-MUJEEB</td><td>The Responsive, The Answerer</td></tr>
-                    <tr><td>45</td><td>الْوَاسِعُ</td><td>AL-WASI</td><td>The Vast, The All-Encompassing</td></tr>
-                    <tr><td>46</td><td>الْحَكِيمُ</td><td>AL-HAKEEM</td><td>The Wise, The Judicious</td></tr>
-                    <tr><td>47</td><td>الْوَدُودُ</td><td>AL-WADOOD</td><td>The Loving, The Affectionate</td></tr>
-                    <tr><td>48</td><td>الْمَجِيدُ</td><td>AL-MAJEED</td><td>The Glorious, The Most Honourable</td></tr>
-                    <tr><td>49</td><td>الْبَاعِثُ</td><td>AL-BA'ITH</td><td>The Resurrector, The Raiser</td></tr>
-                    <tr><td>50</td><td>الشَّهِيدُ</td><td>ASH-SHAHEED</td><td>The Witness, The Testifier</td></tr>
-                    <tr><td>51</td><td>الْحَقُّ</td><td>AL-HAQQ</td><td>The Truth, The Real</td></tr>
-                    <tr><td>52</td><td>الْوَكِيلُ</td><td>AL-WAKEEL</td><td>The Trustee, The Disposer</td></tr>
-                    <tr><td>53</td><td>الْقَوِيُّ</td><td>AL-QAWIYY</td><td>The Strong, The Powerful</td></tr>
-                    <tr><td>54</td><td>الْمَتِينُ</td><td>AL-MATEEN</td><td>The Firm, The Steadfast</td></tr>
-                    <tr><td>55</td><td>الْوَلِيُّ</td><td>AL-WALIYY</td><td>The Protector, The Guardian</td></tr>
-                    <tr><td>56</td><td>الْحَمِيدُ</td><td>AL-HAMEED</td><td>The Praiseworthy</td></tr>
-                    <tr><td>57</td><td>الْمُحْصِي</td><td>AL-MUHSEE</td><td>The Counter, The Reckoner</td></tr>
-                    <tr><td>58</td><td>الْمُبْدِئُ</td><td>AL-MUBDI</td><td>The Originator, The Initiator</td></tr>
-                    <tr><td>59</td><td>الْمُعِيدُ</td><td>AL-MU'ID</td><td>The Restorer, The Reinstater</td></tr>
-                    <tr><td>60</td><td>الْمُحْيِي</td><td>AL-MUHYEE</td><td>The Giver of Life</td></tr>
-                    <tr><td>61</td><td>الْمُمِيتُ</td><td>AL-MUMEET</td><td>The Bringer of Death</td></tr>
-                    <tr><td>62</td><td>الْحَيُّ</td><td>AL-HAYY</td><td>The Ever-Living</td></tr>
-                    <tr><td>63</td><td>الْقَيُّومُ</td><td>AL-QAYYOOM</td><td>The Sustainer, The Self-Subsisting</td></tr>
-                    <tr><td>64</td><td>الْوَاجِدُ</td><td>AL-WAAJID</td><td>The Perceiver</td></tr>
-                    <tr><td>65</td><td>الْمَاجِدُ</td><td>AL-MAAJID</td><td>The Illustrious, the Magnificent</td></tr>
-                    <tr><td>66</td><td>الْوَاحِدُ</td><td>AL-WAAHID</td><td>The One</td></tr>
-                    <tr><td>67</td><td>الْأَحَدُ</td><td>AL-AHAD</td><td>The Unique, The Only One</td></tr>
-                    <tr><td>68</td><td>الصَّمَدُ</td><td>AS-SAMAD</td><td>The Eternal, Satisfier of Needs</td></tr>
-                    <tr><td>69</td><td>الْقَادِرُ</td><td>AL-QADEER</td><td>The Capable, The Powerful</td></tr>
-                    <tr><td>70</td><td>الْمُقْتَدِرُ</td><td>AL-MUQTADIR</td><td>The Omnipotent</td></tr>
-                    <tr><td>71</td><td>الْمُقَدَّمُ</td><td>AL-MUQADDIM</td><td>The Expediter, The Promoter</td></tr>
-                    <tr><td>72</td><td>الْمُؤَخَّرُ</td><td>AL-MU'AKHKHIR</td><td>The Delayer, the Retarder</td></tr>
-                    <tr><td>73</td><td>الْأَوَّلُ</td><td>AL-AWWAL</td><td>The First</td></tr>
-                    <tr><td>74</td><td>الْآخِرُ</td><td>AL-AAKHIR</td><td>The Last</td></tr>
-                    <tr><td>75</td><td>الظَّاهِرُ</td><td>AZ-DHAAHIR</td><td>The Manifest</td></tr>
-                    <tr><td>76</td><td>الْبَاطِنُ</td><td>AL-BAATIN</td><td>The Hidden One, Knower of the Hidden</td></tr>
-                    <tr><td>77</td><td>الْوَالِي</td><td>AL-WAALI</td><td>The Governor, The Patron</td></tr>
-                    <tr><td>78</td><td>الْمُتَعَالِي</td><td>AL-MUTA'ALI</td><td>The Self Exalted</td></tr>
-                    <tr><td>79</td><td>الْبَرُّ</td><td>AL-BARR</td><td>The Source of Goodness, the Kind Benefactor</td></tr>
-                    <tr><td>80</td><td>التَّوَّابُ</td><td>AT-TAWWAB</td><td>The Ever-Pardoning, The Relenting</td></tr>
-                    <tr><td>81</td><td>الْمُنْتَقِمُ</td><td>AL-MUNTAQIM</td><td>The Avenger</td></tr>
-                    <tr><td>82</td><td>الْعَفُوُّ</td><td>AL-'AFUWW</td><td>The Pardoner</td></tr>
-                    <tr><td>83</td><td>الرَّؤُوفُ</td><td>AR-RA'OOF</td><td>The Most Kind</td></tr>
-                    <tr><td>84</td><td>مَالِكُ الْمُلْكِ</td><td>MAALIK-UL-MULK</td><td>Master of the Kingdom, Owner of the Dominion</td></tr>
-                    <tr><td>85</td><td>ذُو الْجَلَالِ وَالْإِكْرَامِ</td><td>DHUL-JALAALI WAL-IKRAAM</td><td>Possessor of Glory and Honour, Lord of Majesty and Generosity</td></tr>
-                    <tr><td>86</td><td>الْمُقْسِطُ</td><td>AL-MUQSIT</td><td>The Equitable, the Requiter</td></tr>
-                    <tr><td>87</td><td>الْجَامِعُ</td><td>AL-JAAMI'</td><td>The Gatherer, the Uniter</td></tr>
-                    <tr><td>88</td><td>الْغَنِيُّ</td><td>AL-GHANIYY</td><td>The Self-Sufficient, The Wealthy</td></tr>
-                    <tr><td>89</td><td>الْمُغْنِي</td><td>AL-MUGHNI</td><td>The Enricher</td></tr>
-                    <tr><td>90</td><td>الْمَانِعُ</td><td>AL-MANI'</td><td>The Withholder</td></tr>
-                    <tr><td>91</td><td>الضَّارُّ</td><td>AD-DHARR</td><td>The Distresser</td></tr>
-                    <tr><td>92</td><td>النَّافِعُ</td><td>AN-NAFI'</td><td>The Propitious, the Benefactor</td></tr>
-                    <tr><td>93</td><td>النُّورُ</td><td>AN-NUR</td><td>The Light, The Illuminator</td></tr>
-                    <tr><td>94</td><td>الْهَادِي</td><td>AL-HAADI</td><td>The Guide</td></tr>
-                    <tr><td>95</td><td>الْبَدِيعُ</td><td>AL-BADEE'</td><td>The Incomparable Originator</td></tr>
-                    <tr><td>96</td><td>الْبَاقِي</td><td>AL-BAAQI</td><td>The Ever-Surviving, The Everlasting</td></tr>
-                    <tr><td>97</td><td>الْوَارِثُ</td><td>AL-WAARITH</td><td>The Inheritor, The Heir</td></tr>
-                    <tr><td>98</td><td>الرَّشِيدُ</td><td>AR-RASHEED</td><td>The Guide, Infallible Teacher</td></tr>
-                    <tr><td>99</td><td>الصَّبُورُ</td><td>AS-SABOOR</td><td>The Forbearing, The Patient</td></tr>
-                  </tbody>
-                </table>
-              </div>
             </div>
           </DuaCategory>
       </SectionWrapper>

@@ -53,7 +53,8 @@ body {
     line-height: 1.7;
     color: var(--text-color);
     background-color: var(--bg-color);
-    direction: rtl;
+    direction: ltr;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 16px;
@@ -136,7 +137,7 @@ a:hover {
     padding: 0;
     z-index: 1001;
     position: absolute;
-    left: var(--spacing-md);
+    right: var(--spacing-md);
     top: 50%;
     transform: translateY(-50%);
 }
@@ -353,6 +354,7 @@ a:hover {
     font-size: clamp(1.2em, 3vw, 1.5em);
     line-height: 2.4;
     text-align: right;
+    direction: rtl;
     color: var(--primary-color);
     margin: var(--spacing-md) 0;
     padding: var(--spacing-md);
@@ -372,6 +374,7 @@ a:hover {
 .arabic-text {
     flex: 1;
     text-align: right;
+    direction: rtl;
 }
 
 .arabic:hover {
@@ -1545,6 +1548,7 @@ a:hover {
     font-size: 1.1rem;
     line-height: 1.9;
     text-align: center;
+    direction: rtl;
     color: var(--primary-color);
     margin: var(--spacing-xs) 0;
     font-weight: 600;
@@ -2025,7 +2029,7 @@ a:hover {
 
 .expandable-toggle {
     width: 100%;
-    text-align: right;
+    text-align: left;
     padding: var(--spacing-md) var(--spacing-lg);
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border: none;
@@ -2086,7 +2090,7 @@ a:hover {
     border-radius: 50%;
     font-weight: 700;
     font-size: 0.95rem;
-    margin-left: var(--spacing-md);
+    margin-right: var(--spacing-md);
     box-shadow: var(--shadow-sm);
     flex-shrink: 0;
     transition: var(--transition-base);
@@ -2107,7 +2111,7 @@ a:hover {
     align-items: center;
     gap: var(--spacing-sm);
     flex: 1;
-    text-align: right;
+    text-align: left;
 }
 
 .expandable-icon {
@@ -2312,7 +2316,7 @@ a:hover {
 
 /* List Utilities */
 .list-styled {
-    margin-right: var(--spacing-lg);
+    margin-left: var(--spacing-lg);
     line-height: 2;
 }
 
@@ -2320,6 +2324,11 @@ a:hover {
     margin-bottom: var(--spacing-xs);
 }
 
+.arabic .list-styled,
+.arabic-text .list-styled {
+    margin-right: var(--spacing-lg);
+    margin-left: 0;
+}
 .list-spaced li {
     margin-bottom: var(--spacing-sm);
 }

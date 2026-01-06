@@ -166,8 +166,8 @@ export default function Umrah() {
 
               <div className="dua-box mt-md">
                 <h4>২. সুন্নাহ অনুসরণ - রাসূল (সা.) এর আমল:</h4>
-                <p className="info-text">রাসূলুল্লাহ (সা.) নিজে উমরাহ করেছেন (একাধিকবার) — তাই সুন্নাহ অনুসরণ করে উমরাহ করি।</p>
-                <p className="info-text mt-sm">রাসূলুল্লাহ (সা.) তাঁর জীবনে একাধিকবার উমরাহ করেছেন, যা আমাদের জন্য অনুসরণীয় সুন্নাহ।</p>
+                <p className="info-text">রাসূলুল্লাহ (সা.) নিজে উমরাহ করেছিেন (একাধিকবার) — তাই সুন্নাহ অনুসরণ করে উমরাহ করি।</p>
+                <p className="info-text mt-sm">রাসূলুল্লাহ (সা.) তাঁর জীবনে একাধিকবার উমরাহ করেছিেন, যা আমাদের জন্য অনুসরণীয় সুন্নাহ।</p>
                 <p className="info-text"><strong>সূত্র:</strong> Islam-QA</p>
               </div>
 
@@ -677,7 +677,7 @@ export default function Umrah() {
                   <AudioPlayer arabicText="اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ" />
                 </p>
                 <p className="transliteration">Allahumma Salli Ala Muhammadin Wa Ala Ali Muhammadin Kama Sallaita Ala Ibrahima Wa Ala Ali Ibrahima Innaka Hamidun Majidun</p>
-                <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, মুহাম্মদ (সা.) ও তাঁর পরিবারের উপর রহমত বর্ষণ করুন, যেমন আপনি ইব্রাহিম (আঃ) ও তাঁর পরিবারের উপর রহমত বর্ষণ করেছেন। নিশ্চয়ই আপনি প্রশংসিত ও মহান।</p>
+                <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, মুহাম্মদ (সা.) ও তাঁর পরিবারের উপর রহমত বর্ষণ করুন, যেমন আপনি ইব্রাহিম (আঃ) ও তাঁর পরিবারের উপর রহমত বর্ষণ করেছিেন। নিশ্চয়ই আপনি প্রশংসিত ও মহান।</p>
               </div>
               
               <h3>মসজিদে নববীতে নামাজের ফজিলত</h3>

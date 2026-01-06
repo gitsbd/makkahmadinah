@@ -176,7 +176,7 @@ export default function Hajj() {
               <ul className="list-styled">
                 <li><strong>ইসলামের পঞ্চম স্তম্ভ:</strong> হজ্জ হল ইসলামের পঞ্চম ও শেষ স্তম্ভ। প্রত্যেক সামর্থ্যবান মুসলমানের উপর এটি ফরজ।</li>
                 <li><strong>আল্লাহর নির্দেশ:</strong> কুরআনে আল্লাহ তা'আলা বলেন: "আর আল্লাহর জন্য মানুষের উপর হজ্জ করা ফরজ, যারা সেখানে যাওয়ার সামর্থ্য রাখে।" (সূরা আল-ইমরান, আয়াত ৯৭)</li>
-                <li><strong>হযরত ইব্রাহিম (আঃ) এর সুন্নত:</strong> হজ্জ হল হযরত ইব্রাহিম (আঃ) এর সুন্নত যা রাসূলুল্লাহ (সা.) পুনরুজ্জীবিত করেছেন।</li>
+                <li><strong>হযরত ইব্রাহিম (আঃ) এর সুন্নত:</strong> হজ্জ হল হযরত ইব্রাহিম (আঃ) এর সুন্নত যা রাসূলুল্লাহ (সা.) পুনরুজ্জীবিত করেছিেন।</li>
                 <li><strong>গুনাহ মাফ:</strong> কবুলকৃত হজ্জ পূর্ববর্তী সমস্ত গুনাহ মাফ করে দেয়।</li>
                 <li><strong>জান্নাতের নিশ্চয়তা:</strong> হাদীসে বর্ণিত আছে যে কবুলকৃত হজ্জের পুরস্কার হল জান্নাত।</li>
                 <li><strong>আল্লাহর নৈকট্য:</strong> হজ্জ হল আল্লাহর সাথে সরাসরি সম্পর্ক স্থাপনের একটি মাধ্যম।</li>
@@ -397,7 +397,7 @@ export default function Hajj() {
                   <AudioPlayer arabicText="إِنِّي وَجَّهْتُ وَجْهِي لِلَّذِي فَطَرَ السَّمَاوَاتِ وَالْأَرْضَ حَنِيفًا وَمَا أَنَا مِنَ الْمُشْرِكِينَ" />
                 </p>
                   <p className="transliteration">Inni Wajjahtu Wajhi Lilladhi Fataras Samawati Wal Arda Hanifan Wa Ma Ana Minal Mushrikin</p>
-                  <p className="translation">নিশ্চয়ই আমি আমার মুখমণ্ডল সেই সত্তার দিকে ফিরিয়েছি যিনি আসমান ও জমিন সৃষ্টি করেছেন, একনিষ্ঠভাবে এবং আমি মুশরিকদের অন্তর্ভুক্ত নই</p>
+                  <p className="translation">নিশ্চয়ই আমি আমার মুখমণ্ডল সেই সত্তার দিকে ফিরিয়েছি যিনি আসমান ও জমিন সৃষ্টি করেছিেন, একনিষ্ঠভাবে এবং আমি মুশরিকদের অন্তর্ভুক্ত নই</p>
                 </div>
               </div>
             </div>
@@ -502,7 +502,7 @@ export default function Hajj() {
                     <AudioPlayer arabicText="اللَّهُمَّ إِنَّ بَيْتِكَ عَظَّمْتَهُ وَحَرَّمْتَهُ وَعَظَّمْتَ حُرْمَتَهُ" />
                   </p>
                   <p className="transliteration">Allahumma Inna Baitaka Azzamatahu Wa Harramtahu Wa Azzamata Hurmatahu</p>
-                  <p className="translation">হে আল্লাহ, নিশ্চয়ই আপনি আপনার ঘরকে সম্মানিত করেছেন, হারাম করেছেন এবং এর সম্মানকে বৃদ্ধি করেছেন</p>
+                  <p className="translation">হে আল্লাহ, নিশ্চয়ই আপনি আপনার ঘরকে সম্মানিত করেছিেন, হারাম করেছিেন এবং এর সম্মানকে বৃদ্ধি করেছিেন</p>
                 </div>
               </div>
             </div>
@@ -590,7 +590,7 @@ export default function Hajj() {
                   <AudioPlayer arabicText="اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ" />
                 </p>
                 <p className="transliteration">Allahumma Salli Ala Muhammadin Wa Ala Ali Muhammadin Kama Sallaita Ala Ibrahima Wa Ala Ali Ibrahima Innaka Hamidun Majidun</p>
-                <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, মুহাম্মদ (সা.) ও তাঁর পরিবারের উপর রহমত বর্ষণ করুন, যেমন আপনি ইব্রাহিম (আঃ) ও তাঁর পরিবারের উপর রহমত বর্ষণ করেছেন। নিশ্চয়ই আপনি প্রশংসিত ও মহান।</p>
+                <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, মুহাম্মদ (সা.) ও তাঁর পরিবারের উপর রহমত বর্ষণ করুন, যেমন আপনি ইব্রাহিম (আঃ) ও তাঁর পরিবারের উপর রহমত বর্ষণ করেছিেন। নিশ্চয়ই আপনি প্রশংসিত ও মহান।</p>
               </div>
               
               <h3>মসজিদে নববীতে নামাজের ফজিলত</h3>

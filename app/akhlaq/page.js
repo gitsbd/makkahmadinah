@@ -48,7 +48,7 @@ export default function Akhlaq() {
             </p>
             <p className="transliteration">Ya ayyuhalladhina amanu ijtannibu kathiran minaz-zanni, inna ba'daz-zanni ithmun, wa la tajassasu wa la yaghtab ba'dukum ba'dan, ayuhibbu ahadukum an ya'kula lahma akhihi maytan fakarihtumuh, wattaqullah, innallaha tawwabur rahim</p>
             <p className="translation"><strong>অনুবাদ:</strong> "হে মুমিনগণ! তোমরা অধিকাংশ ধারণা থেকে দূরে থাক। নিশ্চয়ই অনেক ধারণা পাপ। আর তোমরা গোপনীয় বিষয় অনুসন্ধান করো না এবং একে অপরের গীবত করো না। তোমাদের কেউ কি তার মৃত ভাইয়ের গোশত খেতে পছন্দ করবে? বস্তুত তোমরা তো এটা ঘৃণা কর। আর আল্লাহকে ভয় কর। নিশ্চয়ই আল্লাহ তওবা কবুলকারী, পরম দয়ালু।" (সূরা আল-হুজুরাত, আয়াত ১২)</p>
-            <p className="info-text"><strong>💡 ব্যাখ্যা:</strong> এই আয়াতটি গীবত নিষিদ্ধ হওয়ার সবচেয়ে বিখ্যাত ও স্পষ্ট আয়াত। এখানে আল্লাহ গীবতকে মৃত ভাইয়ের গোশত খাওয়ার সাথে তুলনা করেছেন, যা অত্যন্ত ভয়াবহ ও ঘৃণিত কাজ।</p>
+            <p className="info-text"><strong>💡 ব্যাখ্যা:</strong> এই আয়াতটি গীবত নিষিদ্ধ হওয়ার সবচেয়ে বিখ্যাত ও স্পষ্ট আয়াত। এখানে আল্লাহ গীবতকে মৃত ভাইয়ের গোশত খাওয়ার সাথে তুলনা করেছিেন, যা অত্যন্ত ভয়াবহ ও ঘৃণিত কাজ।</p>
 
             <h4>সূরা আল-হুমাযাহ (সূরা ১০৪) - পরচর্চা ও কটাক্ষ:</h4>
             <p className="arabic">
@@ -159,14 +159,14 @@ export default function Akhlaq() {
               <AudioPlayer arabicText="وَلَقَدْ خَلَقْنَاكُمْ ثُمَّ صَوَّرْنَاكُمْ ثُمَّ قُلْنَا لِلْمَلَائِكَةِ اسْجُدُوا لِآدَمَ فَسَجَدُوا إِلَّا إِبْلِيسَ لَمْ يَكُن مِّنَ السَّاجِدِينَ" />
             </p>
             <p className="transliteration">Wa laqad khalaqnakum thumma sawwarnakum thumma qulna lil-malaikati usjudu li-Adama fa-sajadu illa Iblisa lam yakun minas-sajidin</p>
-            <p className="translation"><strong>অনুবাদ:</strong> "আর নিশ্চয়ই আমি তোমাদের সৃষ্টি করেছি, তারপর তোমাদের আকৃতি দিয়েছি, তারপর ফেরেশতাদের বলেছি: 'আদমকে সিজদা করো', তখন তারা সিজদা করল, কিন্তু ইবলিস সিজদাকারীদের অন্তর্ভুক্ত ছিল না।" (সূরা আল-আ'রাফ, আয়াত ১১)</p>
+            <p className="translation"><strong>অনুবাদ:</strong> "আর নিশ্চয়ই আমি তোমাদের সৃষ্টি করেছিি, তারপর তোমাদের আকৃতি দিয়েছি, তারপর ফেরেশতাদের বলেছি: 'আদমকে সিজদা করো', তখন তারা সিজদা করল, কিন্তু ইবলিস সিজদাকারীদের অন্তর্ভুক্ত ছিল না।" (সূরা আল-আ'রাফ, আয়াত ১১)</p>
 
             <p className="arabic">
               <span className="arabic-text">قَالَ مَا مَنَعَكَ أَلَّا تَسْجُدَ إِذْ أَمَرْتُكَ ۖ قَالَ أَنَا خَيْرٌ مِّنْهُ خَلَقْتَنِي مِن نَّارٍ وَخَلَقْتَهُ مِن طِينٍ</span>
               <AudioPlayer arabicText="قَالَ مَا مَنَعَكَ أَلَّا تَسْجُدَ إِذْ أَمَرْتُكَ ۖ قَالَ أَنَا خَيْرٌ مِّنْهُ خَلَقْتَنِي مِن نَّارٍ وَخَلَقْتَهُ مِن طِينٍ" />
             </p>
             <p className="transliteration">Qala ma mana'aka alla tasjuda iz amartuka, qala ana khayrun minhu khalaqtani min narin wa khalaqtahu min tin</p>
-            <p className="translation"><strong>অনুবাদ:</strong> "তিনি বললেন: 'আমি তোমাকে আদেশ করলে তুমি সিজদা করতে বাধা দিলে কেন?' সে বলল: 'আমি তার চেয়ে উত্তম, আপনি আমাকে আগুন থেকে সৃষ্টি করেছেন এবং তাকে কাদামাটি থেকে সৃষ্টি করেছেন।'" (সূরা আল-আ'রাফ, আয়াত ১২)</p>
+            <p className="translation"><strong>অনুবাদ:</strong> "তিনি বললেন: 'আমি তোমাকে আদেশ করলে তুমি সিজদা করতে বাধা দিলে কেন?' সে বলল: 'আমি তার চেয়ে উত্তম, আপনি আমাকে আগুন থেকে সৃষ্টি করেছিেন এবং তাকে কাদামাটি থেকে সৃষ্টি করেছিেন।'" (সূরা আল-আ'রাফ, আয়াত ১২)</p>
 
             <p className="arabic">
               <span className="arabic-text">قَالَ فَاهْبِطْ مِنْهَا فَمَا يَكُونُ لَكَ أَن تَتَكَبَّرَ فِيهَا فَاخْرُجْ إِنَّكَ مِنَ الصَّاغِرِينَ</span>
@@ -174,7 +174,7 @@ export default function Akhlaq() {
             </p>
             <p className="transliteration">Qala fahbit minha fama yakunu laka an tatakabbara fiha fakhruj innaka minas-saghirin</p>
             <p className="translation"><strong>অনুবাদ:</strong> "তিনি বললেন: 'তাহলে তুমি এখান থেকে নেমে যাও, এখানে অহংকার করা তোমার জন্য শোভনীয় নয়। সুতরাং বের হয়ে যাও, নিশ্চয়ই তুমি অপদস্থদের অন্তর্ভুক্ত।'" (সূরা আল-আ'রাফ, আয়াত ১৩)</p>
-            <p className="info-text"><strong>💡 ব্যাখ্যা:</strong> এই আয়াতসমূহে ইবলিসের অহংকারের ঘটনা বর্ণিত হয়েছে। ইবলিস "আমি তার চেয়ে উত্তম" বলে অহংকার করেছিল, যার ফলে সে আল্লাহর রহমত থেকে বঞ্চিত হয়েছিল। এটি অহংকারের ভয়াবহতা বোঝাতে একটি দারুণ রেফারেন্স।</p>
+            <p className="info-text"><strong>💡 ব্যাখ্যা:</strong> এই আয়াতসমূহে ইবলিসের অহংকারের ঘটনা বর্ণিত হয়েছে। ইবলিস "আমি তার চেয়ে উত্তম" বলে অহংকার করেছিিল, যার ফলে সে আল্লাহর রহমত থেকে বঞ্চিত হয়েছিল। এটি অহংকারের ভয়াবহতা বোঝাতে একটি দারুণ রেফারেন্স।</p>
 
             <h4>সূরা আল-ইসরা (সূরা ১৭), আয়াত ৩৭ - দম্ভভরে চলতে নিষেধ:</h4>
             <p className="arabic">
@@ -425,7 +425,7 @@ export default function Akhlaq() {
                 </p>
                 <p className="transliteration">Walladhina hum li-furujihim hafizuna illa ala azwajihim aw ma malakat aymanuhum fa-innahum ghayru malumin</p>
                 <p className="translation"><strong>অনুবাদ:</strong> "এবং যারা তাদের লজ্জাস্থানের হেফাজত করে, তাদের স্ত্রী এবং তাদের অধিকারভুক্ত দাসীদের ছাড়া, নিশ্চয়ই তারা নিন্দিত হবে না।" (সূরা আল-মু'মিনূন, আয়াত ৫-৭)</p>
-                <p className="info-text"><strong>💡 ব্যাখ্যা:</strong> এই আয়াতটি মুমিনদের একটি প্রধান বৈশিষ্ট্য হিসেবে লজ্জাস্থানের হেফাজতের কথা উল্লেখ করেছে।</p>
+                <p className="info-text"><strong>💡 ব্যাখ্যা:</strong> এই আয়াতটি মুমিনদের একটি প্রধান বৈশিষ্ট্য হিসেবে লজ্জাস্থানের হেফাজতের কথা উল্লেখ করেছিে।</p>
 
                 <h4>সূরা আল-মা'আরিজ (সূরা ৭০), আয়াত ২৯-৩১ - একই বিষয়:</h4>
                 <p className="arabic">
@@ -534,7 +534,7 @@ export default function Akhlaq() {
                   <AudioPlayer arabicText="إِنَّ اللَّهَ كَتَبَ عَلَى ابْنِ آدَمَ حَظَّهُ مِنَ الزِّنَا، أَدْرَكَ ذَلِكَ لَا مَحَالَةَ: الْعَيْنَانِ زِنَاهُمَا النَّظَرُ" />
                 </p>
                 <p className="transliteration">Innal-laha kataba ala ibni Adama hazzahu minaz-zina, adraka dhalika la mahalata: al-aynan zinahuman-nazru</p>
-                <p className="translation"><strong>অনুবাদ:</strong> "নিশ্চয়ই আল্লাহ আদম সন্তানের জন্য ব্যভিচারের অংশ নির্ধারণ করেছেন, যা সে অবশ্যই পাবে: দুই চোখের ব্যভিচার হল নজর করা।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
+                <p className="translation"><strong>অনুবাদ:</strong> "নিশ্চয়ই আল্লাহ আদম সন্তানের জন্য ব্যভিচারের অংশ নির্ধারণ করেছিেন, যা সে অবশ্যই পাবে: দুই চোখের ব্যভিচার হল নজর করা।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
 
                 <ImportantNote variant="blue" title="চোখের সঠিক ব্যবহার:">
                   <ul>
