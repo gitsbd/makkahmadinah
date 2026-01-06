@@ -43,8 +43,10 @@ export default function Header() {
       <header className={`header ${mobileMenuOpen ? 'menu-open' : ''}`}>
         <div className="container">
           <div className="logo">
-            <h1>🕋 উমরাহ ও হজ্জ</h1>
-            <p>Umrah & Hajj Guide</p>
+            <Link href="/" onClick={closeMobileMenu} aria-label="হোম পেজে যান">
+              <h1>🕋 উমরাহ ও হজ্জ</h1>
+              <p>Umrah & Hajj Guide</p>
+            </Link>
           </div>
           <button 
             className="mobile-menu-toggle"

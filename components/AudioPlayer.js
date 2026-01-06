@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-export default function AudioPlayer({ arabicText, className = '' }) {
+export default function AudioPlayer({ arabicText, className = '', tone = 'kid' }) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isSupported, setIsSupported] = useState(false)
   const [voices, setVoices] = useState([])
@@ -93,9 +93,15 @@ export default function AudioPlayer({ arabicText, className = '' }) {
       utterance.lang = 'ar-SA'
     }
     
-    // Higher pitch and rate for more feminine sound
-    utterance.rate = 0.85 // Slightly slower for clarity
-    utterance.pitch = 1.4 // Much higher pitch for female voice (1.0 is default, 2.0 is max)
+    // "Kid-like" tone: higher pitch + slightly faster (browser voices vary; this is best-effort)
+    if (tone === 'kid') {
+      utterance.rate = 1.05
+      utterance.pitch = 1.8
+    } else {
+      // Default/softer tone (kept close to previous behavior)
+      utterance.rate = 0.9
+      utterance.pitch = 1.4
+    }
     utterance.volume = 1
 
     utterance.onstart = () => setIsPlaying(true)
