@@ -20,13 +20,24 @@ export default function VisitorCounter() {
       }
     }
 
+    const namespace = 'makkahmadinah'
+    const key = 'homepage'
+
     const hitOnce = async () => {
       if (didHitRef.current) return
       didHitRef.current = true
       try {
-        const res = await fetch('/api/visits?hit=1', { cache: 'no-store' })
+        const url = `https://api.countapi.xyz/hit/${namespace}/${key}`
+        const res = await fetch(url, {
+          cache: 'no-store',
+          headers: { Accept: 'application/json' },
+        })
+        if (!res.ok) {
+          throw new Error('Failed to fetch')
+        }
         const data = await res.json()
-        setFromResponse(data)
+        const value = typeof data?.value === 'number' ? data.value : null
+        setFromResponse({ ok: value !== null, value })
       } catch {
         if (!isMounted) return
         setError('—')
@@ -35,9 +46,17 @@ export default function VisitorCounter() {
 
     const refresh = async () => {
       try {
-        const res = await fetch('/api/visits?hit=0', { cache: 'no-store' })
+        const url = `https://api.countapi.xyz/get/${namespace}/${key}`
+        const res = await fetch(url, {
+          cache: 'no-store',
+          headers: { Accept: 'application/json' },
+        })
+        if (!res.ok) {
+          return
+        }
         const data = await res.json()
-        setFromResponse(data)
+        const value = typeof data?.value === 'number' ? data.value : null
+        setFromResponse({ ok: value !== null, value })
       } catch {
         // ignore background refresh errors
       }
