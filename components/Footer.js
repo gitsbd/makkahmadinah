@@ -33,6 +33,9 @@ export default function Footer() {
             <h4 className="footer-heading">দোয়া ও সূরা</h4>
             <ul className="footer-links">
               <li>
+                <Link href="/surah/">সূরা</Link>
+              </li>
+              <li>
                 <Link href="/duas/">উমরাহ ও হজ্জ দোয়া</Link>
               </li>
               <li>
@@ -73,6 +76,9 @@ export default function Footer() {
           <div className="footer-section">
             <h4 className="footer-heading">ইসলামী লাইব্রেরি</h4>
             <ul className="footer-links">
+              <li>
+                <Link href="/arabic-learning/">Arabic Learning</Link>
+              </li>
               <li>
                 <Link href="/quran/">কুরআন (Qur'an)</Link>
               </li>

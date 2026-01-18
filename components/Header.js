@@ -88,6 +88,7 @@ export default function Header() {
                 দোয়া ও সূরা
               </button>
               <ul className={`dropdown-menu ${openDropdown === 'duas' ? 'dropdown-open' : ''}`}>
+                <li><Link href="/surah/" className={isActive('/surah/') ? 'active' : ''} onClick={closeMobileMenu}>সূরা</Link></li>
                 <li><Link href="/duas/" className={isActive('/duas/') ? 'active' : ''} onClick={closeMobileMenu}>উমরাহ ও হজ্জ দোয়া</Link></li>
                 <li><Link href="/umrah-duas/" className={isActive('/umrah-duas/') ? 'active' : ''} onClick={closeMobileMenu}>উমরাহ দোয়া</Link></li>
                 <li><Link href="/general-duas/" className={isActive('/general-duas/') ? 'active' : ''} onClick={closeMobileMenu}>দৈনন্দিন মাসনূন দোয়া</Link></li>
@@ -119,6 +120,7 @@ export default function Header() {
                 ইসলামী লাইব্রেরি
               </button>
               <ul className={`dropdown-menu ${openDropdown === 'library' ? 'dropdown-open' : ''}`}>
+                <li><Link href="/arabic-learning/" className={isActive('/arabic-learning/') ? 'active' : ''} onClick={closeMobileMenu}>Arabic Learning</Link></li>
                 <li><Link href="/quran/" className={isActive('/quran/') ? 'active' : ''} onClick={closeMobileMenu}>কুরআন (Qur'an)</Link></li>
                 <li><Link href="/bukhari/" className={isActive('/bukhari/') ? 'active' : ''} onClick={closeMobileMenu}>সহীহ বুখারী (Sahih Bukhari)</Link></li>
                 <li><Link href="/muslim/" className={isActive('/muslim/') ? 'active' : ''} onClick={closeMobileMenu}>মুসলিম শরীফ (সহীহ মুসলিম)</Link></li>

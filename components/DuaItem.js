@@ -1,8 +1,9 @@
 import AudioPlayer from './AudioPlayer'
+import { formatVerseBreaks } from '@/utils/verseFormatter'
 
 /**
  * Reusable DuaItem Component
- * Displays a dua with Arabic text, transliteration, and translation
+ * Displays a dua with Arabic text and Bangla transliteration only
  */
 export default function DuaItem({
   title,
@@ -18,14 +19,22 @@ export default function DuaItem({
       {title && <h3>{title}</h3>}
       {arabic && (
         <p className="arabic">
-          <span className="arabic-text">{arabic}</span>
+          <span 
+            className="arabic-text verse-text"
+            dangerouslySetInnerHTML={{ __html: formatVerseBreaks(arabic) }}
+          />
           <AudioPlayer arabicText={arabic} />
         </p>
       )}
-      {transliteration && <p className="transliteration"><strong>English Pronunciation:</strong> {transliteration}</p>}
-      {banglaTransliteration && <p className="transliteration"><strong>বাংলা উচ্চারণ:</strong> {banglaTransliteration}</p>}
-      {translation && <p className="translation"><strong>Meaning (English):</strong> {translation}</p>}
-      {banglaTranslation && <p className="translation"><strong>অর্থ (বাংলা):</strong> {banglaTranslation}</p>}
+      {banglaTransliteration && (
+        <p className="transliteration">
+          <strong>বাংলা উচ্চারণ:</strong>{' '}
+          <span 
+            className="verse-text"
+            dangerouslySetInnerHTML={{ __html: formatVerseBreaks(banglaTransliteration) }}
+          />
+        </p>
+      )}
       {children}
     </div>
   )
