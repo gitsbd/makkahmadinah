@@ -1,4 +1,5 @@
 import ExpandableSection from '@/components/ExpandableSection'
+import { createArabicTitle } from '@/utils/arabicTitle'
 
 export default function MadinahPlaces() {
   return (
@@ -15,7 +16,7 @@ export default function MadinahPlaces() {
         <div className="container">
           <ExpandableSection 
             id="মসজদ-নবব-masjid-al-nabawi" 
-            title="মসজিদে নববী (Masjid al-Nabawi)" 
+            title={createArabicTitle("মসজিদে নববী (Masjid al-Nabawi)", "المسجد النبوي", "Al-Masjid an-Nabawī")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={1}
@@ -33,7 +34,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection 
             id="রওজ-শরফ-rawdah-sharif" 
-            title="রওজা শরীফ (Rawdah Sharif)" 
+            title={createArabicTitle("রওজা শরীফ (Rawdah Sharif)", "الروضة الشريفة", "Ar-Rawḍa ash-Sharīfa")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={2}
@@ -51,7 +52,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection 
             id="রসলললহ-স-এর-কবর-prophets-grave" 
-            title="রাসূলুল্লাহ (সা.) এর কবর (Prophet's Grave)" 
+            title={createArabicTitle("রাসূলুল্লাহ (সা.) এর কবর (Prophet's Grave)", "قبر النبي", "Qabr an-Nabī")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={3}
@@ -69,7 +70,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection 
             id="কব-মসজদ-quba-mosque" 
-            title="কুবা মসজিদ (Quba Mosque)" 
+            title={createArabicTitle("কুবা মসজিদ (Quba Mosque)", "مسجد قباء", "Masjid Qubāʾ")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={4}
@@ -87,7 +88,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection 
             id="কবলতইন-মসজদ-qiblatain-mosque" 
-            title="কিবলাতাইন মসজিদ (Qiblatain Mosque)" 
+            title={createArabicTitle("কিবলাতাইন মসজিদ (Qiblatain Mosque)", "مسجد القبلتين", "Masjid al-Qiblatayn")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={5}
@@ -123,7 +124,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection 
             id="উহদ-পরবত-uhud-mountain" 
-            title="উহুদ পর্বত (Uhud Mountain)" 
+            title={createArabicTitle("উহুদ পর্বত (Uhud Mountain)", "جبل أحد", "Jabal Uḥud")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={7}
@@ -141,7 +142,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection 
             id="সত-মসজদ-seven-mosques" 
-            title="সাত মসজিদ (Seven Mosques)" 
+            title={createArabicTitle("সাত মসজিদ (Seven Mosques)", "المساجد السبعة", "Al-Masājid as-Sabʿa")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={8}
@@ -159,7 +160,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection 
             id="আযর-পরবত-mount-ayr" 
-            title="আয়র পর্বত (Mount Ayr)" 
+            title={createArabicTitle("আয়র পর্বত (Mount Ayr)", "جبل عير", "Jabal ʿAyr")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={9}
@@ -195,7 +196,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection 
             id="মসজদল-গমম-masjid-al-ghamama" 
-            title="মসজিদুল গামামা (Masjid al-Ghamama)" 
+            title={createArabicTitle("মসজিদুল গামামা (Masjid al-Ghamama)", "مسجد الغمامة", "Masjid al-Ghamāma")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={11}
@@ -230,7 +231,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="masjid-al-ijabah"
-            title="মসজিদুল ইজাবাহ (Masjid al-Ijabah)"
+            title={createArabicTitle("মসজিদুল ইজাবাহ (Masjid al-Ijabah)", "مسجد الإجابة", "Masjid al-Ijāba")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={13}
@@ -247,7 +248,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="masjid-abu-bakr"
-            title="মসজিদে আবু বকর (Masjid Abu Bakr)"
+            title={createArabicTitle("মসজিদে আবু বকর (Masjid Abu Bakr)", "مسجد أبي بكر", "Masjid Abī Bakr")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={14}
@@ -281,7 +282,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="masjid-ali"
-            title="মসজিদে আলী (Masjid Ali)"
+            title={createArabicTitle("মসজিদে আলী (Masjid Ali)", "مسجد علي", "Masjid ʿAlī")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={16}
@@ -298,7 +299,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="masjid-fatimah"
-            title="মসজিদে ফাতিমা (Masjid Fatimah)"
+            title={createArabicTitle("মসজিদে ফাতিমা (Masjid Fatimah)", "مسجد فاطمة", "Masjid Fāṭima")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={17}
@@ -332,7 +333,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="masjid-al-shuhada"
-            title="মসজিদে শুহাদা (Masjid al-Shuhada - Martyrs Mosque)"
+            title={createArabicTitle("মসজিদে শুহাদা (Masjid al-Shuhada - Martyrs Mosque)", "مسجد الشهداء", "Masjid ash-Shuhadāʾ")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={19}
@@ -366,7 +367,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="masjid-al-jummah"
-            title="মসজিদে জুম্মাহ (Masjid al-Jummah)"
+            title={createArabicTitle("মসজিদে জুম্মাহ (Masjid al-Jummah)", "مسجد الجمعة", "Masjid al-Jumʿa")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={21}
@@ -400,7 +401,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-museum"
-            title="আল-মদিনা মিউজিয়াম (Al-Madinah Museum)"
+            title={createArabicTitle("আল-মদিনা মিউজিয়াম (Al-Madinah Museum)", "متحف المدينة", "Matḥaf al-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={23}
@@ -434,7 +435,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-hijrah-road"
-            title="আল-হিজরাহ রোড (Al-Hijrah Road)"
+            title={createArabicTitle("আল-হিজরাহ রোড (Al-Hijrah Road)", "طريق الهجرة", "Ṭarīq al-Hijra")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={25}
@@ -451,7 +452,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="prophets-mosque-library"
-            title="মসজিদে নববীর লাইব্রেরি (Prophet's Mosque Library)"
+            title={createArabicTitle("মসজিদে নববীর লাইব্রেরি (Prophet's Mosque Library)", "مكتبة المسجد النبوي", "Maktabat al-Masjid an-Nabawī")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={26}
@@ -485,7 +486,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="uhud-martyrs-cemetery"
-            title="উহুদ শহীদ কবরস্থান (Uhud Martyrs Cemetery)"
+            title={createArabicTitle("উহুদ শহীদ কবরস্থান (Uhud Martyrs Cemetery)", "مقبرة شهداء أحد", "Maqbara Shuhadāʾ Uḥud")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={28}
@@ -502,7 +503,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-al-munawwarah-museum"
-            title="আল-মদিনা আল-মুনাওয়ারাহ মিউজিয়াম (Al-Madinah Al-Munawwarah Museum)"
+            title={createArabicTitle("আল-মদিনা আল-মুনাওয়ারাহ মিউজিয়াম (Al-Madinah Al-Munawwarah Museum)", "متحف المدينة المنورة", "Matḥaf al-Madīna al-Munawwara")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={29}
@@ -519,7 +520,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-train-station"
-            title="আল-মদিনা ট্রেন স্টেশন (Al-Madinah Train Station)"
+            title={createArabicTitle("আল-মদিনা ট্রেন স্টেশন (Al-Madinah Train Station)", "محطة قطار المدينة", "Maḥaṭṭat Qiṭār al-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={30}
@@ -553,7 +554,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-miqat-mosque-dhu-al-hulayfah"
-            title="আল-মীকাত মসজিদ (ধুল হুলাইফা) (Al-Miqat Mosque - Dhu al-Hulayfah)"
+            title={createArabicTitle("আল-মীকাত মসজিদ (ধুল হুলাইফা) (Al-Miqat Mosque - Dhu al-Hulayfah)", "مسجد الميقات (ذو الحليفة)", "Masjid al-Mīqāt (Dhū al-Ḥulayfa)")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={32}
@@ -570,7 +571,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="masjid-al-qiblatain-expansion"
-            title="কিবলাতাইন মসজিদের সম্প্রসারণ (Masjid al-Qiblatain Expansion)"
+            title={createArabicTitle("কিবলাতাইন মসজিদের সম্প্রসারণ (Masjid al-Qiblatain Expansion)", "توسعة مسجد القبلتين", "Tawsiʿat Masjid al-Qiblatayn")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={33}
@@ -604,7 +605,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-perfume-market"
-            title="আল-মদিনা পারফিউম বাজার (Al-Madinah Perfume Market)"
+            title={createArabicTitle("আল-মদিনা পারফিউম বাজার (Al-Madinah Perfume Market)", "سوق العطر بالمدينة", "Sūq al-ʿIṭr bi-l-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={35}
@@ -621,7 +622,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-souq"
-            title="আল-মদিনা সৌক (Al-Madinah Souq)"
+            title={createArabicTitle("আল-মদিনা সৌক (Al-Madinah Souq)", "سوق المدينة", "Sūq al-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={36}
@@ -638,7 +639,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-university"
-            title="আল-মদিনা বিশ্ববিদ্যালয় (Al-Madinah University)"
+            title={createArabicTitle("আল-মদিনা বিশ্ববিদ্যালয় (Al-Madinah University)", "جامعة المدينة", "Jāmiʿat al-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={37}
@@ -655,7 +656,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="king-fahd-complex-for-printing-the-holy-quran"
-            title="কিং ফাহাদ কমপ্লেক্স ফর প্রিন্টিং দ্য হলি কুরআন (King Fahd Complex for Printing the Holy Quran)"
+            title={createArabicTitle("কিং ফাহাদ কমপ্লেক্স ফর প্রিন্টিং দ্য হলি কুরআন (King Fahd Complex for Printing the Holy Quran)", "مجمع الملك فهد لطباعة المصحف الشريف", "Mujammaʿ al-Malik Fahd li-Ṭibāʿat al-Muṣḥaf ash-Sharīf")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={38}
@@ -689,7 +690,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-bus-station"
-            title="আল-মদিনা বাস স্টেশন (Al-Madinah Bus Station)"
+            title={createArabicTitle("আল-মদিনা বাস স্টেশন (Al-Madinah Bus Station)", "محطة حافلات المدينة", "Maḥaṭṭat Ḥāfilāt al-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={40}
@@ -706,7 +707,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-central-market"
-            title="আল-মদিনা সেন্ট্রাল মার্কেট (Al-Madinah Central Market)"
+            title={createArabicTitle("আল-মদিনা সেন্ট্রাল মার্কেট (Al-Madinah Central Market)", "السوق المركزي بالمدينة", "As-Sūq al-Markazī bi-l-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={41}
@@ -723,7 +724,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-old-market"
-            title="আল-মদিনা ওল্ড মার্কেট (Al-Madinah Old Market)"
+            title={createArabicTitle("আল-মদিনা ওল্ড মার্কেট (Al-Madinah Old Market)", "السوق القديم بالمدينة", "As-Sūq al-Qadīm bi-l-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={42}
@@ -757,7 +758,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-park"
-            title="আল-মদিনা পার্ক (Al-Madinah Park)"
+            title={createArabicTitle("আল-মদিনা পার্ক (Al-Madinah Park)", "حديقة المدينة", "Ḥadīqat al-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={44}
@@ -791,7 +792,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-cultural-center"
-            title="আল-মদিনা কালচারাল সেন্টার (Al-Madinah Cultural Center)"
+            title={createArabicTitle("আল-মদিনা কালচারাল সেন্টার (Al-Madinah Cultural Center)", "المركز الثقافي بالمدينة", "Al-Markaz ath-Thaqāfī bi-l-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={46}
@@ -825,7 +826,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-heritage-village"
-            title="আল-মদিনা হেরিটেজ ভিলেজ (Al-Madinah Heritage Village)"
+            title={createArabicTitle("আল-মদিনা হেরিটেজ ভিলেজ (Al-Madinah Heritage Village)", "قرية التراث بالمدينة", "Qaryat at-Turāth bi-l-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={48}
@@ -842,7 +843,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="prophets-mosque-expansion"
-            title="মসজিদে নববীর সম্প্রসারণ (Prophet's Mosque Expansion)"
+            title={createArabicTitle("মসজিদে নববীর সম্প্রসারণ (Prophet's Mosque Expansion)", "توسعة المسجد النبوي", "Tawsiʿat al-Masjid an-Nabawī")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={49}
@@ -859,7 +860,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="al-madinah-date-festival"
-            title="আল-মদিনা খেজুর উৎসব (Al-Madinah Date Festival)"
+            title={createArabicTitle("আল-মদিনা খেজুর উৎসব (Al-Madinah Date Festival)", "مهرجان التمر بالمدينة", "Mahrajān at-Tamr bi-l-Madīna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={50}
@@ -876,7 +877,7 @@ export default function MadinahPlaces() {
 
           <ExpandableSection
             id="jannati-kuyu"
-            title="জান্নাতি কূপ (Jannati Kuyu - Paradise Well)"
+            title={createArabicTitle("জান্নাতি কূপ (Jannati Kuyu - Paradise Well)", "بئر الجنة", "Biʾr al-Janna")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={51}

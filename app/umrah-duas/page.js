@@ -3,6 +3,8 @@ import DuaCategory from '@/components/DuaCategory'
 import DuaItem from '@/components/DuaItem'
 import ExpandableSection from '@/components/ExpandableSection'
 import UmrahProcessSteps from '@/components/UmrahProcessSteps'
+import AudioPlayer from '@/components/AudioPlayer'
+import { createArabicTitle } from '@/utils/arabicTitle'
 
 export default function UmrahDuas() {
   return (
@@ -17,7 +19,7 @@ export default function UmrahDuas() {
         <div className="container">
           <ExpandableSection 
             id="umrah-process" 
-            title="উমরাহ সম্পাদনের সম্পূর্ণ প্রক্রিয়া (Step by Step Process)" 
+            title={createArabicTitle("উমরাহ সম্পাদনের সম্পূর্ণ প্রক্রিয়া (Step by Step Process)", "عملية العمرة الكاملة", "ʿAmaliyyat al-ʿUmra al-kāmila")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={0}

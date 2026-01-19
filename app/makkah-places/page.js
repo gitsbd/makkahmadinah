@@ -1,4 +1,5 @@
 import ExpandableSection from '@/components/ExpandableSection'
+import { createArabicTitle } from '@/utils/arabicTitle'
 
 export default function MakkahPlaces() {
   return (
@@ -15,7 +16,7 @@ export default function MakkahPlaces() {
         <div className="container">
           <ExpandableSection 
             id="কব-শরফ-kaaba-sharif" 
-            title="কাবা শরীফ (Kaaba Sharif)" 
+            title={createArabicTitle("কাবা শরীফ (Kaaba Sharif)", "الكعبة المشرفة", "Al-Kaʿba al-Musharrafa")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={1}
@@ -33,7 +34,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection 
             id="মসজদল-হরম-masjid-al-haram" 
-            title="মসজিদুল হারাম (Masjid al-Haram)" 
+            title={createArabicTitle("মসজিদুল হারাম (Masjid al-Haram)", "المسجد الحرام", "Al-Masjid al-Ḥarām")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={2}
@@ -51,7 +52,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection 
             id="হজর-আসওযদ-hajar-al-aswad-black-stone" 
-            title="হাজরে আসওয়াদ (Hajar al-Aswad - Black Stone)" 
+            title={createArabicTitle("হাজরে আসওয়াদ (Hajar al-Aswad - Black Stone)", "الحجر الأسود", "Al-Ḥajar al-Aswad")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={3}
@@ -69,7 +70,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection 
             id="মকম-ইবরহম-maqam-ibrahim" 
-            title="মাকামে ইব্রাহিম (Maqam Ibrahim)" 
+            title={createArabicTitle("মাকামে ইব্রাহিম (Maqam Ibrahim)", "مقام إبراهيم", "Maqām Ibrāhīm")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={4}
@@ -87,7 +88,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection 
             id="জমজম-কপ-zamzam-well" 
-            title="জমজম কূপ (Zamzam Well)" 
+            title={createArabicTitle("জমজম কূপ (Zamzam Well)", "بئر زمزم", "Biʾr Zamzam")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={5}
@@ -105,7 +106,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection 
             id="সফ-মরওয-safa-and-marwa" 
-            title="সাফা-মারওয়া (Safa and Marwa)" 
+            title={createArabicTitle("সাফা-মারওয়া (Safa and Marwa)", "الصفا والمروة", "Aṣ-Ṣafā wa al-Marwa")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={6}
@@ -141,7 +142,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection 
             id="গর-সওর-cave-thawr" 
-            title="গারে সাওর (Cave Thawr)" 
+            title={createArabicTitle("গারে সাওর (Cave Thawr)", "غار ثور", "Ghār Thawr")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={8}
@@ -159,7 +160,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection 
             id="মন-mina" 
-            title="মিনা (Mina)" 
+            title={createArabicTitle("মিনা (Mina)", "منى", "Minā")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={9}
@@ -177,7 +178,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection 
             id="আরফত-arafat" 
-            title="আরাফাত (Arafat)" 
+            title={createArabicTitle("আরাফাত (Arafat)", "عرفة", "ʿArafa")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={10}
@@ -195,7 +196,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection 
             id="মজদলফ-muzdalifah" 
-            title="মুযদালিফা (Muzdalifah)" 
+            title={createArabicTitle("মুযদালিফা (Muzdalifah)", "مزدلفة", "Muzdalifa")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={11}
@@ -213,7 +214,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="abraj-al-bait"
-            title="আবরাজ আল বাইত (Abraj Al Bait - Clock Tower)"
+            title={createArabicTitle("আবরাজ আল বাইত (Abraj Al Bait - Clock Tower)", "أبراج البيت", "Abraj al-Bayt")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={12}
@@ -247,7 +248,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="jamarat"
-            title="জামরাত (Jamarat - Stoning Pillars)"
+            title={createArabicTitle("জামরাত (Jamarat - Stoning Pillars)", "الجمرات", "Al-Jamarāt")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={14}
@@ -264,7 +265,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="masjid-al-jinn"
-            title="মসজিদুল জিন (Masjid al-Jinn)"
+            title={createArabicTitle("মসজিদুল জিন (Masjid al-Jinn)", "مسجد الجن", "Masjid al-Jinn")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={15}
@@ -281,7 +282,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="masjid-al-khayf"
-            title="মসজিদুল খায়েফ (Masjid al-Khayf)"
+            title={createArabicTitle("মসজিদুল খায়েফ (Masjid al-Khayf)", "مسجد الخيف", "Masjid al-Khayf")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={16}
@@ -315,7 +316,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="jabal-thawr"
-            title="জাবালে সাওর (Jabal Thawr - Thawr Mountain)"
+            title={createArabicTitle("জাবালে সাওর (Jabal Thawr - Thawr Mountain)", "جبل ثور", "Jabal Thawr")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={18}
@@ -349,7 +350,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-hudaybiyyah"
-            title="হুদায়বিয়াহ (Al-Hudaybiyyah)"
+            title={createArabicTitle("হুদায়বিয়াহ (Al-Hudaybiyyah)", "الحديبية", "Al-Ḥudaybiyya")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={20}
@@ -383,7 +384,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="jabal-al-rahmah"
-            title="জাবালে রহমত (Jabal al-Rahmah - Mount of Mercy)"
+            title={createArabicTitle("জাবালে রহমত (Jabal al-Rahmah - Mount of Mercy)", "جبل الرحمة", "Jabal ar-Raḥma")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={22}
@@ -400,7 +401,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="king-fahd-gate"
-            title="কিং ফাহাদ গেট (King Fahd Gate)"
+            title={createArabicTitle("কিং ফাহাদ গেট (King Fahd Gate)", "باب الملك فهد", "Bāb al-Malik Fahd")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={23}
@@ -417,7 +418,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-safa-gate"
-            title="আল-সাফা গেট (Al-Safa Gate)"
+            title={createArabicTitle("আল-সাফা গেট (Al-Safa Gate)", "باب الصفا", "Bāb aṣ-Ṣafā")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={24}
@@ -434,7 +435,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-marwah-gate"
-            title="আল-মারওয়া গেট (Al-Marwah Gate)"
+            title={createArabicTitle("আল-মারওয়া গেট (Al-Marwah Gate)", "باب المروة", "Bāb al-Marwa")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={25}
@@ -468,7 +469,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-masjid-al-haram-expansion"
-            title="মসজিদুল হারামের সম্প্রসারণ (Al-Masjid al-Haram Expansion)"
+            title={createArabicTitle("মসজিদুল হারামের সম্প্রসারণ (Al-Masjid al-Haram Expansion)", "توسعة المسجد الحرام", "Tawsiʿat al-Masjid al-Ḥarām")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={27}
@@ -485,7 +486,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-kiswah-factory"
-            title="আল-কিসওয়াহ কারখানা (Al-Kiswah Factory)"
+            title={createArabicTitle("আল-কিসওয়াহ কারখানা (Al-Kiswah Factory)", "مصنع الكسوة", "Maṣnaʿ al-Kiswa")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={28}
@@ -502,7 +503,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="makkah-clock-tower-museum"
-            title="মক্কা ঘড়ি টাওয়ার মিউজিয়াম (Makkah Clock Tower Museum)"
+            title={createArabicTitle("মক্কা ঘড়ি টাওয়ার মিউজিয়াম (Makkah Clock Tower Museum)", "متحف برج الساعة", "Matḥaf Burj as-Sāʿa")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={29}
@@ -519,7 +520,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="jabal-omar"
-            title="জাবালে উমর (Jabal Omar)"
+            title={createArabicTitle("জাবালে উমর (Jabal Omar)", "جبل عمر", "Jabal ʿUmar")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={30}
@@ -536,7 +537,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-sharai-district"
-            title="আল-শারাঈ জেলা (Al-Shara'i District)"
+            title={createArabicTitle("আল-শারাঈ জেলা (Al-Shara'i District)", "حي الشرائع", "Ḥayy ash-Sharāʾiʿ")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={31}
@@ -553,7 +554,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-aziziyah"
-            title="আল-আজিজিয়াহ (Al-Aziziyah)"
+            title={createArabicTitle("আল-আজিজিয়াহ (Al-Aziziyah)", "العزيزية", "Al-ʿAzīziyya")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={32}
@@ -570,7 +571,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-haramain-train-station"
-            title="আল-হারামাইন ট্রেন স্টেশন (Al-Haramain Train Station)"
+            title={createArabicTitle("আল-হারামাইন ট্রেন স্টেশন (Al-Haramain Train Station)", "محطة قطار الحرمين", "Maḥaṭṭat Qiṭār al-Ḥaramayn")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={33}
@@ -587,7 +588,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-hijr"
-            title="আল-হিজর (হিজরে ইসমাইল) (Al-Hijr - Hijr Ismail)"
+            title={createArabicTitle("আল-হিজর (হিজরে ইসমাইল) (Al-Hijr - Hijr Ismail)", "الحجر", "Al-Ḥijr")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={34}
@@ -604,7 +605,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="multazam"
-            title="মুলতাজাম (Multazam)"
+            title={createArabicTitle("মুলতাজাম (Multazam)", "الملتزم", "Al-Multazam")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={35}
@@ -621,7 +622,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="rukn-al-yamani"
-            title="রুকনে ইয়ামানি (Rukn al-Yamani)"
+            title={createArabicTitle("রুকনে ইয়ামানি (Rukn al-Yamani)", "الركن اليماني", "Ar-Rukn al-Yamānī")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={36}
@@ -638,7 +639,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="hateem"
-            title="হাতীম (Hateem)"
+            title={createArabicTitle("হাতীম (Hateem)", "الحطيم", "Al-Ḥaṭīm")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={37}
@@ -672,7 +673,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="makkah-museum"
-            title="মক্কা মিউজিয়াম (Makkah Museum)"
+            title={createArabicTitle("মক্কা মিউজিয়াম (Makkah Museum)", "متحف مكة", "Matḥaf Makka")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={39}
@@ -689,7 +690,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-maabda"
-            title="আল-মা'আবদা (Al-Ma'abda)"
+            title={createArabicTitle("আল-মা'আবদা (Al-Ma'abda)", "المعابد", "Al-Maʿābid")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={40}
@@ -706,7 +707,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-misfalah"
-            title="আল-মিসফালাহ (Al-Misfalah)"
+            title={createArabicTitle("আল-মিসফালাহ (Al-Misfalah)", "المسفلة", "Al-Misfala")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={41}
@@ -723,7 +724,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-shamisi"
-            title="আল-শামিসি (Al-Shamisi)"
+            title={createArabicTitle("আল-শামিসি (Al-Shamisi)", "الشامسي", "Ash-Shāmisi")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={42}
@@ -740,7 +741,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-misfalah-tower"
-            title="আল-মিসফালাহ টাওয়ার (Al-Misfalah Tower)"
+            title={createArabicTitle("আল-মিসফালাহ টাওয়ার (Al-Misfalah Tower)", "برج المسفلة", "Burj al-Misfala")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={43}
@@ -757,7 +758,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-shubaikah"
-            title="আল-শুবাইকাহ (Al-Shubaikah)"
+            title={createArabicTitle("আল-শুবাইকাহ (Al-Shubaikah)", "الشبيكة", "Ash-Shubayka")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={44}
@@ -774,7 +775,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-maabda-well"
-            title="আল-মা'আবদা কূপ (Al-Ma'abda Well)"
+            title={createArabicTitle("আল-মা'আবদা কূপ (Al-Ma'abda Well)", "بئر المعابد", "Biʾr al-Maʿābid")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={45}
@@ -791,7 +792,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-aqaba-mosque"
-            title="আল-আকাবা মসজিদ (Al-Aqaba Mosque)"
+            title={createArabicTitle("আল-আকাবা মসজিদ (Al-Aqaba Mosque)", "مسجد العقبة", "Masjid al-ʿAqaba")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={46}
@@ -808,7 +809,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-kakiyyah"
-            title="আল-কা'কিয়্যাহ (Al-Ka'kiyyah)"
+            title={createArabicTitle("আল-কা'কিয়্যাহ (Al-Ka'kiyyah)", "الكعكية", "Al-Kaʿkiyya")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={47}
@@ -825,7 +826,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-masjid-al-haram-gates"
-            title="মসজিদুল হারামের বিভিন্ন গেট (Al-Masjid al-Haram Gates)"
+            title={createArabicTitle("মসজিদুল হারামের বিভিন্ন গেট (Al-Masjid al-Haram Gates)", "أبواب المسجد الحرام", "Abwāb al-Masjid al-Ḥarām")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={48}
@@ -842,7 +843,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="al-haramain-high-speed-railway"
-            title="আল-হারামাইন উচ্চগতির রেলপথ (Al-Haramain High-Speed Railway)"
+            title={createArabicTitle("আল-হারামাইন উচ্চগতির রেলপথ (Al-Haramain High-Speed Railway)", "قطار الحرمين السريع", "Qiṭār al-Ḥaramayn as-Sarīʿ")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={49}
@@ -859,7 +860,7 @@ export default function MakkahPlaces() {
 
           <ExpandableSection
             id="makkah-grand-mosque-expansion-project"
-            title="মক্কা গ্র্যান্ড মসজিদ সম্প্রসারণ প্রকল্প (Makkah Grand Mosque Expansion Project)"
+            title={createArabicTitle("মক্কা গ্র্যান্ড মসজিদ সম্প্রসারণ প্রকল্প (Makkah Grand Mosque Expansion Project)", "مشروع توسعة المسجد الحرام", "Mashrūʿ Tawsiʿat al-Masjid al-Ḥarām")}
             defaultOpen={false}
             className="dua-category-wrapper"
             number={50}

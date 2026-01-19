@@ -3,6 +3,7 @@ import SectionWrapper from '@/components/SectionWrapper'
 import InfoBox from '@/components/InfoBox'
 import ExpandableSection from '@/components/ExpandableSection'
 import AudioPlayer from '@/components/AudioPlayer'
+import { createArabicTitle } from '@/utils/arabicTitle'
 
 export default function Quran() {
   return (
@@ -16,7 +17,7 @@ export default function Quran() {
       <SectionWrapper className="duas-section">
         <ExpandableSection 
           id="quran-intro" 
-          title="কুরআন সম্পর্কে" 
+          title={createArabicTitle("কুরআন সম্পর্কে", "عن القرآن", "ʿAn al-Qurʾān")}
           defaultOpen={true}
           className="dua-category-wrapper"
           number={1}

@@ -5,6 +5,7 @@ import DuaItem from '@/components/DuaItem'
 import InfoBox from '@/components/InfoBox'
 import ImportantNote from '@/components/ImportantNote'
 import AudioPlayer from '@/components/AudioPlayer'
+import { createArabicTitle } from '@/utils/arabicTitle'
 
 export default function Ibadat() {
   return (
@@ -19,7 +20,7 @@ export default function Ibadat() {
         {/* Common Prerequisites */}
         <ExpandableSection 
           id="prerequisites" 
-          title="নামাজের পূর্বশর্তসমূহ (Prerequisites for Prayer)" 
+          title={createArabicTitle("নামাজের পূর্বশর্তসমূহ (Prerequisites for Prayer)", "شروط الصلاة", "Shurūṭ aṣ-Ṣalāh")}
           defaultOpen={true}
           className="dua-category-wrapper"
           number={0}
@@ -57,7 +58,7 @@ export default function Ibadat() {
         {/* 2 Rakat Fard Namaz */}
         <ExpandableSection 
           id="fard-2-rakat" 
-          title="২ রাকাত ফরজ নামাজ (2 Rakat Fard Prayer)" 
+          title={createArabicTitle("২ রাকাত ফরজ নামাজ (2 Rakat Fard Prayer)", "ركعتان فرض", "Rakʿatān Farḍ")}
           defaultOpen={false}
           className="dua-category-wrapper"
           number={1}
@@ -292,7 +293,7 @@ export default function Ibadat() {
         {/* 2 Rakat Sunnat Namaz */}
         <ExpandableSection 
           id="sunnat-2-rakat" 
-          title="২ রাকাত সুন্নত নামাজ (2 Rakat Sunnat Prayer)" 
+          title={createArabicTitle("২ রাকাত সুন্নত নামাজ (2 Rakat Sunnat Prayer)", "ركعتان سنة", "Rakʿatān Sunna")}
           defaultOpen={false}
           className="dua-category-wrapper"
           number={2}
@@ -339,7 +340,7 @@ export default function Ibadat() {
         {/* 2 Rakat Nafl Namaz */}
         <ExpandableSection 
           id="nafl-2-rakat" 
-          title="২ রাকাত নফল নামাজ (2 Rakat Nafl Prayer)" 
+          title={createArabicTitle("২ রাকাত নফল নামাজ (2 Rakat Nafl Prayer)", "ركعتان نفل", "Rakʿatān Nafl")}
           defaultOpen={false}
           className="dua-category-wrapper"
           number={3}
@@ -387,7 +388,7 @@ export default function Ibadat() {
         {/* 3 Rakat Witr Namaz */}
         <ExpandableSection 
           id="witr-3-rakat" 
-          title="৩ রাকাত বিতর নামাজ (3 Rakat Witr Prayer)" 
+          title={createArabicTitle("৩ রাকাত বিতর নামাজ (3 Rakat Witr Prayer)", "ثلاث ركعات وتر", "Thalāth Rakʿāt Witr")}
           defaultOpen={false}
           className="dua-category-wrapper"
           number={4}
@@ -465,7 +466,7 @@ export default function Ibadat() {
         {/* 1 Rakat Witr Namaz */}
         <ExpandableSection 
           id="witr-1-rakat" 
-          title="১ রাকাত বিতর নামাজ (1 Rakat Witr Prayer)" 
+          title={createArabicTitle("১ রাকাত বিতর নামাজ (1 Rakat Witr Prayer)", "ركعة وتر", "Rakʿa Witr")}
           defaultOpen={false}
           className="dua-category-wrapper"
           number={5}
@@ -508,7 +509,7 @@ export default function Ibadat() {
         {/* 2 Rakat Tahajjud Namaz */}
         <ExpandableSection 
           id="tahajjud-2-rakat" 
-          title="২ রাকাত তাহাজ্জুদ নামাজ (2 Rakat Tahajjud Prayer)" 
+          title={createArabicTitle("২ রাকাত তাহাজ্জুদ নামাজ (2 Rakat Tahajjud Prayer)", "ركعتان تهجد", "Rakʿatān Tahajjud")}
           defaultOpen={false}
           className="dua-category-wrapper"
           number={6}
@@ -590,7 +591,7 @@ export default function Ibadat() {
         {/* Janaza Namaz */}
         <ExpandableSection 
           id="janaza-namaz" 
-          title="জানাযা নামাজ (Janaza/Funeral Prayer)" 
+          title={createArabicTitle("জানাযা নামাজ (Janaza/Funeral Prayer)", "صلاة الجنازة", "Ṣalāt al-Janāza")}
           defaultOpen={false}
           className="dua-category-wrapper"
           number={7}
@@ -727,7 +728,7 @@ export default function Ibadat() {
         {/* What to Read During and After Prayer */}
         <ExpandableSection 
           id="prayer-recitations" 
-          title="নামাজে যা পড়তে হয় এবং নামাজের পর (What to Read During and After Prayer)" 
+          title={createArabicTitle("নামাজে যা পড়তে হয় এবং নামাজের পর (What to Read During and After Prayer)", "ما يقرأ في الصلاة وبعدها", "Mā Yuqrāʾ fī aṣ-Ṣalāh wa Baʿdahā")}
           defaultOpen={false}
           className="dua-category-wrapper"
           number={8}

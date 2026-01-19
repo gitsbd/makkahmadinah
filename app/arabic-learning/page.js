@@ -4,6 +4,7 @@ import ExpandableSection from '@/components/ExpandableSection'
 import ArabicNumberItem from '@/components/ArabicNumberItem'
 import NumberConverter from '@/components/NumberConverter'
 import AudioPlayer from '@/components/AudioPlayer'
+import { createArabicTitle } from '@/utils/arabicTitle'
 
 export default function ArabicLearning() {
   // Helper function to convert number to Arabic-Indic numerals
@@ -140,7 +141,7 @@ export default function ArabicLearning() {
       <PageHeader 
         title="Arabic Learning"
         subtitle="আরবি ভাষা শেখা"
-        sectionCount={2}
+        sectionCount={3}
       />
 
       <SectionWrapper className="duas-section">
@@ -152,34 +153,910 @@ export default function ArabicLearning() {
         {/* Arabic Numbers Section */}
         <ExpandableSection 
           id="arabic-numbers" 
-          title="আরবি সংখ্যা (Arabic Numbers)" 
-          defaultOpen={true}
+          title={createArabicTitle("প্রাথমিক আরবি শিক্ষা - Basic Arabic learning", "تعلم العربية الأساسي", "Taʿallum al-ʿarabiyya al-asāsī")}
+          defaultOpen={false}
           className="dua-category-wrapper"
           number={1}
         >
           <div className="dua-item">
-            <p style={{ marginBottom: '1rem', fontSize: '1.05rem', color: 'var(--text-light)' }}>
-              আরবি ভাষা শেখার জন্য আরবি সংখ্যা জানা গুরুত্বপূর্ণ। নিচে ০ থেকে ১০০ পর্যন্ত সংখ্যার আরবি রূপ, ইংরেজি ও বাংলা উচ্চারণ দেওয়া হয়েছে:
-            </p>
-            <div className="arabic-alphabet-grid">
-              {arabicNumbers.map((item, index) => (
-                <ArabicNumberItem
-                  key={index}
-                  number={item.number}
-                  arabicNumber={item.arabicNumber}
-                  arabicName={item.arabicName}
-                  english={item.english}
-                  bangla={item.bangla}
-                />
-              ))}
-            </div>
+            {/* Arabic Numbers Subsection */}
+            <ExpandableSection 
+              id="arabic-numbers-subsection" 
+              title={
+                <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <span>আরবি সংখ্যা (Arabic Numbers 0-100)</span>
+                  <span style={{ fontSize: '1rem', direction: 'rtl' }}>أرقام عربية</span>
+                  <AudioPlayer arabicText="أرقام عربية" className="alphabet-audio-btn" tone="default" />
+                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(Arqām ʿarabiyya)</span>
+                </span>
+              }
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <p style={{ marginBottom: '1rem', fontSize: '1.05rem', color: 'var(--text-light)' }}>
+                  আরবি ভাষা শেখার জন্য আরবি সংখ্যা জানা গুরুত্বপূর্ণ। নিচে ০ থেকে ১০০ পর্যন্ত সংখ্যার আরবি রূপ, ইংরেজি ও বাংলা উচ্চারণ দেওয়া হয়েছে:
+                </p>
+                <div className="arabic-alphabet-grid">
+                  {arabicNumbers.map((item, index) => (
+                    <ArabicNumberItem
+                      key={index}
+                      number={item.number}
+                      arabicNumber={item.arabicNumber}
+                      arabicName={item.arabicName}
+                      english={item.english}
+                      bangla={item.bangla}
+                    />
+                  ))}
+                </div>
+              </div>
+            </ExpandableSection>
+
+            {/* Days of the Week Subsection */}
+            <ExpandableSection 
+              id="days-of-week-subsection" 
+              title={createArabicTitle("সপ্তাহের দিন (Days of the Week)", "أيام الأسبوع", "Ayyām al-usbūʿ")}
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px', marginTop: '1rem' }}>
+              <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• Sunday:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>الأحد</span>
+                    <AudioPlayer arabicText="الأحد" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Al-aḥad</strong> (al-ah-had)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• Monday:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>الاثنين</span>
+                    <AudioPlayer arabicText="الاثنين" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Al-ithnayn</strong> (al-ith-nayn)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• Tuesday:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>الثلاثاء</span>
+                    <AudioPlayer arabicText="الثلاثاء" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Ath-thulāthāʾ</strong> (ath-thu-laa-thaa)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• Wednesday:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>الأربعاء</span>
+                    <AudioPlayer arabicText="الأربعاء" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Al-arbaʿāʾ</strong> (al-ar-ba-aa)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• Thursday:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>الخميس</span>
+                    <AudioPlayer arabicText="الخميس" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Al-khamīs</strong> (al-kha-mees)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• Friday:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>الجمعة</span>
+                    <AudioPlayer arabicText="الجمعة" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Al-jumʿa</strong> (al-jum-a)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• Saturday:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>السبت</span>
+                    <AudioPlayer arabicText="السبت" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>As-sabt</strong> (as-sabt)
+                  </div>
+                </li>
+              </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Months of the Year Subsection */}
+            <ExpandableSection 
+              id="months-of-year-subsection" 
+              title={
+                <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <span>মাসের নাম (Months of the Year)</span>
+                  <span style={{ fontSize: '1rem', direction: 'rtl' }}>أشهر السنة</span>
+                  <AudioPlayer arabicText="أشهر السنة" className="alphabet-audio-btn" tone="default" />
+                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(Ashhur as-sana)</span>
+                </span>
+              }
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px', marginTop: '1rem' }}>
+              <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• January:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>يناير</span>
+                    <AudioPlayer arabicText="يناير" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Yanāyir</strong> (ya-naa-yir)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• February:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>فبراير</span>
+                    <AudioPlayer arabicText="فبراير" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Fibrayir</strong> (fib-ra-yir)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• March:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>مارس</span>
+                    <AudioPlayer arabicText="مارس" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Māris</strong> (maa-ris)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• April:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أبريل</span>
+                    <AudioPlayer arabicText="أبريل" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Abrīl</strong> (ab-reel)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• May:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>مايو</span>
+                    <AudioPlayer arabicText="مايو" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Māyū</strong> (maa-yoo)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• June:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>يونيو</span>
+                    <AudioPlayer arabicText="يونيو" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Yūniyū</strong> (yoo-ni-yoo)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• July:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>يوليو</span>
+                    <AudioPlayer arabicText="يوليو" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Yūliyū</strong> (yoo-li-yoo)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• August:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أغسطس</span>
+                    <AudioPlayer arabicText="أغسطس" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Aghusṭus</strong> (a-ghus-tus)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• September:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>سبتمبر</span>
+                    <AudioPlayer arabicText="سبتمبر" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Sibtambir</strong> (sib-tam-bir)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• October:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أكتوبر</span>
+                    <AudioPlayer arabicText="أكتوبر" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Uktūbar</strong> (uk-too-bar)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• November:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>نوفمبر</span>
+                    <AudioPlayer arabicText="نوفمبر" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Nūfambir</strong> (noo-fam-bir)
+                  </div>
+                </li>
+                <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                    <span>• December:</span>
+                    <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>ديسمبر</span>
+                    <AudioPlayer arabicText="ديسمبر" className="alphabet-audio-btn" tone="default" />
+                  </div>
+                  <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                    <strong>Dīsambir</strong> (dee-sam-bir)
+                  </div>
+                </li>
+              </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Daily Words Subsection */}
+            <ExpandableSection 
+              id="daily-words-subsection" 
+              title={
+                <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <span>Numbers, Colors, Family, Common Things</span>
+                  <span style={{ fontSize: '1rem', direction: 'rtl' }}>أرقام، ألوان، عائلة، أشياء شائعة</span>
+                  <AudioPlayer arabicText="أرقام ألوان عائلة أشياء شائعة" className="alphabet-audio-btn" tone="default" />
+                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(Arqām, alwān, ʿāʾila, ashyaʾ shāʾiʿa)</span>
+                </span>
+              }
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px', marginTop: '1rem' }}>
+                {/* Numbers 1-20 */}
+                <div style={{ marginBottom: '2rem' }}>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-color)', marginBottom: '1rem', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                    <span>Numbers</span>
+                    <span style={{ fontSize: '1.2rem', direction: 'rtl' }}>أرقام</span>
+                    <AudioPlayer arabicText="أرقام" className="alphabet-audio-btn" tone="default" />
+                    <span style={{ fontSize: '0.85rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(Arqām)</span>
+                    <span>1–20</span>
+                  </h4>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.75rem' }}>
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map(num => {
+                      const item = arabicNumbersMap[num];
+                      return item ? (
+                        <div key={num} style={{ padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', flexWrap: 'wrap' }}>
+                            <span style={{ fontWeight: '600' }}>{num}:</span>
+                            <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>{item.arabicNumber}</span>
+                            <span style={{ fontSize: '1.1rem', color: 'var(--primary-color)', fontWeight: '600', direction: 'rtl' }}>{item.arabicName}</span>
+                            <AudioPlayer arabicText={item.arabicName} className="alphabet-audio-btn" tone="default" />
+                          </div>
+                          <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>
+                            <strong>{item.english}</strong>
+                          </div>
+                        </div>
+                      ) : null;
+                    })}
+                  </div>
+                </div>
+
+                {/* Colors */}
+                <div style={{ marginBottom: '2rem' }}>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-color)', marginBottom: '1rem', fontWeight: '600' }}>Colors</h4>
+                  <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Red:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أحمر</span>
+                        <AudioPlayer arabicText="أحمر" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Aḥmar</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Blue:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أزرق</span>
+                        <AudioPlayer arabicText="أزرق" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Azraq</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Green:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أخضر</span>
+                        <AudioPlayer arabicText="أخضر" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Akhḍar</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• White:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أبيض</span>
+                        <AudioPlayer arabicText="أبيض" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Abyaḍ</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Black:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أسود</span>
+                        <AudioPlayer arabicText="أسود" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Aswad</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Family */}
+                <div style={{ marginBottom: '2rem' }}>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-color)', marginBottom: '1rem', fontWeight: '600' }}>Family</h4>
+                  <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Mother:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أم</span>
+                        <AudioPlayer arabicText="أم" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Umm</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Father:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أب</span>
+                        <AudioPlayer arabicText="أب" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ab</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Son:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>ابن</span>
+                        <AudioPlayer arabicText="ابن" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ibn</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Daughter:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>ابنة</span>
+                        <AudioPlayer arabicText="ابنة" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ibnah</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Brother:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أخ</span>
+                        <AudioPlayer arabicText="أخ" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Akh</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Sister:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أخت</span>
+                        <AudioPlayer arabicText="أخت" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ukht</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Common Things */}
+                <div style={{ marginBottom: '1rem' }}>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-color)', marginBottom: '1rem', fontWeight: '600' }}>Common Things</h4>
+                  <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Water:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>ماء</span>
+                        <AudioPlayer arabicText="ماء" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Māʾ</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Food:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>طعام</span>
+                        <AudioPlayer arabicText="طعام" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ṭaʿām</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Phone:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>هاتف</span>
+                        <AudioPlayer arabicText="هاتف" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Hātif</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Door:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>باب</span>
+                        <AudioPlayer arabicText="باب" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Bāb</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• House:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>بيت</span>
+                        <AudioPlayer arabicText="بيت" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Bayt</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Car:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>سيارة</span>
+                        <AudioPlayer arabicText="سيارة" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Sayyāra</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Book:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>كتاب</span>
+                        <AudioPlayer arabicText="كتاب" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Kitāb</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Pen:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>قلم</span>
+                        <AudioPlayer arabicText="قلم" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Qalam</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Daily Sentences */}
+                <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(13, 79, 28, 0.05)', borderRadius: '8px', border: '1px solid rgba(13, 79, 28, 0.2)' }}>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-color)', marginBottom: '0.75rem', fontWeight: '600' }}>Daily Sentences (say out loud):</h4>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--text-light)', marginBottom: '1.5rem', fontStyle: 'italic' }}>
+                    👉 Say each sentence 10 times aloud.
+                  </p>
+                  <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'white', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"My name is ___."</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>اسمي</span>
+                        <AudioPlayer arabicText="اسمي" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ismī ___</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'white', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I am from ___."</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا من</span>
+                        <AudioPlayer arabicText="أنا من" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā min ___</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'white', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I live in ___."</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا أعيش في</span>
+                        <AudioPlayer arabicText="أنا أعيش في" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā aʿīshu fī ___</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'white', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I want water."</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أريد ماء</span>
+                        <AudioPlayer arabicText="أريد ماء" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Urīdu māʾ</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'white', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I don't understand."</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>لا أفهم</span>
+                        <AudioPlayer arabicText="لا أفهم" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Lā afham</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'white', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"Please repeat."</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>من فضلك كرر</span>
+                        <AudioPlayer arabicText="من فضلك كرر" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Min faḍlik karrir</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'white', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"How much is this?"</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>كم ثمن هذا؟</span>
+                        <AudioPlayer arabicText="كم ثمن هذا" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Kam thaman hādhā?</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'white', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"Where is the bathroom?"</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أين الحمام؟</span>
+                        <AudioPlayer arabicText="أين الحمام" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ayna al-ḥammām?</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </ExpandableSection>
+
+            {/* Pronunciation First Subsection */}
+            <ExpandableSection 
+              id="pronunciation-subsection" 
+              title={
+                <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <span>Step 2: Pronunciation first (very important)</span>
+                  <span style={{ fontSize: '1rem', direction: 'rtl' }}>النطق أولاً</span>
+                  <AudioPlayer arabicText="النطق أولاً" className="alphabet-audio-btn" tone="default" />
+                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(An-nuṭq awwalan)</span>
+                </span>
+              }
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px', marginTop: '1rem' }}>
+                <div style={{ marginBottom: '1.5rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.05)', borderRadius: '6px' }}>
+                  <p style={{ fontSize: '1rem', color: 'var(--text-color)', lineHeight: '1.6', marginBottom: '0.5rem' }}>
+                    If you can say words clearly, you'll learn faster.
+                  </p>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--primary-color)', fontWeight: '600' }}>
+                    Practice these every day (5 minutes)
+                  </p>
+                </div>
+
+                {/* Vowel Sounds */}
+                <div style={{ marginBottom: '2rem' }}>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-color)', marginBottom: '1rem', fontWeight: '600' }}>A, E, I, O, U (sound practice)</h4>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '0.75rem' }}>
+                    <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', textAlign: 'center' }}>
+                      <div style={{ fontSize: '1.5rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.5rem' }}>A</div>
+                      <div style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>أ</div>
+                      <AudioPlayer arabicText="أ" className="alphabet-audio-btn" tone="default" />
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Alif</div>
+                    </div>
+                    <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', textAlign: 'center' }}>
+                      <div style={{ fontSize: '1.5rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.5rem' }}>E</div>
+                      <div style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>ي</div>
+                      <AudioPlayer arabicText="ي" className="alphabet-audio-btn" tone="default" />
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Yāʾ</div>
+                    </div>
+                    <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', textAlign: 'center' }}>
+                      <div style={{ fontSize: '1.5rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.5rem' }}>I</div>
+                      <div style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>إ</div>
+                      <AudioPlayer arabicText="إ" className="alphabet-audio-btn" tone="default" />
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Alif</div>
+                    </div>
+                    <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', textAlign: 'center' }}>
+                      <div style={{ fontSize: '1.5rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.5rem' }}>O</div>
+                      <div style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>و</div>
+                      <AudioPlayer arabicText="و" className="alphabet-audio-btn" tone="default" />
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Wāw</div>
+                    </div>
+                    <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', textAlign: 'center' }}>
+                      <div style={{ fontSize: '1.5rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.5rem' }}>U</div>
+                      <div style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>و</div>
+                      <AudioPlayer arabicText="و" className="alphabet-audio-btn" tone="default" />
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Wāw</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Simple Words */}
+                <div style={{ marginBottom: '2rem' }}>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-color)', marginBottom: '1rem', fontWeight: '600' }}>Simple words: me, you, go, no, yes, name, water</h4>
+                  <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Me:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا</span>
+                        <AudioPlayer arabicText="أنا" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• You:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنت</span>
+                        <AudioPlayer arabicText="أنت" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anta</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Go:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>اذهب</span>
+                        <AudioPlayer arabicText="اذهب" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Idhhab</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• No:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>لا</span>
+                        <AudioPlayer arabicText="لا" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Lā</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Yes:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>نعم</span>
+                        <AudioPlayer arabicText="نعم" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Naʿam</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Name:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>اسم</span>
+                        <AudioPlayer arabicText="اسم" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ism</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• Water:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>ماء</span>
+                        <AudioPlayer arabicText="ماء" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Māʾ</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Practice Tip */}
+                <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(13, 79, 28, 0.05)', borderRadius: '8px', border: '1px solid rgba(13, 79, 28, 0.2)' }}>
+                  <h4 style={{ fontSize: '1rem', color: 'var(--primary-color)', marginBottom: '0.75rem', fontWeight: '600' }}>A good beginner trick:</h4>
+                  <div style={{ fontSize: '0.95rem', color: 'var(--text-color)', lineHeight: '1.8' }}>
+                    <div style={{ marginBottom: '0.5rem' }}>1. <strong>Listen</strong> → Click the audio button</div>
+                    <div style={{ marginBottom: '0.5rem' }}>2. <strong>Repeat</strong> → Say it out loud</div>
+                    <div style={{ marginBottom: '0.5rem' }}>3. <strong>Record yourself</strong> → Use your phone</div>
+                    <div>4. <strong>Repeat again</strong> → Compare and improve</div>
+                  </div>
+                </div>
+              </div>
+            </ExpandableSection>
+
+            {/* Speaking from Day 1 Subsection */}
+            <ExpandableSection 
+              id="speaking-day1-subsection" 
+              title={
+                <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <span>Step 4: Speaking from Day 1 (even alone)</span>
+                  <span style={{ fontSize: '1rem', direction: 'rtl' }}>التحدث من اليوم الأول</span>
+                  <AudioPlayer arabicText="التحدث من اليوم الأول" className="alphabet-audio-btn" tone="default" />
+                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(At-taḥadduth min al-yawm al-awwal)</span>
+                </span>
+              }
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px', marginTop: '1rem' }}>
+                <div style={{ marginBottom: '1.5rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.05)', borderRadius: '6px' }}>
+                  <p style={{ fontSize: '1rem', color: 'var(--text-color)', lineHeight: '1.6', marginBottom: '0.5rem' }}>
+                    You can talk to yourself—this works.
+                  </p>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--primary-color)', fontWeight: '600' }}>
+                    Daily speaking (5–10 minutes)
+                  </p>
+                </div>
+
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"Today is Monday."</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>اليوم هو الاثنين</span>
+                      <AudioPlayer arabicText="اليوم هو الاثنين" className="alphabet-audio-btn" tone="default" />
+                      <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Al-yawm huwa al-ithnayn</span>
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I am at home."</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا في البيت</span>
+                      <AudioPlayer arabicText="أنا في البيت" className="alphabet-audio-btn" tone="default" />
+                      <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā fī al-bayt</span>
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I eat rice."</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا آكل الأرز</span>
+                      <AudioPlayer arabicText="أنا آكل الأرز" className="alphabet-audio-btn" tone="default" />
+                      <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā ākul al-aruzz</span>
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I drink water."</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا أشرب الماء</span>
+                      <AudioPlayer arabicText="أنا أشرب الماء" className="alphabet-audio-btn" tone="default" />
+                      <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā ashrab al-māʾ</span>
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I like tea."</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا أحب الشاي</span>
+                      <AudioPlayer arabicText="أنا أحب الشاي" className="alphabet-audio-btn" tone="default" />
+                      <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā uḥibb ash-shāy</span>
+                    </div>
+                  </li>
+                </ul>
+
+                <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.05)', borderRadius: '6px', border: '1px solid rgba(13, 79, 28, 0.2)' }}>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--text-color)', lineHeight: '1.6', fontStyle: 'italic' }}>
+                    <strong>Keep it simple.</strong> Don't worry about mistakes.
+                  </p>
+                </div>
+              </div>
+            </ExpandableSection>
+
+            {/* Tiny Grammar Subsection */}
+            <ExpandableSection 
+              id="tiny-grammar-subsection" 
+              title={
+                <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <span>Step 5: Tiny grammar (only after 2 weeks)</span>
+                  <span style={{ fontSize: '1rem', direction: 'rtl' }}>قواعد صغيرة</span>
+                  <AudioPlayer arabicText="قواعد صغيرة" className="alphabet-audio-btn" tone="default" />
+                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(Qawāʿid ṣaghīra)</span>
+                </span>
+              }
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px', marginTop: '1rem' }}>
+                <div style={{ marginBottom: '1.5rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.05)', borderRadius: '6px' }}>
+                  <p style={{ fontSize: '1rem', color: 'var(--text-color)', lineHeight: '1.6', marginBottom: '0.5rem' }}>
+                    Just these 3 basics:
+                  </p>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--primary-color)', fontWeight: '600', fontStyle: 'italic' }}>
+                    That's enough to start speaking correctly.
+                  </p>
+                </div>
+
+                {/* I / You / He / She */}
+                <div style={{ marginBottom: '2rem' }}>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-color)', marginBottom: '1rem', fontWeight: '600' }}>I / You / He / She</h4>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.75rem' }}>
+                    <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>I</div>
+                      <div style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.25rem' }}>أنا</div>
+                      <AudioPlayer arabicText="أنا" className="alphabet-audio-btn" tone="default" />
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Anā</div>
+                    </div>
+                    <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>You (m)</div>
+                      <div style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.25rem' }}>أنت</div>
+                      <AudioPlayer arabicText="أنت" className="alphabet-audio-btn" tone="default" />
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Anta</div>
+                    </div>
+                    <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>He</div>
+                      <div style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.25rem' }}>هو</div>
+                      <AudioPlayer arabicText="هو" className="alphabet-audio-btn" tone="default" />
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Huwa</div>
+                    </div>
+                    <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>She</div>
+                      <div style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.25rem' }}>هي</div>
+                      <AudioPlayer arabicText="هي" className="alphabet-audio-btn" tone="default" />
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Hiya</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* am / is / are */}
+                <div style={{ marginBottom: '2rem' }}>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-color)', marginBottom: '1rem', fontWeight: '600' }}>am / is / are</h4>
+                  <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• I am:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا</span>
+                        <AudioPlayer arabicText="أنا" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>Example: أنا طالب (I am a student)</div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• He/She is:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>هو / هي</span>
+                        <AudioPlayer arabicText="هو هي" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Huwa / Hiya</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>Example: هو طبيب (He is a doctor)</div>
+                    </li>
+                    <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span>• You are:</span>
+                        <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنت</span>
+                        <AudioPlayer arabicText="أنت" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anta</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>Example: أنت طالب (You are a student)</div>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Simple Present */}
+                <div style={{ marginBottom: '1rem' }}>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-color)', marginBottom: '1rem', fontWeight: '600' }}>Simple present: "I eat." "He eats."</h4>
+                  <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I eat."</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا آكل</span>
+                        <AudioPlayer arabicText="أنا آكل" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā ākul</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"He eats."</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>هو يأكل</span>
+                        <AudioPlayer arabicText="هو يأكل" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Huwa yaʾkul</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"She eats."</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>هي تأكل</span>
+                        <AudioPlayer arabicText="هي تأكل" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Hiya taʾkul</span>
+                      </div>
+                    </li>
+                    <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                      <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"You eat."</div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                        <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنت تأكل</span>
+                        <AudioPlayer arabicText="أنت تأكل" className="alphabet-audio-btn" tone="default" />
+                        <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anta taʾkul</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </ExpandableSection>
           </div>
         </ExpandableSection>
 
         {/* 30-Day Arabic Speaking Practice Plan */}
+        <div style={{ marginTop: '2rem' }}>
         <ExpandableSection 
           id="30-day-practice" 
-          title="৩০ দিনের আরবি কথা বলা অনুশীলন (30-Day Arabic Speaking Practice)" 
+          title={createArabicTitle("৩০ দিনের আরবি কথা বলা অনুশীলন (30-Day Arabic Speaking Practice)", "ممارسة التحدث بالعربية لمدة 30 يوماً", "Mumārasat at-taḥadduth bi-l-ʿarabiyya li-muddat thalāthīn yawman")}
           defaultOpen={false}
           className="dua-category-wrapper"
           number={2}
@@ -209,7 +1086,7 @@ export default function ArabicLearning() {
             {/* Day 1 */}
             <ExpandableSection 
               id="day-1" 
-              title="Day 1 — Greetings (basic)" 
+              title={createArabicTitle("Day 1 — Greetings (basic)", "اليوم الأول — التحيات (أساسي)", "Al-yawm al-awwal — At-taḥiyyāt (asāsī)")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -330,7 +1207,7 @@ export default function ArabicLearning() {
             {/* Day 2 */}
             <ExpandableSection 
               id="day-2" 
-              title="Day 2 — Polite words" 
+              title={createArabicTitle("Day 2 — Polite words", "اليوم الثاني — كلمات مهذبة", "Al-yawm ath-thānī — Kalimāt muḥadhdhaba")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -404,7 +1281,7 @@ export default function ArabicLearning() {
             {/* Day 3 */}
             <ExpandableSection 
               id="day-3" 
-              title={'Day 3 — "I am / you are" (super important)'} 
+              title={createArabicTitle('Day 3 — "I am / you are" (super important)', 'اليوم الثالث — "أنا / أنت" (مهم جداً)', 'Al-yawm ath-thālith — "Anā / Anta" (muhimm jiddan)')} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -551,7 +1428,7 @@ export default function ArabicLearning() {
             {/* Day 5 */}
             <ExpandableSection 
               id="day-5" 
-              title="Day 5 — Numbers 1–10 (speak fast)" 
+              title={createArabicTitle("Day 5 — Numbers 1–10 (speak fast)", "اليوم الخامس — الأرقام 1-10 (تحدث بسرعة)", "Al-yawm al-khāmis — Al-arqām 1-10 (taḥaddath bi-surʿa)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -698,7 +1575,7 @@ export default function ArabicLearning() {
             {/* Day 7 */}
             <ExpandableSection 
               id="day-7" 
-              title="Day 7 — Review Day (no new words)" 
+              title={createArabicTitle("Day 7 — Review Day (no new words)", "اليوم السابع — يوم المراجعة (لا كلمات جديدة)", "Al-yawm as-sābiʿ — Yawm al-murājaʿa (lā kalimāt jadīda)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -777,7 +1654,7 @@ export default function ArabicLearning() {
             {/* Day 9 */}
             <ExpandableSection 
               id="day-9" 
-              title="Day 9 — Time basics" 
+              title={createArabicTitle("Day 9 — Time basics", "اليوم التاسع — أساسيات الوقت", "Al-yawm at-tāsiʿ — Asāsiyyāt al-waqt")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -893,7 +1770,7 @@ export default function ArabicLearning() {
             {/* Day 11 */}
             <ExpandableSection 
               id="day-11" 
-              title="Day 11 — Shopping phrases" 
+              title={createArabicTitle("Day 11 — Shopping phrases", "اليوم الحادي عشر — عبارات التسوق", "Al-yawm al-ḥādī ʿashar — ʿIbārāt at-tasawwuq")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -999,7 +1876,7 @@ export default function ArabicLearning() {
             {/* Day 13 */}
             <ExpandableSection 
               id="day-13" 
-              title="Day 13 — At the restaurant" 
+              title={createArabicTitle("Day 13 — At the restaurant", "اليوم الثالث عشر — في المطعم", "Al-yawm ath-thālith ʿashar — Fī al-maṭʿam")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1064,7 +1941,7 @@ export default function ArabicLearning() {
             {/* Day 15 */}
             <ExpandableSection 
               id="day-15" 
-              title="Day 15 — Simple verbs (speak)" 
+              title={createArabicTitle("Day 15 — Simple verbs (speak)", "اليوم الخامس عشر — أفعال بسيطة (تحدث)", "Al-yawm al-khāmis ʿashar — Afʿāl basīṭa (taḥaddath)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1128,7 +2005,7 @@ export default function ArabicLearning() {
             {/* Day 16 */}
             <ExpandableSection 
               id="day-16" 
-              title={'Day 16 — "Can you...?" + "I can..."'} 
+              title={createArabicTitle('Day 16 — "Can you...?" + "I can..."', 'اليوم السادس عشر — "هل تستطيع...؟" + "أستطيع..."', 'Al-yawm as-sādis ʿashar — "Hal tastatīʿ...?" + "Astatīʿ..."')} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1224,7 +2101,7 @@ export default function ArabicLearning() {
             {/* Day 18 */}
             <ExpandableSection 
               id="day-18" 
-              title="Day 18 — At the airport / travel" 
+              title={createArabicTitle("Day 18 — At the airport / travel", "اليوم الثامن عشر — في المطار / السفر", "Al-yawm ath-thāmin ʿashar — Fī al-maṭār / As-safar")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1320,7 +2197,7 @@ export default function ArabicLearning() {
             {/* Day 20 */}
             <ExpandableSection 
               id="day-20" 
-              title="Day 20 — Making requests" 
+              title={createArabicTitle("Day 20 — Making requests", "اليوم العشرون — تقديم الطلبات", "Al-yawm al-ʿishrūn — Taqdīm aṭ-ṭalabāt")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1376,7 +2253,7 @@ export default function ArabicLearning() {
             {/* Day 22 */}
             <ExpandableSection 
               id="day-22" 
-              title="Day 22 — Questions (the magic set)" 
+              title={createArabicTitle("Day 22 — Questions (the magic set)", "اليوم الثاني والعشرون — الأسئلة (المجموعة السحرية)", "Al-yawm ath-thānī wa-l-ʿishrūn — Al-asʾila (al-majmūʿa as-siḥriyya)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1503,7 +2380,7 @@ export default function ArabicLearning() {
             {/* Day 24 */}
             <ExpandableSection 
               id="day-24" 
-              title="Day 24 — Talking about your day" 
+              title={createArabicTitle("Day 24 — Talking about your day", "اليوم الرابع والعشرون — الحديث عن يومك", "Al-yawm ar-rābiʿ wa-l-ʿishrūn — Al-ḥadīth ʿan yawmik")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1575,7 +2452,7 @@ export default function ArabicLearning() {
             {/* Day 26 */}
             <ExpandableSection 
               id="day-26" 
-              title="Day 26 — Simple conversation builder (templates)" 
+              title={createArabicTitle("Day 26 — Simple conversation builder (templates)", "اليوم السادس والعشرون — بناء محادثة بسيطة (قوالب)", "Al-yawm as-sādis wa-l-ʿishrūn — Bināʾ muḥādatha basīṭa (qawālib)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1609,7 +2486,7 @@ export default function ArabicLearning() {
             {/* Day 27 */}
             <ExpandableSection 
               id="day-27" 
-              title="Day 27 — Conversation: meeting someone" 
+              title={createArabicTitle("Day 27 — Conversation: meeting someone", "اليوم السابع والعشرون — محادثة: لقاء شخص", "Al-yawm as-sābiʿ wa-l-ʿishrūn — Muḥādatha: liqāʾ shakhṣ")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1664,7 +2541,7 @@ export default function ArabicLearning() {
             {/* Day 29 */}
             <ExpandableSection 
               id="day-29" 
-              title="Day 29 — Conversation: restaurant + taxi" 
+              title={createArabicTitle("Day 29 — Conversation: restaurant + taxi", "اليوم التاسع والعشرون — محادثة: المطعم + التاكسي", "Al-yawm at-tāsiʿ wa-l-ʿishrūn — Muḥādatha: al-maṭʿam + at-tāksī")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1682,7 +2559,7 @@ export default function ArabicLearning() {
             {/* Day 30 */}
             <ExpandableSection 
               id="day-30" 
-              title={'Day 30 — Your "real life speaking test"'} 
+              title={createArabicTitle('Day 30 — Your "real life speaking test"', 'اليوم الثلاثون — "اختبار التحدث في الحياة الحقيقية"', 'Al-yawm ath-thalāthūn — "Ikhtibār at-taḥadduth fī al-ḥayāh al-ḥaqīqiyya"')} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1700,6 +2577,1431 @@ export default function ArabicLearning() {
             </ExpandableSection>
           </div>
         </ExpandableSection>
+        </div>
+
+        {/* 31-60 Day Arabic Speaking Practice Plan */}
+        <div style={{ marginTop: '2rem' }}>
+        <ExpandableSection 
+          id="31-60-day-practice" 
+          title={createArabicTitle("৩১-৬০ দিনের আরবি কথা বলা অনুশীলন (31-60 Day Arabic Speaking Practice)", "ممارسة التحدث بالعربية من اليوم 31 إلى 60", "Mumārasat at-taḥadduth bi-l-ʿarabiyya min al-yawm 31 ilā 60")}
+          defaultOpen={false}
+          className="dua-category-wrapper"
+          number={3}
+        >
+          <div className="dua-item">
+            <div className="practice-plan-intro" style={{ marginBottom: '2rem', padding: '1.5rem', background: 'rgba(13, 79, 28, 0.05)', borderRadius: '8px', border: '1px solid rgba(13, 79, 28, 0.2)' }}>
+              <h3 style={{ fontSize: '1.3rem', color: 'var(--primary-color)', marginBottom: '1rem' }}>
+                ৩১-৬০ দিনে আরবি কথা বলা শিখুন (Learn Arabic Speaking in Days 31-60)
+              </h3>
+              <p style={{ marginBottom: '1rem', fontSize: '1.05rem', color: 'var(--text-color)', lineHeight: '1.6' }}>
+                প্রথম ৩০ দিন সম্পন্ন করার পর, এখন আপনি আরও উন্নত আরবি শিখবেন। এই অংশে আপনি অতীত ও ভবিষ্যৎ কাল, আবেগ, মতামত, এবং আরও অনেক ব্যবহারিক কথোপকথন শিখবেন।
+              </p>
+              <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'white', borderRadius: '6px' }}>
+                <h4 style={{ fontSize: '1.1rem', color: 'var(--primary-color)', marginBottom: '0.75rem' }}>আপনার দৈনিক রুটিন (প্রতিদিন একই, ২৫-৩৫ মিনিট):</h4>
+                <ol style={{ paddingLeft: '1.5rem', lineHeight: '1.8', color: 'var(--text-color)' }}>
+                  <li><strong>শুনুন + পুনরাবৃত্তি করুন (৫ মিনিট):</strong> আজকের বাক্যগুলি ৩ বার জোরে পড়ুন</li>
+                  <li><strong>উচ্চারণ অনুশীলন (৫-১০ মিনিট):</strong> প্রতিটি বাক্য ধীরে → স্বাভাবিক গতিতে বলুন</li>
+                  <li><strong>ছোট কথোপকথন (১০ মিনিট):</strong> "ব্যক্তি A" এবং "ব্যক্তি B" উভয়ই বলুন (হ্যাঁ, উভয়ই)</li>
+                  <li><strong>ভয়েস রেকর্ডিং (৫ মিনিট):</strong> নিজেকে রেকর্ড করুন, তারপর একবার শুনুন এবং আবার পুনরাবৃত্তি করুন</li>
+                </ol>
+                <p style={{ marginTop: '1rem', fontSize: '1rem', color: 'var(--primary-color)', fontWeight: '600' }}>
+                  <strong>নিয়ম:</strong> খুব বেশি "অধ্যয়ন" করবেন না। <strong>যতটা পড়বেন তার চেয়ে বেশি কথা বলুন।</strong>
+                </p>
+              </div>
+            </div>
+
+            {/* Day 31 */}
+            <ExpandableSection 
+              id="day-31" 
+              title="Day 31 — Past tense verbs (I did...)" 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I went:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>ذهبت</span>
+                      <AudioPlayer arabicText="ذهبت" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Dhahabtu</strong> (dha-hab-tu)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I ate:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أكلت</span>
+                      <AudioPlayer arabicText="أكلت" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Akalatu</strong> (a-ka-la-tu)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I drank:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>شربت</span>
+                      <AudioPlayer arabicText="شربت" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Sharabtu</strong> (sha-rab-tu)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I bought:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>اشتريت</span>
+                      <AudioPlayer arabicText="اشتريت" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ishtaraytu</strong> (ish-ta-ray-tu)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I saw:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>رأيت</span>
+                      <AudioPlayer arabicText="رأيت" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Raʾaytu</strong> (ra-ay-tu)
+                    </div>
+                  </li>
+                </ul>
+                <p style={{ marginTop: '1rem', fontStyle: 'italic', color: 'var(--text-light)' }}>Make sentences: <strong>Dhahabtu ilā... / Akalatu... / Sharabtu...</strong></p>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 32 */}
+            <ExpandableSection 
+              id="day-32" 
+              title={createArabicTitle("Day 32 — Future tense (I will...)", "اليوم الثاني والثلاثون — المستقبل (سأفعل...)", "Al-yawm ath-thānī wa-th-thalāthūn — Al-mustaqbal (sa-afʿal...)")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I will go:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>سأذهب</span>
+                      <AudioPlayer arabicText="سأذهب" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Sa-adhhab</strong> (sa-adh-hab)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I will eat:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>سآكل</span>
+                      <AudioPlayer arabicText="سآكل" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Sa-ākul</strong> (sa-aa-kul)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I will buy:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>سأشتري</span>
+                      <AudioPlayer arabicText="سأشتري" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Sa-ashtarī</strong> (sa-ash-ta-ree)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I will come:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>سأتي</span>
+                      <AudioPlayer arabicText="سأتي" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Sa-ātī</strong> (sa-aa-tee)
+                    </div>
+                  </li>
+                </ul>
+                <p style={{ marginTop: '1rem', fontStyle: 'italic', color: 'var(--text-light)' }}>Practice: <strong>Sa-adhhab ghadan... / Sa-ākul al-ān...</strong></p>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 33 */}
+            <ExpandableSection 
+              id="day-33" 
+              title={createArabicTitle("Day 33 — Weather & seasons", "اليوم الثالث والثلاثون — الطقس والفصول", "Al-yawm ath-thālith wa-th-thalāthūn — Aṭ-ṭaqs wa-l-fuṣūl")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Hot:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>حار</span>
+                      <AudioPlayer arabicText="حار" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ḥārr</strong> (haar)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Cold:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>بارد</span>
+                      <AudioPlayer arabicText="بارد" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Bārid</strong> (baa-rid)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Rain:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>مطر</span>
+                      <AudioPlayer arabicText="مطر" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Maṭar</strong> (ma-tar)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• How is the weather?:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>كيف الطقس؟</span>
+                      <AudioPlayer arabicText="كيف الطقس" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Kayfa aṭ-ṭaqs?</strong> (kay-fa at-taqs)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 34 */}
+            <ExpandableSection 
+              id="day-34" 
+              title={createArabicTitle("Day 34 — Body parts", "اليوم الرابع والثلاثون — أجزاء الجسم", "Al-yawm ar-rābiʿ wa-th-thalāthūn — Ajzāʾ al-jism")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Head:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>رأس</span>
+                      <AudioPlayer arabicText="رأس" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Raʾs</strong> (ras)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Hand:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>يد</span>
+                      <AudioPlayer arabicText="يد" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Yad</strong> (yad)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Foot:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>قدم</span>
+                      <AudioPlayer arabicText="قدم" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Qadam</strong> (qa-dam)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Eye:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>عين</span>
+                      <AudioPlayer arabicText="عين" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>ʿAyn</strong> (ayn)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• My head hurts:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>رأسي يؤلمني</span>
+                      <AudioPlayer arabicText="رأسي يؤلمني" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Raʾsī yuʾlimunī</strong> (ras-ee yu-lim-u-nee)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 35 */}
+            <ExpandableSection 
+              id="day-35" 
+              title={createArabicTitle("Day 35 — Colors", "اليوم الخامس والثلاثون — الألوان", "Al-yawm al-khāmis wa-th-thalāthūn — Al-alwān")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Red:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أحمر</span>
+                      <AudioPlayer arabicText="أحمر" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Aḥmar</strong> (ah-mar)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Blue:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أزرق</span>
+                      <AudioPlayer arabicText="أزرق" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Azraq</strong> (az-raq)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Green:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أخضر</span>
+                      <AudioPlayer arabicText="أخضر" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Akhḍar</strong> (akh-dar)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• White:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أبيض</span>
+                      <AudioPlayer arabicText="أبيض" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Abyaḍ</strong> (ab-yad)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Black:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أسود</span>
+                      <AudioPlayer arabicText="أسود" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Aswad</strong> (as-wad)
+                    </div>
+                  </li>
+                </ul>
+                <p style={{ marginTop: '1rem', fontStyle: 'italic', color: 'var(--text-light)' }}>Practice: <strong>Urīdu qamīṣan aḥmar... / Al-bayt akhḍar...</strong></p>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 36 */}
+            <ExpandableSection 
+              id="day-36" 
+              title={createArabicTitle("Day 36 — At the hotel", "اليوم السادس والثلاثون — في الفندق", "Al-yawm as-sādis wa-th-thalāthūn — Fī al-funduq")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Room:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>غرفة</span>
+                      <AudioPlayer arabicText="غرفة" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ghurfa</strong> (ghur-fa)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I need a room:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أحتاج غرفة</span>
+                      <AudioPlayer arabicText="أحتاج غرفة" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Aḥtāju ghurfa</strong> (ah-taa-ju ghur-fa)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Key:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>مفتاح</span>
+                      <AudioPlayer arabicText="مفتاح" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Miftāḥ</strong> (mif-tah)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Where is my room?:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أين غرفتي؟</span>
+                      <AudioPlayer arabicText="أين غرفتي" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ayna ghurfatī?</strong> (ay-na ghur-fa-tee)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 37 */}
+            <ExpandableSection 
+              id="day-37" 
+              title={createArabicTitle("Day 37 — Review Day", "اليوم السابع والثلاثون — يوم المراجعة", "Al-yawm as-sābiʿ wa-th-thalāthūn — Yawm al-murājaʿa")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <p style={{ lineHeight: '1.8' }}>Review Days 31-36. Practice: <strong>Tell what you did yesterday + what you will do tomorrow + describe weather + body parts + colors</strong>.</p>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 38 */}
+            <ExpandableSection 
+              id="day-38" 
+              title={createArabicTitle("Day 38 — More verbs (daily actions)", "اليوم الثامن والثلاثون — المزيد من الأفعال (أفعال يومية)", "Al-yawm ath-thāmin wa-th-thalāthūn — Al-mazīd min al-afʿāl (afʿāl yawmiyya)")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I sleep:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنام</span>
+                      <AudioPlayer arabicText="أنام" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Anām</strong> (a-naam)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I wake up:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أستيقظ</span>
+                      <AudioPlayer arabicText="أستيقظ" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Astayqiẓ</strong> (as-tay-qiz)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I work:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أعمل</span>
+                      <AudioPlayer arabicText="أعمل" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Aʿmal</strong> (a-mal)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I study:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أدرس</span>
+                      <AudioPlayer arabicText="أدرس" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Adrus</strong> (ad-rus)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I read:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أقرأ</span>
+                      <AudioPlayer arabicText="أقرأ" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Aqraʾ</strong> (aq-ra)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 39 */}
+            <ExpandableSection 
+              id="day-39" 
+              title="Day 39 — Clothes & shopping" 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Shirt:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>قميص</span>
+                      <AudioPlayer arabicText="قميص" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Qamīṣ</strong> (qa-mees)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Pants:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>بنطلون</span>
+                      <AudioPlayer arabicText="بنطلون" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Bantalūn</strong> (ban-ta-loon)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Shoes:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أحذية</span>
+                      <AudioPlayer arabicText="أحذية" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Aḥdhiya</strong> (ah-dhi-ya)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I want to try this:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أريد أن أجرب هذا</span>
+                      <AudioPlayer arabicText="أريد أن أجرب هذا" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Urīdu an ujarriba hādhā</strong> (u-ree-du an u-jar-ri-ba haa-dhaa)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 40 */}
+            <ExpandableSection 
+              id="day-40" 
+              title={createArabicTitle("Day 40 — Health & doctor", "اليوم الأربعون — الصحة والطبيب", "Al-yawm al-arbaʿūn — Aṣ-ṣiḥḥa wa-ṭ-ṭabīb")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Doctor:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>طبيب</span>
+                      <AudioPlayer arabicText="طبيب" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ṭabīb</strong> (ta-beeb)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I am sick:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا مريض</span>
+                      <AudioPlayer arabicText="أنا مريض" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Anā marīḍ</strong> (a-naa ma-reed)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Medicine:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>دواء</span>
+                      <AudioPlayer arabicText="دواء" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Dawāʾ</strong> (da-waa)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Where is the hospital?:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أين المستشفى؟</span>
+                      <AudioPlayer arabicText="أين المستشفى" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ayna al-mustashfā?</strong> (ay-na al-mus-tash-faa)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 41 */}
+            <ExpandableSection 
+              id="day-41" 
+              title={createArabicTitle("Day 41 — Phone & technology", "اليوم الحادي والأربعون — الهاتف والتكنولوجيا", "Al-yawm al-ḥādī wa-l-arbaʿūn — Al-hātif wa-t-tiknūlūjiyā")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Phone:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>هاتف</span>
+                      <AudioPlayer arabicText="هاتف" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Hātif</strong> (haa-tif)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• What is your phone number?:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>ما رقم هاتفك؟</span>
+                      <AudioPlayer arabicText="ما رقم هاتفك" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Mā raqm hātifika?</strong> (maa raqm haa-ti-fi-ka)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Internet:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>إنترنت</span>
+                      <AudioPlayer arabicText="إنترنت" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Internet</strong> (in-ter-net)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Wi-Fi password:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>كلمة سر الواي فاي</span>
+                      <AudioPlayer arabicText="كلمة سر الواي فاي" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Kalimat sirr al-wāy fāy</strong> (ka-li-mat sirr al-waa-y faa-y)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 42 */}
+            <ExpandableSection 
+              id="day-42" 
+              title={createArabicTitle("Day 42 — Money & banking", "اليوم الثاني والأربعون — المال والبنوك", "Al-yawm ath-thānī wa-l-arbaʿūn — Al-māl wa-l-bunūk")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Money:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>مال</span>
+                      <AudioPlayer arabicText="مال" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Māl</strong> (maal)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Bank:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>بنك</span>
+                      <AudioPlayer arabicText="بنك" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Bank</strong> (bank)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• ATM:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>صراف آلي</span>
+                      <AudioPlayer arabicText="صراف آلي" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ṣarrāf ālī</strong> (sar-raaf aa-lee)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I want to exchange money:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أريد صرف النقود</span>
+                      <AudioPlayer arabicText="أريد صرف النقود" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Urīdu ṣarf an-nuqūd</strong> (u-ree-du sarf an-nu-quud)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 43 */}
+            <ExpandableSection 
+              id="day-43" 
+              title={createArabicTitle("Day 43 — Transportation (advanced)", "اليوم الثالث والأربعون — النقل (متقدم)", "Al-yawm ath-thālith wa-l-arbaʿūn — An-naql (mutaqaddim)")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Bus:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>حافلة</span>
+                      <AudioPlayer arabicText="حافلة" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ḥāfila</strong> (haa-fi-la)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Train:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>قطار</span>
+                      <AudioPlayer arabicText="قطار" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Qiṭār</strong> (qi-taar)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Ticket:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>تذكرة</span>
+                      <AudioPlayer arabicText="تذكرة" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Tadhkira</strong> (tadh-ki-ra)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Where does this bus go?:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>إلى أين تذهب هذه الحافلة؟</span>
+                      <AudioPlayer arabicText="إلى أين تذهب هذه الحافلة" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ilā ayna tadhhab hādhihi al-ḥāfila?</strong> (i-laa ay-na tadh-hab haa-dhi-hi al-haa-fi-la)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 44 */}
+            <ExpandableSection 
+              id="day-44" 
+              title="Day 44 — Review Day" 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <p style={{ lineHeight: '1.8' }}>Review Days 38-43. Practice: <strong>Describe your daily routine + shopping for clothes + health issues + phone conversation + banking</strong>.</p>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 45 */}
+            <ExpandableSection 
+              id="day-45" 
+              title={createArabicTitle("Day 45 — Emotions & expressions", "اليوم الخامس والأربعون — المشاعر والتعبيرات", "Al-yawm al-khāmis wa-l-arbaʿūn — Al-mashāʿir wa-t-taʿbīrāt")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I am happy:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا سعيد</span>
+                      <AudioPlayer arabicText="أنا سعيد" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Anā saʿīd</strong> (a-naa sa-eed)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I am sad:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا حزين</span>
+                      <AudioPlayer arabicText="أنا حزين" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Anā ḥazīn</strong> (a-naa ha-zeen)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I am tired:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا متعب</span>
+                      <AudioPlayer arabicText="أنا متعب" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Anā mutʿab</strong> (a-naa mut-ab)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I am excited:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا متحمس</span>
+                      <AudioPlayer arabicText="أنا متحمس" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Anā mutaḥammis</strong> (a-naa mu-ta-ham-mis)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 46 */}
+            <ExpandableSection 
+              id="day-46" 
+              title="Day 46 — Making plans" 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Tomorrow:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>غدا</span>
+                      <AudioPlayer arabicText="غدا" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ghadan</strong> (gha-dan)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Next week:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>الأسبوع القادم</span>
+                      <AudioPlayer arabicText="الأسبوع القادم" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Al-usbūʿ al-qādim</strong> (al-us-buu' al-qa-dim)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Let's meet:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>دعنا نلتقي</span>
+                      <AudioPlayer arabicText="دعنا نلتقي" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Daʿnā naltaqī</strong> (da-naa nal-ta-qee)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• What time?:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>في أي ساعة؟</span>
+                      <AudioPlayer arabicText="في أي ساعة" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Fī ayyi sāʿa?</strong> (fee ay-yi saa-a)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 47 */}
+            <ExpandableSection 
+              id="day-47" 
+              title={createArabicTitle("Day 47 — Hobbies & interests", "اليوم السابع والأربعون — الهوايات والاهتمامات", "Al-yawm as-sābiʿ wa-l-arbaʿūn — Al-hawāyāt wa-l-ihtimāmāt")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I like:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أحب</span>
+                      <AudioPlayer arabicText="أحب" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Uḥibb</strong> (u-hibb)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Reading:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>القراءة</span>
+                      <AudioPlayer arabicText="القراءة" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Al-qirāʾa</strong> (al-qi-raa-a)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Sports:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>الرياضة</span>
+                      <AudioPlayer arabicText="الرياضة" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ar-riyāḍa</strong> (ar-ri-yaa-da)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• What do you like?:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>ماذا تحب؟</span>
+                      <AudioPlayer arabicText="ماذا تحب" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Mādhā tuḥibb?</strong> (maa-dhaa tu-hibb)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 48 */}
+            <ExpandableSection 
+              id="day-48" 
+              title="Day 48 — At the market" 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Market:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>سوق</span>
+                      <AudioPlayer arabicText="سوق" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Sūq</strong> (sooq)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• How much per kilo?:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>كم للكيلو؟</span>
+                      <AudioPlayer arabicText="كم للكيلو" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Kam lil-kilū?</strong> (kam lil-ki-loo)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Fresh:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>طازج</span>
+                      <AudioPlayer arabicText="طازج" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ṭāzij</strong> (taa-zij)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Give me half a kilo:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أعطني نصف كيلو</span>
+                      <AudioPlayer arabicText="أعطني نصف كيلو" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Aʿṭinī niṣf kilū</strong> (a-ti-nee nisf ki-loo)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 49 */}
+            <ExpandableSection 
+              id="day-49" 
+              title={createArabicTitle("Day 49 — Giving directions (detailed)", "اليوم التاسع والأربعون — إعطاء الاتجاهات (مفصل)", "Al-yawm at-tāsiʿ wa-l-arbaʿūn — Iʿṭāʾ al-ittijāhāt (mufaṣṣal)")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Turn right:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>انعطف يمينا</span>
+                      <AudioPlayer arabicText="انعطف يمينا" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Inʿaṭif yamīnan</strong> (in-a-tif ya-mee-nan)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Turn left:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>انعطف يسارا</span>
+                      <AudioPlayer arabicText="انعطف يسارا" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Inʿaṭif yasāran</strong> (in-a-tif ya-saa-ran)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Go straight:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>امش مباشرة</span>
+                      <AudioPlayer arabicText="امش مباشرة" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Imshi mubāsharatan</strong> (im-shi mu-baa-sha-ra-tan)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• It's near:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>إنه قريب</span>
+                      <AudioPlayer arabicText="إنه قريب" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Innahu qarīb</strong> (in-na-hu qa-reeb)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 50 */}
+            <ExpandableSection 
+              id="day-50" 
+              title="Day 50 — Review Day" 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <p style={{ lineHeight: '1.8' }}>Review Days 45-49. Practice: <strong>Talk about emotions + make plans + discuss hobbies + market shopping + give detailed directions</strong>.</p>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 51 */}
+            <ExpandableSection 
+              id="day-51" 
+              title={createArabicTitle("Day 51 — Numbers 11-20 (speaking)", "اليوم الحادي والخمسون — الأرقام 11-20 (التحدث)", "Al-yawm al-ḥādī wa-l-khamsūn — Al-arqām 11-20 (at-taḥadduth)")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <p style={{ lineHeight: '1.8', marginBottom: '1rem' }}>Practice saying numbers 11-20 fast:</p>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>١١</span>
+                    <AudioPlayer arabicText="أحد عشر" className="alphabet-audio-btn" tone="default" />
+                    <span style={{ marginLeft: '0.5rem', fontFamily: 'monospace' }}>Aḥada ʿashar</span>
+                  </li>
+                  <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>١٥</span>
+                    <AudioPlayer arabicText="خمسة عشر" className="alphabet-audio-btn" tone="default" />
+                    <span style={{ marginLeft: '0.5rem', fontFamily: 'monospace' }}>Khamsata ʿashar</span>
+                  </li>
+                  <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>٢٠</span>
+                    <AudioPlayer arabicText="عشرون" className="alphabet-audio-btn" tone="default" />
+                    <span style={{ marginLeft: '0.5rem', fontFamily: 'monospace' }}>ʿIshrūn</span>
+                  </li>
+                </ul>
+                <p style={{ marginTop: '1rem', fontStyle: 'italic', color: 'var(--text-light)' }}>Practice prices: <strong>Kam thaman hādhā? Thamānīya ʿashar riyālan.</strong></p>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 52 */}
+            <ExpandableSection 
+              id="day-52" 
+              title="Day 52 — Time expressions (advanced)" 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Morning:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>صباح</span>
+                      <AudioPlayer arabicText="صباح" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ṣabāḥ</strong> (sa-bah)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Evening:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>مساء</span>
+                      <AudioPlayer arabicText="مساء" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Masāʾ</strong> (ma-saa)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Night:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>ليل</span>
+                      <AudioPlayer arabicText="ليل" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Layl</strong> (layl)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Good morning:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>صباح الخير</span>
+                      <AudioPlayer arabicText="صباح الخير" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ṣabāḥ al-khayr</strong> (sa-bah al-khayr)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 53 */}
+            <ExpandableSection 
+              id="day-53" 
+              title={createArabicTitle("Day 53 — Asking for help", "اليوم الثالث والخمسون — طلب المساعدة", "Al-yawm ath-thālith wa-l-khamsūn — Ṭalab al-musāʿada")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Help me please:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>ساعدني من فضلك</span>
+                      <AudioPlayer arabicText="ساعدني من فضلك" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Sāʿidnī min faḍlik</strong> (saa-id-nee min fad-lik)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I don't understand:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>لا أفهم</span>
+                      <AudioPlayer arabicText="لا أفهم" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Lā afham</strong> (laa af-ham)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Can you repeat?:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>هل يمكنك التكرار؟</span>
+                      <AudioPlayer arabicText="هل يمكنك التكرار" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Hal yumkinuka at-tikrār?</strong> (hal yum-ki-nu-ka at-tik-raar)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Speak slowly:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>تحدث ببطء</span>
+                      <AudioPlayer arabicText="تحدث ببطء" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Tahaḍdath bi-buṭʾ</strong> (ta-had-dath bi-but')
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 54 */}
+            <ExpandableSection 
+              id="day-54" 
+              title="Day 54 — Expressing opinions" 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I think:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أعتقد</span>
+                      <AudioPlayer arabicText="أعتقد" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Aʿtaqid</strong> (a-ta-qid)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• In my opinion:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>في رأيي</span>
+                      <AudioPlayer arabicText="في رأيي" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Fī raʾyī</strong> (fee ra-yee)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I agree:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أوافق</span>
+                      <AudioPlayer arabicText="أوافق" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ūāfiq</strong> (u-aa-fiq)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I disagree:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>لا أوافق</span>
+                      <AudioPlayer arabicText="لا أوافق" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Lā ūāfiq</strong> (laa u-aa-fiq)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 55 */}
+            <ExpandableSection 
+              id="day-55" 
+              title={createArabicTitle("Day 55 — Making comparisons", "اليوم الخامس والخمسون — المقارنات", "Al-yawm al-khāmis wa-l-khamsūn — Al-muqāranāt")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Bigger:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أكبر</span>
+                      <AudioPlayer arabicText="أكبر" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Akbar</strong> (ak-bar)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Smaller:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أصغر</span>
+                      <AudioPlayer arabicText="أصغر" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Aṣghar</strong> (as-ghar)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Better:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أفضل</span>
+                      <AudioPlayer arabicText="أفضل" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Afḍal</strong> (af-dal)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• This is better than that:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>هذا أفضل من ذلك</span>
+                      <AudioPlayer arabicText="هذا أفضل من ذلك" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Hādhā afḍal min dhālik</strong> (haa-dhaa af-dal min dhaa-lik)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 56 */}
+            <ExpandableSection 
+              id="day-56" 
+              title="Day 56 — Review Day" 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <p style={{ lineHeight: '1.8' }}>Review Days 51-55. Practice: <strong>Numbers 11-20 + time expressions + asking for help + expressing opinions + making comparisons</strong>.</p>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 57 */}
+            <ExpandableSection 
+              id="day-57" 
+              title={createArabicTitle("Day 57 — Conversation: At the post office", "اليوم السابع والخمسون — محادثة: في مكتب البريد", "Al-yawm as-sābiʿ wa-l-khamsūn — Muḥādatha: Fī maktab al-barīd")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Post office:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>مكتب البريد</span>
+                      <AudioPlayer arabicText="مكتب البريد" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Maktab al-barīd</strong> (mak-tab al-ba-reed)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Stamp:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>طابع</span>
+                      <AudioPlayer arabicText="طابع" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ṭābiʿ</strong> (taa-bi')
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I want to send a letter:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أريد إرسال رسالة</span>
+                      <AudioPlayer arabicText="أريد إرسال رسالة" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Urīdu irsāl risāla</strong> (u-ree-du ir-saal ri-saa-la)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 58 */}
+            <ExpandableSection 
+              id="day-58" 
+              title="Day 58 — Conversation: At the pharmacy" 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Pharmacy:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>صيدلية</span>
+                      <AudioPlayer arabicText="صيدلية" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ṣaydaliyya</strong> (say-da-liy-ya)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I have a headache:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>لدي صداع</span>
+                      <AudioPlayer arabicText="لدي صداع" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Ladī ṣadāʿ</strong> (la-dee sa-daa')
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Do you have medicine for...?:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>هل لديك دواء لـ...؟</span>
+                      <AudioPlayer arabicText="هل لديك دواء" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Hal ladayka dawāʾ li-...?</strong> (hal la-day-ka da-waa li)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 59 */}
+            <ExpandableSection 
+              id="day-59" 
+              title={createArabicTitle("Day 59 — Conversation: Making appointments", "اليوم التاسع والخمسون — محادثة: تحديد المواعيد", "Al-yawm at-tāsiʿ wa-l-khamsūn — Muḥādatha: Taḥdīd al-mawāʿīd")} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <ul style={{ listStyle: 'none', paddingLeft: '0', lineHeight: '2' }}>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Appointment:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>موعد</span>
+                      <AudioPlayer arabicText="موعد" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Mawʿid</strong> (maw-id)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• I want to make an appointment:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أريد تحديد موعد</span>
+                      <AudioPlayer arabicText="أريد تحديد موعد" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Urīdu taḥdīd mawʿid</strong> (u-ree-du tah-deed maw-id)
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• Is tomorrow available?:</span>
+                      <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>هل غدا متاح؟</span>
+                      <AudioPlayer arabicText="هل غدا متاح" className="alphabet-audio-btn" tone="default" />
+                    </div>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>Hal ghadan mutāḥ?</strong> (hal gha-dan mu-taah)
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </ExpandableSection>
+
+            {/* Day 60 */}
+            <ExpandableSection 
+              id="day-60" 
+              title={'Day 60 — Final speaking test (60 days milestone)'} 
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px', border: '2px solid var(--primary-color)' }}>
+                <p style={{ lineHeight: '1.8', marginBottom: '1rem' }}>Congratulations! You've completed 60 days. Do a <strong>10-minute recording</strong> covering:</p>
+                <ol style={{ paddingLeft: '1.5rem', lineHeight: '1.8' }}>
+                  <li>Introduce yourself (name, country, work/study)</li>
+                  <li>Describe your daily routine (past, present, future)</li>
+                  <li>Talk about your hobbies and interests</li>
+                  <li>Describe a shopping experience (clothes, market, pharmacy)</li>
+                  <li>Ask for directions to 3 different places</li>
+                  <li>Make plans for next week</li>
+                  <li>Express opinions about something</li>
+                  <li>Ask for help with something</li>
+                  <li>Have a conversation about weather and health</li>
+                  <li>Close with polite farewell</li>
+                </ol>
+                <p style={{ marginTop: '1.5rem', fontStyle: 'italic', color: 'var(--primary-color)', fontWeight: '600' }}>
+                  مبروك! (Mabrūk!) — Congratulations! Keep practicing daily!
+                </p>
+              </div>
+            </ExpandableSection>
+          </div>
+        </ExpandableSection>
+        </div>
       </SectionWrapper>
     </>
   )
