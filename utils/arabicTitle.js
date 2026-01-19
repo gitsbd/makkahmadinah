@@ -2,6 +2,8 @@ import AudioPlayer from '@/components/AudioPlayer'
 
 /**
  * Helper function to create Arabic title with audio player
+ * Note: This returns JSX with a client component, so it should only be used
+ * within client components or passed as props to client components
  * @param {string} englishTitle - The English/Bengali title
  * @param {string} arabicText - The Arabic text
  * @param {string} transliteration - The transliteration guide

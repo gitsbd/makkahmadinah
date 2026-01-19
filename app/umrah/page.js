@@ -1,3 +1,5 @@
+'use client'
+
 import ExpandableSection from '@/components/ExpandableSection'
 import PageHeader from '@/components/PageHeader'
 import ImportantNote from '@/components/ImportantNote'
@@ -10,29 +12,52 @@ export default function Umrah() {
   return (
     <>
       <PageHeader 
-        title="উমরাহ সম্পাদনের সম্পূর্ণ গাইড"
-        subtitle="ধাপে ধাপে নির্দেশিকা"
+        title={
+          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+            উমরাহ সম্পাদনের সম্পূর্ণ গাইড (الدليل الكامل لأداء العمرة)
+            <AudioPlayer arabicText="الدليل الكامل لأداء العمرة" className="alphabet-audio-btn" tone="default" />
+          </span>
+        }
+        subtitle={
+          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+            ধাপে ধাপে নির্দেশিকা (دليل خطوة بخطوة)
+            <AudioPlayer arabicText="دليل خطوة بخطوة" className="alphabet-audio-btn" tone="default" />
+          </span>
+        }
         sectionCount={15}
       />
 
       <section className="process-section">
         <div className="container">
           <div className="umrah-flowchart">
-            <h2 className="section-heading">
-              উমরাহ প্রক্রিয়া - ভিজ্যুয়াল ডায়াগ্রাম
+            <h2 className="section-heading" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+              উমরাহ প্রক্রিয়া - ভিজ্যুয়াল ডায়াগ্রাম (عملية العمرة - الرسم البياني)
+              <AudioPlayer arabicText="عملية العمرة - الرسم البياني" className="alphabet-audio-btn" tone="default" />
             </h2>
             <div className="flowchart-container">
               <div className="flowchart-step start">
                 <div className="flowchart-icon">🚶</div>
-                <div className="flowchart-title">শুরু</div>
-                <div className="flowchart-desc">মিকাতের আগে</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  শুরু (البداية)
+                  <AudioPlayer arabicText="البداية" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  মিকাতের আগে (قبل الميقات)
+                  <AudioPlayer arabicText="قبل الميقات" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">👕</div>
-                <div className="flowchart-title">১. ইহরাম</div>
-                <div className="flowchart-desc">ইহরাম পরিধান<br/>তালবিয়া পড়া</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ১. ইহরাম (الإحرام)
+                  <AudioPlayer arabicText="الإحرام" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ইহরাম পরিধান (لبس الإحرام)<br/>তালবিয়া পড়া (قراءة التلبية)
+                  <AudioPlayer arabicText="لبس الإحرام وقراءة التلبية" className="alphabet-audio-btn" tone="default" />
+                </div>
                 <div className="flowchart-dua">
                   <p className="arabic-small">لَبَّيْكَ اللَّهُمَّ عُمْرَةً</p>
                   <p className="transliteration-small">Labbaik Allahumma Umratan</p>
@@ -42,8 +67,14 @@ export default function Umrah() {
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">🕋</div>
-                <div className="flowchart-title">২. মসজিদুল হারাম</div>
-                <div className="flowchart-desc">কাবা শরীফে<br/>প্রবেশ</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ২. মসজিদুল হারাম (المسجد الحرام)
+                  <AudioPlayer arabicText="المسجد الحرام" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  কাবা শরীফে (الكعبة المشرفة)<br/>প্রবেশ (الدخول)
+                  <AudioPlayer arabicText="الدخول إلى الكعبة المشرفة" className="alphabet-audio-btn" tone="default" />
+                </div>
                 <div className="flowchart-dua">
                   <p className="arabic-small">اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ</p>
                   <p className="transliteration-small">Allahumma Iftah Li Abwaba Rahmatik</p>
@@ -53,8 +84,14 @@ export default function Umrah() {
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">🔄</div>
-                <div className="flowchart-title">৩. তাওয়াফ</div>
-                <div className="flowchart-desc">৭ বার কাবা<br/>প্রদক্ষিণ</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৩. তাওয়াফ (الطواف)
+                  <AudioPlayer arabicText="الطواف" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৭ বার কাবা (7 أشواط حول الكعبة)<br/>প্রদক্ষিণ (الطواف)
+                  <AudioPlayer arabicText="7 أشواط حول الكعبة" className="alphabet-audio-btn" tone="default" />
+                </div>
                 <div className="flowchart-dua">
                   <p className="arabic-small">بِسْمِ اللَّهِ وَاللَّهُ أَكْبَرُ</p>
                   <p className="transliteration-small">Bismillahi Wallahu Akbar</p>
@@ -64,43 +101,78 @@ export default function Umrah() {
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">🤲</div>
-                <div className="flowchart-title">৪. নামাজ</div>
-                <div className="flowchart-desc">মাকামে ইব্রাহিমে<br/>২ রাকাত</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৪. নামাজ (الصلاة)
+                  <AudioPlayer arabicText="الصلاة" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  মাকামে ইব্রাহিমে (مقام إبراهيم)<br/>২ রাকাত (ركعتان)
+                  <AudioPlayer arabicText="ركعتان في مقام إبراهيم" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">💧</div>
-                <div className="flowchart-title">৫. জমজম</div>
-                <div className="flowchart-desc">জমজম পানি<br/>পান করা</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৫. জমজম (زمزم)
+                  <AudioPlayer arabicText="زمزم" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  জমজম পানি (ماء زمزم)<br/>পান করা (الشرب)
+                  <AudioPlayer arabicText="شرب ماء زمزم" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">🏃</div>
-                <div className="flowchart-title">৬. সাঈ</div>
-                <div className="flowchart-desc">সাফা-মারওয়া<br/>৭ বার যাতায়াত</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৬. সাঈ (السعي)
+                  <AudioPlayer arabicText="السعي" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  সাফা-মারওয়া (الصفا والمروة)<br/>৭ বার যাতায়াত (7 مرات ذهاباً وإياباً)
+                  <AudioPlayer arabicText="7 مرات بين الصفا والمروة" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">✂️</div>
-                <div className="flowchart-title">৭. চুল কাটা</div>
-                <div className="flowchart-desc">মুন্ডন/চুল কাটা<br/>ইহরাম খোলা</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৭. চুল কাটা (قص الشعر)
+                  <AudioPlayer arabicText="قص الشعر" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  মুন্ডন/চুল কাটা (الحلاقة/قص الشعر)<br/>ইহরাম খোলা (إزالة الإحرام)
+                  <AudioPlayer arabicText="الحلاقة وإزالة الإحرام" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step end">
                 <div className="flowchart-icon">✅</div>
-                <div className="flowchart-title">উমরাহ সম্পন্ন</div>
-                <div className="flowchart-desc">আল্লাহ কবুল করুন</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  উমরাহ সম্পন্ন (اكتملت العمرة)
+                  <AudioPlayer arabicText="اكتملت العمرة" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  আল্লাহ কবুল করুন (تقبل الله)
+                  <AudioPlayer arabicText="تقبل الله" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
             </div>
           </div>
 
           <ExpandableSection 
             id="trip-checklist" 
-            title="উমরাহ ভ্রমণের প্রস্তুতি চেকলিস্ট (Umrah Trip Checklist)" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহ ভ্রমণের প্রস্তুতি চেকলিস্ট (قائمة التحضير لرحلة العمرة)
+                <AudioPlayer arabicText="قائمة التحضير لرحلة العمرة" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="dua-category-wrapper"
             number={0}
@@ -110,7 +182,12 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="umrah-process-detailed" 
-            title="উমরাহ সম্পাদনের সম্পূর্ণ প্রক্রিয়া (Step by Step Process)" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহ সম্পাদনের সম্পূর্ণ প্রক্রিয়া (العملية الكاملة لأداء العمرة)
+                <AudioPlayer arabicText="العملية الكاملة لأداء العمرة" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="dua-category-wrapper"
             number={1}
@@ -120,14 +197,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="umrah-intro" 
-            title="উমরাহ কি?" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহ কি? (ما هي العمرة؟)
+                <AudioPlayer arabicText="ما هي العمرة؟" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
            number={2}>
             <div className="dua-item">
               <p className="info-text">উমরাহ হল ইসলামের একটি গুরুত্বপূর্ণ ইবাদত যা মক্কায় কাবা শরীফ তাওয়াফ, সাফা-মারওয়ার মধ্যে সাঈ এবং চুল কাটার মাধ্যমে সম্পন্ন হয়। এটি হজ্জের মতো ফরজ নয়, তবে এটি একটি সুন্নত এবং খুবই ফজিলতপূর্ণ ইবাদত।</p>
               
-              <h3>উমরাহর ধাপসমূহ:</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহর ধাপসমূহ: (خطوات العمرة)
+                <AudioPlayer arabicText="خطوات العمرة" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <ol className="list-styled">
                 <li><strong>ইহরাম গ্রহণ:</strong> মিকাত থেকে উমরাহর ইহরাম গ্রহণ করতে হবে</li>
                 <li><strong>তালবিয়া পড়া:</strong> ইহরাম গ্রহণের পর তালবিয়া পড়তে হবে</li>
@@ -144,12 +229,20 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="umrah-importance" 
-            title="উমরাহর গুরুত্ব ও ফজিলত" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহর গুরুত্ব ও ফজিলত (أهمية وفضائل العمرة)
+                <AudioPlayer arabicText="أهمية وفضائل العمرة" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
            number={3}>
             <div className="dua-item">
-              <h3>কেন উমরাহ করি?</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                কেন উমরাহ করি? (لماذا نؤدي العمرة؟)
+                <AudioPlayer arabicText="لماذا نؤدي العمرة؟" className="alphabet-audio-btn" tone="default" />
+              </h3>
               
               <div className="dua-box mt-md">
                 <h4>১. আল্লাহর নির্দেশ - কুরআনের নির্দেশনা:</h4>
@@ -233,7 +326,10 @@ export default function Umrah() {
                 </ul>
               </div>
 
-              <h3 className="mt-lg">উমরাহর আধ্যাত্মিক গুরুত্ব</h3>
+              <h3 className="mt-lg" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহর আধ্যাত্মিক গুরুত্ব (الأهمية الروحية للعمرة)
+                <AudioPlayer arabicText="الأهمية الروحية للعمرة" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <p>উমরাহ শুধুমাত্র একটি ধর্মীয় রীতি নয়, এটি একটি আধ্যাত্মিক যাত্রা যা মুসলমানদের:</p>
               <ul className="list-styled">
                 <li>আল্লাহর সাথে সম্পর্ক গড়ে তুলতে সাহায্য করে</li>
@@ -247,14 +343,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="umrah-when" 
-            title="উমরাহ কখন করা যায়?" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহ কখন করা যায়? (متى يمكن أداء العمرة؟)
+                <AudioPlayer arabicText="متى يمكن أداء العمرة؟" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
            number={4}>
             <div className="dua-item">
               <p className="info-text"><strong>উমরাহ বছরের যেকোনো সময় করা যায়।</strong> হজ্জের মতো নির্দিষ্ট মাসে সীমাবদ্ধ নয়। তবে কিছু সময়ে উমরাহ পালনের বিশেষ ফজিলত রয়েছে।</p>
               
-              <h3>উমরাহ করার উত্তম সময়:</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহ করার উত্তম সময়: (أفضل الأوقات لأداء العمرة)
+                <AudioPlayer arabicText="أفضل الأوقات لأداء العمرة" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <ul className="list-styled">
                 <li><strong>রমজান মাস:</strong> রমজানে উমরাহ একটি হজ্জের সমান</li>
                 <li><strong>হজ্জের মাস ছাড়া:</strong> হজ্জের মাস (জিলহজ্জ) ছাড়া যেকোনো সময়</li>
@@ -276,14 +380,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="umrah-where" 
-            title="উমরাহ কোথায় করতে হয়?" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহ কোথায় করতে হয়? (أين تؤدى العمرة؟)
+                <AudioPlayer arabicText="أين تؤدى العمرة؟" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
            number={5}>
             <div className="dua-item">
               <p className="info-text"><strong>উমরাহ শুধুমাত্র মক্কা শরীফে করা যায়।</strong> উমরাহর প্রধান কাজগুলো মক্কার বিভিন্ন স্থানে সম্পন্ন করতে হয়।</p>
               
-              <h3>উমরাহর প্রধান স্থানসমূহ:</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহর প্রধান স্থানসমূহ: (الأماكن الرئيسية للعمرة)
+                <AudioPlayer arabicText="الأماكن الرئيسية للعمرة" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <ul className="list-styled">
                 <li><strong>মিকাত:</strong> উমরাহর ইহরাম গ্রহণের স্থান (মক্কার বাইরে)</li>
                 <li><strong>মসজিদুল হারাম:</strong> কাবা শরীফের চারপাশে অবস্থিত মসজিদ</li>
@@ -297,14 +409,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="meeqat" 
-            title="মিকাত (Meeqat)" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                মিকাত (الميقات)
+                <AudioPlayer arabicText="الميقات" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
            number={6}>
             <div className="dua-item">
               <p className="info-text">মিকাত হল সেই স্থান যেখান থেকে ইহরাম গ্রহণ করতে হয়। মক্কা থেকে বিভিন্ন দিক থেকে আসা লোকদের জন্য বিভিন্ন মিকাত নির্ধারিত:</p>
               
-              <h3>মিকাতের স্থানসমূহ:</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                মিকাতের স্থানসমূহ: (أماكن الميقات)
+                <AudioPlayer arabicText="أماكن الميقات" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <ul className="list-styled">
                 <li><strong>যুল হুলাইফা (আবিয়ার আলী):</strong> মদিনা থেকে আসা লোকদের জন্য</li>
                 <li><strong>জুহফা:</strong> সিরিয়া, মিশর ও উত্তর আফ্রিকা থেকে আসা লোকদের জন্য</li>
@@ -319,14 +439,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="umrah-frequency" 
-            title="উমরাহ কতবার করা যায়?" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহ কতবার করা যায়? (كم مرة يمكن أداء العمرة؟)
+                <AudioPlayer arabicText="كم مرة يمكن أداء العمرة؟" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
            number={7}>
             <div className="dua-item">
               <p className="info-text"><strong>উমরাহ যতবার ইচ্ছা ততবার করা যায়।</strong> এটি হজ্জের মতো জীবনে একবার সীমাবদ্ধ নয়।</p>
               
-              <h3>উমরাহ করার সুযোগ:</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহ করার সুযোগ: (فرص أداء العمرة)
+                <AudioPlayer arabicText="فرص أداء العمرة" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <ul className="list-styled">
                 <li><strong>সীমাহীন:</strong> উমরাহ যতবার ইচ্ছা ততবার করা যায়</li>
                 <li><strong>বছরে একাধিকবার:</strong> এক বছরে একাধিকবার উমরাহ করা যায়</li>
@@ -349,12 +477,20 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="who-can-perform" 
-            title="কে কে উমরাহ করতে পারে?" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                কে কে উমরাহ করতে পারে? (من يمكنه أداء العمرة؟)
+                <AudioPlayer arabicText="من يمكنه أداء العمرة؟" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
            number={9}>
             <div className="dua-item">
-              <h3>উমরাহ করার শর্তসমূহ:</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                উমরাহ করার শর্তসমূহ: (شروط أداء العمرة)
+                <AudioPlayer arabicText="شروط أداء العمرة" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <ul className="list-styled">
                 <li><strong>ইসলাম:</strong> উমরাহকারীকে মুসলমান হতে হবে</li>
                 <li><strong>বয়স:</strong> বালেগ (প্রাপ্তবয়স্ক) হতে হবে</li>
@@ -364,7 +500,10 @@ export default function Umrah() {
                 <li><strong>সুযোগ:</strong> উমরাহে যাওয়ার সুযোগ থাকতে হবে (রাস্তা নিরাপদ, পরিবারের খরচের ব্যবস্থা থাকা)</li>
               </ul>
               
-              <h3>বিশেষ ক্ষেত্রে উমরাহ:</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                বিশেষ ক্ষেত্রে উমরাহ: (العمرة في حالات خاصة)
+                <AudioPlayer arabicText="العمرة في حالات خاصة" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <ul className="list-styled">
                 <li><strong>নারীদের জন্য:</strong> নারীরা উমরাহ করতে পারেন, তবে মাহরাম (স্বামী, পিতা, ভাই, পুত্র ইত্যাদি) সহ যাওয়া উত্তম</li>
                 <li><strong>বৃদ্ধদের জন্য:</strong> বৃদ্ধ ব্যক্তিরা উমরাহ করতে পারেন, তবে শারীরিক সামর্থ্য থাকতে হবে</li>
@@ -385,14 +524,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="step-1" 
-            title="১. ইহরাম গ্রহণ (Ihram)" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ১. ইহরাম গ্রহণ (الإحرام)
+                <AudioPlayer arabicText="الإحرام" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="👕"
            number={9}>
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>মিকাত (Meeqat) এর আগে ইহরাম পরিধান করুন</li>
                   <li>পুরুষদের জন্য: দুইটি সাদা কাপড় (একটি কোমরে, একটি কাঁধে)</li>
@@ -426,14 +573,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="step-2" 
-            title="২. কাবা শরীফে প্রবেশ" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ২. কাবা শরীফে প্রবেশ (الدخول إلى الكعبة المشرفة)
+                <AudioPlayer arabicText="الدخول إلى الكعبة المشرفة" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="🕋"
            number={10}>
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>মসজিদুল হারামে প্রবেশ করুন</li>
                   <li>কাবা শরীফের দিকে মুখ করুন</li>
@@ -455,14 +610,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="step-3" 
-            title="৩. তাওয়াফ (Tawaf) - কাবা প্রদক্ষিণ" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ৩. তাওয়াফ - কাবা প্রদক্ষিণ (الطواف حول الكعبة)
+                <AudioPlayer arabicText="الطواف حول الكعبة" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="🔄"
            number={10}>
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>হাজরে আসওয়াদ (কালো পাথর) থেকে শুরু করুন</li>
                   <li>কাবা শরীফকে বাম দিকে রেখে ৭ বার প্রদক্ষিণ করুন</li>
@@ -495,14 +658,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="step-4" 
-            title="৪. মাকামে ইব্রাহিমে নামাজ" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ৪. মাকামে ইব্রাহিমে নামাজ (الصلاة في مقام إبراهيم)
+                <AudioPlayer arabicText="الصلاة في مقام إبراهيم" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="🤲"
            number={11}>
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>তাওয়াফ শেষে মাকামে ইব্রাহিমের কাছে যান</li>
                   <li>২ রাকাত নামাজ পড়ুন</li>
@@ -514,14 +685,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="step-5" 
-            title="৫. জমজম পানি পান" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ৫. জমজম পানি পান (شرب ماء زمزم)
+                <AudioPlayer arabicText="شرب ماء زمزم" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="💧"
            number={12}>
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>জমজম কূপের কাছে যান</li>
                   <li>কিবলার দিকে মুখ করে পান করুন</li>
@@ -543,14 +722,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="step-6" 
-            title="৬. সাঈ (Sai) - সাফা-মারওয়া" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ৬. সাঈ - সাফা-মারওয়া (السعي بين الصفا والمروة)
+                <AudioPlayer arabicText="السعي بين الصفا والمروة" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="🏃"
            number={13}>
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>সাফা পাহাড় থেকে শুরু করুন</li>
                   <li>মারওয়া পর্যন্ত ৭ বার যাতায়াত করুন</li>
@@ -574,14 +761,22 @@ export default function Umrah() {
 
           <ExpandableSection 
             id="step-7" 
-            title="৭. চুল কাটা/মুন্ডন" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ৭. চুল কাটা/মুন্ডন (قص الشعر/الحلاقة)
+                <AudioPlayer arabicText="قص الشعر أو الحلاقة" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="✂️"
            number={14}>
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>সাঈ শেষে চুল কাটুন বা মুন্ডন করুন</li>
                   <li>পুরুষদের জন্য: মুন্ডন করা উত্তম, তবে চুল কাটাও বৈধ</li>

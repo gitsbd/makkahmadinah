@@ -1,3 +1,5 @@
+'use client'
+
 import ExpandableSection from '@/components/ExpandableSection'
 import PageHeader from '@/components/PageHeader'
 import ImportantNote from '@/components/ImportantNote'
@@ -9,29 +11,52 @@ export default function Hajj() {
   return (
     <>
       <PageHeader 
-        title="হজ্জ সম্পাদনের সম্পূর্ণ গাইড"
-        subtitle="দিনে দিনে বিস্তারিত নির্দেশিকা"
+        title={
+          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+            হজ্জ সম্পাদনের সম্পূর্ণ গাইড (الدليل الكامل لأداء الحج)
+            <AudioPlayer arabicText="الدليل الكامل لأداء الحج" className="alphabet-audio-btn" tone="default" />
+          </span>
+        }
+        subtitle={
+          <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+            দিনে দিনে বিস্তারিত নির্দেশিকা (دليل مفصل يوماً بيوم)
+            <AudioPlayer arabicText="دليل مفصل يوماً بيوم" className="alphabet-audio-btn" tone="default" />
+          </span>
+        }
         sectionCount={11}
       />
 
       <section className="process-section">
         <div className="container">
           <div className="umrah-flowchart">
-            <h2 className="section-heading">
-              হজ্জ প্রক্রিয়া - ভিজ্যুয়াল ডায়াগ্রাম
+            <h2 className="section-heading" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+              হজ্জ প্রক্রিয়া - ভিজ্যুয়াল ডায়াগ্রাম (عملية الحج - الرسم البياني)
+              <AudioPlayer arabicText="عملية الحج - الرسم البياني" className="alphabet-audio-btn" tone="default" />
             </h2>
             <div className="flowchart-container">
               <div className="flowchart-step start">
                 <div className="flowchart-icon">🚶</div>
-                <div className="flowchart-title">শুরু</div>
-                <div className="flowchart-desc">৮ই জিলহজ্জ<br/>মিকাত থেকে</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  শুরু (البداية)
+                  <AudioPlayer arabicText="البداية" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৮ই জিলহজ্জ (اليوم الثامن من ذي الحجة)<br/>মিকাত থেকে (من الميقات)
+                  <AudioPlayer arabicText="اليوم الثامن من ذي الحجة من الميقات" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">👕</div>
-                <div className="flowchart-title">১. ইহরাম</div>
-                <div className="flowchart-desc">হজ্জের ইহরাম<br/>তালবিয়া</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ১. ইহরাম (الإحرام)
+                  <AudioPlayer arabicText="الإحرام" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  হজ্জের ইহরাম (إحرام الحج)<br/>তালবিয়া (التلبية)
+                  <AudioPlayer arabicText="إحرام الحج والتلبية" className="alphabet-audio-btn" tone="default" />
+                </div>
                 <div className="flowchart-dua">
                   <p className="arabic-small">لَبَّيْكَ اللَّهُمَّ حَجًّا</p>
                   <p className="transliteration-small">Labbaik Allahumma Hajjan</p>
@@ -41,78 +66,143 @@ export default function Hajj() {
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">🕋</div>
-                <div className="flowchart-title">২. তাওয়াফে কুদুম</div>
-                <div className="flowchart-desc">মক্কায় প্রবেশ<br/>তাওয়াফ</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ২. তাওয়াফে কুদুম (طواف القدوم)
+                  <AudioPlayer arabicText="طواف القدوم" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  মক্কায় প্রবেশ (الدخول إلى مكة)<br/>তাওয়াফ (الطواف)
+                  <AudioPlayer arabicText="الدخول إلى مكة والطواف" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">🏃</div>
-                <div className="flowchart-title">৩. সাঈ</div>
-                <div className="flowchart-desc">সাফা-মারওয়া<br/>৭ বার</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৩. সাঈ (السعي)
+                  <AudioPlayer arabicText="السعي" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  সাফা-মারওয়া (الصفا والمروة)<br/>৭ বার (7 مرات)
+                  <AudioPlayer arabicText="7 مرات بين الصفا والمروة" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step highlight">
                 <div className="flowchart-icon">⛰️</div>
-                <div className="flowchart-title">৪. আরাফাত</div>
-                <div className="flowchart-desc">৯ই জিলহজ্জ<br/>সূর্যাস্ত পর্যন্ত</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৪. আরাফাত (عرفات)
+                  <AudioPlayer arabicText="عرفات" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৯ই জিলহজ্জ (اليوم التاسع من ذي الحجة)<br/>সূর্যাস্ত পর্যন্ত (حتى غروب الشمس)
+                  <AudioPlayer arabicText="اليوم التاسع من ذي الحجة حتى غروب الشمس" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">🌙</div>
-                <div className="flowchart-title">৫. মুজদালিফা</div>
-                <div className="flowchart-desc">৯ই রাত<br/>পাথর সংগ্রহ</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৫. মুজদালিফা (مزدلفة)
+                  <AudioPlayer arabicText="مزدلفة" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৯ই রাত (ليلة التاسع)<br/>পাথর সংগ্রহ (جمع الحصى)
+                  <AudioPlayer arabicText="ليلة التاسع وجمع الحصى" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step highlight">
                 <div className="flowchart-icon">🎯</div>
-                <div className="flowchart-title">৬. রমি</div>
-                <div className="flowchart-desc">১০ই জিলহজ্জ<br/>জামরাতুল আকাবা</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৬. রমি (الرمي)
+                  <AudioPlayer arabicText="الرمي" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ১০ই জিলহজ্জ (اليوم العاشر من ذي الحجة)<br/>জামরাতুল আকাবা (جمرة العقبة)
+                  <AudioPlayer arabicText="اليوم العاشر من ذي الحجة جمرة العقبة" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">🐑</div>
-                <div className="flowchart-title">৭. কুরবানি</div>
-                <div className="flowchart-desc">ঈদুল আযহা<br/>কুরবানি</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৭. কুরবানি (الذبح)
+                  <AudioPlayer arabicText="الذبح" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ঈদুল আযহা (عيد الأضحى)<br/>কুরবানি (الذبح)
+                  <AudioPlayer arabicText="عيد الأضحى والذبح" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">✂️</div>
-                <div className="flowchart-title">৮. চুল কাটা</div>
-                <div className="flowchart-desc">মুন্ডন/চুল কাটা<br/>ইহরাম খোলা</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৮. চুল কাটা (قص الشعر)
+                  <AudioPlayer arabicText="قص الشعر" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  মুন্ডন/চুল কাটা (الحلاقة/قص الشعر)<br/>ইহরাম খোলা (إزالة الإحرام)
+                  <AudioPlayer arabicText="الحلاقة وإزالة الإحرام" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">🔄</div>
-                <div className="flowchart-title">৯. তাওয়াফে জিয়ারত</div>
-                <div className="flowchart-desc">মক্কায় ফিরে<br/>তাওয়াফ</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ৯. তাওয়াফে জিয়ারত (طواف الزيارة)
+                  <AudioPlayer arabicText="طواف الزيارة" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  মক্কায় ফিরে (العودة إلى مكة)<br/>তাওয়াফ (الطواف)
+                  <AudioPlayer arabicText="العودة إلى مكة والطواف" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step">
                 <div className="flowchart-icon">🎯</div>
-                <div className="flowchart-title">১০. রমি (৩ দিন)</div>
-                <div className="flowchart-desc">১১-১৩ই জিলহজ্জ<br/>তিন জামরা</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ১০. রমি (৩ দিন) (الرمي 3 أيام)
+                  <AudioPlayer arabicText="الرمي 3 أيام" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  ১১-১৩ই জিলহজ্জ (الأيام 11-13 من ذي الحجة)<br/>তিন জামরা (الجمرات الثلاث)
+                  <AudioPlayer arabicText="الأيام 11-13 من ذي الحجة الجمرات الثلاث" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
               <div className="flowchart-arrow">↓</div>
               
               <div className="flowchart-step end">
                 <div className="flowchart-icon">✅</div>
-                <div className="flowchart-title">হজ্জ সম্পন্ন</div>
-                <div className="flowchart-desc">আল্লাহ কবুল করুন</div>
+                <div className="flowchart-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  হজ্জ সম্পন্ন (اكتمل الحج)
+                  <AudioPlayer arabicText="اكتمل الحج" className="alphabet-audio-btn" tone="default" />
+                </div>
+                <div className="flowchart-desc" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  আল্লাহ কবুল করুন (تقبل الله)
+                  <AudioPlayer arabicText="تقبل الله" className="alphabet-audio-btn" tone="default" />
+                </div>
               </div>
             </div>
           </div>
 
           <ExpandableSection 
             id="trip-checklist" 
-            title="হজ্জ ভ্রমণের প্রস্তুতি চেকলিস্ট (Hajj Trip Checklist)" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                হজ্জ ভ্রমণের প্রস্তুতি চেকলিস্ট (قائمة التحضير لرحلة الحج)
+                <AudioPlayer arabicText="قائمة التحضير لرحلة الحج" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="dua-category-wrapper"
             number={0}
@@ -122,7 +212,12 @@ export default function Hajj() {
 
           <ExpandableSection 
             id="hajj-importance" 
-            title="হজ্জ পালনের গুরুত্ব" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                হজ্জ পালনের গুরুত্ব (أهمية أداء الحج)
+                <AudioPlayer arabicText="أهمية أداء الحج" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             number={1}
@@ -130,7 +225,10 @@ export default function Hajj() {
             <div className="dua-item">
               <p className="info-text">হজ্জ হল ইসলামের পঞ্চম স্তম্ভ এবং প্রত্যেক সামর্থ্যবান মুসলমানের উপর ফরজ। এটি জীবনে একবার করা ফরজ এবং এটি ইসলামের সবচেয়ে গুরুত্বপূর্ণ ইবাদতগুলোর মধ্যে একটি।</p>
               
-              <h3>হজ্জর ফজিলত সম্পর্কে হাদীস</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                হজ্জর ফজিলত সম্পর্কে হাদীس (أحاديث عن فضائل الحج)
+                <AudioPlayer arabicText="أحاديث عن فضائل الحج" className="alphabet-audio-btn" tone="default" />
+              </h3>
               
               <div className="dua-box">
                 <h4>হাদীস ১:</h4>
@@ -172,7 +270,10 @@ export default function Hajj() {
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত আয়েশা (রা.) থেকে বর্ণিত, তিনি বলেন: আমি বললাম, হে আল্লাহর রাসূল! আমরা কি যুদ্ধ করব না এবং আপনার সাথে জিহাদ করব না? তিনি বললেন: "কিন্তু সর্বোত্তম ও সর্বোৎকৃষ্ট জিহাদ হল কবুলকৃত হজ্জ।" (সহীহ বুখারী)</p>
               </div>
               
-              <h3>হজ্জ কেন করতে হয়? (কেন হজ্জ ফরজ?)</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                হজ্জ কেন করতে হয়? (لماذا يجب أداء الحج؟)
+                <AudioPlayer arabicText="لماذا يجب أداء الحج؟" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <ul className="list-styled">
                 <li><strong>ইসলামের পঞ্চম স্তম্ভ:</strong> হজ্জ হল ইসলামের পঞ্চম ও শেষ স্তম্ভ। প্রত্যেক সামর্থ্যবান মুসলমানের উপর এটি ফরজ।</li>
                 <li><strong>আল্লাহর নির্দেশ:</strong> কুরআনে আল্লাহ তা'আলা বলেন: "আর আল্লাহর জন্য মানুষের উপর হজ্জ করা ফরজ, যারা সেখানে যাওয়ার সামর্থ্য রাখে।" (সূরা আল-ইমরান, আয়াত ৯৭)</li>
@@ -183,7 +284,10 @@ export default function Hajj() {
                 <li><strong>ইসলামি ঐক্য:</strong> হজ্জ মুসলমানদের মধ্যে ঐক্য, ভ্রাতৃত্ব ও সমতা প্রতিষ্ঠা করে।</li>
               </ul>
               
-              <h3>হজ্জ কখন করতে হয়? (হজ্জের সময়)</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                হজ্জ কখন করতে হয়? (متى يجب أداء الحج؟)
+                <AudioPlayer arabicText="متى يجب أداء الحج؟" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <div className="info-text">
                 <h4>হজ্জের নির্দিষ্ট সময়:</h4>
                 <p>হজ্জ শুধুমাত্র ইসলামি বর্ষপঞ্জির (হিজরি) <strong>জিলহজ্জ মাসের ৮ থেকে ১২ তারিখ</strong> পর্যন্ত করা যায়। এটি বছরের অন্যান্য সময় করা যায় না।</p>
@@ -208,7 +312,10 @@ export default function Hajj() {
                 <li><strong>সুযোগ:</strong> হজ্জে যাওয়ার সুযোগ থাকতে হবে (রাস্তা নিরাপদ, পরিবারের খরচের ব্যবস্থা থাকা)</li>
               </ul>
               
-              <h3>হজ্জ কীভাবে করতে হয়? (হজ্জের প্রক্রিয়া)</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                হজ্জ কীভাবে করতে হয়? (كيف يؤدى الحج؟)
+                <AudioPlayer arabicText="كيف يؤدى الحج؟" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <p className="info-text">হজ্জ একটি জটিল প্রক্রিয়া যা কয়েক দিন ধরে সম্পন্ন হয়। নিচে হজ্জের সম্পূর্ণ প্রক্রিয়া দেওয়া হল:</p>
               
               <h4>হজ্জের প্রধান ধাপসমূহ:</h4>
@@ -226,7 +333,10 @@ export default function Hajj() {
                 <li><strong>বিদায়ী তাওয়াফ:</strong> মক্কা ত্যাগ করার আগে বিদায়ী তাওয়াফ করতে হবে</li>
               </ol>
               
-              <h3>হজ্জর বিশেষ ফজিলতসমূহ</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                হজ্জর বিশেষ ফজিলতসমূহ (فضائل الحج الخاصة)
+                <AudioPlayer arabicText="فضائل الحج الخاصة" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <ul className="list-styled">
                 <li><strong>গুনাহ মাফ:</strong> কবুলকৃত হজ্জ পূর্ববর্তী সমস্ত গুনাহ মাফ করে দেয়</li>
                 <li><strong>জান্নাতের নিশ্চয়তা:</strong> হাদীস অনুসারে কবুলকৃত হজ্জের পুরস্কার হল জান্নাত</li>
@@ -238,7 +348,10 @@ export default function Hajj() {
                 <li><strong>ধৈর্য ও সহিষ্ণুতা:</strong> হজ্জ ধৈর্য, সহিষ্ণুতা ও সহনশীলতা বৃদ্ধি করে</li>
               </ul>
               
-              <h3>হজ্জর আধ্যাত্মিক গুরুত্ব</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                হজ্জর আধ্যাত্মিক গুরুত্ব (الأهمية الروحية للحج)
+                <AudioPlayer arabicText="الأهمية الروحية للحج" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <p>হজ্জ শুধুমাত্র একটি ধর্মীয় রীতি নয়, এটি একটি আধ্যাত্মিক যাত্রা যা মুসলমানদের:</p>
               <ul className="list-styled">
                 <li>আল্লাহর সাথে সরাসরি সম্পর্ক গড়ে তুলতে সাহায্য করে</li>
@@ -264,7 +377,12 @@ export default function Hajj() {
 
           <ExpandableSection 
             id="day-8" 
-            title="৮ই জিলহজ্জ - ইহরাম গ্রহণ" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ৮ই জিলহজ্জ - ইহরাম গ্রহণ (اليوم الثامن من ذي الحجة - الإحرام)
+                <AudioPlayer arabicText="اليوم الثامن من ذي الحجة - الإحرام" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="📅"
@@ -272,7 +390,10 @@ export default function Hajj() {
           >
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>মিকাত থেকে ইহরাম গ্রহণ করুন</li>
                   <li>গোসল করুন বা ওজু করুন</li>
@@ -299,7 +420,12 @@ export default function Hajj() {
 
           <ExpandableSection 
             id="day-9" 
-            title="৯ই জিলহজ্জ - আরাফাত দিবস" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ৯ই জিলহজ্জ - আরাফাত দিবস (اليوم التاسع من ذي الحجة - يوم عرفات)
+                <AudioPlayer arabicText="اليوم التاسع من ذي الحجة - يوم عرفات" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="⛰️"
@@ -307,7 +433,10 @@ export default function Hajj() {
           >
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>সূর্যোদয়ের পর মিনা থেকে আরাফাতের উদ্দেশ্যে রওনা হন</li>
                   <li>আরাফাতের ময়দানে অবস্থান করুন</li>
@@ -336,7 +465,12 @@ export default function Hajj() {
 
           <ExpandableSection 
             id="day-9-night" 
-            title="৯ই জিলহজ্জ রাত - মুজদালিফা" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ৯ই জিলহজ্জ রাত - মুজদালিফা (ليلة التاسع من ذي الحجة - مزدلفة)
+                <AudioPlayer arabicText="ليلة التاسع من ذي الحجة - مزدلفة" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="🌙"
@@ -344,7 +478,10 @@ export default function Hajj() {
           >
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>আরাফাত থেকে মুজদালিফায় পৌঁছুন</li>
                   <li>মাগরিব ও এশার নামাজ একত্রে পড়ুন</li>
@@ -358,7 +495,12 @@ export default function Hajj() {
 
           <ExpandableSection 
             id="day-10" 
-            title="১০ই জিলহজ্জ - ঈদুল আযহা (কুরবানির দিন)" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ১০ই জিলহজ্জ - ঈদুল আযহা (اليوم العاشر من ذي الحجة - عيد الأضحى)
+                <AudioPlayer arabicText="اليوم العاشر من ذي الحجة - عيد الأضحى" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="🎉"
@@ -366,7 +508,10 @@ export default function Hajj() {
           >
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>ফজরের নামাজের পর মুজদালিফা থেকে মিনায় যান</li>
                   <li>জামরাতুল আকাবা (বড় শয়তান) কে ৭টি পাথর মারুন</li>
@@ -405,7 +550,12 @@ export default function Hajj() {
 
           <ExpandableSection 
             id="day-11" 
-            title="১১ই জিলহজ্জ - প্রথম দিন রমি" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ১১ই জিলহজ্জ - প্রথম দিন রমি (اليوم الحادي عشر من ذي الحجة - اليوم الأول للرمي)
+                <AudioPlayer arabicText="اليوم الحادي عشر من ذي الحجة - اليوم الأول للرمي" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="🎯"
@@ -413,7 +563,10 @@ export default function Hajj() {
           >
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>সূর্য পশ্চিম দিকে হেলে যাওয়ার পর (জোহরের পর) তিনটি জামরায় পাথর মারুন</li>
                   <li>প্রথমে জামরাতুল উলা (ছোট শয়তান) - ৭টি পাথর</li>
@@ -437,7 +590,12 @@ export default function Hajj() {
 
           <ExpandableSection 
             id="day-12" 
-            title="১২ই জিলহজ্জ - দ্বিতীয় দিন রমি" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ১২ই জিলহজ্জ - দ্বিতীয় দিন রমি (اليوم الثاني عشر من ذي الحجة - اليوم الثاني للرمي)
+                <AudioPlayer arabicText="اليوم الثاني عشر من ذي الحجة - اليوم الثاني للرمي" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="🎯"
@@ -445,7 +603,10 @@ export default function Hajj() {
           >
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>আগের দিনের মতো তিনটি জামরায় পাথর মারুন</li>
                   <li>জোহরের পর থেকে সূর্যাস্তের আগ পর্যন্ত সময়ে</li>
@@ -458,7 +619,12 @@ export default function Hajj() {
 
           <ExpandableSection 
             id="day-13" 
-            title="১৩ই জিলহজ্জ - তৃতীয় দিন রমি (যদি মিনায় থাকেন)" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                ১৩ই জিলহজ্জ - তৃতীয় দিন রমি (اليوم الثالث عشر من ذي الحجة - اليوم الثالث للرمي)
+                <AudioPlayer arabicText="اليوم الثالث عشر من ذي الحجة - اليوم الثالث للرمي" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="🎯"
@@ -466,7 +632,10 @@ export default function Hajj() {
           >
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>আগের দিনের মতো তিনটি জামরায় পাথর মারুন</li>
                   <li>রমি শেষে মিনা ত্যাগ করুন</li>
@@ -478,7 +647,12 @@ export default function Hajj() {
 
           <ExpandableSection 
             id="farewell-tawaf" 
-            title="বিদায়ী তাওয়াফ (Tawaf al-Wida)" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                বিদায়ী তাওয়াফ (طواف الوداع)
+                <AudioPlayer arabicText="طواف الوداع" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="🔄"
@@ -486,7 +660,10 @@ export default function Hajj() {
           >
             <div className="process-step">
               <div className="step-content">
-                <h3>কি করতে হবে:</h3>
+                <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  কি করতে হবে: (ما يجب فعله)
+                  <AudioPlayer arabicText="ما يجب فعله" className="alphabet-audio-btn" tone="default" />
+                </h3>
                 <ul>
                   <li>মক্কা ত্যাগ করার আগে বিদায়ী তাওয়াফ করুন</li>
                   <li>৭ বার কাবা প্রদক্ষিণ করুন</li>
@@ -510,7 +687,12 @@ export default function Hajj() {
 
           <ExpandableSection 
             id="masjid-nabawi" 
-            title="মসজিদে নববীতে যাওয়া (Visiting Masjid al-Nabawi)" 
+            title={
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                মসজিদে নববীতে যাওয়া (زيارة المسجد النبوي)
+                <AudioPlayer arabicText="زيارة المسجد النبوي" className="alphabet-audio-btn" tone="default" />
+              </span>
+            }
             defaultOpen={false}
             className="day-section-expandable"
             icon="🕌"
@@ -519,7 +701,10 @@ export default function Hajj() {
             <div className="dua-item">
               <p className="info-text">হজ্জ সম্পন্ন করার পর বা আগে মদিনা শরীফে গিয়ে মসজিদে নববীতে নামাজ পড়া এবং রাসূলুল্লাহ (সা.) এর রওজা শরীফে সালাম দেওয়া একটি সুন্নত ও অত্যন্ত ফজিলতপূর্ণ আমল।</p>
               
-              <h3>মসজিদে নববীতে যাওয়ার ফজিলত সম্পর্কে হাদীস</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                মসজিদে নববীতে যাওয়ার ফজিলত সম্পর্কে হাদীস (أحاديث عن فضائل زيارة المسجد النبوي)
+                <AudioPlayer arabicText="أحاديث عن فضائل زيارة المسجد النبوي" className="alphabet-audio-btn" tone="default" />
+              </h3>
               
               <div className="dua-box">
                 <h4>হাদীস ১:</h4>
@@ -561,7 +746,10 @@ export default function Hajj() {
                 <p className="translation"><strong>অনুবাদ:</strong> হযরত আবু হুরায়রা (রা.) থেকে বর্ণিত, রাসূলুল্লাহ (সা.) বলেছেন: "আমার ঘর ও মিম্বরের মধ্যবর্তী স্থান হল জান্নাতের বাগানসমূহের একটি বাগান।" (সহীহ বুখারী, সহীহ মুসলিম)</p>
               </div>
               
-              <h3>মসজিদে নববীতে কি করতে হবে?</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                মসজিদে নববীতে কি করতে হবে? (ماذا يجب فعله في المسجد النبوي؟)
+                <AudioPlayer arabicText="ماذا يجب فعله في المسجد النبوي؟" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <div className="info-text">
                 <h4>মদিনায় পৌঁছার পর করণীয়:</h4>
                 <ol className="list-styled">
@@ -593,7 +781,10 @@ export default function Hajj() {
                 <p className="translation"><strong>অনুবাদ:</strong> হে আল্লাহ, মুহাম্মদ (সা.) ও তাঁর পরিবারের উপর রহমত বর্ষণ করুন, যেমন আপনি ইব্রাহিম (আঃ) ও তাঁর পরিবারের উপর রহমত বর্ষণ করেছিেন। নিশ্চয়ই আপনি প্রশংসিত ও মহান।</p>
               </div>
               
-              <h3>মসজিদে নববীতে নামাজের ফজিলত</h3>
+              <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                মসজিদে নববীতে নামাজের ফজিলত (فضائل الصلاة في المسجد النبوي)
+                <AudioPlayer arabicText="فضائل الصلاة في المسجد النبوي" className="alphabet-audio-btn" tone="default" />
+              </h3>
               <ul className="list-styled">
                 <li><strong>বিশেষ পুরস্কার:</strong> মসজিদে নববীতে এক নামাজ মসজিদুল হারাম ছাড়া অন্য যেকোনো মসজিদে এক হাজার নামাজের সমান</li>
                 <li><strong>রওজা শরীফ:</strong> রাসূলুল্লাহ (সা.) এর ঘর ও মিম্বরের মধ্যবর্তী স্থান হল জান্নাতের বাগান</li>

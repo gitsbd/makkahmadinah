@@ -1,3 +1,5 @@
+'use client'
+
 import PageHeader from '@/components/PageHeader'
 import SectionWrapper from '@/components/SectionWrapper'
 import ExpandableSection from '@/components/ExpandableSection'
@@ -186,7 +188,7 @@ export default function ArabicLearning() {
         {/* Arabic Numbers Section */}
         <ExpandableSection 
           id="arabic-numbers" 
-          title={createArabicTitle("প্রাথমিক আরবি শিক্ষা - Basic Arabic learning", "تعلم العربية الأساسي", "Taʿallum al-ʿarabiyya al-asāsī")}
+          title={createArabicTitle("প্রাথমিক আরবি শিক্ষা (Basic Arabic Learning)", "تعلم العربية الأساسي", "Taʿallum al-ʿarabiyya al-asāsī")}
           defaultOpen={false}
           className="dua-category-wrapper"
           number={1}
@@ -565,7 +567,7 @@ export default function ArabicLearning() {
               id="daily-words-subsection" 
               title={
                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <span>Numbers, Colors, Family, Common Things</span>
+                  <span>সংখ্যা, রং, পরিবার, সাধারণ জিনিস (Numbers, Colors, Family, Common Things)</span>
                   <span style={{ fontSize: '1rem', direction: 'rtl' }}>أرقام، ألوان، عائلة، أشياء شائعة</span>
                   <AudioPlayer arabicText="أرقام ألوان عائلة أشياء شائعة" className="alphabet-audio-btn" tone="default" />
                   <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(Arqām, alwān, ʿāʾila, ashyaʾ shāʾiʿa)</span>
@@ -916,7 +918,7 @@ export default function ArabicLearning() {
               id="pronunciation-subsection" 
               title={
                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <span>Step 2: Pronunciation first (very important)</span>
+                  <span>ধাপ ২: উচ্চারণ প্রথম (অত্যন্ত গুরুত্বপূর্ণ) (Step 2: Pronunciation first - very important)</span>
                   <span style={{ fontSize: '1rem', direction: 'rtl' }}>النطق أولاً</span>
                   <AudioPlayer arabicText="النطق أولاً" className="alphabet-audio-btn" tone="default" />
                   <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(An-nuṭq awwalan)</span>
@@ -1074,7 +1076,7 @@ export default function ArabicLearning() {
               id="speaking-day1-subsection" 
               title={
                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <span>Step 4: Speaking from Day 1 (even alone)</span>
+                  <span>ধাপ ৪: প্রথম দিন থেকেই কথা বলা (একা হলেও) (Step 4: Speaking from Day 1 - even alone)</span>
                   <span style={{ fontSize: '1rem', direction: 'rtl' }}>التحدث من اليوم الأول</span>
                   <AudioPlayer arabicText="التحدث من اليوم الأول" className="alphabet-audio-btn" tone="default" />
                   <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(At-taḥadduth min al-yawm al-awwal)</span>
@@ -1164,7 +1166,7 @@ export default function ArabicLearning() {
               id="tiny-grammar-subsection" 
               title={
                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <span>Step 5: Tiny grammar (only after 2 weeks)</span>
+                  <span>ধাপ ৫: ছোট ব্যাকরণ (শুধুমাত্র ২ সপ্তাহ পর) (Step 5: Tiny grammar - only after 2 weeks)</span>
                   <span style={{ fontSize: '1rem', direction: 'rtl' }}>قواعد صغيرة</span>
                   <AudioPlayer arabicText="قواعد صغيرة" className="alphabet-audio-btn" tone="default" />
                   <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(Qawāʿid ṣaghīra)</span>
@@ -1924,7 +1926,7 @@ export default function ArabicLearning() {
             {/* Day 9 */}
             <ExpandableSection 
               id="day-9" 
-              title={createArabicTitle("Day 9 — Time basics", "اليوم التاسع — أساسيات الوقت", "Al-yawm at-tāsiʿ — Asāsiyyāt al-waqt")} 
+              title={createArabicTitle("Day 9 — সময়ের মূল বিষয় (Time basics)", "اليوم التاسع — أساسيات الوقت", "Al-yawm at-tāsiʿ — Asāsiyyāt al-waqt")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2381,7 +2383,7 @@ export default function ArabicLearning() {
             {/* Day 18 */}
             <ExpandableSection 
               id="day-18" 
-              title={createArabicTitle("Day 18 — At the airport / travel", "اليوم الثامن عشر — في المطار / السفر", "Al-yawm ath-thāmin ʿashar — Fī al-maṭār / As-safar")} 
+              title={createArabicTitle("Day 18 — বিমানবন্দরে / ভ্রমণ (At the airport / travel)", "اليوم الثامن عشر — في المطار / السفر", "Al-yawm ath-thāmin ʿashar — Fī al-maṭār / As-safar")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2740,7 +2742,7 @@ export default function ArabicLearning() {
             {/* Day 26 */}
             <ExpandableSection 
               id="day-26" 
-              title={createArabicTitle("Day 26 — Simple conversation builder (templates)", "اليوم السادس والعشرون — بناء محادثة بسيطة (قوالب)", "Al-yawm as-sādis wa-l-ʿishrūn — Bināʾ muḥādatha basīṭa (qawālib)")} 
+              title={createArabicTitle("Day 26 — সহজ কথোপকথন তৈরি (টেমপ্লেট) (Simple conversation builder - templates)", "اليوم السادس والعشرون — بناء محادثة بسيطة (قوالب)", "Al-yawm as-sādis wa-l-ʿishrūn — Bināʾ muḥādatha basīṭa (qawālib)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2901,7 +2903,7 @@ export default function ArabicLearning() {
             {/* Day 31 */}
             <ExpandableSection 
               id="day-31" 
-              title={createArabicTitle("Day 31 — Past tense verbs (I did...) (দিন ৩১ — অতীত কালের ক্রিয়া)", "اليوم الحادي والثلاثون — أفعال الماضي (فعلت...)", "Al-yawm al-ḥādī wa-th-thalāthūn — Afʿāl al-māḍī (faʿaltu...)")}
+              title={createArabicTitle("দিন ৩১ — অতীত কালের ক্রিয়া (I did...) (Day 31 — Past tense verbs)", "اليوم الحادي والثلاثون — أفعال الماضي (فعلت...)", "Al-yawm al-ḥādī wa-th-thalāthūn — Afʿāl al-māḍī (faʿaltu...)")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2966,7 +2968,7 @@ export default function ArabicLearning() {
             {/* Day 32 */}
             <ExpandableSection 
               id="day-32" 
-              title={createArabicTitle("Day 32 — Future tense (I will...) (দিন ৩২ — ভবিষ্যৎ কাল)", "اليوم الثاني والثلاثون — المستقبل (سأفعل...)", "Al-yawm ath-thānī wa-th-thalāthūn — Al-mustaqbal (sa-afʿal...)")} 
+              title={createArabicTitle("দিন ৩২ — ভবিষ্যৎ কাল (I will...) (Day 32 — Future tense)", "اليوم الثاني والثلاثون — المستقبل (سأفعل...)", "Al-yawm ath-thānī wa-th-thalāthūn — Al-mustaqbal (sa-afʿal...)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3021,7 +3023,7 @@ export default function ArabicLearning() {
             {/* Day 33 */}
             <ExpandableSection 
               id="day-33" 
-              title={createArabicTitle("Day 33 — Weather & seasons (দিন ৩৩ — আবহাওয়া ও ঋতু)", "اليوم الثالث والثلاثون — الطقس والفصول", "Al-yawm ath-thālith wa-th-thalāthūn — Aṭ-ṭaqs wa-l-fuṣūl")} 
+              title={createArabicTitle("দিন ৩৩ — আবহাওয়া ও ঋতু (Day 33 — Weather & seasons)", "اليوم الثالث والثلاثون — الطقس والفصول", "Al-yawm ath-thālith wa-th-thalāthūn — Aṭ-ṭaqs wa-l-fuṣūl")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3075,7 +3077,7 @@ export default function ArabicLearning() {
             {/* Day 34 */}
             <ExpandableSection 
               id="day-34" 
-              title={createArabicTitle("Day 34 — Body parts (দিন ৩৪ — শরীরের অংশ)", "اليوم الرابع والثلاثون — أجزاء الجسم", "Al-yawm ar-rābiʿ wa-th-thalāthūn — Ajzāʾ al-jism")} 
+              title={createArabicTitle("দিন ৩৪ — শরীরের অংশ (Day 34 — Body parts)", "اليوم الرابع والثلاثون — أجزاء الجسم", "Al-yawm ar-rābiʿ wa-th-thalāthūn — Ajzāʾ al-jism")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3139,7 +3141,7 @@ export default function ArabicLearning() {
             {/* Day 35 */}
             <ExpandableSection 
               id="day-35" 
-              title={createArabicTitle("Day 35 — Colors (দিন ৩৫ — রং)", "اليوم الخامس والثلاثون — الألوان", "Al-yawm al-khāmis wa-th-thalāthūn — Al-alwān")} 
+              title={createArabicTitle("দিন ৩৫ — রং (Day 35 — Colors)", "اليوم الخامس والثلاثون — الألوان", "Al-yawm al-khāmis wa-th-thalāthūn — Al-alwān")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3205,7 +3207,7 @@ export default function ArabicLearning() {
             {/* Day 36 */}
             <ExpandableSection 
               id="day-36" 
-              title={createArabicTitle("Day 36 — At the hotel (দিন ৩৬ — হোটেলে)", "اليوم السادس والثلاثون — في الفندق", "Al-yawm as-sādis wa-th-thalāthūn — Fī al-funduq")} 
+              title={createArabicTitle("দিন ৩৬ — হোটেলে (Day 36 — At the hotel)", "اليوم السادس والثلاثون — في الفندق", "Al-yawm as-sādis wa-th-thalāthūn — Fī al-funduq")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3261,7 +3263,7 @@ export default function ArabicLearning() {
             {/* Day 37 */}
             <ExpandableSection 
               id="day-37" 
-              title={createArabicTitle("Day 37 — Review Day (দিন ৩৭ — পর্যালোচনা দিন)", "اليوم السابع والثلاثون — يوم المراجعة", "Al-yawm as-sābiʿ wa-th-thalāthūn — Yawm al-murājaʿa")} 
+              title={createArabicTitle("দিন ৩৭ — পর্যালোচনা দিন (Day 37 — Review Day)", "اليوم السابع والثلاثون — يوم المراجعة", "Al-yawm as-sābiʿ wa-th-thalāthūn — Yawm al-murājaʿa")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3273,7 +3275,7 @@ export default function ArabicLearning() {
             {/* Day 38 */}
             <ExpandableSection 
               id="day-38" 
-              title={createArabicTitle("Day 38 — More verbs (daily actions) (দিন ৩৮ — আরও ক্রিয়া)", "اليوم الثامن والثلاثون — المزيد من الأفعال (أفعال يومية)", "Al-yawm ath-thāmin wa-th-thalāthūn — Al-mazīd min al-afʿāl (afʿāl yawmiyya)")} 
+              title={createArabicTitle("দিন ৩৮ — আরও ক্রিয়া (দৈনন্দিন কাজ) (Day 38 — More verbs - daily actions)", "اليوم الثامن والثلاثون — المزيد من الأفعال (أفعال يومية)", "Al-yawm ath-thāmin wa-th-thalāthūn — Al-mazīd min al-afʿāl (afʿāl yawmiyya)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3337,7 +3339,7 @@ export default function ArabicLearning() {
             {/* Day 39 */}
             <ExpandableSection 
               id="day-39" 
-              title={createArabicTitle("Day 39 — Clothes & shopping (দিন ৩৯ — পোশাক ও কেনাকাটা)", "اليوم التاسع والثلاثون — الملابس والتسوق", "Al-yawm at-tāsiʿ wa-th-thalāthūn — Al-malābis wa-t-tasawwuq")}
+              title={createArabicTitle("দিন ৩৯ — পোশাক ও কেনাকাটা (Day 39 — Clothes & shopping)", "اليوم التاسع والثلاثون — الملابس والتسوق", "Al-yawm at-tāsiʿ wa-th-thalāthūn — Al-malābis wa-t-tasawwuq")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3392,7 +3394,7 @@ export default function ArabicLearning() {
             {/* Day 40 */}
             <ExpandableSection 
               id="day-40" 
-              title={createArabicTitle("Day 40 — Health & doctor (দিন ৪০ — স্বাস্থ্য ও ডাক্তার)", "اليوم الأربعون — الصحة والطبيب", "Al-yawm al-arbaʿūn — Aṣ-ṣiḥḥa wa-ṭ-ṭabīb")} 
+              title={createArabicTitle("দিন ৪০ — স্বাস্থ্য ও ডাক্তার (Day 40 — Health & doctor)", "اليوم الأربعون — الصحة والطبيب", "Al-yawm al-arbaʿūn — Aṣ-ṣiḥḥa wa-ṭ-ṭabīb")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3448,7 +3450,7 @@ export default function ArabicLearning() {
             {/* Day 41 */}
             <ExpandableSection 
               id="day-41" 
-              title={createArabicTitle("Day 41 — Phone & technology", "اليوم الحادي والأربعون — الهاتف والتكنولوجيا", "Al-yawm al-ḥādī wa-l-arbaʿūn — Al-hātif wa-t-tiknūlūjiyā")} 
+              title={createArabicTitle("Day 41 — ফোন ও প্রযুক্তি (Phone & technology)", "اليوم الحادي والأربعون — الهاتف والتكنولوجيا", "Al-yawm al-ḥādī wa-l-arbaʿūn — Al-hātif wa-t-tiknūlūjiyā")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3503,7 +3505,7 @@ export default function ArabicLearning() {
             {/* Day 42 */}
             <ExpandableSection 
               id="day-42" 
-              title={createArabicTitle("Day 42 — Money & banking (দিন ৪২ — টাকা ও ব্যাংকিং)", "اليوم الثاني والأربعون — المال والبنوك", "Al-yawm ath-thānī wa-l-arbaʿūn — Al-māl wa-l-bunūk")} 
+              title={createArabicTitle("দিন ৪২ — টাকা ও ব্যাংকিং (Day 42 — Money & banking)", "اليوم الثاني والأربعون — المال والبنوك", "Al-yawm ath-thānī wa-l-arbaʿūn — Al-māl wa-l-bunūk")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3558,7 +3560,7 @@ export default function ArabicLearning() {
             {/* Day 43 */}
             <ExpandableSection 
               id="day-43" 
-              title={createArabicTitle("Day 43 — Transportation (advanced) (দিন ৪৩ — পরিবহন)", "اليوم الثالث والأربعون — النقل (متقدم)", "Al-yawm ath-thālith wa-l-arbaʿūn — An-naql (mutaqaddim)")} 
+              title={createArabicTitle("দিন ৪৩ — পরিবহন (উন্নত) (Day 43 — Transportation - advanced)", "اليوم الثالث والأربعون — النقل (متقدم)", "Al-yawm ath-thālith wa-l-arbaʿūn — An-naql (mutaqaddim)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3613,7 +3615,7 @@ export default function ArabicLearning() {
             {/* Day 44 */}
             <ExpandableSection 
               id="day-44" 
-              title={createArabicTitle("Day 44 — Review Day (দিন ৪৪ — পর্যালোচনা দিন)", "اليوم الرابع والأربعون — يوم المراجعة", "Al-yawm ar-rābiʿ wa-l-arbaʿūn — Yawm al-murājaʿa")} 
+              title={createArabicTitle("দিন ৪৪ — পর্যালোচনা দিন (Day 44 — Review Day)", "اليوم الرابع والأربعون — يوم المراجعة", "Al-yawm ar-rābiʿ wa-l-arbaʿūn — Yawm al-murājaʿa")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3625,7 +3627,7 @@ export default function ArabicLearning() {
             {/* Day 45 */}
             <ExpandableSection 
               id="day-45" 
-              title={createArabicTitle("Day 45 — Emotions & expressions (দিন ৪৫ — আবেগ ও অভিব্যক্তি)", "اليوم الخامس والأربعون — المشاعر والتعبيرات", "Al-yawm al-khāmis wa-l-arbaʿūn — Al-mashāʿir wa-t-taʿbīrāt")} 
+              title={createArabicTitle("দিন ৪৫ — আবেগ ও অভিব্যক্তি (Day 45 — Emotions & expressions)", "اليوم الخامس والأربعون — المشاعر والتعبيرات", "Al-yawm al-khāmis wa-l-arbaʿūn — Al-mashāʿir wa-t-taʿbīrāt")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3680,7 +3682,7 @@ export default function ArabicLearning() {
             {/* Day 46 */}
             <ExpandableSection 
               id="day-46" 
-              title={createArabicTitle("Day 46 — Making plans (দিন ৪৬ — পরিকল্পনা করা)", "اليوم السادس والأربعون — وضع الخطط", "Al-yawm as-sādis wa-l-arbaʿūn — Waḍʿ al-khuṭuṭ")}
+              title={createArabicTitle("দিন ৪৬ — পরিকল্পনা করা (Day 46 — Making plans)", "اليوم السادس والأربعون — وضع الخطط", "Al-yawm as-sādis wa-l-arbaʿūn — Waḍʿ al-khuṭuṭ")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3736,7 +3738,7 @@ export default function ArabicLearning() {
             {/* Day 47 */}
             <ExpandableSection 
               id="day-47" 
-              title={createArabicTitle("Day 47 — Hobbies & interests (দিন ৪৭ — শখ ও আগ্রহ)", "اليوم السابع والأربعون — الهوايات والاهتمامات", "Al-yawm as-sābiʿ wa-l-arbaʿūn — Al-hawāyāt wa-l-ihtimāmāt")} 
+              title={createArabicTitle("দিন ৪৭ — শখ ও আগ্রহ (Day 47 — Hobbies & interests)", "اليوم السابع والأربعون — الهوايات والاهتمامات", "Al-yawm as-sābiʿ wa-l-arbaʿūn — Al-hawāyāt wa-l-ihtimāmāt")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3790,7 +3792,7 @@ export default function ArabicLearning() {
             {/* Day 48 */}
             <ExpandableSection 
               id="day-48" 
-              title={createArabicTitle("Day 48 — At the market (দিন ৪৮ — বাজারে)", "اليوم الثامن والأربعون — في السوق", "Al-yawm ath-thāmin wa-l-arbaʿūn — Fī as-sūq")}
+              title={createArabicTitle("দিন ৪৮ — বাজারে (Day 48 — At the market)", "اليوم الثامن والأربعون — في السوق", "Al-yawm ath-thāmin wa-l-arbaʿūn — Fī as-sūq")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3844,7 +3846,7 @@ export default function ArabicLearning() {
             {/* Day 49 */}
             <ExpandableSection 
               id="day-49" 
-              title={createArabicTitle("Day 49 — Giving directions (detailed) (দিন ৪৯ — দিকনির্দেশনা দেওয়া)", "اليوم التاسع والأربعون — إعطاء الاتجاهات (مفصل)", "Al-yawm at-tāsiʿ wa-l-arbaʿūn — Iʿṭāʾ al-ittijāhāt (mufaṣṣal)")} 
+              title={createArabicTitle("দিন ৪৯ — দিকনির্দেশনা দেওয়া (বিস্তারিত) (Day 49 — Giving directions - detailed)", "اليوم التاسع والأربعون — إعطاء الاتجاهات (مفصل)", "Al-yawm at-tāsiʿ wa-l-arbaʿūn — Iʿṭāʾ al-ittijāhāt (mufaṣṣal)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3898,7 +3900,7 @@ export default function ArabicLearning() {
             {/* Day 50 */}
             <ExpandableSection 
               id="day-50" 
-              title={createArabicTitle("Day 50 — Review Day (দিন ৫০ — পর্যালোচনা দিন)", "اليوم الخمسون — يوم المراجعة", "Al-yawm al-khamsūn — Yawm al-murājaʿa")}
+              title={createArabicTitle("দিন ৫০ — পর্যালোচনা দিন (Day 50 — Review Day)", "اليوم الخمسون — يوم المراجعة", "Al-yawm al-khamsūn — Yawm al-murājaʿa")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3910,7 +3912,7 @@ export default function ArabicLearning() {
             {/* Day 51 */}
             <ExpandableSection 
               id="day-51" 
-              title={createArabicTitle("Day 51 — Numbers 11-20 (speaking) (দিন ৫১ — সংখ্যা ১১-২০)", "اليوم الحادي والخمسون — الأرقام 11-20 (التحدث)", "Al-yawm al-ḥādī wa-l-khamsūn — Al-arqām 11-20 (at-taḥadduth)")} 
+              title={createArabicTitle("দিন ৫১ — সংখ্যা ১১-২০ (কথা বলা) (Day 51 — Numbers 11-20 - speaking)", "اليوم الحادي والخمسون — الأرقام 11-20 (التحدث)", "Al-yawm al-ḥādī wa-l-khamsūn — Al-arqām 11-20 (at-taḥadduth)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3940,7 +3942,7 @@ export default function ArabicLearning() {
             {/* Day 52 */}
             <ExpandableSection 
               id="day-52" 
-              title={createArabicTitle("Day 52 — Time expressions (advanced) (দিন ৫২ — সময়ের অভিব্যক্তি)", "اليوم الثاني والخمسون — تعبيرات الوقت (متقدم)", "Al-yawm ath-thānī wa-l-khamsūn — Taʿbīrāt al-waqt (mutaqaddim)")} 
+              title={createArabicTitle("দিন ৫২ — সময়ের অভিব্যক্তি (উন্নত) (Day 52 — Time expressions - advanced)", "اليوم الثاني والخمسون — تعبيرات الوقت (متقدم)", "Al-yawm ath-thānī wa-l-khamsūn — Taʿbīrāt al-waqt (mutaqaddim)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3994,7 +3996,7 @@ export default function ArabicLearning() {
             {/* Day 53 */}
             <ExpandableSection 
               id="day-53" 
-              title={createArabicTitle("Day 53 — Asking for help (দিন ৫৩ — সাহায্য চাওয়া)", "اليوم الثالث والخمسون — طلب المساعدة", "Al-yawm ath-thālith wa-l-khamsūn — Ṭalab al-musāʿada")} 
+              title={createArabicTitle("দিন ৫৩ — সাহায্য চাওয়া (Day 53 — Asking for help)", "اليوم الثالث والخمسون — طلب المساعدة", "Al-yawm ath-thālith wa-l-khamsūn — Ṭalab al-musāʿada")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -4048,7 +4050,7 @@ export default function ArabicLearning() {
             {/* Day 54 */}
             <ExpandableSection 
               id="day-54" 
-              title={createArabicTitle("Day 54 — Expressing opinions (দিন ৫৪ — মতামত প্রকাশ করা)", "اليوم الرابع والخمسون — التعبير عن الآراء", "Al-yawm ar-rābiʿ wa-l-khamsūn — At-taʿbīr ʿan al-ārāʾ")}
+              title={createArabicTitle("দিন ৫৪ — মতামত প্রকাশ করা (Day 54 — Expressing opinions)", "اليوم الرابع والخمسون — التعبير عن الآراء", "Al-yawm ar-rābiʿ wa-l-khamsūn — At-taʿbīr ʿan al-ārāʾ")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -4102,7 +4104,7 @@ export default function ArabicLearning() {
             {/* Day 55 */}
             <ExpandableSection 
               id="day-55" 
-              title={createArabicTitle("Day 55 — Making comparisons (দিন ৫৫ — তুলনা করা)", "اليوم الخامس والخمسون — المقارنات", "Al-yawm al-khāmis wa-l-khamsūn — Al-muqāranāt")} 
+              title={createArabicTitle("দিন ৫৫ — তুলনা করা (Day 55 — Making comparisons)", "اليوم الخامس والخمسون — المقارنات", "Al-yawm al-khāmis wa-l-khamsūn — Al-muqāranāt")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -4155,7 +4157,7 @@ export default function ArabicLearning() {
             {/* Day 56 */}
             <ExpandableSection 
               id="day-56" 
-              title={createArabicTitle("Day 56 — Review Day (দিন ৫৬ — পর্যালোচনা দিন)", "اليوم السادس والخمسون — يوم المراجعة", "Al-yawm as-sādis wa-l-khamsūn — Yawm al-murājaʿa")} 
+              title={createArabicTitle("দিন ৫৬ — পর্যালোচনা দিন (Day 56 — Review Day)", "اليوم السادس والخمسون — يوم المراجعة", "Al-yawm as-sādis wa-l-khamsūn — Yawm al-murājaʿa")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -4167,7 +4169,7 @@ export default function ArabicLearning() {
             {/* Day 57 */}
             <ExpandableSection 
               id="day-57" 
-              title={createArabicTitle("Day 57 — Conversation: At the post office (দিন ৫৭ — কথোপকথন: ডাকঘরে)", "اليوم السابع والخمسون — محادثة: في مكتب البريد", "Al-yawm as-sābiʿ wa-l-khamsūn — Muḥādatha: Fī maktab al-barīd")} 
+              title={createArabicTitle("দিন ৫৭ — কথোপকথন: ডাকঘরে (Day 57 — Conversation: At the post office)", "اليوم السابع والخمسون — محادثة: في مكتب البريد", "Al-yawm as-sābiʿ wa-l-khamsūn — Muḥādatha: Fī maktab al-barīd")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -4211,7 +4213,7 @@ export default function ArabicLearning() {
             {/* Day 58 */}
             <ExpandableSection 
               id="day-58" 
-              title={createArabicTitle("Day 58 — Conversation: At the pharmacy (দিন ৫৮ — কথোপকথন: ফার্মেসিতে)", "اليوم الثامن والخمسون — محادثة: في الصيدلية", "Al-yawm ath-thāmin wa-l-khamsūn — Muḥādatha: Fī aṣ-ṣaydaliyya")}
+              title={createArabicTitle("দিন ৫৮ — কথোপকথন: ফার্মেসিতে (Day 58 — Conversation: At the pharmacy)", "اليوم الثامن والخمسون — محادثة: في الصيدلية", "Al-yawm ath-thāmin wa-l-khamsūn — Muḥādatha: Fī aṣ-ṣaydaliyya")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -4254,7 +4256,7 @@ export default function ArabicLearning() {
             {/* Day 59 */}
             <ExpandableSection 
               id="day-59" 
-              title={createArabicTitle("Day 59 — Conversation: Making appointments (দিন ৫৯ — কথোপকথন: অ্যাপয়েন্টমেন্ট করা)", "اليوم التاسع والخمسون — محادثة: تحديد المواعيد", "Al-yawm at-tāsiʿ wa-l-khamsūn — Muḥādatha: Taḥdīd al-mawāʿīd")} 
+              title={createArabicTitle("দিন ৫৯ — কথোপকথন: অ্যাপয়েন্টমেন্ট করা (Day 59 — Conversation: Making appointments)", "اليوم التاسع والخمسون — محادثة: تحديد المواعيد", "Al-yawm at-tāsiʿ wa-l-khamsūn — Muḥādatha: Taḥdīd al-mawāʿīd")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -4298,7 +4300,7 @@ export default function ArabicLearning() {
             {/* Day 60 */}
             <ExpandableSection 
               id="day-60" 
-              title={createArabicTitle('Day 60 — Final speaking test (60 days milestone) (দিন ৬০ — চূড়ান্ত কথা বলা পরীক্ষা)', 'اليوم الستون — اختبار التحدث النهائي (معلم 60 يوماً)', 'Al-yawm as-sittūn — Ikhtibār at-taḥadduth an-nihāʾī (maʿlam 60 yawman)')} 
+              title={createArabicTitle('দিন ৬০ — চূড়ান্ত কথা বলা পরীক্ষা (৬০ দিনের মাইলফলক) (Day 60 — Final speaking test - 60 days milestone)', 'اليوم الستون — اختبار التحدث النهائي (معلم 60 يوماً)', 'Al-yawm as-sittūn — Ikhtibār at-taḥadduth an-nihāʾī (maʿlam 60 yawman)')} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
