@@ -23,14 +23,22 @@ export default function ExpandableSection({
 }) {
   const [isOpen, setIsOpen] = useState(defaultOpen)
 
-  const toggle = () => {
+  const toggle = (e) => {
+    // Don't toggle if clicking on an interactive element (button, link, etc.)
+    if (e && e.target && e.target.closest('button, a, [role="button"]:not(.expandable-toggle)')) {
+      return
+    }
     setIsOpen(!isOpen)
   }
 
   const handleKeyDown = (e) => {
+    // Don't handle if focus is on an interactive element inside
+    if (e.target.closest('button, a, [role="button"]:not(.expandable-toggle)')) {
+      return
+    }
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
-      toggle()
+      toggle(e)
     }
   }
 
@@ -39,13 +47,14 @@ export default function ExpandableSection({
       className={`expandable-section ${className}`}
       id={id}
     >
-      <button
+      <div
         className={`expandable-toggle ${isOpen ? 'active' : ''} ${headerClassName}`}
         onClick={toggle}
         onKeyDown={handleKeyDown}
         aria-expanded={isOpen}
         aria-controls={`${id}-content`}
-        type="button"
+        role="button"
+        tabIndex={0}
       >
         <div className="expandable-header-content">
           {number !== null && <span className="expandable-number">{number}</span>}
@@ -58,7 +67,7 @@ export default function ExpandableSection({
         >
           {isOpen ? '▲' : '▼'}
         </span>
-      </button>
+      </div>
       <div
         id={`${id}-content`}
         className={`expandable-content ${isOpen ? 'open' : ''}`}

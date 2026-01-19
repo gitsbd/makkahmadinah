@@ -2,6 +2,7 @@ import PageHeader from '@/components/PageHeader'
 import SectionWrapper from '@/components/SectionWrapper'
 import ExpandableSection from '@/components/ExpandableSection'
 import ArabicNumberItem from '@/components/ArabicNumberItem'
+import ArabicAlphabetItem from '@/components/ArabicAlphabetItem'
 import NumberConverter from '@/components/NumberConverter'
 import AudioPlayer from '@/components/AudioPlayer'
 import { createArabicTitle } from '@/utils/arabicTitle'
@@ -130,6 +131,38 @@ export default function ArabicLearning() {
     { number: '100', arabicNumber: '١٠٠', arabicName: 'مِئَة', english: "Mi'a", bangla: "মিআ" },
   ]
 
+  // Arabic alphabet (28 letters) with English and Bangla pronunciations, and letter forms
+  const arabicAlphabet = [
+    { letter: 'ا', arabicName: 'أَلِف', english: 'Alif', bangla: 'আলিফ', isolated: 'ا', initial: 'ا', medial: 'ا', final: 'ا', initialExample: 'أب', medialExample: 'رأس', finalExample: 'سماء', initialExampleTrans: 'Ab (Father)', medialExampleTrans: 'Ra\'s (Head)', finalExampleTrans: 'Sama\' (Sky)' },
+    { letter: 'ب', arabicName: 'بَاء', english: 'Ba', bangla: 'বা', isolated: 'ب', initial: 'بـ', medial: 'ـبـ', final: 'ـب', initialExample: 'باب', medialExample: 'كتاب', finalExample: 'حب', initialExampleTrans: 'Baab (Door)', medialExampleTrans: 'Kitab (Book)', finalExampleTrans: 'Hubb (Love)' },
+    { letter: 'ت', arabicName: 'تَاء', english: 'Ta', bangla: 'তা', isolated: 'ت', initial: 'تـ', medial: 'ـتـ', final: 'ـت', initialExample: 'تاج', medialExample: 'كتاب', finalExample: 'بيت', initialExampleTrans: 'Taj (Crown)', medialExampleTrans: 'Kitab (Book)', finalExampleTrans: 'Bayt (House)' },
+    { letter: 'ث', arabicName: 'ثَاء', english: 'Tha', bangla: 'থা', isolated: 'ث', initial: 'ثـ', medial: 'ـثـ', final: 'ـث', initialExample: 'ثوب', medialExample: 'مثل', finalExample: 'ميث', initialExampleTrans: 'Thawb (Garment)', medialExampleTrans: 'Mithl (Like)', finalExampleTrans: 'Mith (Like)' },
+    { letter: 'ج', arabicName: 'جِيم', english: 'Jim', bangla: 'জিম', isolated: 'ج', initial: 'جـ', medial: 'ـجـ', final: 'ـج', initialExample: 'جبل', medialExample: 'مجد', finalExample: 'خبز', initialExampleTrans: 'Jabal (Mountain)', medialExampleTrans: 'Majd (Glory)', finalExampleTrans: 'Khubz (Bread)' },
+    { letter: 'ح', arabicName: 'حَاء', english: 'Ha', bangla: 'হা', isolated: 'ح', initial: 'حـ', medial: 'ـحـ', final: 'ـح', initialExample: 'حجر', medialExample: 'محمد', finalExample: 'روح', initialExampleTrans: 'Hajar (Stone)', medialExampleTrans: 'Muhammad', finalExampleTrans: 'Ruh (Soul)' },
+    { letter: 'خ', arabicName: 'خَاء', english: 'Kha', bangla: 'খা', isolated: 'خ', initial: 'خـ', medial: 'ـخـ', final: 'ـخ', initialExample: 'خبز', medialExample: 'مخزن', finalExample: 'روح', initialExampleTrans: 'Khubz (Bread)', medialExampleTrans: 'Makhzan (Store)', finalExampleTrans: 'Ruh (Soul)' },
+    { letter: 'د', arabicName: 'دَال', english: 'Dal', bangla: 'দাল', isolated: 'د', initial: 'د', medial: 'د', final: 'د', initialExample: 'دار', medialExample: 'مدينة', finalExample: 'جند', initialExampleTrans: 'Dar (House)', medialExampleTrans: 'Madina (City)', finalExampleTrans: 'Jund (Army)' },
+    { letter: 'ذ', arabicName: 'ذَال', english: 'Dhal', bangla: 'ধাল', isolated: 'ذ', initial: 'ذ', medial: 'ذ', final: 'ذ', initialExample: 'ذهب', medialExample: 'مذهب', finalExample: 'عرض', initialExampleTrans: 'Dhahab (Gold)', medialExampleTrans: 'Madhhab (School)', finalExampleTrans: 'Ard (Land)' },
+    { letter: 'ر', arabicName: 'رَاء', english: 'Ra', bangla: 'রা', isolated: 'ر', initial: 'ر', medial: 'ر', final: 'ر', initialExample: 'رجل', medialExample: 'مركز', finalExample: 'بحر', initialExampleTrans: 'Rajul (Man)', medialExampleTrans: 'Markaz (Center)', finalExampleTrans: 'Bahr (Sea)' },
+    { letter: 'ز', arabicName: 'زَاي', english: 'Zay', bangla: 'যায়', isolated: 'ز', initial: 'ز', medial: 'ز', final: 'ز', initialExample: 'زهر', medialExample: 'مزهر', finalExample: 'عز', initialExampleTrans: 'Zahr (Flower)', medialExampleTrans: 'Mazhar (Appearance)', finalExampleTrans: 'Izz (Honor)' },
+    { letter: 'س', arabicName: 'سِين', english: 'Sin', bangla: 'সীন', isolated: 'س', initial: 'سـ', medial: 'ـسـ', final: 'ـس', initialExample: 'سيف', medialExample: 'مسجد', finalExample: 'نفس', initialExampleTrans: 'Sayf (Sword)', medialExampleTrans: 'Masjid (Mosque)', finalExampleTrans: 'Nafs (Self)' },
+    { letter: 'ش', arabicName: 'شِين', english: 'Shin', bangla: 'শীন', isolated: 'ش', initial: 'شـ', medial: 'ـشـ', final: 'ـش', initialExample: 'شمس', medialExample: 'مشكل', finalExample: 'نش', initialExampleTrans: 'Shams (Sun)', medialExampleTrans: 'Mushkil (Problem)', finalExampleTrans: 'Nash (Rising)' },
+    { letter: 'ص', arabicName: 'صَاد', english: 'Sad', bangla: 'সাদ', isolated: 'ص', initial: 'صـ', medial: 'ـصـ', final: 'ـص', initialExample: 'صبر', medialExample: 'مصطفى', finalExample: 'نص', initialExampleTrans: 'Sabr (Patience)', medialExampleTrans: 'Mustafa', finalExampleTrans: 'Nas (Text)' },
+    { letter: 'ض', arabicName: 'ضَاد', english: 'Dad', bangla: 'দাদ', isolated: 'ض', initial: 'ضـ', medial: 'ـضـ', final: 'ـض', initialExample: 'ضرب', medialExample: 'مضرب', finalExample: 'عرض', initialExampleTrans: 'Darb (Strike)', medialExampleTrans: 'Madrab (Struck)', finalExampleTrans: 'Ard (Land)' },
+    { letter: 'ط', arabicName: 'طَاء', english: 'Ta', bangla: 'তা', isolated: 'ط', initial: 'طـ', medial: 'ـطـ', final: 'ـط', initialExample: 'طالب', medialExample: 'مطعم', finalExample: 'خط', initialExampleTrans: 'Talib (Student)', medialExampleTrans: 'Mat\'am (Restaurant)', finalExampleTrans: 'Khatt (Line)' },
+    { letter: 'ظ', arabicName: 'ظَاء', english: 'Za', bangla: 'জা', isolated: 'ظ', initial: 'ظـ', medial: 'ـظـ', final: 'ـظ', initialExample: 'ظلم', medialExample: 'مظلم', finalExample: 'عظم', initialExampleTrans: 'Zulm (Injustice)', medialExampleTrans: 'Muzlim (Dark)', finalExampleTrans: 'Azm (Bone)' },
+    { letter: 'ع', arabicName: 'عَيْن', english: 'Ayn', bangla: 'আইন', isolated: 'ع', initial: 'عـ', medial: 'ـعـ', final: 'ـع', initialExample: 'عبد', medialExample: 'معلم', finalExample: 'دع', initialExampleTrans: 'Abd (Servant)', medialExampleTrans: 'Mu\'allim (Teacher)', finalExampleTrans: 'Da\' (Call)' },
+    { letter: 'غ', arabicName: 'غَيْن', english: 'Ghayn', bangla: 'ঘাইন', isolated: 'غ', initial: 'غـ', medial: 'ـغـ', final: 'ـغ', initialExample: 'غرب', medialExample: 'مغرب', finalExample: 'بغ', initialExampleTrans: 'Gharb (West)', medialExampleTrans: 'Maghrib (Sunset)', finalExampleTrans: 'Baghd (Baghdad)' },
+    { letter: 'ف', arabicName: 'فَاء', english: 'Fa', bangla: 'ফা', isolated: 'ف', initial: 'فـ', medial: 'ـفـ', final: 'ـف', initialExample: 'فهم', medialExample: 'مفتاح', finalExample: 'خوف', initialExampleTrans: 'Fahm (Understanding)', medialExampleTrans: 'Miftah (Key)', finalExampleTrans: 'Khawf (Fear)' },
+    { letter: 'ق', arabicName: 'قَاف', english: 'Qaf', bangla: 'কাফ', isolated: 'ق', initial: 'قـ', medial: 'ـقـ', final: 'ـق', initialExample: 'قلم', medialExample: 'مقعد', finalExample: 'حق', initialExampleTrans: 'Qalam (Pen)', medialExampleTrans: 'Maq\'ad (Seat)', finalExampleTrans: 'Haqq (Right)' },
+    { letter: 'ك', arabicName: 'كَاف', english: 'Kaf', bangla: 'কাফ', isolated: 'ك', initial: 'كـ', medial: 'ـكـ', final: 'ـك', initialExample: 'كتاب', medialExample: 'مكتب', finalExample: 'شك', initialExampleTrans: 'Kitab (Book)', medialExampleTrans: 'Maktab (Office)', finalExampleTrans: 'Shakk (Doubt)' },
+    { letter: 'ل', arabicName: 'لاَم', english: 'Lam', bangla: 'লাম', isolated: 'ل', initial: 'لـ', medial: 'ـلـ', final: 'ـل', initialExample: 'لبن', medialExample: 'مدرسة', finalExample: 'بعل', initialExampleTrans: 'Laban (Milk)', medialExampleTrans: 'Madrasa (School)', finalExampleTrans: 'Ba\'l (Husband)' },
+    { letter: 'م', arabicName: 'مِيم', english: 'Mim', bangla: 'মীম', isolated: 'م', initial: 'مـ', medial: 'ـمـ', final: 'ـم', initialExample: 'ماء', medialExample: 'أمير', finalExample: 'كرم', initialExampleTrans: 'Ma\' (Water)', medialExampleTrans: 'Amir (Prince)', finalExampleTrans: 'Karim (Generous)' },
+    { letter: 'ن', arabicName: 'نُون', english: 'Nun', bangla: 'নুন', isolated: 'ن', initial: 'نـ', medial: 'ـنـ', final: 'ـن', initialExample: 'نور', medialExample: 'منزل', finalExample: 'عين', initialExampleTrans: 'Nur (Light)', medialExampleTrans: 'Manzil (House)', finalExampleTrans: 'Ayn (Eye)' },
+    { letter: 'ه', arabicName: 'هَاء', english: 'Ha', bangla: 'হা', isolated: 'ه', initial: 'هـ', medial: 'ـهـ', final: 'ـه', initialExample: 'هلال', medialExample: 'مهندس', finalExample: 'روح', initialExampleTrans: 'Hilal (Crescent)', medialExampleTrans: 'Muhandis (Engineer)', finalExampleTrans: 'Ruh (Soul)' },
+    { letter: 'و', arabicName: 'وَاو', english: 'Waw', bangla: 'ওয়াও', isolated: 'و', initial: 'و', medial: 'و', final: 'و', initialExample: 'ولد', medialExample: 'موعد', finalExample: 'عرو', initialExampleTrans: 'Walad (Boy)', medialExampleTrans: 'Maw\'id (Appointment)', finalExampleTrans: 'Aru (I see)' },
+    { letter: 'ي', arabicName: 'يَاء', english: 'Ya', bangla: 'ইয়া', isolated: 'ي', initial: 'يـ', medial: 'ـيـ', final: 'ـي', initialExample: 'يوم', medialExample: 'مدرسة', finalExample: 'علي', initialExampleTrans: 'Yawm (Day)', medialExampleTrans: 'Madrasa (School)', finalExampleTrans: 'Ali' },
+  ]
+
   // Create a map for quick lookup by number
   const arabicNumbersMap = {}
   arabicNumbers.forEach(item => {
@@ -159,6 +192,99 @@ export default function ArabicLearning() {
           number={1}
         >
           <div className="dua-item">
+            {/* Arabic Alphabet Subsection */}
+            <ExpandableSection 
+              id="arabic-alphabet-subsection" 
+              title={
+                <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <span>আরবি বর্ণমালা (Arabic Alphabet)</span>
+                  <span style={{ fontSize: '1rem', direction: 'rtl' }}>الأبجدية العربية</span>
+                  <AudioPlayer arabicText="الأبجدية العربية" className="alphabet-audio-btn" tone="default" />
+                  <span style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-light)' }}>(Al-abjadīya al-ʿarabiyya)</span>
+                </span>
+              }
+              defaultOpen={false}
+              className="practice-day-wrapper"
+            >
+              <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
+                <p style={{ marginBottom: '1rem', fontSize: '1.05rem', color: 'var(--text-light)' }}>
+                  আরবি ভাষা শেখার জন্য আরবি বর্ণমালা জানা অত্যন্ত গুরুত্বপূর্ণ। নিচে ২৮টি আরবি বর্ণের আরবি নাম, ইংরেজি ও বাংলা উচ্চারণ দেওয়া হয়েছে:
+                </p>
+                <div className="arabic-alphabet-grid">
+                  {arabicAlphabet.map((item, index) => (
+                    <ArabicAlphabetItem
+                      key={index}
+                      letter={item.letter}
+                      arabicName={item.arabicName}
+                      english={item.english}
+                      bangla={item.bangla}
+                    />
+                  ))}
+                </div>
+
+                {/* All Letters Forms Table */}
+                  <div style={{ marginTop: '2rem', padding: '1rem', background: 'white', borderRadius: '6px' }}>
+                    <div style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '1rem', color: 'var(--primary-color)' }}>
+                      সব বর্ণের বিভিন্ন অবস্থান (All Letters in Different Positions):
+                    </div>
+                    <div style={{ overflowX: 'auto' }}>
+                      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+                        <thead>
+                          <tr style={{ background: 'rgba(13, 79, 28, 0.1)' }}>
+                            <th style={{ padding: '0.75rem', textAlign: 'left', border: '1px solid rgba(13, 79, 28, 0.2)', fontWeight: '600' }}>বর্ণ</th>
+                            <th style={{ padding: '0.75rem', textAlign: 'center', border: '1px solid rgba(13, 79, 28, 0.2)', fontWeight: '600' }}>একা</th>
+                            <th style={{ padding: '0.75rem', textAlign: 'center', border: '1px solid rgba(13, 79, 28, 0.2)', fontWeight: '600' }}>শুরুতে</th>
+                            <th style={{ padding: '0.75rem', textAlign: 'center', border: '1px solid rgba(13, 79, 28, 0.2)', fontWeight: '600' }}>মাঝে</th>
+                            <th style={{ padding: '0.75rem', textAlign: 'center', border: '1px solid rgba(13, 79, 28, 0.2)', fontWeight: '600' }}>শেষে</th>
+                            <th style={{ padding: '0.75rem', textAlign: 'left', border: '1px solid rgba(13, 79, 28, 0.2)', fontWeight: '600' }}>উদাহরণ</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {arabicAlphabet.map((item, index) => (
+                            <tr key={index} style={{ borderBottom: '1px solid rgba(13, 79, 28, 0.1)' }}>
+                              <td style={{ padding: '0.75rem', border: '1px solid rgba(13, 79, 28, 0.1)' }}>
+                                <div style={{ fontSize: '1.5rem', direction: 'rtl', fontWeight: '600', marginBottom: '0.25rem' }}>{item.letter}</div>
+                                <div style={{ fontSize: '0.75rem', color: 'var(--text-light)' }}>{item.english} ({item.bangla})</div>
+                              </td>
+                              <td style={{ padding: '0.75rem', textAlign: 'center', border: '1px solid rgba(13, 79, 28, 0.1)' }}>
+                                <div style={{ fontSize: '1.8rem', direction: 'rtl' }}>{item.isolated}</div>
+                              </td>
+                              <td style={{ padding: '0.75rem', textAlign: 'center', border: '1px solid rgba(13, 79, 28, 0.1)' }}>
+                                <div style={{ fontSize: '1.8rem', direction: 'rtl', marginBottom: '0.25rem' }}>{item.initial}</div>
+                                <div style={{ fontSize: '0.7rem', color: 'var(--text-light)', direction: 'rtl' }}>{item.initialExample}</div>
+                                <div style={{ fontSize: '0.65rem', color: 'var(--text-light)' }}>{item.initialExampleTrans}</div>
+                              </td>
+                              <td style={{ padding: '0.75rem', textAlign: 'center', border: '1px solid rgba(13, 79, 28, 0.1)' }}>
+                                <div style={{ fontSize: '1.8rem', direction: 'rtl', marginBottom: '0.25rem' }}>{item.medial}</div>
+                                <div style={{ fontSize: '0.7rem', color: 'var(--text-light)', direction: 'rtl' }}>{item.medialExample}</div>
+                                <div style={{ fontSize: '0.65rem', color: 'var(--text-light)' }}>{item.medialExampleTrans}</div>
+                              </td>
+                              <td style={{ padding: '0.75rem', textAlign: 'center', border: '1px solid rgba(13, 79, 28, 0.1)' }}>
+                                <div style={{ fontSize: '1.8rem', direction: 'rtl', marginBottom: '0.25rem' }}>{item.final}</div>
+                                <div style={{ fontSize: '0.7rem', color: 'var(--text-light)', direction: 'rtl' }}>{item.finalExample}</div>
+                                <div style={{ fontSize: '0.65rem', color: 'var(--text-light)' }}>{item.finalExampleTrans}</div>
+                              </td>
+                              <td style={{ padding: '0.75rem', border: '1px solid rgba(13, 79, 28, 0.1)' }}>
+                                <div style={{ fontSize: '1rem', direction: 'rtl', fontWeight: '600', marginBottom: '0.25rem' }}>
+                                  {item.initialExample} / {item.medialExample} / {item.finalExample}
+                                </div>
+                                <div style={{ fontSize: '0.7rem', color: 'var(--text-light)' }}>
+                                  {item.initialExampleTrans.split('(')[0]} / {item.medialExampleTrans.split('(')[0]} / {item.finalExampleTrans.split('(')[0]}
+                                </div>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                <div style={{ marginTop: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.05)', borderRadius: '6px', fontSize: '0.9rem', color: 'var(--text-light)', lineHeight: '1.6' }}>
+                  <strong style={{ color: 'var(--primary-color)' }}>মনে রাখবেন:</strong> কিছু বর্ণ (যেমন: ا, د, ذ, ر, ز, و) সবসময় একই রূপে থাকে এবং অন্য বর্ণের সাথে যুক্ত হয় না।
+                </div>
+              </div>
+            </ExpandableSection>
+
             {/* Arabic Numbers Subsection */}
             <ExpandableSection 
               id="arabic-numbers-subsection" 
@@ -208,7 +334,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="الأحد" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Al-aḥad</strong> (al-ah-had)
+                    <strong>Al-aḥad</strong> (al-ah-had)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আল-আহাদ
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -218,7 +345,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="الاثنين" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Al-ithnayn</strong> (al-ith-nayn)
+                    <strong>Al-ithnayn</strong> (al-ith-nayn)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আল-ইসনাইন
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -228,7 +356,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="الثلاثاء" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Ath-thulāthāʾ</strong> (ath-thu-laa-thaa)
+                    <strong>Ath-thulāthāʾ</strong> (ath-thu-laa-thaa)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আস-ছুলাছা
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -238,7 +367,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="الأربعاء" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Al-arbaʿāʾ</strong> (al-ar-ba-aa)
+                    <strong>Al-arbaʿāʾ</strong> (al-ar-ba-aa)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আল-আরবাআ
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -248,7 +378,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="الخميس" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Al-khamīs</strong> (al-kha-mees)
+                    <strong>Al-khamīs</strong> (al-kha-mees)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আল-খামীস
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -258,7 +389,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="الجمعة" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Al-jumʿa</strong> (al-jum-a)
+                    <strong>Al-jumʿa</strong> (al-jum-a)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আল-জুমআ
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -268,7 +400,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="السبت" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>As-sabt</strong> (as-sabt)
+                    <strong>As-sabt</strong> (as-sabt)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আস-সাবত
                   </div>
                 </li>
               </ul>
@@ -298,7 +431,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="يناير" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Yanāyir</strong> (ya-naa-yir)
+                    <strong>Yanāyir</strong> (ya-naa-yir)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইয়ানাইর
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -308,7 +442,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="فبراير" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Fibrayir</strong> (fib-ra-yir)
+                    <strong>Fibrayir</strong> (fib-ra-yir)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ফিবরাইর
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -318,7 +453,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="مارس" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Māris</strong> (maa-ris)
+                    <strong>Māris</strong> (maa-ris)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> মারিস
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -328,7 +464,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="أبريل" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Abrīl</strong> (ab-reel)
+                    <strong>Abrīl</strong> (ab-reel)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আবরীল
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -338,7 +475,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="مايو" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Māyū</strong> (maa-yoo)
+                    <strong>Māyū</strong> (maa-yoo)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> মায়ূ
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -348,7 +486,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="يونيو" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Yūniyū</strong> (yoo-ni-yoo)
+                    <strong>Yūniyū</strong> (yoo-ni-yoo)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইউনিয়ূ
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -358,7 +497,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="يوليو" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Yūliyū</strong> (yoo-li-yoo)
+                    <strong>Yūliyū</strong> (yoo-li-yoo)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইউলিয়ূ
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -368,7 +508,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="أغسطس" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Aghusṭus</strong> (a-ghus-tus)
+                    <strong>Aghusṭus</strong> (a-ghus-tus)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আগুসতুস
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -378,7 +519,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="سبتمبر" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Sibtambir</strong> (sib-tam-bir)
+                    <strong>Sibtambir</strong> (sib-tam-bir)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> সিবতামবির
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -388,7 +530,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="أكتوبر" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Uktūbar</strong> (uk-too-bar)
+                    <strong>Uktūbar</strong> (uk-too-bar)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> উক্তূবার
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -398,7 +541,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="نوفمبر" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Nūfambir</strong> (noo-fam-bir)
+                    <strong>Nūfambir</strong> (noo-fam-bir)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> নূফামবির
                   </div>
                 </li>
                 <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -408,7 +552,8 @@ export default function ArabicLearning() {
                     <AudioPlayer arabicText="ديسمبر" className="alphabet-audio-btn" tone="default" />
                   </div>
                   <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                    <strong>Dīsambir</strong> (dee-sam-bir)
+                    <strong>Dīsambir</strong> (dee-sam-bir)<br />
+                    <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> দীসামবির
                   </div>
                 </li>
               </ul>
@@ -451,7 +596,8 @@ export default function ArabicLearning() {
                             <AudioPlayer arabicText={item.arabicName} className="alphabet-audio-btn" tone="default" />
                           </div>
                           <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>
-                            <strong>{item.english}</strong>
+                            <strong>{item.english}</strong><br />
+                            <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> {item.bangla}
                           </div>
                         </div>
                       ) : null;
@@ -470,6 +616,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="أحمر" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Aḥmar</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আহমার
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -477,6 +626,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أزرق</span>
                         <AudioPlayer arabicText="أزرق" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Azraq</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আজরাক
                       </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -486,6 +638,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="أخضر" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Akhḍar</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আখদার
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -494,6 +649,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="أبيض" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Abyaḍ</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আবিয়াদ
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -501,6 +659,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أسود</span>
                         <AudioPlayer arabicText="أسود" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Aswad</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আসওয়াদ
                       </div>
                     </li>
                   </ul>
@@ -517,6 +678,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="أم" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Umm</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> উম্ম
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -524,6 +688,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أب</span>
                         <AudioPlayer arabicText="أب" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ab</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আব
                       </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -533,6 +700,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="ابن" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ibn</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইবন
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -540,6 +710,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>ابنة</span>
                         <AudioPlayer arabicText="ابنة" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ibnah</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইবনাহ
                       </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -549,6 +722,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="أخ" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Akh</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আখ
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -556,6 +732,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أخت</span>
                         <AudioPlayer arabicText="أخت" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ukht</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> উখত
                       </div>
                     </li>
                   </ul>
@@ -572,6 +751,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="ماء" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Māʾ</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> মা
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -579,6 +761,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>طعام</span>
                         <AudioPlayer arabicText="طعام" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ṭaʿām</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> তাআম
                       </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -588,6 +773,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="هاتف" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Hātif</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> হাতিফ
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -595,6 +783,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>باب</span>
                         <AudioPlayer arabicText="باب" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Bāb</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> বাব
                       </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -604,6 +795,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="بيت" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Bayt</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> বাইত
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -611,6 +805,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>سيارة</span>
                         <AudioPlayer arabicText="سيارة" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Sayyāra</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> সাইয়ারা
                       </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -620,6 +817,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="كتاب" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Kitāb</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> কিতাব
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -627,6 +827,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>قلم</span>
                         <AudioPlayer arabicText="قلم" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Qalam</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> কালাম
                       </div>
                     </li>
                   </ul>
@@ -740,31 +943,31 @@ export default function ArabicLearning() {
                       <div style={{ fontSize: '1.5rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.5rem' }}>A</div>
                       <div style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>أ</div>
                       <AudioPlayer arabicText="أ" className="alphabet-audio-btn" tone="default" />
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Alif</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Alif<br /><span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আলিফ</div>
                     </div>
                     <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', textAlign: 'center' }}>
                       <div style={{ fontSize: '1.5rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.5rem' }}>E</div>
                       <div style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>ي</div>
                       <AudioPlayer arabicText="ي" className="alphabet-audio-btn" tone="default" />
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Yāʾ</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Yāʾ<br /><span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইয়া</div>
                     </div>
                     <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', textAlign: 'center' }}>
                       <div style={{ fontSize: '1.5rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.5rem' }}>I</div>
                       <div style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>إ</div>
                       <AudioPlayer arabicText="إ" className="alphabet-audio-btn" tone="default" />
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Alif</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Alif<br /><span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আলিফ</div>
                     </div>
                     <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', textAlign: 'center' }}>
                       <div style={{ fontSize: '1.5rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.5rem' }}>O</div>
                       <div style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>و</div>
                       <AudioPlayer arabicText="و" className="alphabet-audio-btn" tone="default" />
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Wāw</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Wāw<br /><span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ওয়াউ</div>
                     </div>
                     <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', textAlign: 'center' }}>
                       <div style={{ fontSize: '1.5rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.5rem' }}>U</div>
                       <div style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>و</div>
                       <AudioPlayer arabicText="و" className="alphabet-audio-btn" tone="default" />
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Wāw</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>Wāw<br /><span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ওয়াউ</div>
                     </div>
                   </div>
                 </div>
@@ -780,6 +983,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="أنا" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -787,6 +993,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنت</span>
                         <AudioPlayer arabicText="أنت" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anta</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনতা
                       </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -796,6 +1005,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="اذهب" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Idhhab</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইযহাব
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -803,6 +1015,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>لا</span>
                         <AudioPlayer arabicText="لا" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Lā</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> লা
                       </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -812,6 +1027,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="نعم" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Naʿam</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> নাআম
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -820,6 +1038,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="اسم" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Ism</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইসম
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -827,6 +1048,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600' }}>ماء</span>
                         <AudioPlayer arabicText="ماء" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Māʾ</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> মা
                       </div>
                     </li>
                   </ul>
@@ -877,6 +1101,9 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="اليوم هو الاثنين" className="alphabet-audio-btn" tone="default" />
                       <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Al-yawm huwa al-ithnayn</span>
                     </div>
+                    <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আল-ইয়াউম হুওয়া আল-ইসনাইন
+                    </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                     <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I am at home."</div>
@@ -884,6 +1111,9 @@ export default function ArabicLearning() {
                       <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا في البيت</span>
                       <AudioPlayer arabicText="أنا في البيت" className="alphabet-audio-btn" tone="default" />
                       <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā fī al-bayt</span>
+                    </div>
+                    <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ ফী আল-বাইত
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -893,6 +1123,9 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أنا آكل الأرز" className="alphabet-audio-btn" tone="default" />
                       <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā ākul al-aruzz</span>
                     </div>
+                    <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ আকুল আল-আরুয
+                    </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                     <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I drink water."</div>
@@ -901,6 +1134,9 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أنا أشرب الماء" className="alphabet-audio-btn" tone="default" />
                       <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā ashrab al-māʾ</span>
                     </div>
+                    <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ আশরাব আল-মা
+                    </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                     <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"I like tea."</div>
@@ -908,6 +1144,9 @@ export default function ArabicLearning() {
                       <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>أنا أحب الشاي</span>
                       <AudioPlayer arabicText="أنا أحب الشاي" className="alphabet-audio-btn" tone="default" />
                       <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā uḥibb ash-shāy</span>
+                    </div>
+                    <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ উহিব্ব আশ-শাই
                     </div>
                   </li>
                 </ul>
@@ -952,25 +1191,25 @@ export default function ArabicLearning() {
                       <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>I</div>
                       <div style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.25rem' }}>أنا</div>
                       <AudioPlayer arabicText="أنا" className="alphabet-audio-btn" tone="default" />
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Anā</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Anā<br /><span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ</div>
                     </div>
                     <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>You (m)</div>
                       <div style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.25rem' }}>أنت</div>
                       <AudioPlayer arabicText="أنت" className="alphabet-audio-btn" tone="default" />
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Anta</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Anta<br /><span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনতা</div>
                     </div>
                     <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>He</div>
                       <div style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.25rem' }}>هو</div>
                       <AudioPlayer arabicText="هو" className="alphabet-audio-btn" tone="default" />
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Huwa</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Huwa<br /><span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> হুওয়া</div>
                     </div>
                     <div style={{ padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>She</div>
                       <div style={{ fontSize: '1.2rem', color: 'var(--primary-color)', fontWeight: '600', marginBottom: '0.25rem' }}>هي</div>
                       <AudioPlayer arabicText="هي" className="alphabet-audio-btn" tone="default" />
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Hiya</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginTop: '0.25rem' }}>Hiya<br /><span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> হিয়া</div>
                     </div>
                   </div>
                 </div>
@@ -986,7 +1225,10 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="أنا" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā</span>
                       </div>
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>Example: أنا طالب (I am a student)</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ<br />
+                        Example: أنا طالب (I am a student) - <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ তালিব
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -995,7 +1237,10 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="هو هي" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Huwa / Hiya</span>
                       </div>
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>Example: هو طبيب (He is a doctor)</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> হুওয়া / হিয়া<br />
+                        Example: هو طبيب (He is a doctor) - <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> হুওয়া তাবীব
+                      </div>
                     </li>
                     <li style={{ marginBottom: '0.75rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
@@ -1004,7 +1249,10 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="أنت" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anta</span>
                       </div>
-                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>Example: أنت طالب (You are a student)</div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনতা<br />
+                        Example: أنت طالب (You are a student) - <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনতা তালিব
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -1020,6 +1268,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="أنا آكل" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Anā ākul</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ আকুল
+                      </div>
                     </li>
                     <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"He eats."</div>
@@ -1028,6 +1279,9 @@ export default function ArabicLearning() {
                         <AudioPlayer arabicText="هو يأكل" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Huwa yaʾkul</span>
                       </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> হুওয়া ইয়াকুল
+                      </div>
                     </li>
                     <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
                       <div style={{ marginBottom: '0.5rem', fontWeight: '600', color: 'var(--text-color)' }}>"She eats."</div>
@@ -1035,6 +1289,9 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>هي تأكل</span>
                         <AudioPlayer arabicText="هي تأكل" className="alphabet-audio-btn" tone="default" />
                         <span style={{ fontSize: '0.9rem', fontFamily: 'monospace', marginLeft: '0.5rem' }}>Hiya taʾkul</span>
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> হিয়া তাকুল
                       </div>
                     </li>
                     <li style={{ marginBottom: '1rem', padding: '1rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1086,7 +1343,7 @@ export default function ArabicLearning() {
             {/* Day 1 */}
             <ExpandableSection 
               id="day-1" 
-              title={createArabicTitle("Day 1 — Greetings (basic)", "اليوم الأول — التحيات (أساسي)", "Al-yawm al-awwal — At-taḥiyyāt (asāsī)")}
+              title={createArabicTitle("Day 1 — Greetings (basic) (দিন ১ — অভিবাদন)", "اليوم الأول — التحيات (أساسي)", "Al-yawm al-awwal — At-taḥiyyāt (asāsī)")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1110,18 +1367,20 @@ export default function ArabicLearning() {
                         <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>السلام عليكم</span>
                         <AudioPlayer arabicText="السلام عليكم" className="alphabet-audio-btn" tone="default" />
                       </div>
-                      <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                        <strong>As-salāmu ʿalaykum</strong> (as-sa-laa-mu a-lay-kum)
-                      </div>
-                    </li>
-                    <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
-                        <span>• And upon you too:</span>
+                    <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
+                      <strong>As-salāmu ʿalaykum</strong> (as-sa-laa-mu a-lay-kum)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আস-সালামু আলাইকুম
+                    </div>
+                  </li>
+                  <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+                      <span>• And upon you too:</span>
                         <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>وعليكم السلام</span>
                         <AudioPlayer arabicText="وعليكم السلام" className="alphabet-audio-btn" tone="default" />
                       </div>
                       <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                        <strong>Wa ʿalaykum as-salām</strong> (wa a-lay-kum as-sa-laam)
+                        <strong>Wa ʿalaykum as-salām</strong> (wa a-lay-kum as-sa-laam)<br />
+                        <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ওয়া আলাইকুম আস-সালাম
                       </div>
                     </li>
                     <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1207,7 +1466,7 @@ export default function ArabicLearning() {
             {/* Day 2 */}
             <ExpandableSection 
               id="day-2" 
-              title={createArabicTitle("Day 2 — Polite words", "اليوم الثاني — كلمات مهذبة", "Al-yawm ath-thānī — Kalimāt muḥadhdhaba")} 
+              title={createArabicTitle("Day 2 — Polite words (দিন ২ — শিষ্টাচারপূর্ণ শব্দ)", "اليوم الثاني — كلمات مهذبة", "Al-yawm ath-thānī — Kalimāt muḥadhdhaba")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1230,7 +1489,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="شكرا" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Shukran</strong> (shuk-ran)
+                      <strong>Shukran</strong> (shuk-ran)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> শুকরান
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1281,7 +1541,7 @@ export default function ArabicLearning() {
             {/* Day 3 */}
             <ExpandableSection 
               id="day-3" 
-              title={createArabicTitle('Day 3 — "I am / you are" (super important)', 'اليوم الثالث — "أنا / أنت" (مهم جداً)', 'Al-yawm ath-thālith — "Anā / Anta" (muhimm jiddan)')} 
+              title={createArabicTitle('Day 3 — "I am / you are" (super important) (দিন ৩ — "আমি / আপনি")', 'اليوم الثالث — "أنا / أنت" (مهم جداً)', 'Al-yawm ath-thālith — "Anā / Anta" (muhimm jiddan)')} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1304,7 +1564,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أنت" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Anta…</strong> (an-ta)
+                      <strong>Anta…</strong> (an-ta)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনতা
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1314,7 +1575,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أنا زمان" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Anā Zaman</strong>
+                      <strong>Anā Zaman</strong><br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ জামান
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1355,7 +1617,7 @@ export default function ArabicLearning() {
             {/* Day 4 */}
             <ExpandableSection 
               id="day-4" 
-              title="Day 4 — Daily needs" 
+              title={createArabicTitle("Day 4 — Daily needs (দিন ৪ — দৈনন্দিন প্রয়োজন)", "اليوم الرابع — الاحتياجات اليومية", "Al-yawm ar-rābiʿ — Al-iḥtiyājāt al-yawmiyya")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1378,7 +1640,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أحتاج" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Aḥtāju…</strong> (ah-taa-ju)
+                      <strong>Aḥtāju…</strong> (ah-taa-ju)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আহতাজু
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1388,7 +1651,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="لا أفهم" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Lā afham</strong> (laa af-ham)
+                      <strong>Lā afham</strong> (laa af-ham)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> লা আফহাম
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1428,29 +1692,32 @@ export default function ArabicLearning() {
             {/* Day 5 */}
             <ExpandableSection 
               id="day-5" 
-              title={createArabicTitle("Day 5 — Numbers 1–10 (speak fast)", "اليوم الخامس — الأرقام 1-10 (تحدث بسرعة)", "Al-yawm al-khāmis — Al-arqām 1-10 (taḥaddath bi-surʿa)")} 
+              title={createArabicTitle("Day 5 — Numbers 1–10 (speak fast) (দিন ৫ — সংখ্যা ১-১০)", "اليوم الخامس — الأرقام 1-10 (تحدث بسرعة)", "Al-yawm al-khāmis — Al-arqām 1-10 (taḥaddath bi-surʿa)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
               <div className="practice-day" style={{ padding: '1.5rem', background: 'white', borderRadius: '8px' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '1rem' }}>
-                  <div style={{ padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <div style={{ padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
                     <span>1:</span>
                     <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>واحد</span>
                     <AudioPlayer arabicText="واحد" className="alphabet-audio-btn" tone="default" />
                     <span style={{ fontSize: '0.9rem' }}><strong>wāḥid</strong></span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--primary-color)', marginLeft: '0.5rem' }}>বাংলা: ওয়াহিদ</span>
                   </div>
-                  <div style={{ padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <div style={{ padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
                     <span>2:</span>
                     <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>اثنان</span>
                     <AudioPlayer arabicText="اثنان" className="alphabet-audio-btn" tone="default" />
                     <span style={{ fontSize: '0.9rem' }}><strong>ithnayn</strong></span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--primary-color)', marginLeft: '0.5rem' }}>বাংলা: ইসনান</span>
                   </div>
-                  <div style={{ padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <div style={{ padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
                     <span>3:</span>
                     <span style={{ fontSize: '1.3rem', color: 'var(--primary-color)', fontWeight: '600' }}>ثلاثة</span>
                     <AudioPlayer arabicText="ثلاثة" className="alphabet-audio-btn" tone="default" />
                     <span style={{ fontSize: '0.9rem' }}><strong>thalātha</strong></span>
+                    <span style={{ fontSize: '0.85rem', color: 'var(--primary-color)', marginLeft: '0.5rem' }}>বাংলা: থালাসা</span>
                   </div>
                   <div style={{ padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <span>4:</span>
@@ -1502,7 +1769,7 @@ export default function ArabicLearning() {
             {/* Day 6 */}
             <ExpandableSection 
               id="day-6" 
-              title="Day 6 — Food & drink basics" 
+              title={createArabicTitle("Day 6 — Food & drink basics (দিন ৬ — খাবার ও পানীয়ের মূল বিষয়)", "اليوم السادس — أساسيات الطعام والشراب", "Al-yawm as-sādis — Asāsiyyāt aṭ-ṭaʿām wa-sh-sharāb")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1515,7 +1782,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="ماء" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Mā'</strong> (maa')
+                      <strong>Mā'</strong> (maa')<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> মা
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1525,7 +1793,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="شاي" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Shāy</strong> (shaay)
+                      <strong>Shāy</strong> (shaay)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> শাই
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1575,7 +1844,7 @@ export default function ArabicLearning() {
             {/* Day 7 */}
             <ExpandableSection 
               id="day-7" 
-              title={createArabicTitle("Day 7 — Review Day (no new words)", "اليوم السابع — يوم المراجعة (لا كلمات جديدة)", "Al-yawm as-sābiʿ — Yawm al-murājaʿa (lā kalimāt jadīda)")} 
+              title={createArabicTitle("Day 7 — Review Day (no new words) (দিন ৭ — পর্যালোচনা দিন)", "اليوم السابع — يوم المراجعة (لا كلمات جديدة)", "Al-yawm as-sābiʿ — Yawm al-murājaʿa (lā kalimāt jadīda)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1591,7 +1860,7 @@ export default function ArabicLearning() {
             {/* Day 8 */}
             <ExpandableSection 
               id="day-8" 
-              title="Day 8 — Directions (street talk)" 
+              title={createArabicTitle("Day 8 — Directions (street talk) (দিন ৮ — দিকনির্দেশনা)", "اليوم الثامن — الاتجاهات (كلام الشارع)", "Al-yawm ath-thāmin — Al-ittijāhāt (kalām ash-shāriʿ)")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1614,7 +1883,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="هنا هناك" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Hunā / Hunāk</strong> (hu-naa / hu-naak)
+                      <strong>Hunā / Hunāk</strong> (hu-naa / hu-naak)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> হুনা / হুনাক
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1677,7 +1947,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="الآن" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Al-ān</strong> (al-aan)
+                      <strong>Al-ān</strong> (al-aan)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আল-আন
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1707,7 +1978,7 @@ export default function ArabicLearning() {
             {/* Day 10 */}
             <ExpandableSection 
               id="day-10" 
-              title="Day 10 — Family" 
+              title={createArabicTitle("Day 10 — Family (দিন ১০ — পরিবার)", "اليوم العاشر — العائلة", "Al-yawm al-ʿāshir — Al-ʿāʾila")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1730,7 +2001,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أخ أخت" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Akh / Ukht</strong>
+                      <strong>Akh / Ukht</strong><br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আখ / উখত
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1770,7 +2042,7 @@ export default function ArabicLearning() {
             {/* Day 11 */}
             <ExpandableSection 
               id="day-11" 
-              title={createArabicTitle("Day 11 — Shopping phrases", "اليوم الحادي عشر — عبارات التسوق", "Al-yawm al-ḥādī ʿashar — ʿIbārāt at-tasawwuq")} 
+              title={createArabicTitle("Day 11 — Shopping phrases (দিন ১১ — কেনাকাটার বাক্য)", "اليوم الحادي عشر — عبارات التسوق", "Al-yawm al-ḥādī ʿashar — ʿIbārāt at-tasawwuq")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1793,7 +2065,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="رخيص غالي" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Rakhīṣ / Ghalī</strong> (ra-khees / gha-lee)
+                      <strong>Rakhīṣ / Ghalī</strong> (ra-khees / gha-lee)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> রাখীস / গালী
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1823,7 +2096,7 @@ export default function ArabicLearning() {
             {/* Day 12 */}
             <ExpandableSection 
               id="day-12" 
-              title="Day 12 — Compliments + friendly talk" 
+              title={createArabicTitle("Day 12 — Compliments + friendly talk (দিন ১২ — প্রশংসা + বন্ধুত্বপূর্ণ কথা)", "اليوم الثاني عشر — المجاملات + الحديث الودي", "Al-yawm ath-thānī ʿashar — Al-mujāmalāt + Al-ḥadīth al-wadī")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1846,7 +2119,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="جميل" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Jamīl</strong> (ja-meel)
+                      <strong>Jamīl</strong> (ja-meel)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> জামীল
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1876,7 +2150,7 @@ export default function ArabicLearning() {
             {/* Day 13 */}
             <ExpandableSection 
               id="day-13" 
-              title={createArabicTitle("Day 13 — At the restaurant", "اليوم الثالث عشر — في المطعم", "Al-yawm ath-thālith ʿashar — Fī al-maṭʿam")} 
+              title={createArabicTitle("Day 13 — At the restaurant (দিন ১৩ — রেস্তোরাঁয়)", "اليوم الثالث عشر — في المطعم", "Al-yawm ath-thālith ʿashar — Fī al-maṭʿam")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1899,7 +2173,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أريد دجاج لحم" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Urīdu dajāj / laḥm</strong> (da-jaaj / lahm)
+                      <strong>Urīdu dajāj / laḥm</strong> (da-jaaj / lahm)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> উরীদু দাজাজ / লাহম
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1929,7 +2204,7 @@ export default function ArabicLearning() {
             {/* Day 14 */}
             <ExpandableSection 
               id="day-14" 
-              title="Day 14 — Review Day" 
+              title={createArabicTitle("Day 14 — Review Day (দিন ১৪ — পর্যালোচনা দিন)", "اليوم الرابع عشر — يوم المراجعة", "Al-yawm ar-rābiʿ ʿashar — Yawm al-murājaʿa")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1941,7 +2216,7 @@ export default function ArabicLearning() {
             {/* Day 15 */}
             <ExpandableSection 
               id="day-15" 
-              title={createArabicTitle("Day 15 — Simple verbs (speak)", "اليوم الخامس عشر — أفعال بسيطة (تحدث)", "Al-yawm al-khāmis ʿashar — Afʿāl basīṭa (taḥaddath)")} 
+              title={createArabicTitle("Day 15 — Simple verbs (speak) (দিন ১৫ — সহজ ক্রিয়া)", "اليوم الخامس عشر — أفعال بسيطة (تحدث)", "Al-yawm al-khāmis ʿashar — Afʿāl basīṭa (taḥaddath)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -1964,7 +2239,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أتي" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Ātī</strong> (aa-tee)
+                      <strong>Ātī</strong> (aa-tee)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আতী
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -1974,7 +2250,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="آكل" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Ākul</strong> (aa-kul)
+                      <strong>Ākul</strong> (aa-kul)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আকুল
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2005,7 +2282,7 @@ export default function ArabicLearning() {
             {/* Day 16 */}
             <ExpandableSection 
               id="day-16" 
-              title={createArabicTitle('Day 16 — "Can you...?" + "I can..."', 'اليوم السادس عشر — "هل تستطيع...؟" + "أستطيع..."', 'Al-yawm as-sādis ʿashar — "Hal tastatīʿ...?" + "Astatīʿ..."')} 
+              title={createArabicTitle('Day 16 — "Can you...?" + "I can..." (দিন ১৬ — "আপনি পারবেন...?" + "আমি পারি...")', 'اليوم السادس عشر — "هل تستطيع...؟" + "أستطيع..."', 'Al-yawm as-sādis ʿashar — "Hal tastatīʿ...?" + "Astatīʿ..."')} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2028,7 +2305,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أستطيع" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Astatīʿ</strong> (as-ta-tee')
+                      <strong>Astatīʿ</strong> (as-ta-tee')<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আসতাতী
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2038,7 +2316,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="لا أستطيع" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Lā astatīʿ</strong>
+                      <strong>Lā astatīʿ</strong><br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> লা আসতাতী
                     </div>
                   </li>
                 </ul>
@@ -2048,7 +2327,7 @@ export default function ArabicLearning() {
             {/* Day 17 */}
             <ExpandableSection 
               id="day-17" 
-              title="Day 17 — Feelings" 
+              title={createArabicTitle("Day 17 — Feelings (দিন ১৭ — অনুভূতি)", "اليوم السابع عشر — المشاعر", "Al-yawm as-sābiʿ ʿashar — Al-mashāʿir")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2071,7 +2350,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="تعبان" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Taʿbān</strong> (ta'-baan)
+                      <strong>Taʿbān</strong> (ta'-baan)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> তাবান
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2124,7 +2404,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="تذكرة" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Tadhkira</strong> (taz-ki-ra)
+                      <strong>Tadhkira</strong> (taz-ki-ra)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> তাযকিরা
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2154,7 +2435,7 @@ export default function ArabicLearning() {
             {/* Day 19 */}
             <ExpandableSection 
               id="day-19" 
-              title="Day 19 — In a taxi" 
+              title={createArabicTitle("Day 19 — In a taxi (দিন ১৯ — ট্যাক্সিতে)", "اليوم التاسع عشر — في التاكسي", "Al-yawm at-tāsiʿ ʿashar — Fī at-tāksī")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2177,7 +2458,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="إلى من فضلك" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Ilā… min faḍlik</strong>
+                      <strong>Ilā… min faḍlik</strong><br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইলা মিন ফাদলিক
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2187,7 +2469,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="كم المدة" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Kam al-mudda?</strong> (kam al-mud-da)
+                      <strong>Kam al-mudda?</strong> (kam al-mud-da)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> কাম আল-মুদ্দা?
                     </div>
                   </li>
                 </ul>
@@ -2197,7 +2480,7 @@ export default function ArabicLearning() {
             {/* Day 20 */}
             <ExpandableSection 
               id="day-20" 
-              title={createArabicTitle("Day 20 — Making requests", "اليوم العشرون — تقديم الطلبات", "Al-yawm al-ʿishrūn — Taqdīm aṭ-ṭalabāt")} 
+              title={createArabicTitle("Day 20 — Making requests (দিন ২০ — অনুরোধ করা)", "اليوم العشرون — تقديم الطلبات", "Al-yawm al-ʿishrūn — Taqdīm aṭ-ṭalabāt")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2220,7 +2503,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="افتح أغلق" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Iftaḥ / Ighlaq</strong> (if-tah / igh-laq)
+                      <strong>Iftaḥ / Ighlaq</strong> (if-tah / igh-laq)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইফতাহ / ইগলাক
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2230,7 +2514,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="انتظر" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Intaẓir</strong> (in-ta-zir)
+                      <strong>Intaẓir</strong> (in-ta-zir)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইনতাযির
                     </div>
                   </li>
                 </ul>
@@ -2240,7 +2525,7 @@ export default function ArabicLearning() {
             {/* Day 21 */}
             <ExpandableSection 
               id="day-21" 
-              title="Day 21 — Review Day" 
+              title={createArabicTitle("Day 21 — Review Day (দিন ২১ — পর্যালোচনা দিন)", "اليوم الحادي والعشرون — يوم المراجعة", "Al-yawm al-ḥādī wa-l-ʿishrūn — Yawm al-murājaʿa")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2253,7 +2538,7 @@ export default function ArabicLearning() {
             {/* Day 22 */}
             <ExpandableSection 
               id="day-22" 
-              title={createArabicTitle("Day 22 — Questions (the magic set)", "اليوم الثاني والعشرون — الأسئلة (المجموعة السحرية)", "Al-yawm ath-thānī wa-l-ʿishrūn — Al-asʾila (al-majmūʿa as-siḥriyya)")} 
+              title={createArabicTitle("Day 22 — Questions (the magic set) (দিন ২২ — প্রশ্ন)", "اليوم الثاني والعشرون — الأسئلة (المجموعة السحرية)", "Al-yawm ath-thānī wa-l-ʿishrūn — Al-asʾila (al-majmūʿa as-siḥriyya)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2276,7 +2561,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أين" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Ayna?</strong>
+                      <strong>Ayna?</strong><br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আইনা?
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2327,7 +2613,7 @@ export default function ArabicLearning() {
             {/* Day 23 */}
             <ExpandableSection 
               id="day-23" 
-              title="Day 23 — Describing things" 
+              title={createArabicTitle("Day 23 — Describing things (দিন ২৩ — জিনিস বর্ণনা করা)", "اليوم الثالث والعشرون — وصف الأشياء", "Al-yawm ath-thālith wa-l-ʿishrūn — Waṣf al-ashyāʾ")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2350,7 +2636,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="حار بارد" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Ḥārr / bārid</strong>
+                      <strong>Ḥārr / bārid</strong><br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> হার / বারিদ
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2380,7 +2667,7 @@ export default function ArabicLearning() {
             {/* Day 24 */}
             <ExpandableSection 
               id="day-24" 
-              title={createArabicTitle("Day 24 — Talking about your day", "اليوم الرابع والعشرون — الحديث عن يومك", "Al-yawm ar-rābiʿ wa-l-ʿishrūn — Al-ḥadīth ʿan yawmik")} 
+              title={createArabicTitle("Day 24 — Talking about your day (দিন ২৪ — আপনার দিন সম্পর্কে কথা বলা)", "اليوم الرابع والعشرون — الحديث عن يومك", "Al-yawm ar-rābiʿ wa-l-ʿishrūn — Al-ḥadīth ʿan yawmik")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2403,7 +2690,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أعمل" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Aʿmal</strong> (a'-mal)
+                      <strong>Aʿmal</strong> (a'-mal)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আমাল
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2434,7 +2722,7 @@ export default function ArabicLearning() {
             {/* Day 25 */}
             <ExpandableSection 
               id="day-25" 
-              title="Day 25 — Common mistakes fixer (pronunciation focus)" 
+              title={createArabicTitle("Day 25 — Common mistakes fixer (pronunciation focus) (দিন ২৫ — সাধারণ ভুল সংশোধন)", "اليوم الخامس والعشرون — إصلاح الأخطاء الشائعة (تركيز على النطق)", "Al-yawm al-khāmis wa-l-ʿishrūn — Iṣlāḥ al-akhṭāʾ ash-shāʾiʿa (tarkīz ʿalā an-nuṭq)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2486,7 +2774,7 @@ export default function ArabicLearning() {
             {/* Day 27 */}
             <ExpandableSection 
               id="day-27" 
-              title={createArabicTitle("Day 27 — Conversation: meeting someone", "اليوم السابع والعشرون — محادثة: لقاء شخص", "Al-yawm as-sābiʿ wa-l-ʿishrūn — Muḥādatha: liqāʾ shakhṣ")} 
+              title={createArabicTitle("Day 27 — Conversation: meeting someone (দিন ২৭ — কথোপকথন: কারো সাথে দেখা)", "اليوم السابع والعشرون — محادثة: لقاء شخص", "Al-yawm as-sābiʿ wa-l-ʿishrūn — Muḥādatha: liqāʾ shakhṣ")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2523,7 +2811,7 @@ export default function ArabicLearning() {
             {/* Day 28 */}
             <ExpandableSection 
               id="day-28" 
-              title="Day 28 — Conversation: shopping + directions" 
+              title={createArabicTitle("Day 28 — Conversation: shopping + directions (দিন ২৮ — কথোপকথন: কেনাকাটা + দিকনির্দেশনা)", "اليوم الثامن والعشرون — محادثة: التسوق + الاتجاهات", "Al-yawm ath-thāmin wa-l-ʿishrūn — Muḥādatha: At-tasawwuq + Al-ittijāhāt")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2541,7 +2829,7 @@ export default function ArabicLearning() {
             {/* Day 29 */}
             <ExpandableSection 
               id="day-29" 
-              title={createArabicTitle("Day 29 — Conversation: restaurant + taxi", "اليوم التاسع والعشرون — محادثة: المطعم + التاكسي", "Al-yawm at-tāsiʿ wa-l-ʿishrūn — Muḥādatha: al-maṭʿam + at-tāksī")} 
+              title={createArabicTitle("Day 29 — Conversation: restaurant + taxi (দিন ২৯ — কথোপকথন: রেস্তোরাঁ + ট্যাক্সি)", "اليوم التاسع والعشرون — محادثة: المطعم + التاكسي", "Al-yawm at-tāsiʿ wa-l-ʿishrūn — Muḥādatha: al-maṭʿam + at-tāksī")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2559,7 +2847,7 @@ export default function ArabicLearning() {
             {/* Day 30 */}
             <ExpandableSection 
               id="day-30" 
-              title={createArabicTitle('Day 30 — Your "real life speaking test"', 'اليوم الثلاثون — "اختبار التحدث في الحياة الحقيقية"', 'Al-yawm ath-thalāthūn — "Ikhtibār at-taḥadduth fī al-ḥayāh al-ḥaqīqiyya"')} 
+              title={createArabicTitle('Day 30 — Your "real life speaking test" (দিন ৩০ — আপনার "বাস্তব জীবনের কথা বলা পরীক্ষা")', 'اليوم الثلاثون — "اختبار التحدث في الحياة الحقيقية"', 'Al-yawm ath-thalāthūn — "Ikhtibār at-taḥadduth fī al-ḥayāh al-ḥaqīqiyya"')} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2613,7 +2901,7 @@ export default function ArabicLearning() {
             {/* Day 31 */}
             <ExpandableSection 
               id="day-31" 
-              title="Day 31 — Past tense verbs (I did...)" 
+              title={createArabicTitle("Day 31 — Past tense verbs (I did...) (দিন ৩১ — অতীত কালের ক্রিয়া)", "اليوم الحادي والثلاثون — أفعال الماضي (فعلت...)", "Al-yawm al-ḥādī wa-th-thalāthūn — Afʿāl al-māḍī (faʿaltu...)")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2636,7 +2924,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أكلت" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Akalatu</strong> (a-ka-la-tu)
+                      <strong>Akalatu</strong> (a-ka-la-tu)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আকালাতু
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2677,7 +2966,7 @@ export default function ArabicLearning() {
             {/* Day 32 */}
             <ExpandableSection 
               id="day-32" 
-              title={createArabicTitle("Day 32 — Future tense (I will...)", "اليوم الثاني والثلاثون — المستقبل (سأفعل...)", "Al-yawm ath-thānī wa-th-thalāthūn — Al-mustaqbal (sa-afʿal...)")} 
+              title={createArabicTitle("Day 32 — Future tense (I will...) (দিন ৩২ — ভবিষ্যৎ কাল)", "اليوم الثاني والثلاثون — المستقبل (سأفعل...)", "Al-yawm ath-thānī wa-th-thalāthūn — Al-mustaqbal (sa-afʿal...)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2700,7 +2989,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="سآكل" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Sa-ākul</strong> (sa-aa-kul)
+                      <strong>Sa-ākul</strong> (sa-aa-kul)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> সা-আকুল
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2731,7 +3021,7 @@ export default function ArabicLearning() {
             {/* Day 33 */}
             <ExpandableSection 
               id="day-33" 
-              title={createArabicTitle("Day 33 — Weather & seasons", "اليوم الثالث والثلاثون — الطقس والفصول", "Al-yawm ath-thālith wa-th-thalāthūn — Aṭ-ṭaqs wa-l-fuṣūl")} 
+              title={createArabicTitle("Day 33 — Weather & seasons (দিন ৩৩ — আবহাওয়া ও ঋতু)", "اليوم الثالث والثلاثون — الطقس والفصول", "Al-yawm ath-thālith wa-th-thalāthūn — Aṭ-ṭaqs wa-l-fuṣūl")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2754,7 +3044,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="بارد" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Bārid</strong> (baa-rid)
+                      <strong>Bārid</strong> (baa-rid)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> বারিদ
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2784,7 +3075,7 @@ export default function ArabicLearning() {
             {/* Day 34 */}
             <ExpandableSection 
               id="day-34" 
-              title={createArabicTitle("Day 34 — Body parts", "اليوم الرابع والثلاثون — أجزاء الجسم", "Al-yawm ar-rābiʿ wa-th-thalāthūn — Ajzāʾ al-jism")} 
+              title={createArabicTitle("Day 34 — Body parts (দিন ৩৪ — শরীরের অংশ)", "اليوم الرابع والثلاثون — أجزاء الجسم", "Al-yawm ar-rābiʿ wa-th-thalāthūn — Ajzāʾ al-jism")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2807,7 +3098,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="يد" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Yad</strong> (yad)
+                      <strong>Yad</strong> (yad)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইয়াদ
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2847,7 +3139,7 @@ export default function ArabicLearning() {
             {/* Day 35 */}
             <ExpandableSection 
               id="day-35" 
-              title={createArabicTitle("Day 35 — Colors", "اليوم الخامس والثلاثون — الألوان", "Al-yawm al-khāmis wa-th-thalāthūn — Al-alwān")} 
+              title={createArabicTitle("Day 35 — Colors (দিন ৩৫ — রং)", "اليوم الخامس والثلاثون — الألوان", "Al-yawm al-khāmis wa-th-thalāthūn — Al-alwān")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2870,7 +3162,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أزرق" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Azraq</strong> (az-raq)
+                      <strong>Azraq</strong> (az-raq)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আজরাক
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2880,7 +3173,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أخضر" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Akhḍar</strong> (akh-dar)
+                      <strong>Akhḍar</strong> (akh-dar)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আখদার
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2911,7 +3205,7 @@ export default function ArabicLearning() {
             {/* Day 36 */}
             <ExpandableSection 
               id="day-36" 
-              title={createArabicTitle("Day 36 — At the hotel", "اليوم السادس والثلاثون — في الفندق", "Al-yawm as-sādis wa-th-thalāthūn — Fī al-funduq")} 
+              title={createArabicTitle("Day 36 — At the hotel (দিন ৩৬ — হোটেলে)", "اليوم السادس والثلاثون — في الفندق", "Al-yawm as-sādis wa-th-thalāthūn — Fī al-funduq")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2934,7 +3228,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أحتاج غرفة" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Aḥtāju ghurfa</strong> (ah-taa-ju ghur-fa)
+                      <strong>Aḥtāju ghurfa</strong> (ah-taa-ju ghur-fa)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আহতাজু ঘুরফা
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2944,7 +3239,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="مفتاح" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Miftāḥ</strong> (mif-tah)
+                      <strong>Miftāḥ</strong> (mif-tah)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> মিফতাহ
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -2954,7 +3250,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أين غرفتي" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Ayna ghurfatī?</strong> (ay-na ghur-fa-tee)
+                      <strong>Ayna ghurfatī?</strong> (ay-na ghur-fa-tee)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আইনা ঘুরফাতী?
                     </div>
                   </li>
                 </ul>
@@ -2964,7 +3261,7 @@ export default function ArabicLearning() {
             {/* Day 37 */}
             <ExpandableSection 
               id="day-37" 
-              title={createArabicTitle("Day 37 — Review Day", "اليوم السابع والثلاثون — يوم المراجعة", "Al-yawm as-sābiʿ wa-th-thalāthūn — Yawm al-murājaʿa")} 
+              title={createArabicTitle("Day 37 — Review Day (দিন ৩৭ — পর্যালোচনা দিন)", "اليوم السابع والثلاثون — يوم المراجعة", "Al-yawm as-sābiʿ wa-th-thalāthūn — Yawm al-murājaʿa")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2976,7 +3273,7 @@ export default function ArabicLearning() {
             {/* Day 38 */}
             <ExpandableSection 
               id="day-38" 
-              title={createArabicTitle("Day 38 — More verbs (daily actions)", "اليوم الثامن والثلاثون — المزيد من الأفعال (أفعال يومية)", "Al-yawm ath-thāmin wa-th-thalāthūn — Al-mazīd min al-afʿāl (afʿāl yawmiyya)")} 
+              title={createArabicTitle("Day 38 — More verbs (daily actions) (দিন ৩৮ — আরও ক্রিয়া)", "اليوم الثامن والثلاثون — المزيد من الأفعال (أفعال يومية)", "Al-yawm ath-thāmin wa-th-thalāthūn — Al-mazīd min al-afʿāl (afʿāl yawmiyya)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -2999,7 +3296,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أستيقظ" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Astayqiẓ</strong> (as-tay-qiz)
+                      <strong>Astayqiẓ</strong> (as-tay-qiz)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আসতাইকিয
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3039,7 +3337,7 @@ export default function ArabicLearning() {
             {/* Day 39 */}
             <ExpandableSection 
               id="day-39" 
-              title="Day 39 — Clothes & shopping" 
+              title={createArabicTitle("Day 39 — Clothes & shopping (দিন ৩৯ — পোশাক ও কেনাকাটা)", "اليوم التاسع والثلاثون — الملابس والتسوق", "Al-yawm at-tāsiʿ wa-th-thalāthūn — Al-malābis wa-t-tasawwuq")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3062,7 +3360,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="بنطلون" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Bantalūn</strong> (ban-ta-loon)
+                      <strong>Bantalūn</strong> (ban-ta-loon)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> বানতালূন
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3072,7 +3371,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أحذية" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Aḥdhiya</strong> (ah-dhi-ya)
+                      <strong>Aḥdhiya</strong> (ah-dhi-ya)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আহধিয়া
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3092,7 +3392,7 @@ export default function ArabicLearning() {
             {/* Day 40 */}
             <ExpandableSection 
               id="day-40" 
-              title={createArabicTitle("Day 40 — Health & doctor", "اليوم الأربعون — الصحة والطبيب", "Al-yawm al-arbaʿūn — Aṣ-ṣiḥḥa wa-ṭ-ṭabīb")} 
+              title={createArabicTitle("Day 40 — Health & doctor (দিন ৪০ — স্বাস্থ্য ও ডাক্তার)", "اليوم الأربعون — الصحة والطبيب", "Al-yawm al-arbaʿūn — Aṣ-ṣiḥḥa wa-ṭ-ṭabīb")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3115,7 +3415,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أنا مريض" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Anā marīḍ</strong> (a-naa ma-reed)
+                      <strong>Anā marīḍ</strong> (a-naa ma-reed)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ মারীদ
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3125,7 +3426,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="دواء" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Dawāʾ</strong> (da-waa)
+                      <strong>Dawāʾ</strong> (da-waa)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> দাওয়া
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3135,7 +3437,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أين المستشفى" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Ayna al-mustashfā?</strong> (ay-na al-mus-tash-faa)
+                      <strong>Ayna al-mustashfā?</strong> (ay-na al-mus-tash-faa)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আইনা আল-মুস্তাশফা?
                     </div>
                   </li>
                 </ul>
@@ -3168,7 +3471,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="ما رقم هاتفك" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Mā raqm hātifika?</strong> (maa raqm haa-ti-fi-ka)
+                      <strong>Mā raqm hātifika?</strong> (maa raqm haa-ti-fi-ka)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> মা রাকম হাতিফিকা?
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3178,7 +3482,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="إنترنت" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Internet</strong> (in-ter-net)
+                      <strong>Internet</strong> (in-ter-net)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইন্টারনেট
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3198,7 +3503,7 @@ export default function ArabicLearning() {
             {/* Day 42 */}
             <ExpandableSection 
               id="day-42" 
-              title={createArabicTitle("Day 42 — Money & banking", "اليوم الثاني والأربعون — المال والبنوك", "Al-yawm ath-thānī wa-l-arbaʿūn — Al-māl wa-l-bunūk")} 
+              title={createArabicTitle("Day 42 — Money & banking (দিন ৪২ — টাকা ও ব্যাংকিং)", "اليوم الثاني والأربعون — المال والبنوك", "Al-yawm ath-thānī wa-l-arbaʿūn — Al-māl wa-l-bunūk")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3221,7 +3526,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="بنك" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Bank</strong> (bank)
+                      <strong>Bank</strong> (bank)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ব্যাংক
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3231,7 +3537,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="صراف آلي" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Ṣarrāf ālī</strong> (sar-raaf aa-lee)
+                      <strong>Ṣarrāf ālī</strong> (sar-raaf aa-lee)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> সাররাফ আলী
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3251,7 +3558,7 @@ export default function ArabicLearning() {
             {/* Day 43 */}
             <ExpandableSection 
               id="day-43" 
-              title={createArabicTitle("Day 43 — Transportation (advanced)", "اليوم الثالث والأربعون — النقل (متقدم)", "Al-yawm ath-thālith wa-l-arbaʿūn — An-naql (mutaqaddim)")} 
+              title={createArabicTitle("Day 43 — Transportation (advanced) (দিন ৪৩ — পরিবহন)", "اليوم الثالث والأربعون — النقل (متقدم)", "Al-yawm ath-thālith wa-l-arbaʿūn — An-naql (mutaqaddim)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3284,7 +3591,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="تذكرة" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Tadhkira</strong> (tadh-ki-ra)
+                      <strong>Tadhkira</strong> (tadh-ki-ra)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> তাযকিরা
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3294,7 +3602,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="إلى أين تذهب هذه الحافلة" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Ilā ayna tadhhab hādhihi al-ḥāfila?</strong> (i-laa ay-na tadh-hab haa-dhi-hi al-haa-fi-la)
+                      <strong>Ilā ayna tadhhab hādhihi al-ḥāfila?</strong> (i-laa ay-na tadh-hab haa-dhi-hi al-haa-fi-la)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইলা আইনা তাযহাব হাধিহি আল-হাফিলা?
                     </div>
                   </li>
                 </ul>
@@ -3304,7 +3613,7 @@ export default function ArabicLearning() {
             {/* Day 44 */}
             <ExpandableSection 
               id="day-44" 
-              title="Day 44 — Review Day" 
+              title={createArabicTitle("Day 44 — Review Day (দিন ৪৪ — পর্যালোচনা দিন)", "اليوم الرابع والأربعون — يوم المراجعة", "Al-yawm ar-rābiʿ wa-l-arbaʿūn — Yawm al-murājaʿa")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3316,7 +3625,7 @@ export default function ArabicLearning() {
             {/* Day 45 */}
             <ExpandableSection 
               id="day-45" 
-              title={createArabicTitle("Day 45 — Emotions & expressions", "اليوم الخامس والأربعون — المشاعر والتعبيرات", "Al-yawm al-khāmis wa-l-arbaʿūn — Al-mashāʿir wa-t-taʿbīrāt")} 
+              title={createArabicTitle("Day 45 — Emotions & expressions (দিন ৪৫ — আবেগ ও অভিব্যক্তি)", "اليوم الخامس والأربعون — المشاعر والتعبيرات", "Al-yawm al-khāmis wa-l-arbaʿūn — Al-mashāʿir wa-t-taʿbīrāt")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3349,7 +3658,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أنا متعب" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Anā mutʿab</strong> (a-naa mut-ab)
+                      <strong>Anā mutʿab</strong> (a-naa mut-ab)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ মুতাব
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3359,7 +3669,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أنا متحمس" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Anā mutaḥammis</strong> (a-naa mu-ta-ham-mis)
+                      <strong>Anā mutaḥammis</strong> (a-naa mu-ta-ham-mis)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আনাআ মুতাহাম্মিস
                     </div>
                   </li>
                 </ul>
@@ -3369,7 +3680,7 @@ export default function ArabicLearning() {
             {/* Day 46 */}
             <ExpandableSection 
               id="day-46" 
-              title="Day 46 — Making plans" 
+              title={createArabicTitle("Day 46 — Making plans (দিন ৪৬ — পরিকল্পনা করা)", "اليوم السادس والأربعون — وضع الخطط", "Al-yawm as-sādis wa-l-arbaʿūn — Waḍʿ al-khuṭuṭ")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3392,7 +3703,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="الأسبوع القادم" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Al-usbūʿ al-qādim</strong> (al-us-buu' al-qa-dim)
+                      <strong>Al-usbūʿ al-qādim</strong> (al-us-buu' al-qa-dim)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আল-উসবূআ আল-কাদিম
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3402,7 +3714,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="دعنا نلتقي" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Daʿnā naltaqī</strong> (da-naa nal-ta-qee)
+                      <strong>Daʿnā naltaqī</strong> (da-naa nal-ta-qee)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> দানা নালতাকী
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3412,7 +3725,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="في أي ساعة" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Fī ayyi sāʿa?</strong> (fee ay-yi saa-a)
+                      <strong>Fī ayyi sāʿa?</strong> (fee ay-yi saa-a)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ফী আইয়ি সাআ?
                     </div>
                   </li>
                 </ul>
@@ -3422,7 +3736,7 @@ export default function ArabicLearning() {
             {/* Day 47 */}
             <ExpandableSection 
               id="day-47" 
-              title={createArabicTitle("Day 47 — Hobbies & interests", "اليوم السابع والأربعون — الهوايات والاهتمامات", "Al-yawm as-sābiʿ wa-l-arbaʿūn — Al-hawāyāt wa-l-ihtimāmāt")} 
+              title={createArabicTitle("Day 47 — Hobbies & interests (দিন ৪৭ — শখ ও আগ্রহ)", "اليوم السابع والأربعون — الهوايات والاهتمامات", "Al-yawm as-sābiʿ wa-l-arbaʿūn — Al-hawāyāt wa-l-ihtimāmāt")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3445,7 +3759,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="القراءة" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Al-qirāʾa</strong> (al-qi-raa-a)
+                      <strong>Al-qirāʾa</strong> (al-qi-raa-a)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> আল-কিরাআ
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3475,7 +3790,7 @@ export default function ArabicLearning() {
             {/* Day 48 */}
             <ExpandableSection 
               id="day-48" 
-              title="Day 48 — At the market" 
+              title={createArabicTitle("Day 48 — At the market (দিন ৪৮ — বাজারে)", "اليوم الثامن والأربعون — في السوق", "Al-yawm ath-thāmin wa-l-arbaʿūn — Fī as-sūq")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3508,7 +3823,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="طازج" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Ṭāzij</strong> (taa-zij)
+                      <strong>Ṭāzij</strong> (taa-zij)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> তাজিজ
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3528,7 +3844,7 @@ export default function ArabicLearning() {
             {/* Day 49 */}
             <ExpandableSection 
               id="day-49" 
-              title={createArabicTitle("Day 49 — Giving directions (detailed)", "اليوم التاسع والأربعون — إعطاء الاتجاهات (مفصل)", "Al-yawm at-tāsiʿ wa-l-arbaʿūn — Iʿṭāʾ al-ittijāhāt (mufaṣṣal)")} 
+              title={createArabicTitle("Day 49 — Giving directions (detailed) (দিন ৪৯ — দিকনির্দেশনা দেওয়া)", "اليوم التاسع والأربعون — إعطاء الاتجاهات (مفصل)", "Al-yawm at-tāsiʿ wa-l-arbaʿūn — Iʿṭāʾ al-ittijāhāt (mufaṣṣal)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3561,7 +3877,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="امش مباشرة" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Imshi mubāsharatan</strong> (im-shi mu-baa-sha-ra-tan)
+                      <strong>Imshi mubāsharatan</strong> (im-shi mu-baa-sha-ra-tan)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> ইমশি মুবাশারাতান
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3581,7 +3898,7 @@ export default function ArabicLearning() {
             {/* Day 50 */}
             <ExpandableSection 
               id="day-50" 
-              title="Day 50 — Review Day" 
+              title={createArabicTitle("Day 50 — Review Day (দিন ৫০ — পর্যালোচনা দিন)", "اليوم الخمسون — يوم المراجعة", "Al-yawm al-khamsūn — Yawm al-murājaʿa")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3593,7 +3910,7 @@ export default function ArabicLearning() {
             {/* Day 51 */}
             <ExpandableSection 
               id="day-51" 
-              title={createArabicTitle("Day 51 — Numbers 11-20 (speaking)", "اليوم الحادي والخمسون — الأرقام 11-20 (التحدث)", "Al-yawm al-ḥādī wa-l-khamsūn — Al-arqām 11-20 (at-taḥadduth)")} 
+              title={createArabicTitle("Day 51 — Numbers 11-20 (speaking) (দিন ৫১ — সংখ্যা ১১-২০)", "اليوم الحادي والخمسون — الأرقام 11-20 (التحدث)", "Al-yawm al-ḥādī wa-l-khamsūn — Al-arqām 11-20 (at-taḥadduth)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3623,7 +3940,7 @@ export default function ArabicLearning() {
             {/* Day 52 */}
             <ExpandableSection 
               id="day-52" 
-              title="Day 52 — Time expressions (advanced)" 
+              title={createArabicTitle("Day 52 — Time expressions (advanced) (দিন ৫২ — সময়ের অভিব্যক্তি)", "اليوم الثاني والخمسون — تعبيرات الوقت (متقدم)", "Al-yawm ath-thānī wa-l-khamsūn — Taʿbīrāt al-waqt (mutaqaddim)")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3656,7 +3973,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="ليل" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Layl</strong> (layl)
+                      <strong>Layl</strong> (layl)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> লাইল
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3676,7 +3994,7 @@ export default function ArabicLearning() {
             {/* Day 53 */}
             <ExpandableSection 
               id="day-53" 
-              title={createArabicTitle("Day 53 — Asking for help", "اليوم الثالث والخمسون — طلب المساعدة", "Al-yawm ath-thālith wa-l-khamsūn — Ṭalab al-musāʿada")} 
+              title={createArabicTitle("Day 53 — Asking for help (দিন ৫৩ — সাহায্য চাওয়া)", "اليوم الثالث والخمسون — طلب المساعدة", "Al-yawm ath-thālith wa-l-khamsūn — Ṭalab al-musāʿada")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3709,7 +4027,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="هل يمكنك التكرار" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Hal yumkinuka at-tikrār?</strong> (hal yum-ki-nu-ka at-tik-raar)
+                      <strong>Hal yumkinuka at-tikrār?</strong> (hal yum-ki-nu-ka at-tik-raar)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> হাল ইয়ুমকিনুকা আত-তিকরার?
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3729,7 +4048,7 @@ export default function ArabicLearning() {
             {/* Day 54 */}
             <ExpandableSection 
               id="day-54" 
-              title="Day 54 — Expressing opinions" 
+              title={createArabicTitle("Day 54 — Expressing opinions (দিন ৫৪ — মতামত প্রকাশ করা)", "اليوم الرابع والخمسون — التعبير عن الآراء", "Al-yawm ar-rābiʿ wa-l-khamsūn — At-taʿbīr ʿan al-ārāʾ")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3762,7 +4081,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أوافق" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Ūāfiq</strong> (u-aa-fiq)
+                      <strong>Ūāfiq</strong> (u-aa-fiq)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> উআফিক
                     </div>
                   </li>
                   <li style={{ marginBottom: '1rem', padding: '0.75rem', background: 'rgba(13, 79, 28, 0.03)', borderRadius: '6px' }}>
@@ -3782,7 +4102,7 @@ export default function ArabicLearning() {
             {/* Day 55 */}
             <ExpandableSection 
               id="day-55" 
-              title={createArabicTitle("Day 55 — Making comparisons", "اليوم الخامس والخمسون — المقارنات", "Al-yawm al-khāmis wa-l-khamsūn — Al-muqāranāt")} 
+              title={createArabicTitle("Day 55 — Making comparisons (দিন ৫৫ — তুলনা করা)", "اليوم الخامس والخمسون — المقارنات", "Al-yawm al-khāmis wa-l-khamsūn — Al-muqāranāt")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3835,7 +4155,7 @@ export default function ArabicLearning() {
             {/* Day 56 */}
             <ExpandableSection 
               id="day-56" 
-              title="Day 56 — Review Day" 
+              title={createArabicTitle("Day 56 — Review Day (দিন ৫৬ — পর্যালোচনা দিন)", "اليوم السادس والخمسون — يوم المراجعة", "Al-yawm as-sādis wa-l-khamsūn — Yawm al-murājaʿa")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3847,7 +4167,7 @@ export default function ArabicLearning() {
             {/* Day 57 */}
             <ExpandableSection 
               id="day-57" 
-              title={createArabicTitle("Day 57 — Conversation: At the post office", "اليوم السابع والخمسون — محادثة: في مكتب البريد", "Al-yawm as-sābiʿ wa-l-khamsūn — Muḥādatha: Fī maktab al-barīd")} 
+              title={createArabicTitle("Day 57 — Conversation: At the post office (দিন ৫৭ — কথোপকথন: ডাকঘরে)", "اليوم السابع والخمسون — محادثة: في مكتب البريد", "Al-yawm as-sābiʿ wa-l-khamsūn — Muḥādatha: Fī maktab al-barīd")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3880,7 +4200,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="أريد إرسال رسالة" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Urīdu irsāl risāla</strong> (u-ree-du ir-saal ri-saa-la)
+                      <strong>Urīdu irsāl risāla</strong> (u-ree-du ir-saal ri-saa-la)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> উরীদু ইরসাল রিসালা
                     </div>
                   </li>
                 </ul>
@@ -3890,7 +4211,7 @@ export default function ArabicLearning() {
             {/* Day 58 */}
             <ExpandableSection 
               id="day-58" 
-              title="Day 58 — Conversation: At the pharmacy" 
+              title={createArabicTitle("Day 58 — Conversation: At the pharmacy (দিন ৫৮ — কথোপকথন: ফার্মেসিতে)", "اليوم الثامن والخمسون — محادثة: في الصيدلية", "Al-yawm ath-thāmin wa-l-khamsūn — Muḥādatha: Fī aṣ-ṣaydaliyya")}
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3933,7 +4254,7 @@ export default function ArabicLearning() {
             {/* Day 59 */}
             <ExpandableSection 
               id="day-59" 
-              title={createArabicTitle("Day 59 — Conversation: Making appointments", "اليوم التاسع والخمسون — محادثة: تحديد المواعيد", "Al-yawm at-tāsiʿ wa-l-khamsūn — Muḥādatha: Taḥdīd al-mawāʿīd")} 
+              title={createArabicTitle("Day 59 — Conversation: Making appointments (দিন ৫৯ — কথোপকথন: অ্যাপয়েন্টমেন্ট করা)", "اليوم التاسع والخمسون — محادثة: تحديد المواعيد", "Al-yawm at-tāsiʿ wa-l-khamsūn — Muḥādatha: Taḥdīd al-mawāʿīd")} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
@@ -3966,7 +4287,8 @@ export default function ArabicLearning() {
                       <AudioPlayer arabicText="هل غدا متاح" className="alphabet-audio-btn" tone="default" />
                     </div>
                     <div style={{ fontSize: '0.9rem', color: 'var(--text-light)', marginLeft: '1rem' }}>
-                      <strong>Hal ghadan mutāḥ?</strong> (hal gha-dan mu-taah)
+                      <strong>Hal ghadan mutāḥ?</strong> (hal gha-dan mu-taah)<br />
+                      <span style={{ color: 'var(--primary-color)' }}>বাংলা:</span> হাল ঘাদান মুতাহ?
                     </div>
                   </li>
                 </ul>
@@ -3976,7 +4298,7 @@ export default function ArabicLearning() {
             {/* Day 60 */}
             <ExpandableSection 
               id="day-60" 
-              title={'Day 60 — Final speaking test (60 days milestone)'} 
+              title={createArabicTitle('Day 60 — Final speaking test (60 days milestone) (দিন ৬০ — চূড়ান্ত কথা বলা পরীক্ষা)', 'اليوم الستون — اختبار التحدث النهائي (معلم 60 يوماً)', 'Al-yawm as-sittūn — Ikhtibār at-taḥadduth an-nihāʾī (maʿlam 60 yawman)')} 
               defaultOpen={false}
               className="practice-day-wrapper"
             >
